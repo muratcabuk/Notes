@@ -6,34 +6,35 @@
 
 #### [Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/)
 
-Orchard CMS deki anlatım : [link](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes)
+
+Orchard CMS deki anlatım: [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes)
 
 
 #### Content Type
 
-Orchars CMS deki anlatım : (link)[http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system]
+Orchars CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
 
-#### (Content)[https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Contents/README/]
+#### [Content](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Contents/README/)
 
 Orchard CMS deki anlatım : 
 
 
-#### (Content Template)[https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-templates]
+#### [Content Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-templates)
 
 #### Content Field
 
 
-#### (Content Field Template)[https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-field-templates]
+#### [Content Field Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-field-templates)
 
 #### Content Part
 
-#### (Content Part Template)[https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-part-templates]
+#### [Content Part Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-part-templates)
 
 #### Content Zone
 
 #### Widget
 
-#### (Widget Template) [https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#widget-templates]
+#### [Widget Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#widget-templates)
 
 
 
