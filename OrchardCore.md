@@ -2,11 +2,11 @@
 
 ### Tasarım Terminolojisi
 
-#### (Template)[https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates]
+#### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
 
-#### (Theme)[https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/]
+#### [Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/)
 
-Orchard CMS deki anlatım : (link)[http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes]
+Orchard CMS deki anlatım : [link](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes)
 
 
 #### Content Type
