@@ -1,8 +1,8 @@
 ## Orchard Core 
 
-- ### Tasarım Terminolojisi
+1 ### Tasarım Terminolojisi
 
-  - #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
+  1.1. #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
 
   #### [Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/)
 
