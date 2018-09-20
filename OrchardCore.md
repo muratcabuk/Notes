@@ -1,6 +1,6 @@
 ## Orchard Core 
 
-### Tasarım Terminolojisi
+-### Tasarım Terminolojisi
 
   #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
 
