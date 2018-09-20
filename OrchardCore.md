@@ -5,10 +5,9 @@
   - #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
 
   - #### [Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/)
-
-
+  
   Orchard CMS deki anlatım: [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes)
-
+  Orchard CMS de Theme nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Writing-a-new-theme/Creating Themes)
 
   - #### Content Type
 
@@ -40,7 +39,7 @@
 
   - #### Shape
 
-  - #### (Shape Differentiator)[https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#shape-differentiators]
+  - #### [Shape Differentiator](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#shape-differentiators)
 
 
   - #### Alternate
@@ -51,7 +50,19 @@
 
   - #### Permalink (Permanent Link)
 
+- ### [Manifest Dosyası](http://docs.orchardproject.net/en/latest/Documentation/Manifest-files/)
+  Module Manifest
+  Module Manifest
 
+- ### Routing
+
+- ### Localization
+
+Localization hakkında Orchard Core daki Localization Module sayfası: [adres](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Localization/README/)
+
+Orchard CMS deki linkler: (adres)[http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#localization] 
+
+Orchard CMS deki Laclization nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Creating-global-ready-applications/#localizing-the-orchard-application-and-orchard-modules)
 
 
 
