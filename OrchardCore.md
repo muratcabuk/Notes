@@ -15,7 +15,8 @@
 
   - #### [Content](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Contents/README/)
 
-  Orchard CMS deki anlatım : 
+  Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#content)
+  Kısaca içinde bilgi bulunan ve kullanıcıya sunulan hertürlü içerik. 
 
 
   - #### [Content Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-templates)
@@ -41,8 +42,18 @@
 
   - #### [Shape Differentiator](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#shape-differentiators)
 
+  - [Placement.info](https://orchardcore.readthedocs.io/en/latest/OrchardCore/OrchardCore.DisplayManagement/README/)
+    Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Understanding-placement-info/)
+    - [Menu Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Menu/README/#menu-alternates)
+    
 
-  - #### Alternate
+
+
+  - #### [Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
+    Orchard CMS deki anlatım : [adres](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
+
+    
+
 
   - #### Display Driver
 
@@ -70,6 +81,17 @@ Orchard CMS deki Laclization nasıl yapılır sayfası: [adres](http://docs.orch
 - ### Nasıl Çalışır
 
 - ### Links
+  - #### Definitions
+  bu artık eskimiş bi tanımlama sayfası ama mantığı anlatması açısından iyi sayılır
+  http://docs.orchardproject.net/en/latest/Documentation/Definitions/
+  
+  Orchard CMS Builtin Features and Modules
+  http://docs.orchardproject.net/en/latest/Documentation/Builtin-Features/
+  
+  
+
+
+
 
 https://weblogs.asp.net/antoinegriffard
 https://twitter.com/Lombiq
