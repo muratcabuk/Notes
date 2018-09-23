@@ -57,7 +57,7 @@
   
     Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Understanding-placement-info/)
     
-    - [Menu Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Menu/README/#menu-alternates)
+  - [Menu Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Menu/README/#menu-alternates)
     
 
 
@@ -75,7 +75,9 @@
   - #### Permalink (Permanent Link)
 
 - ### [Manifest Dosyası](http://docs.orchardproject.net/en/latest/Documentation/Manifest-files/)
-  Module Manifest
+
+  Theme Manifest
+  
   Module Manifest
 
 - ### Routing
@@ -92,6 +94,11 @@ Orchard CMS deki Laclization nasıl yapılır sayfası: [adres](http://docs.orch
 
 
 - ### Nasıl Çalışır
+
+  Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/)
+  
+  
+
 
 - ### Links
   - #### Definitions
