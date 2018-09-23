@@ -40,13 +40,27 @@
   
   Diğer bir fark ise, içerik türü (content type) başına belirli bir türün (type) yalnızça bir parçasına (part) sahip olabilmemizdir. Ancak bir parça (part) belirli bir tür (type) için birçok alana (field) sahip olabilir. Bunu anlatmanın bir diğer yolu ise şudur: parça (part) üzerindeki alanlar (field), alanın türüne (field's type) ait değerlerin string dictionary si iken, içerik türü (content type) ise parça türlerinin (part type) bir listesi (isimler olmaksızın) olmasıdır.
       
+[content type anatomisi (okumalısın)](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
 
-  - #### Content Field
 
+  - #### [Event Bus](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#event-bus)
+
+  - #### [Content Field](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.ContentFields/README/)
+
+İçerik alanları (content field), bir içerik türüne (content type) eklenebilecek bilgi parçalarıdır. İçerik alanlarının (content field) bir adı ve türü vardır ve bir içerik türüne özgüdür. Herhangi bir içerik türünde (content type) her alan (field)  türünden birkaç tane olabilir. Örneğin, bir Ürün içerik türü, SKU'sunu temsil eden bir metin alanına, fiyatını temsil eden bir sayısal alana ve ağırlığını temsil eden başka bir sayısal alana sahip olabilir.
+
+  [Field lar nasıl kullanılır](http://docs.orchardproject.net/en/latest/Documentation/Getting-Started-with-Modules-Part-3/#using-fields)
 
   - #### [Content Field Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-field-templates)
 
-  - #### Content Part
+Orchard CMS deki anlatım :
+
+  - #### [Content Filed Differentiator](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-field-differentiator)
+  
+  Differentiator Orchard CMS de yok gibi görünüyor. yada başka türlü çalışıyor
+
+
+  - #### Content Part 
 
   - #### [Content Part Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-part-templates)
 
@@ -55,8 +69,6 @@
   - #### Widget
 
   - #### [Widget Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#widget-templates)
-
-
 
   - #### Shape
 
@@ -68,14 +80,8 @@
     
   - [Menu Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Menu/README/#menu-alternates)
     
-
-
-
   - #### [Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
     Orchard CMS deki anlatım : [adres](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
-
-    
-
 
   - #### Display Driver
 
