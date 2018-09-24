@@ -22,11 +22,10 @@
     - #### [Content](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Contents/README/)
 
   Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#content)
+  
   Kısaca içinde bilgi bulunan ve kullanıcıya sunulan hertürlü içerik. 
 
-
     - #### [Content Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-templates)
-
 
     - #### [Types, Parts, and Fields](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
   
@@ -41,8 +40,6 @@
   Diğer bir fark ise, içerik türü (content type) başına belirli bir türün (type) yalnızça bir parçasına (part) sahip olabilmemizdir. Ancak bir parça (part) belirli bir tür (type) için birçok alana (field) sahip olabilir. Bunu anlatmanın bir diğer yolu ise şudur: parça (part) üzerindeki alanlar (field), alanın türüne (field's type) ait değerlerin string dictionary si iken, içerik türü (content type) ise parça türlerinin (part type) bir listesi (isimler olmaksızın) olmasıdır.
       
 [content type anatomisi (okumalısın)](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
-
-   - #### [Event Bus](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#event-bus)
 
    - #### [Content Field](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.ContentFields/README/)
 
@@ -62,11 +59,15 @@ Orchard CMS deki anlatım :
   
   Orchard CMS deki anlatım: [adres](http://docs.orchardproject.net/en/latest/Documentation/Content-types/#content-part), [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#content-part), [adres](http://docs.orchardproject.net/en/latest/Documentation/Understanding-placement-info/#contentpart)  
   
+  Ayrıca bu dökümanda (Type, Part and Field) bölmünde detaylı anlatılmaktadır. [adres](https://github.com/muratcabuk/Notes/blob/master/OrchardCore.md#types-parts-and-fields)
+  
    - #### [Content Part Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-part-templates)
 
    - #### Content Zone
   
-  [Liquid and zone](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Liquid/README/#zone)
+   Zone lar layout içinde yer alan, içine widged konulabilen ve customize edilebilen özel partlardır. bazıları collepse yapılabilir.
+    
+   [Liquid and zone](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Liquid/README/#zone)
   
   Orchard CMS deki linkler: [Zone](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#zone), [local-zone-placement](http://docs.orchardproject.net/en/latest/Documentation/Understanding-placement-info/#local-zone-placement)
      
@@ -77,6 +78,10 @@ Orchard CMS deki anlatım :
   
    - #### [Widget](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Widgets/README/)
   
+  Widged lar safanınn belirlenen yerlerine render edilebilen spesifik kategorideki (stereotype) conten itemler dır. Widged modulu widged stereotype ını ve render edilebilir bir template i sunar.  
+  
+  Widget lar sayfaya Layer lar yardımıyla eklenir. layerlar widged ların bir listesidir.
+  
   Widged oluşturmak için : [core adres](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Widgets/README/), [creating cusotm widged](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Widgets/README/#creating-custom-widgets)
   
   Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#widgets), 
@@ -85,6 +90,13 @@ Orchard CMS deki anlatım :
    - #### [Widget Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#widget-templates)
   
    - #### [Layer, Zone and Widged](http://docs.orchardproject.net/en/latest/Documentation/Managing-widgets/#layers-zones-and-widgets)
+   
+   A layer is a group of widgets (with their specific configuration, which includes their positioning -zone name and ordering-) that is activated by a specific rule.
+   
+   Layer widgetlar hakkındaki bilgilerin de bulunduğu (pozisyonları, zone isimleri ve sıları gibi) bir listedir. Layer lar widget ları belirli kurallar dahilinde ekrana basar. örneğin layer widget ı sadece belirli userlar login olduğunda gösterebilir.
+   
+   Zone widget ın sayfa üzerindeki pozisyonu için yardımcı olur.
+
   
    - #### Shape
   
@@ -96,7 +108,7 @@ Orchard CMS deki anlatım :
 
    - [Placement.info](https://orchardcore.readthedocs.io/en/latest/OrchardCore/OrchardCore.DisplayManagement/README/)
   
-    Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Understanding-placement-info/)
+   Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Understanding-placement-info/)
     
    - [Menu Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Menu/README/#menu-alternates)
     
@@ -141,13 +153,11 @@ Orchard CMS deki linkler: [adres](http://docs.orchardproject.net/en/latest/Docum
 
 Orchard CMS deki Laclization nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Creating-global-ready-applications/#localizing-the-orchard-application-and-orchard-modules)
 
-
-
-
 - ### Nasıl Çalışır
 
   Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/)
   
+- ### [Workflows](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Workflows/README/)  
   
 
 
