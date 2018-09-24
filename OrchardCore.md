@@ -109,7 +109,13 @@ Orchard CMS deki anlatım :
    -- DefaultShapeFactory
    -- New adında ki fonksiyonu Orchard layout.cshtml içinde çağırarak
    
+   Content Shape Oluşturmak
+   
    ![Creating Content Shape](https://github.com/muratcabuk/Notes/blob/master/CreatingContentShape.png)
+   
+   Content Shape Events
+   ![Content Shape Event](https://github.com/muratcabuk/Notes/blob/master/ShapeEvents.png)
+   
    
      
   Orchard Core şu video ya link vermiş shape i an latmak için [adres](https://www.youtube.com/watch?v=gKLjtCIs4GU&feature=youtu.be)
