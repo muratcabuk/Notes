@@ -102,6 +102,12 @@ Orchard CMS deki anlatım :
    
    Dinamik data modeldir. yani çalışma zamanında  (runtime) update edilebilir. Statik olan view modelin yerini alır. File template razor files ı kullanır yani cshtml (shape template olarak adlandırılır.). Shape classın dan inherit edilerek yazılır ve Shape attribute olarak methodlarda kullanılır. Dinamik olduğu için strong typing ile yazılmaz. 
    
+   Örneğin OrchardCore.Html partına bakılırsa HtmlBodyPart.cshtml dosyaındaki model içinde (HtmlBodyPartViewModel) içinde HtmlBodyPart property si tipi string olan bir html adında bir property bulunur. dinamik olarak bu property update edilebilir.
+   
+   Shape oluşturmak için aşağıdaki yöntemler kullanılabilir.
+   -- IShapeFactory (IShape Create (string shapeType))
+   -- DefaultShapeFactory
+   -- New adında ki fonksiyonu Orchard layout.cshtml içinde çağırarak
    
    
      
