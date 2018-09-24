@@ -42,29 +42,29 @@
       
 [content type anatomisi (okumalısın)](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
 
-    - #### [Event Bus](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#event-bus)
+   - #### [Event Bus](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#event-bus)
 
-    - #### [Content Field](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.ContentFields/README/)
+   - #### [Content Field](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.ContentFields/README/)
 
 İçerik alanları (content field), bir içerik türüne (content type) eklenebilecek bilgi parçalarıdır. İçerik alanlarının (content field) bir adı ve türü vardır ve bir içerik türüne özgüdür. Herhangi bir içerik türünde (content type) her alan (field)  türünden birkaç tane olabilir. Örneğin, bir Ürün içerik türü, SKU'sunu temsil eden bir metin alanına, fiyatını temsil eden bir sayısal alana ve ağırlığını temsil eden başka bir sayısal alana sahip olabilir.
 
   [Field lar nasıl kullanılır](http://docs.orchardproject.net/en/latest/Documentation/Getting-Started-with-Modules-Part-3/#using-fields)
 
-    - #### [Content Field Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-field-templates)
+   - #### [Content Field Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-field-templates)
 
 Orchard CMS deki anlatım :
 
-    - #### [Content Filed Differentiator](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-field-differentiator)
+   - #### [Content Filed Differentiator](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-field-differentiator)
   
   Differentiator Orchard CMS de yok gibi görünüyor. yada başka türlü çalışıyor
 
-    - #### Content Part 
+   - #### Content Part 
   
   Orchard CMS deki anlatım: [adres](http://docs.orchardproject.net/en/latest/Documentation/Content-types/#content-part), [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#content-part), [adres](http://docs.orchardproject.net/en/latest/Documentation/Understanding-placement-info/#contentpart)  
   
-    - #### [Content Part Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-part-templates)
+   - #### [Content Part Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-part-templates)
 
-    - #### Content Zone
+   - #### Content Zone
   
   [Liquid and zone](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Liquid/README/#zone)
   
@@ -75,40 +75,39 @@ Orchard CMS deki anlatım :
   
   Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#zone)
   
-    - #### [Widget](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Widgets/README/)
+   - #### [Widget](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Widgets/README/)
   
   Widged oluşturmak için : [core adres](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Widgets/README/), [creating cusotm widged](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Widgets/README/#creating-custom-widgets)
   
   Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#widgets), 
   [adres](http://docs.orchardproject.net/en/latest/Documentation/Definitions/#widget), [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#widget), 
   
-
-    - #### [Widget Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#widget-templates)
+   - #### [Widget Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#widget-templates)
   
-    - #### [Layer, Zone and Widged](http://docs.orchardproject.net/en/latest/Documentation/Managing-widgets/#layers-zones-and-widgets)
+   - #### [Layer, Zone and Widged](http://docs.orchardproject.net/en/latest/Documentation/Managing-widgets/#layers-zones-and-widgets)
   
-    - #### Shape
+   - #### Shape
   
   Orchard Core şu video ya link vermiş shape i an latmak için [adres](https://www.youtube.com/watch?v=gKLjtCIs4GU&feature=youtu.be)
   
   Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#shape), [adres](http://docs.orchardproject.net/en/latest/Documentation/Builtin-Features/#shapes), [shape and template](http://docs.orchardproject.net/en/latest/Documentation/Content-types/#shapes-and-templates), 
   
-    - #### [Shape Differentiator](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#shape-differentiators)
+   - #### [Shape Differentiator](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#shape-differentiators)
 
-    - [Placement.info](https://orchardcore.readthedocs.io/en/latest/OrchardCore/OrchardCore.DisplayManagement/README/)
+   - [Placement.info](https://orchardcore.readthedocs.io/en/latest/OrchardCore/OrchardCore.DisplayManagement/README/)
   
     Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Understanding-placement-info/)
     
-    - [Menu Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Menu/README/#menu-alternates)
+   - [Menu Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Menu/README/#menu-alternates)
     
-    - #### [Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
+   - #### [Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
     Orchard CMS deki anlatım : [adres](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
       
-    - #### Display Driver
+   - #### Display Driver
 
-    - #### Display Type
+   - #### Display Type
 
-    - #### Permalink (Permanent Link)
+   - #### Permalink (Permanent Link)
 
 - ### [Manifest Dosyası](http://docs.orchardproject.net/en/latest/Documentation/Manifest-files/)
 
