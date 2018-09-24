@@ -128,24 +128,18 @@ Orchard CMS deki anlatım :
 
   Yesql ORM değildir yazarın tabiriyle DRN ()
   
-  bütün veriler tek bir tablonun tek bir sütununda JSON olarak tutulur. Sorgu işlemleri için ise verideki önemli kısımlar ayrı ayrı tablolarda index ve view create edilerek yapılır.
+  Bütün veriler tek bir tablonun tek bir sütununda JSON olarak tutulur. Sorgu işlemleri için ise verideki önemli kısımlar ayrı ayrı tablolarda index ve view create edilerek yapılır.
   
-  index leme yapıldıktan sonra iki türlü map leme yapılır: one-to-one ya da one-to-many. (map/reduce).
+  Index leme yapıldıktan sonra iki türlü map leme yapılır: one-to-one (map index) ya da one-to-many (map/reduce indexing). (map/reduce).
   
-  verileri JSON olarak store edilirken indexleme yapılan database den farklı yerler kullanılabilir. dosya yada farklı bir database.
+  Verileri JSON olarak store edilirken indexleme yapılan database den farklı yerler kullanılabilir. dosya yada farklı bir database.
   
   Session kavramı aslında EF' deki Context yada Nhibernate deki Session kavramı ile aynıdır.
   
   Migration için bir kez initialize fonksiyonu çağrılır.
   
-  
-  
-  
-  
-  
-  
-
-
+  IndexProvider ile bitenler IIndexProvider interface ini implement eden class lar. UB objeler (orneğin PersonByNameIndexProvier) index in bizzat kendisinitemsil eder (aynı zamanda DB deki tablonun adını). Bu Inbdex içindeki property lerde tablodaki sütunları temsil eder.
+   
 - ### Routing
 
 - ### Localization
