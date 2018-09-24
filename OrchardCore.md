@@ -109,6 +109,7 @@ Orchard CMS deki anlatım :
    -- DefaultShapeFactory
    -- New adında ki fonksiyonu Orchard layout.cshtml içinde çağırarak
    
+   ![Creating Content Shape](https://github.com/muratcabuk/Notes/blob/master/CreatingContentShape.png)
    
      
   Orchard Core şu video ya link vermiş shape i an latmak için [adres](https://www.youtube.com/watch?v=gKLjtCIs4GU&feature=youtu.be)
@@ -124,7 +125,9 @@ Orchard CMS deki anlatım :
    - [Menu Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Menu/README/#menu-alternates)
     
    - #### [Alternate](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
-    Orchard CMS deki anlatım : [adres](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
+   
+   Orchard CMS deki anlatım : [adres](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/#alternates)
+    
       
    - #### Display Driver
 
