@@ -123,6 +123,28 @@ Orchard CMS deki anlatım :
   Theme Manifest
   
   Module Manifest
+  
+- ### [YESQL](https://github.com/krisajenkins/yesql)
+
+  Yesql ORM değildir yazarın tabiriyle DRN ()
+  
+  bütün veriler tek bir tablonun tek bir sütununda JSON olarak tutulur. Sorgu işlemleri için ise verideki önemli kısımlar ayrı ayrı tablolarda index ve view create edilerek yapılır.
+  
+  index leme yapıldıktan sonra iki türlü map leme yapılır: one-to-one ya da one-to-many. (map/reduce).
+  
+  verileri JSON olarak store edilirken indexleme yapılan database den farklı yerler kullanılabilir. dosya yada farklı bir database.
+  
+  Session kavramı aslında EF' deki Context yada Nhibernate deki Session kavramı ile aynıdır.
+  
+  Migration için bir kez initialize fonksiyonu çağrılır.
+  
+  
+  
+  
+  
+  
+  
+
 
 - ### Routing
 
@@ -152,13 +174,12 @@ Orchard CMS deki Laclization nasıl yapılır sayfası: [adres](http://docs.orch
   Orchard CMS Builtin Features and Modules
   http://docs.orchardproject.net/en/latest/Documentation/Builtin-Features/
   
+  Orchard ın Youtube sayfası
+  https://www.youtube.com/channel/UCcEaR8HfGpPwt-GqJr_h5UQ
   
 
-
-
-
-https://weblogs.asp.net/antoinegriffard
-https://twitter.com/Lombiq
-https://twitter.com/sebastienros
+  https://weblogs.asp.net/antoinegriffard
+  https://twitter.com/Lombiq
+  https://twitter.com/sebastienros
 
 
