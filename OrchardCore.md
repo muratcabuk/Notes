@@ -99,7 +99,12 @@ Orchard CMS deki anlatım :
 
   
    - #### Shape
-  
+   
+   Dinamik data modeldir. yani çalışma zamanında  (runtime) update edilebilir. Statik olan view modelin yerini alır. File template razor files ı kullanır yani cshtml (shape template olarak adlandırılır.). Shape classın dan inherit edilerek yazılır ve Shape attribute olarak methodlarda kullanılır. Dinamik olduğu için strong typing ile yazılmaz. 
+   
+   
+   
+     
   Orchard Core şu video ya link vermiş shape i an latmak için [adres](https://www.youtube.com/watch?v=gKLjtCIs4GU&feature=youtu.be)
   
   Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#shape), [adres](http://docs.orchardproject.net/en/latest/Documentation/Builtin-Features/#shapes), [shape and template](http://docs.orchardproject.net/en/latest/Documentation/Content-types/#shapes-and-templates), 
