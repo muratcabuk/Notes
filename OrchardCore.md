@@ -5,10 +5,16 @@
     - #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
 
     - #### [Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/)
+    
+    
+    [video1](https://www.youtube.com/watch?v=wtAIgn4gYXc&index=7&list=PLuskKJW0FhJfOAN3dL0Y0KBMdG1pKESVn)
+    [video2](https://www.youtube.com/watch?v=bt3Stgb_wbI)
   
-  Orchard CMS deki anlatım: [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes)
+    Orchard CMS deki anlatım: [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes)
   
-  Orchard CMS de Theme nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Writing-a-new-theme)
+    Orchard CMS de Theme nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Writing-a-new-theme)
+  
+  
 
     - #### Content Type
 
@@ -173,9 +179,30 @@ Orchard CMS deki linkler: [adres](http://docs.orchardproject.net/en/latest/Docum
 
 Orchard CMS deki Laclization nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Creating-global-ready-applications/#localizing-the-orchard-application-and-orchard-modules)
 
+- ### Module
+
+[Video1](https://www.youtube.com/watch?v=LoPlECp31Oo)
+
+
+- ### Multitanent Website
+
+[Nasıl Yapılır Video](https://www.youtube.com/watch?v=yWpz8p-oaKg)
+
+[Saas Framework Video](https://www.youtube.com/watch?v=Bqgnd2mfRQY)
+
+
+
+
+
 - ### Nasıl Çalışır
 
   Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/)
+  
+  [video1](https://www.youtube.com/watch?v=2XP_klGjg40)
+  
+  Capabilities
+  [video2](https://www.youtube.com/watch?v=6ZaqWmq8Pog)
+  
   
 - ### [Workflows](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Workflows/README/)  
   
