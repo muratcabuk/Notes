@@ -1,6 +1,11 @@
 
 MAC OS as Guest
 
+vmware unlocker for macos
+
+https://github.com/DrDonk/unlocker
+
+
 Mac OS 10.14 Mojave
 
 anlatım 1
