@@ -17,7 +17,9 @@ https://www.wikigain.com/install-macos-mojave-on-virtualbox-windows/
 
 
 Dosya Linki 1 : https://drive.google.com/file/d/14wxD0RQswL7BTfgbv-jVMjaWHj3nswNQ/view
+
 Dosya Linki 2 : https://drive.google.com/drive/folders/1uHeGDvXTpnez3wdirq4y4TGGQQyZH2D3
+
 Dosya Linki 3 : https://drive.google.com/file/d/1OJ-Owi_0IkqVhdWJ37GjlVVFa2QulSJe/view
 
 VirtualBox için Code
