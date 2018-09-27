@@ -1,6 +1,14 @@
 
 MAC OS as Guest
 
+
+Download Mac OS from app store
+
+https://www.youtube.com/watch?v=gM6rQ8GWboQ
+
+
+
+
 vmware unlocker for macos
 
 https://github.com/DrDonk/unlocker
