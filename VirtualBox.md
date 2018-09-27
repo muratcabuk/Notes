@@ -1,6 +1,44 @@
 
 MAC OS as Guest
 
+Mac OS 10.14 Mojave
+
+anlatım 1
+
+https://www.sysnettechsolutions.com/en/macos/download-macos-mojave-10-14-iso/
+
+anlatım 2
+
+https://techsviewer.com/install-macos-10-14-mojave-virtualbox-windows/
+
+anlatım 3
+
+https://www.wikigain.com/install-macos-mojave-on-virtualbox-windows/
+
+
+Dosya Linki 1 : https://drive.google.com/file/d/14wxD0RQswL7BTfgbv-jVMjaWHj3nswNQ/view
+Dosya Linki 2 : https://drive.google.com/drive/folders/1uHeGDvXTpnez3wdirq4y4TGGQQyZH2D3
+Dosya Linki 3 : https://drive.google.com/file/d/1OJ-Owi_0IkqVhdWJ37GjlVVFa2QulSJe/view
+
+VirtualBox için Code
+
+Code for Virtualbox 5.0.x:
+
+cd "C:\Program Files\Oracle\VirtualBox\"
+VBoxManage.exe modifyvm "Your Virtual Machine Name" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+
+VBoxManage setextradata "Your Virtual Machine Name" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac11,3"
+
+VBoxManage setextradata "Your Virtual Machine Name" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+
+VBoxManage setextradata "Your Virtual Machine Name" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Iloveapple"
+
+VBoxManage setextradata "Your Virtual Machine Name" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+
+VBoxManage setextradata "Your Virtual Machine Name" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
+
+
+
 Mac OS 10.13.6 
 
 https://astr0baby.wordpress.com/2018/07/15/installing-high-sierra-10-13-6-in-virtualbox-5-2-12-on-linux-x86_64/
