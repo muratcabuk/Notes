@@ -12,8 +12,11 @@ ilk kopyalamdan sonra CD yi sil, shel de alttaki komutları çalıştır
 FS1: 
 
 cd "macOS Install Data"
+
 cd "Locked Files"
+
 cd "Boot Files"
+
 Now we can run the installer itself with the following command:
 
 boot.efi
