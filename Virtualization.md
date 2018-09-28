@@ -6,6 +6,10 @@ Download Mac OS from app store
 
 https://www.youtube.com/watch?v=gM6rQ8GWboQ
 
+vmware 14 link
+
+http://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-14.1.3-9474260.x86_64.bundle
+
 
 ilk kopyalamdan sonra CD yi sil, shel de alttaki komutları çalıştır
 
