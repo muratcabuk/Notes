@@ -7,6 +7,16 @@ Download Mac OS from app store
 https://www.youtube.com/watch?v=gM6rQ8GWboQ
 
 
+ilk kopyalamdan sonra CD yi sil, shel de alttaki komutları çalıştır
+
+FS1: 
+
+cd "macOS Install Data"
+cd "Locked Files"
+cd "Boot Files"
+Now we can run the installer itself with the following command:
+
+boot.efi
 
 
 vmware unlocker for macos
@@ -64,7 +74,13 @@ You can get the latest 10.13.6 ISO here -> https://drop.me/ByWxnP
 
 https://tylermade.net/2017/10/05/how-to-create-a-bootable-iso-image-of-macos-10-13-high-sierra-installer/
 
+klavye ve mouse sorunları için
 
+https://forums.virtualbox.org/viewtopic.php?f=35&t=82639
+
+https://forums.virtualbox.org/viewtopic.php?f=35&t=82639#p390399
+
+https://forums.virtualbox.org/viewtopic.php?f=35&t=82639&p=390399#p390403
 
 
 eski version
