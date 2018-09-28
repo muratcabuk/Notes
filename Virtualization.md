@@ -22,6 +22,27 @@ Now we can run the installer itself with the following command:
 boot.efi
 
 
+Unlock yapmadan once servisleri durdur.
+
+Stop all VMware service
+
+sudo /etc/init.d/vmware stop
+
+sudo /etc/init.d/vmware-workstation-server stop
+
+sudo /etc/init.d/vmware-USBArbitrator stop
+
+daha sonra çalıştır
+
+sudo /etc/init.d/vmware start
+
+sudo /etc/init.d/vmware-workstation-server start
+
+sudo /etc/init.d/vmware-USBArbitrator start
+
+
+
+
 vmware unlocker for macos
 
 https://github.com/DrDonk/unlocker
