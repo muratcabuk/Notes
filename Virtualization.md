@@ -19,10 +19,10 @@ or download beta bootable iso version
 - File URL 2 : https://drive.google.com/drive/folders/1uHeGDvXTpnez3wdirq4y4TGGQQyZH2D3
 - File URL 3 : https://drive.google.com/file/d/1OJ-Owi_0IkqVhdWJ37GjlVVFa2QulSJe/view
 
-### 2. vmware 14 link
+### 2. vmware links
+
 http://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-14.1.3-9474260.x86_64.bundle
 
-vmware 15 link
 https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0
 
 ### 3. Unlock wmware for macos
@@ -50,6 +50,11 @@ start all services
 ### 4. Folow the the video instructions
 
 https://www.youtube.com/watch?v=50dXwQTY-zk
+
+### 5. Troubleshooting
+
+for screen resolution install darwin.iso and restart. use wmvare full screen option from view menuj
+
 
 # VIRTUALBOX - MacOs Mojave as Guest
 
