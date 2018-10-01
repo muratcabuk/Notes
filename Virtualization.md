@@ -1,5 +1,8 @@
 # VMWARE - MacOs Mojave as Guest
 
+vmware latest version direct link : https://www.vmware.com/go/getworkstation-linux
+
+
 ### 1. if you have a MacOS Download Mac OS from app store
 
 https://www.youtube.com/watch?v=gM6rQ8GWboQ
