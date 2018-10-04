@@ -3,9 +3,9 @@
 - ### Tasarım Terminolojisi
 
     - CMS Types
-     - Standart CMS
-     - Decoupled CMS
-     - Headless CMS
+      1. Standart CMS
+      2. Decoupled CMS
+      3. Headless CMS
 
 
     - #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
