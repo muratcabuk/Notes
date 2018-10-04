@@ -11,14 +11,32 @@
     - #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
 
     - #### [Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/)
-    
-    
+        
     [video1](https://www.youtube.com/watch?v=wtAIgn4gYXc&index=7&list=PLuskKJW0FhJfOAN3dL0Y0KBMdG1pKESVn)
     [video2](https://www.youtube.com/watch?v=bt3Stgb_wbI)
   
     Orchard CMS deki anlatım: [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes)
   
     Orchard CMS de Theme nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Writing-a-new-theme)
+  
+  
+  Buradaki theme yukarıda bahsi geçen "[Standart CMS](https://github.com/muratcabuk/Notes/blob/master/OrchardCore.md#tasar%C4%B1m-terminolojisi)" 
+  
+  ##### Adım Adım theme oluşturma
+  1. Öncelikle OrchardCore.Themes sanal klasörüne Theme projesi oluşturuyoruz class library olarak. Agency Theme proj dodyasını editkeme modunda açıp içeriğğini yeni oluşturduğumuz TheCreativeTheme projesinin proj doyasına editleme modunda  açıp yapıştırıyoruz. 
+  
+  kopyalama yaptığımız proj dosyası içindeki embeddedresources itemgroup nodu silinmeli
+  
+  2. Manifest dosyasını theagenttheme den kopyalarıp değştiriyoruz.
+  
+  3. Bootstrap sayfasından indridiğimiz [Creative Theme](https://startbootstrap.com/template-overviews/creative/) dosyalarını wwwroot klasörüne yapıştırıyoruz. gulp.js ve package.json dahil
+  
+  4.  daha sonra ilk olarak Layout u oluşturmaya başlayacağız.
+  4.1. bunun için wwwroot altına koyaladığımız index.html adını Layout.liquıd olarak değiştirip Views klasörü altına koyaplıyoruz. Zone olarak ayarlanacak yerleri daha sonra yarlayacağız.
+  
+  
+  
+   
   
   
 
