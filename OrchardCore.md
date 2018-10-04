@@ -2,6 +2,13 @@
 
 - ### Tasarım Terminolojisi
 
+
+    - CMS Types
+    -- Standart CMS
+    -- Decoupled CMS
+    -- Headless CMS
+
+
     - #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
 
     - #### [Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/)
