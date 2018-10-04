@@ -32,7 +32,7 @@
   3. Bootstrap sayfasından indridiğimiz [Creative Theme](https://startbootstrap.com/template-overviews/creative/) dosyalarını wwwroot klasörüne yapıştırıyoruz. gulp.js ve package.json dahil
   
   4.  daha sonra ilk olarak Layout u oluşturmaya başlayacağız.
-    4.1. bunun için wwwroot altına koyaladığımız index.html adını Layout.liquıd olarak değiştirip Views klasörü altına koyaplıyoruz. Zone olarak ayarlanacak yerleri daha sonra yarlayacağız.
+    - 4.1. bunun için wwwroot altına koyaladığımız index.html adını Layout.liquıd olarak değiştirip Views klasörü altına koyaplıyoruz. Zone olarak ayarlanacak yerleri daha sonra yarlayacağız.
   
   
   
