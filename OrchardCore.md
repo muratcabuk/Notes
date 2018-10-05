@@ -32,7 +32,9 @@
   3. Bootstrap sayfasından indridiğimiz [Creative Theme](https://startbootstrap.com/template-overviews/creative/) dosyalarını wwwroot klasörüne yapıştırıyoruz. gulp.js ve package.json dahil
   
   4.  daha sonra ilk olarak Layout u oluşturmaya başlayacağız.
-        - bunun için wwwroot altına koyaladığımız index.html adını Layout.liquıd olarak değiştirip Views klasörü altına koyaplıyoruz. Zone olarak ayarlanacak yerleri daha sonra yarlayacağız.
+        - bunun için wwwroot altına koyaladığımız index.html adını Layout.liquıd olarak değiştirip Views klasörü altına koyaplıyoruz. Zone olarak ayarlanacak yerleri daha sonra yarlayacağız. Daha sonra TheAgentTheme deki Layout.liquid dosyaından gerekli yerleri kopyala yapıştır yapacağız.
+        - Layout.liquid içindeki bütün statik (css, js, image ... vs) dosyalarınınbaşına template in adını yazıyoruz. bizim durumumuzda TheCreativeTemplate ekliyoruz.
+        - 
   
   
   
