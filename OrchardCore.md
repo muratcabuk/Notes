@@ -34,11 +34,13 @@
   4.  daha sonra ilk olarak Layout u oluşturmaya başlayacağız.
         - bunun için wwwroot altına koyaladığımız index.html adını Layout.liquıd olarak değiştirip Views klasörü altına koyaplıyoruz. Zone olarak ayarlanacak yerleri daha sonra yarlayacağız. Daha sonra TheAgentTheme deki Layout.liquid dosyaından gerekli yerleri kopyala yapıştır yapacağız.
         - Layout.liquid içindeki bütün statik (css, js, image ... vs) dosyalarınınbaşına template in adını yazıyoruz. bizim durumumuzda TheCreativeTemplate ekliyoruz.
-        - Head tagı içine alttaki satırları ekliyoruz. 
-                
-        {% render_section "HeadMeta", required: false %}
+        - Head tagı içine alttaki satırları ekliyoruz. render_section alanı razor engine deki section lar gibi. partial view leri yüklemek için kullanılır. burada çalışma zamanında eklemek istediğimiz meta datalar, js ve css ler için kullanıyoruz.
         
-      <title>{% page_title Site.SiteName %}</title>
+          İkinci page_title liquid tag ıdır. 
+          
+          {% render_section "HeadMeta", required: false %}
+          
+          <title>{% page_title Site.SiteName %}</title>
   
   
   
