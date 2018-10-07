@@ -34,7 +34,11 @@
   4.  daha sonra ilk olarak Layout u oluşturmaya başlayacağız.
         - bunun için wwwroot altına koyaladığımız index.html adını Layout.liquıd olarak değiştirip Views klasörü altına koyaplıyoruz. Zone olarak ayarlanacak yerleri daha sonra yarlayacağız. Daha sonra TheAgentTheme deki Layout.liquid dosyaından gerekli yerleri kopyala yapıştır yapacağız.
         - Layout.liquid içindeki bütün statik (css, js, image ... vs) dosyalarınınbaşına template in adını yazıyoruz. bizim durumumuzda TheCreativeTemplate ekliyoruz.
-        - 
+        - Head tagı içine alttaki satırları ekliyoruz. 
+                
+        {% render_section "HeadMeta", required: false %}
+        
+      <title>{% page_title Site.SiteName %}</title>
   
   
   
