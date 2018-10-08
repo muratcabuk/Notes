@@ -1,8 +1,14 @@
+
+https://git-scm.com/book/tr/v2/Ba%C5%9Flang%C4%B1%C3%A7-Git%E2%80%99in-Temelleri
+
+
 https://www.youtube.com/watch?v=LIG-OsGysWM&list=PLPrHLaayVkhnNstGIzQcxxnj6VYvsHBHy&index=15
 
 https://www.youtube.com/watch?v=uncrCoLiq-g&list=PLHN6JcK509bOrevTCFrSMeAfBtuib4Gpg
 
 https://www.youtube.com/watch?v=ciRGHbfKBBo&list=PL_Z0TaFYSF3IqQKPOmbigAOVMMlZ2yU4K
+
+
 
 http://marklodato.github.io/visual-git-guide/index-en.html
 
