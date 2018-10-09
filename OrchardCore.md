@@ -36,11 +36,28 @@
         - Layout.liquid içindeki bütün statik (css, js, image ... vs) dosyalarınınbaşına template in adını yazıyoruz. bizim durumumuzda TheCreativeTemplate ekliyoruz.
         - Head tagı içine alttaki satırları ekliyoruz. render_section alanı razor engine deki section lar gibi. partial view leri yüklemek için kullanılır. burada çalışma zamanında eklemek istediğimiz meta datalar, js ve css ler için kullanıyoruz.
         
-          İkinci page_title liquid tag ıdır. 
+          İkinci page_title liquid tag ıdır. page_title title a özel bir section tanımlamasıdır.
+          
+          OrchardCore.Settings projesi siteye ait settingsleri farklı akaynaklardan toplar.
+          
+          OrchardCore.DisplayManagement.Title projesi ise Title partnın kullanacağı html title ı oluşturur. Sayfanın herhangi bir yerinde title ı çağırıp html olarak eklran abasmak için lazım. Aynı zamanda HTML içindeki title tag ının (segmentinin) oluşturlmasını nı sağlar (GenerateTitle() fonksiyonu).
           
           {% render_section "HeadMeta", required: false %}
           
           <title>{% page_title Site.SiteName %}</title>
+          
+          ayrıca body tag ı içine 
+          
+          dir="{{ Culture.Dir }}"
+          
+          satırını ekşiyoruz. bu culture koduna gore sağdan solamı soldan sağa mı yazılacağını belirtir.
+          
+          en alta body tag ını kapatmadan hemen öncesine alttaki satırı ekliyoruz.Resource a eklenen footer için scriptleri ekliyor. [Resources](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Resources/README/)
+          
+          {% resources type: "FootScript" %}
+          
+          
+        - 
   
   
   
