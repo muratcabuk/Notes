@@ -200,6 +200,10 @@ Orchard CMS deki anlatım :
   Migration için bir kez initialize fonksiyonu çağrılır.
   
   IndexProvider ile bitenler IIndexProvider interface ini implement eden class lar. UB objeler (orneğin PersonByNameIndexProvier) index in bizzat kendisinitemsil eder (aynı zamanda DB deki tablonun adını). Bu Inbdex içindeki property lerde tablodaki sütunları temsil eder.
+  
+  [YESSQL Doc](https://github.com/sebastienros/yessql/wiki)
+  
+  [YESSQL Example](https://github.com/sebastienros/yessql/tree/master/samples)
    
 - ### Routing
 
