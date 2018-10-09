@@ -39,6 +39,8 @@
 
 /usr :	This holds the executables and shared resources that are not system critical.
 
+/opt : is reserved for the installation of add-on application software packages. we can aşso use the /usr/local folder for this purpose.
+
 /var :	This stands for variable and is a place for files that are in a changeable state. Such as size going up and down.
 
 /swap :	The swap partition is where you extend the system memory by dedicating part of the hard drive to it.
