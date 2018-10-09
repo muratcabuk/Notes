@@ -85,12 +85,25 @@
           cache_tag: "alias:main-menu" ise cache in değişip değişmediğini kontrol eden property
           
           
-          şuan sitede bu template i anble yapıp default template yaparsak üst taraf alttaki gibi görünecektir.
+          şuan sitede bu template i anble yapıp default template yaparsak üst taraf alttaki gibi görünecektir. menu css i düzgün görünmüyor. Bu alana menu module ü menuyü basıyor ancak css inin düzenlenmesi gerekiyor. bunun için ilgili view in (template in) değiştirilmesi gerekiyor. 
           
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardtheme1.png)
           
+          Tam bu noktada Orchard Core Shape mantığını b,raz anlamamız gerekiyor. Menu content-type ından oluşturulan main menu contentine nebulermizi ekledik. menu modulu içinde theme e eklediğimiz menu shape ine menumuz menu.cshtml yardımıyla ekleniyor. Bunun için 
           
-
+          Menu.Cshtml
+          ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu1.png)
+          
+          MenuItem.Cshtml
+          ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu2.png)
+          
+          MenuItemLink.Cshtml
+          ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu3.png)
+          
+          MenuItemLink-LinkMenuItem.Cshtml
+          ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu4.png)
+       
+          
 
     - #### Content Type
 
