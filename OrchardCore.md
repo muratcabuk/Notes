@@ -75,7 +75,7 @@
       
         - Navigasyon için gereklei alattaki işlemleri yapıyoruz.
         nav tagları arasında yer alan ultagınıda içine alan div i siliyoruz. tüm menu itemleri veritabanından gelecek.
-       bu alanı sildikten sontra alttaki bölümü silinen yere kopyalıyoruz.
+       bu alanı sildikten sontra alttaki bölümü silinen yere kopyalıyoruz. OrchardCore.Menu module içinde MenuTagHelper yardımıyla menu shape ini ekrana basar.
        
           {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
           
@@ -89,23 +89,33 @@
           
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardtheme1.png)
           
-          Tam bu noktada Orchard Core Shape mantığını b,raz anlamamız gerekiyor. Menu content-type ından oluşturulan main menu contentine nebulermizi ekledik. menu modulu içinde theme e eklediğimiz menu shape ine menumuz menu.cshtml yardımıyla ekleniyor. Bunun için 
+          Tam bu noktada Orchard Core Shape mantığını b,raz anlamamız gerekiyor. Menu content-type ından oluşturulan main menu contentine nebulermizi ekledik. menu modulu içinde theme e eklediğimiz menu shape ine menumuz menu.cshtml yardımıyla ekleniyor. Bunun için alttaki template leri (cshrml) incelememiz lazım.
           
-          Menu.Cshtml
+          Menu.Cshtml : Model aslında aynı zamanda shape dir. IShape interface ini implamenet ettiği için tag ın sahip olması gereken bilgileri barındırır. menu içinde bulunana her menuitem gezilerek menu ye eklenir.
           
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu1.png)
           
-          MenuItem.Cshtml
+          MenuItem.Cshtml : Menu içindeki her menuitem için bu template çalıştırılır. admin sayfasından menu comten itemlerine bakılırsa contenttype nının menuitem olduğu görülür. ozaman bu menu item objes iiçin ayrı bir temolate e ihtiyaç var oda bu sayfadır. herbir menuitem da menulinkitem dan oluşmaktadır. daha doğrusu kodda görüleceği üzere dinamik olarak 3. satırda shape MenuItemLink olarak değiştirilmktedir.
           
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu2.png)
           
-          MenuItemLink.Cshtml
+          MenuItemLink.Cshtml : bizim template imizde differentiator yapılarak MenuItemLink-LinkMenuItem.cshtml kullaılmaktadır.
           
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu3.png)
           
           MenuItemLink-LinkMenuItem.Cshtml
           
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu4.png)
+          
+          
+          bu dosyalar madule içinbde olduğu için bunları değiştirmememiz lazım. bunun için meu.cshtml ve MenuItemLink-LinkMenuItem.Cshtml dosylarını theme mamıza kopyalamamız lazım. bu dosylar zaten TheAgent theme içinde mevcut olduğundan oradan alabiliriz. tabi dosyaları liquid olarak alacağız temamıza. menu ile ilgili liquid dosyalarını TheAgentTheme dan TheCreativeTheme kalsörü altındaki View kalsötrüne kopyaladıktan sonra csss class larını düzeltiyoruz.
+          
+          web server ı yenilediğimizde menu kısmının düzeldiğini görebiliriz.
+          
+          
+          
+          
+          
        
           
 
