@@ -71,9 +71,7 @@
           
           body içindeki script taglarının hemen üstüne alttaki satırı ekliyoruz
           
-          {% render_section "Footer", required: false %}
-          
-          
+          {% render_section "Footer", required: false %}      
       
         - Navigasyon için gereklei alattaki işlemleri yapıyoruz.
         nav tagları arasında yer alan ultagınıda içine alan div i siliyoruz. tüm menu itemleri veritabanından gelecek.
@@ -85,6 +83,13 @@
           cache id = menuyu caclemek için kullanıyoruz
           alias = content item adı
           cache_tag: "alias:main-menu" ise cache in değişip değişmediğini kontrol eden property
+          
+          
+          şuan sitede bu template i anble yapıp default template yaparsak üst taraf alttaki gibi görünecektir.
+          
+          ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardtheme1.png)
+          
+          
 
 
     - #### Content Type
