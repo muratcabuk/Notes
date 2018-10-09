@@ -25,6 +25,12 @@
   ##### Adım Adım theme oluşturma
   1. Öncelikle OrchardCore.Themes sanal klasörüne Theme projesi oluşturuyoruz class library olarak. Agency Theme proj dodyasını editkeme modunda açıp içeriğğini yeni oluşturduğumuz TheCreativeTheme projesinin proj doyasına editleme modunda  açıp yapıştırıyoruz. 
   
+  projeyi CMS projesine eklemeni iki yolu var: birinci yol CMS projesine referans olark eklemek; ikinci yol ise OrchardCore.Application.Cms.Targets.proj dosyasına  en alta alttaki satırı eklemektir. biz bu yöntemi tercih ettik.
+  
+  <ProjectReference Include="..\..\OrchardCore.Themes\TheCreativeTheme\TheCreativeTheme.csproj" PrivateAssets="none" />
+  
+  
+  
   kopyalama yaptığımız proj dosyası içindeki embeddedresources itemgroup nodu silinmeli
   
   2. Manifest dosyasını theagenttheme den kopyalarıp değştiriyoruz.
@@ -56,14 +62,30 @@
           
           {% resources type: "FootScript" %}
           
+          alttaki satırları da head tagını kapatmadan hemen öcesine ekliyoruz.
           
-        - 
-  
-  
-  
-   
-  
-  
+          {% resources type: "Meta" %}
+          {% resources type: "HeadLink" %}
+          {% resources type: "Stylesheet" %}
+          {% resources type: "HeadScript" %}
+          
+          body içindeki script taglarının hemen üstüne alttaki satırı ekliyoruz
+          
+          {% render_section "Footer", required: false %}
+          
+          
+      
+        - Navigasyon için gereklei alattaki işlemleri yapıyoruz.
+        nav tagları arasında yer alan ultagınıda içine alan div i siliyoruz. tüm menu itemleri veritabanından gelecek.
+       bu alanı sildikten sontra alttaki bölümü silinen yere kopyalıyoruz.
+       
+          {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
+          
+          menu : hem content_type hem de shape ı belirtir. shape menu template inin kullanılacağını belirtir.
+          cache id = menuyu caclemek için kullanıyoruz
+          alias = content item adı
+          cache_tag: "alias:main-menu" ise cache in değişip değişmediğini kontrol eden property
+
 
     - #### Content Type
 
