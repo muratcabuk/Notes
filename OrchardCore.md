@@ -92,15 +92,19 @@
           Tam bu noktada Orchard Core Shape mantığını b,raz anlamamız gerekiyor. Menu content-type ından oluşturulan main menu contentine nebulermizi ekledik. menu modulu içinde theme e eklediğimiz menu shape ine menumuz menu.cshtml yardımıyla ekleniyor. Bunun için 
           
           Menu.Cshtml
+          
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu1.png)
           
           MenuItem.Cshtml
+          
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu2.png)
           
           MenuItemLink.Cshtml
+          
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu3.png)
           
           MenuItemLink-LinkMenuItem.Cshtml
+          
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu4.png)
        
           
