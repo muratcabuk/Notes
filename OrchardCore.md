@@ -115,6 +115,8 @@
           
          - Sayfadaki ana kısmda yer alan title ı ve diğer içerikleri değiştirmek için 2 yol var .ya tüm html kopyalanarak bir content e konulur ve yönetim panelinden html editlenir. ya da her bir içerik alanı (yani html dışındaki ekrana basılan metinler) farklı contentlerden template e dokunmadan html içine basılır. biz bu örneğimizde ilk versiyonu yapacağız. daha sonra ikincisine de değinmeyi planlıyoruz.
          
+         Konu ile alakalı [Orchard Core Template sayfasına](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/) da bakılabilir.
+         
          bunun için yine TheAgentTheme içindeki alttaki alanı TheCreativeTheme altındaki Layout.liquid dosyasındaki navigasyon alanı hariç tüm içeriği açıklama satırına çevirip buraya kopyalıyoruz.
           
            <div class="container" id="main">
@@ -123,7 +125,7 @@
                     
            </div>
 
-       daha sonr aaçılma satırına çevirdiğimiz bu alanı    
+       daha sonr açılma satırına çevirdiğimiz bu alanı    
           
        
           
