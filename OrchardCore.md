@@ -69,7 +69,9 @@
           {% resources type: "Stylesheet" %}
           {% resources type: "HeadScript" %}
           
-          body içindeki script taglarının hemen üstüne alttaki satırı ekliyoruz. yonetim panelinde layers lara TemplateFooter adında bir html içerikli layer ekliyoruz. şuan içeriği boş olabilir.
+          body içindeki script taglarının hemen üstüne alttaki satırı ekliyoruz. yonetim panelinde Configuration > Settings > Layer içine virgülle ayrılmış yere TemplateFooter, TemplateHerader ekliyoruz. Layerlar ı Zone olarak düşünebiliriz
+          
+          yonetim panelinde layers lara TemplateFooter adında bir html içerikli layer ekliyoruz. şuan içeriği boş olabilir.
           
           {% render_section "TemplateFooter", required: false %}      
       
