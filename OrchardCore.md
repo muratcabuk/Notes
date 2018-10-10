@@ -69,9 +69,9 @@
           {% resources type: "Stylesheet" %}
           {% resources type: "HeadScript" %}
           
-          body içindeki script taglarının hemen üstüne alttaki satırı ekliyoruz
+          body içindeki script taglarının hemen üstüne alttaki satırı ekliyoruz. yonetim panelinde layers lara TemplateFooter adında bir html içerikli layer ekliyoruz. şuan içeriği boş olabilir.
           
-          {% render_section "Footer", required: false %}      
+          {% render_section "TemplateFooter", required: false %}      
       
         - Navigasyon için gereklei alattaki işlemleri yapıyoruz.
         nav tagları arasında yer alan ultagınıda içine alan div i siliyoruz. tüm menu itemleri veritabanından gelecek.
@@ -108,24 +108,28 @@
           ![resim](https://github.com/muratcabuk/Notes/blob/master/orchardthememenu4.png)
           
           
-          bu dosyalar madule içinbde olduğu için bunları değiştirmememiz lazım. bunun için meu.cshtml ve MenuItemLink-LinkMenuItem.Cshtml dosylarını theme mamıza kopyalamamız lazım. bu dosylar zaten TheAgent theme içinde mevcut olduğundan oradan alabiliriz. tabi dosyaları liquid olarak alacağız temamıza. menu ile ilgili liquid dosyalarını TheAgentTheme dan TheCreativeTheme kalsörü altındaki View kalsötrüne kopyaladıktan sonra csss class larını düzeltiyoruz.
+          bu dosyalar madule içinbde olduğu için bunları değiştirmememiz lazım. bunun için menu.cshtml ve MenuItemLink-LinkMenuItem.Cshtml dosylarını theme mamıza kopyalamamız lazım. bu dosylar zaten TheAgent theme içinde mevcut olduğundan oradan alabiliriz. tabi dosyaları liquid olarak alacağız temamıza. menu ile ilgili liquid dosyalarını TheAgentTheme dan TheCreativeTheme kalsörü altındaki View kalsötrüne kopyaladıktan sonra csss class larını düzeltiyoruz.
           
           web server ı yenilediğimizde menu kısmının düzeldiğini görebiliriz.
           
           
-         - Sayfadaki ana kısmda yer alan title ı ve diğer içerikleri değiştirmek için 2 yol var .ya tüm html kopyalanarak bir content e konulur ve yönetim panelinden html editlenir. ya da her bir içerik alanı (yani html dışındaki ekrana basılan metinler) farklı contentlerden template e dokunmadan html içine basılır. biz bu örneğimizde ilk versiyonu yapacağız. daha sonra ikincisine de değinmeyi planlıyoruz.
+         - Sayfadaki ana kısmda yer alan title ı ve diğer içerikleri teme içinden alarak yönetim panelinden editlenebilecek şekle getirmemiz lazım. bunun için yönetim panelinde templates menusunde yer alan  Content__Landing templatei için TheCreativeTheme temamıza Content-LandingPage.liquid adında bir sayfa oluşturuyoruz. Teheme içindeki header tagı ile başlayıp <section id="contact"> section ını da dahil ederek bu sayfaya kesip kopyalıyoruz. bu şekli ile sayfamızı çalıştırdığımızda sayfamızın çalıştığını görebiliriz ancak sayfadaki hiç bir içerik yönetim panelinden güncellenemez halde olacaktır. Bunun için yönetim panelinde content items altında yer alan  content type ı "Landing Page" olan "Orchard Core Website" başlıklı içeriğe göre ilgili içerikleri listeleyebilecek zone ları ayarlamamız gerekmektedir. 
+         
+          
+         
          
          Konu ile alakalı [Orchard Core Template sayfasına](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/) da bakılabilir.
          
-         bunun için yine TheAgentTheme içindeki alttaki alanı TheCreativeTheme altındaki Layout.liquid dosyasındaki navigasyon alanı hariç tüm içeriği açıklama satırına çevirip buraya kopyalıyoruz.
-          
-           <div class="container" id="main">
-           
-                    {% render_section "Content" %}
+         bunun için yine TheAgentTheme içindeki alttaki satırı TheCreativeTheme altındaki Layout.liquid dosyasındaki navigasyon alanı hariç tüm içeriği açıklama satırına çevirip buraya kopyalıyoruz. yonetim panelinde layers lara TemplateHeader adında bir html içerikli layer ekliyoruz. şuan içeriği boş olabilir.
+                             
+                   
+                   {% render_section "TemplateHeader", required: false %}  
+                   
+                   {% render_section "Content" %}
                     
-           </div>
+      
 
-       daha sonr açılma satırına çevirdiğimiz bu alanı    
+       
           
        
           
