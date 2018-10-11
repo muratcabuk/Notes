@@ -235,6 +235,7 @@ Orchard CMS deki anlatım :
    
    
    Content Shape Events
+   
    ![Content Shape Event](https://github.com/muratcabuk/Notes/blob/master/ShapeEvents.png)
    
    
