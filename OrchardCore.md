@@ -126,8 +126,7 @@
      {% render_section "Content" %}
          
      Bu noktoda şunu hatırlamamız gerekşyor. aslında veri tabanındaki içeriklerin aynı olması gerekiyor.  Ancak uyguladığımız theme Agent theme anssayfasından farklı olduğu için default içerik olarak agent theme altındaki içerikleri alacağız. yani tasarımımız içerik olarak biraz değişecek.
-         
-         
+              
 
        
     - #### Content Type
@@ -233,6 +232,8 @@ Orchard CMS deki anlatım :
    
    ![Creating Content Shape](https://github.com/muratcabuk/Notes/blob/master/CreatingContentShape.png)
    
+   
+   
    Content Shape Events
    ![Content Shape Event](https://github.com/muratcabuk/Notes/blob/master/ShapeEvents.png)
    
@@ -267,7 +268,7 @@ Orchard CMS deki anlatım :
   
   Module Manifest
   
-- ### [YESQL](https://github.com/krisajenkins/yesql)
+- ### [YESSQL](https://github.com/krisajenkins/yesql)
 
   Yesql ORM değildir yazarın tabiriyle DRN ()
   
