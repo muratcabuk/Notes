@@ -115,17 +115,17 @@
           web server ı yenilediğimizde menu kısmının düzeldiğini görebiliriz.
           
           
-         - Sayfadaki (Layout.liquid dosyasındaki) ana kısmda yer alan title ı ve diğer içerikleri teme içinden alarak yönetim panelinden editlenebilecek şekle getirmemiz lazım. bunun için yönetim panelinde templates menusunde yer alan  Content__Landing templatei için TheCreativeTheme temamıza Content-LandingPage.liquid adında bir sayfa oluşturuyoruz. Theme içindeki header tagı ile başlayıp <section id="contact"> section ını da dahil ederek bu sayfaya kesip kopyalıyoruz. bu şekli ile sayfamızı çalıştırdığımızda sayfamızın çalıştığını görebiliriz ancak sayfadaki hiç bir içerik yönetim panelinden güncellenemez halde olacaktır. Bunun için yönetim panelinde content items altında yer alan  content type ı "Landing Page" olan "Orchard Core Website" başlıklı içeriğe göre ilgili içerikleri listeleyebilecek zone ları ayarlamamız gerekmektedir. 
+         - Sayfadaki (Layout.liquid dosyasındaki) ana kısmda yer alan title ı ve diğer içerikleri teme içinden alarak yönetim panelinden editlenebilecek şekle getirmemiz lazım. bunun için yönetim panelinde templates menusunde yer alan  Content__Landing templatei için TheCreativeTheme temamıza Content-LandingPage.liquid adında bir sayfa oluşturuyoruz. Theme içindeki header tagı ile başlayıp < section id="contact" > section ını da dahil ederek bu sayfaya kesip kopyalıyoruz. bu şekli ile sayfamızı çalıştırdığımızda sayfamızın çalıştığını görebiliriz ancak sayfadaki hiç bir içerik yönetim panelinden güncellenemez halde olacaktır. Bunun için yönetim panelinde content items altında yer alan  content type ı "Landing Page" olan "Orchard Core Website" başlıklı içeriğe göre ilgili içerikleri listeleyebilecek zone ları ayarlamamız gerekmektedir. 
     
     Konu ile alakalı [Orchard Core Template sayfasına](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/) da bakılabilir.
          
-      Daha sonra ansayfa içeriklerini Layout.liquid e ekleyabilmek için içeriği kesip aldığımız alana  alttaki satırları ekliyoruz . yonetim panelinde layers lara TemplateHeader adında bir html içerikli layer ekliyoruz. şuan içeriği boş olabilir.
+     Daha sonra ansayfa içeriklerini Layout.liquid e ekleyabilmek için içeriği kesip aldığımız alana  alttaki satırları ekliyoruz . yonetim panelinde layers lara TemplateHeader adında bir html içerikli layer ekliyoruz. şuan içeriği boş olabilir.
          
-          {% render_section "TemplateHeader", required: false %}  
+     {% render_section "TemplateHeader", required: false %}  
                    
-          {% render_section "Content" %}
+     {% render_section "Content" %}
          
-         Bu noktoda şunu hatırlamamız gerekşyor. aslında veri tabanındaki içeriklerin aynı olması gerekiyor.  Ancak uyguladığımız theme Agent theme anssayfasından farklı olduğu için default içerik olarak agent theme altındaki içerikleri alacağız. yani tasarımımız içerik olarak biraz değişecek.
+     Bu noktoda şunu hatırlamamız gerekşyor. aslında veri tabanındaki içeriklerin aynı olması gerekiyor.  Ancak uyguladığımız theme Agent theme anssayfasından farklı olduğu için default içerik olarak agent theme altındaki içerikleri alacağız. yani tasarımımız içerik olarak biraz değişecek.
          
          
 
@@ -309,6 +309,9 @@ Orchard CMS deki Laclization nasıl yapılır sayfası: [adres](http://docs.orch
 [Saas Framework Video](https://www.youtube.com/watch?v=Bqgnd2mfRQY)
 
 
+- ### Workflow
+
+burada kullanılan bir kütüphahne var JINT onun kullanımı ile ilgili [video](https://www.youtube.com/watch?v=yCs6UmogKEg) ve ilgili [GitHub sayfası](https://github.com/sebastienros/jint). Bu kütüphane javascript kodunu server da çalıştırmak için geliştirilmiş (yine de kontrol edilmeli). 
 
 
 
