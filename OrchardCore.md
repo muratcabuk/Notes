@@ -7,6 +7,14 @@
       2. Decoupled CMS : render işlemlerinin serverda yapıldığı ancak altyapının theme ve html generate etme özelliklerinin kullanımadığı CMS türüdür.
       3. Headless CMS: server tarafından istemciye sadece datanın sunulduğu, tüm tasarım ve render işlemlerinin istemci tarafında yapıldığı şekildir. 
 
+    - #### Liquid ve Fluid 
+    
+    Fluid Sebastian ın Liquid Template Language ı asp.net core a uyarlaması.
+    
+    Liquid için [adres](https://shopify.github.io/liquid/). Tag lardan ve filterlardan oluşur.
+    
+    Fluid için [adres](https://github.com/sebastienros/fluid)
+    
 
     - #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
 
