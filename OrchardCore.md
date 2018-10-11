@@ -119,16 +119,19 @@
     
     Konu ile alakalı [Orchard Core Template sayfasına](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/) da bakılabilir.
          
-     Daha sonra ansayfa içeriklerini Layout.liquid e ekleyabilmek için içeriği kesip aldığımız alana  alttaki satırları ekliyoruz . yonetim panelinde layers lara TemplateHeader adında bir html içerikli layer ekliyoruz. şuan içeriği boş olabilir.
+     Daha sonra ansayfa içeriklerini Layout.liquid e ekleyabilmek için içeriği kesip aldığımız alana  alttaki satırları ekliyoruz . yonetim panelinde layers lara TemplateHeader adında bir html içerikli layer ekliyoruz. TemplateHeader koduna içerikteki header tagını kopyalayabiliriz.
          
      {% render_section "TemplateHeader", required: false %}  
                    
      {% render_section "Content" %}
          
-     Bu noktoda şunu hatırlamamız gerekşyor. aslında veri tabanındaki içeriklerin aynı olması gerekiyor.  Ancak uyguladığımız theme Agent theme anssayfasından farklı olduğu için default içerik olarak agent theme altındaki içerikleri alacağız. yani tasarımımız içerik olarak biraz değişecek.
-              
-
-       
+     Bu noktoda şunu hatırlamamız gerekiyor. aslında veri tabanındaki içeriklerin aynı olması gerekiyor.  Ancak uyguladığımız theme Agent theme anssayfasından farklı olduğu için default içerik olarak agent theme altındaki içerikleri alacağız. yani tasarımımız içerik olarak biraz değişecek.
+     
+     Content-LandingPage.liquid içeriğini yönetim panelinde Template altındaki Content__LandingPage içeriğine göre güncelliyoruz. veri tabanından gelen verileri çekip tasarıma basacak şekilde liquid kodlarını sayfamıza taşıyoruz.
+     
+     bu işlemden sonra ilgilialanlar artık editlenebilir şekle gelecektir. konu ile ilgili [video](https://www.youtube.com/watch?v=wtAIgn4gYXc)
+     
+          
     - #### Content Type
 
   Orchars CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Content-types/#content-type)
