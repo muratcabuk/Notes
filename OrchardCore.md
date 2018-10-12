@@ -139,23 +139,6 @@
      
      bu işlemden sonra ilgilialanlar artık editlenebilir şekle gelecektir. konu ile ilgili [video](https://www.youtube.com/watch?v=wtAIgn4gYXc)
      
-          
-    - #### Content Type
-
-  Orchars CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Content-types/#content-type)
-  
-  Content Type content in kategorisi olarak görülebilir. content in ne sunduğunun tanımıdır. örneğin bir blog sitesindeki   bir post veya fotoğraf gibi.
-  
-  [anatomy of content type](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
-  
-
-    - #### [Content](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Contents/README/)
-
-  Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#content)
-  
-  Kısaca içinde bilgi bulunan ve kullanıcıya sunulan hertürlü içerik. 
-
-    - #### [Content Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-templates)
 
     - #### [Types, Parts, and Fields](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
   
@@ -170,6 +153,27 @@
   Diğer bir fark ise, içerik türü (content type) başına belirli bir türün (type) yalnızça bir parçasına (part) sahip olabilmemizdir. Ancak bir parça (part) belirli bir tür (type) için birçok alana (field) sahip olabilir. Bunu anlatmanın bir diğer yolu ise şudur: parça (part) üzerindeki alanlar (field), alanın türüne (field's type) ait değerlerin string dictionary si iken, içerik türü (content type) ise parça türlerinin (part type) bir listesi (isimler olmaksızın) olmasıdır.
       
 [content type anatomisi (okumalısın)](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
+
+
+
+   - #### Content Type
+
+  Orchars CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Content-types/#content-type)
+  
+  Content Type content in kategorisi olarak görülebilir. content in ne sunduğunun tanımıdır. örneğin bir blog sitesindeki   bir post veya fotoğraf gibi.
+  
+  [anatomy of content type](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
+  
+  
+  Content Type create ederken Bag ile List arasındaki temek fark, Bag in ilgili contenet type dışında kullanılamasıdır. List ise oluşturulduktan sonra içinde bulunduğu content type dan bağımsız kullanılabilir.
+
+   - #### [Content](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Contents/README/)
+
+  Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#content)
+  
+  Kısaca içinde bilgi bulunan ve kullanıcıya sunulan hertürlü içerik. 
+
+   - #### [Content Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-templates)
 
    - #### [Content Field](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.ContentFields/README/)
 
