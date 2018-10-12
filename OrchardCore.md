@@ -139,6 +139,9 @@
      
      bu işlemden sonra ilgilialanlar artık editlenebilir şekle gelecektir. konu ile ilgili [video](https://www.youtube.com/watch?v=wtAIgn4gYXc)
      
+     ayrıca kesinlikle şu adrese de bakılmalı [Orchard Core Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/).
+     
+     
 
     - #### [Types, Parts, and Fields](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
   
