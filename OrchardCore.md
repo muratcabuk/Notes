@@ -310,6 +310,11 @@ Orchard CMS deki linkler: [adres](http://docs.orchardproject.net/en/latest/Docum
 
 Orchard CMS deki Laclization nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Creating-global-ready-applications/#localizing-the-orchard-application-and-orchard-modules)
 
+- ### Resources
+
+https://www.youtube.com/watch?v=-CX98nfXfo0
+
+
 - ### Module
 
 [Video1](https://www.youtube.com/watch?v=LoPlECp31Oo)
