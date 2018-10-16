@@ -6,6 +6,8 @@
       1. Standart CMS : Sunucu taraflı ve istemci taraflı tüm işlerim tek altyapıyla sağlandığı CMS ler. örneğin orchard core theme giydirme işlerinin yapıldığı ve sayfanın HTML render işlemlerinin de bu theme in kullanılarak server tarafından yapılarak çalıştırılan CMS buna örnektir.
       2. Decoupled CMS : render işlemlerinin serverda yapıldığı ancak altyapının theme ve html generate etme özelliklerinin kullanımadığı CMS türüdür.
       3. Headless CMS: server tarafından istemciye sadece datanın sunulduğu, tüm tasarım ve render işlemlerinin istemci tarafında yapıldığı şekildir. 
+      
+      Orchard Core'un yapabildilerini anltan bir [video](https://www.youtube.com/watch?v=6ZaqWmq8Pog). Tavsiye edilir.
 
     - #### Liquid ve Fluid 
     
