@@ -11,6 +11,15 @@ https://www.youtube.com/watch?v=uncrCoLiq-g&list=PLHN6JcK509bOrevTCFrSMeAfBtuib4
 https://www.youtube.com/watch?v=ciRGHbfKBBo&list=PL_Z0TaFYSF3IqQKPOmbigAOVMMlZ2yU4K
 
 
+https://fatihhayrioglu.com/git/
+
+
+https://github.com/vigo/git-puf-noktalari/blob/master/bolum-01/patch-mod-git-add.md
+
+
+
+
+
 
 http://marklodato.github.io/visual-git-guide/index-en.html
 
