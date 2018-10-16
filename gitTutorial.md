@@ -1,6 +1,8 @@
 
 https://git-scm.com/book/tr/v2/Ba%C5%9Flang%C4%B1%C3%A7-Git%E2%80%99in-Temelleri
 
+https://git-scm.com/book/tr/v1/Git-te-Dallanma-Rebasing-Tekrar-Adresleme
+https://aliozgur.gitbooks.io/git101/content/bolum_1_-_baslangic/
 
 https://www.youtube.com/watch?v=LIG-OsGysWM&list=PLPrHLaayVkhnNstGIzQcxxnj6VYvsHBHy&index=15
 
