@@ -1,5 +1,23 @@
 ## Orchard Core 
 
+- ### Başlamadan Önce
+
+    - Öğrenilmesi gereken tasarım desenleri (herhangi bir kaynağa link vermiyorum internette yüzlerce örnek var zaten)
+    
+      Builder Design Pattern 
+      
+      Abstract Design Pattern
+      
+      Options pattern
+      
+      
+    - Öğrenilmesi gereken bası advance konular
+    
+      [Thread Safety - Multi Thread Locking](https://www.c-sharpcorner.com/UploadFile/de41d6/monitor-and-lock-in-C-Sharp/)
+      
+      [Thread Safety - Multi Thread Locking](http://www.albahari.com/threading/part2.aspx)
+
+
 - ### Tasarım Terminolojisi
 
     - CMS Types
