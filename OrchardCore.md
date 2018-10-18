@@ -11,11 +11,13 @@
       Options pattern - [link](https://weblog.west-wind.com/posts/2016/May/23/Strongly-Typed-Configuration-Settings-in-ASPNET-Core#Using-String-Configuration-Values) - [link](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-2.1)
       
       
-    - Öğrenilmesi gereken bası advance konular
+    - Öğrenilmesi gereken bası ileri konular konular
     
       [Thread Safety - Multi Thread Locking](https://www.c-sharpcorner.com/UploadFile/de41d6/monitor-and-lock-in-C-Sharp/)
       
       [Thread Safety - Multi Thread Locking](http://www.albahari.com/threading/part2.aspx)
+      
+      [ASP.Net Core Fundamentals sayfası](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-2.1) detaylı şekilde alt linklerle birlikte hazmedilmeli
 
 
 - ### Tasarım Terminolojisi
