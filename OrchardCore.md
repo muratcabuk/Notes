@@ -17,6 +17,8 @@
       
       [Thread Safety - Multi Thread Locking](http://www.albahari.com/threading/part2.aspx)
       
+      [Factoty Based Middleware] (https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/extensibility?view=aspnetcore-2.1)
+      
       [ASP.Net Core Fundamentals sayfası](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-2.1) detaylı şekilde alt linklerle birlikte hazmedilmeli
 
 
