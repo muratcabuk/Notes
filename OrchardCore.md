@@ -2,13 +2,13 @@
 
 - ### Başlamadan Önce
 
-    - Öğrenilmesi gereken tasarım desenleri (herhangi bir kaynağa link vermiyorum internette yüzlerce örnek var zaten)
+    - Öğrenilmesi gereken tasarım desenleri
     
       Builder Design Pattern 
       
       Abstract Design Pattern
       
-      Options pattern
+      Options pattern - [link](https://weblog.west-wind.com/posts/2016/May/23/Strongly-Typed-Configuration-Settings-in-ASPNET-Core#Using-String-Configuration-Values) - [link](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-2.1)
       
       
     - Öğrenilmesi gereken bası advance konular
