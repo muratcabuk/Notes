@@ -6,19 +6,22 @@
 
         - Creatinal Design Patterns
     
-      Builder Design Pattern 
+            Builder Design Pattern 
       
-      Abstract Factory Design Pattern
+            Abstract Factory Design Pattern
       
-      Factory Design Pattern
+            Factory Design Pattern
       
         - Behavioral design Patterns
       
-      Observer Design Pattern 
+            Observer Design Pattern 
+            
+            Command design Pattern
+      
       
         - Structural Design Patterns
       
-      Decorator Design Patterns
+            Decorator Design Patterns
       
       
       
