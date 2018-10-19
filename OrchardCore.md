@@ -21,24 +21,13 @@
       
       [ASP.Net Core Fundamentals sayfası](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-2.1) detaylı şekilde alt linklerle birlikte hazmedilmeli
       
+      [Asp.net Core Application Model](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/application-model?view=aspnetcore-2.1)
       
-https://github.com/TelerikAcademy/Object-Oriented-Programming/blob/master/Topics/03.%20Extension-Methods-Delegates-Lambda-LINQ/README.md
-
-https://www.dotnetperls.com/delegate
-
-https://www.oreilly.com/library/view/c-70-in/9781491987643/ch04.html
-
-https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods
-
-https://stackoverflow.com/questions/852916/how-to-create-extension-methods-with-lambda-expressions
-
-https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions
-
-
-https://www.c-sharpcorner.com/uploadfile/ashish_2008/introduction-to-linq-extension-methods-and-lambda-expressions/
-
-
-
+      [Asp.net Core Application Part](https://docs.microsoft.com/en-us/aspnet/core/mvc/advanced/app-parts?view=aspnetcore-2.1)
+      
+      Extension Methods,Delegastes ve Events, Lambda Expression 
+      
+[link1](https://github.com/TelerikAcademy/Object-Oriented-Programming/blob/master/Topics/03.%20Extension-Methods-Delegates-Lambda-LINQ/README.md) - [link2](https://www.dotnetperls.com/delegate) - [link3](https://www.oreilly.com/library/view/c-70-in/9781491987643/ch04.html) - [link4](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) - [link5](https://stackoverflow.com/questions/852916/how-to-create-extension-methods-with-lambda-expressions) - [link6](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) - [link7](https://www.c-sharpcorner.com/uploadfile/ashish_2008/introduction-to-linq-extension-methods-and-lambda-expressions/)
 
 - ### Tasarım Terminolojisi
 
