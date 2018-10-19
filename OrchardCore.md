@@ -30,35 +30,35 @@
       
     - Öğrenilmesi gereken bası ileri konular konular
     
-      [Thread Safety - Multi Thread Locking](https://www.c-sharpcorner.com/UploadFile/de41d6/monitor-and-lock-in-C-Sharp/)
+        [Thread Safety - Multi Thread Locking](https://www.c-sharpcorner.com/UploadFile/de41d6/monitor-and-lock-in-C-Sharp/)
       
-      [Thread Safety - Multi Thread Locking](http://www.albahari.com/threading/part2.aspx)
+        [Thread Safety - Multi Thread Locking](http://www.albahari.com/threading/part2.aspx)
       
-      [Application Startup](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-2.1)
+        [Application Startup](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-2.1)
       
-      [external assembly in ASP.NET Core with IHostingStartup](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/platform-specific-configuration?view=aspnetcore-2.1&tabs=linux)
+        [external assembly in ASP.NET Core with IHostingStartup](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/platform-specific-configuration?view=aspnetcore-2.1&tabs=linux)
       
-      [Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-2.1)
+        [Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-2.1)
       
-      [Options](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-2.1)
+        [Options](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-2.1)
       
-      [WebHost](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-2.1)
+        [WebHost](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-2.1)
       
-      [Background tasks with hosted services](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-2.1)
+        [Background tasks with hosted services](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-2.1)
       
-      [Change Tokens](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/change-tokens?view=aspnetcore-2.1)
+        [Change Tokens](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/change-tokens?view=aspnetcore-2.1)
       
-      [Factoty Based Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/extensibility?view=aspnetcore-2.1)
+        [Factoty Based Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/extensibility?view=aspnetcore-2.1)
       
-      [ASP.Net Core Fundamentals sayfası](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-2.1) detaylı şekilde alt linklerle birlikte hazmedilmeli
+        [ASP.Net Core Fundamentals sayfası](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-2.1) detaylı şekilde alt linklerle birlikte hazmedilmeli
       
-      [Asp.net Core Application Model](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/application-model?view=aspnetcore-2.1)
+        [Asp.net Core Application Model](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/application-model?view=aspnetcore-2.1)
       
-      [Asp.net Core Application Part](https://docs.microsoft.com/en-us/aspnet/core/mvc/advanced/app-parts?view=aspnetcore-2.1)
+        [Asp.net Core Application Part](https://docs.microsoft.com/en-us/aspnet/core/mvc/advanced/app-parts?view=aspnetcore-2.1)
       
-      Extension Methods,Delegastes ve Events, Lambda Expression 
+        Extension Methods,Delegastes ve Events, Lambda Expression 
       
-[link1](https://github.com/TelerikAcademy/Object-Oriented-Programming/blob/master/Topics/03.%20Extension-Methods-Delegates-Lambda-LINQ/README.md) - [link2](https://www.dotnetperls.com/delegate) - [link3](https://www.oreilly.com/library/view/c-70-in/9781491987643/ch04.html) - [link4](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) - [link5](https://stackoverflow.com/questions/852916/how-to-create-extension-methods-with-lambda-expressions) - [link6](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) - [link7](https://www.c-sharpcorner.com/uploadfile/ashish_2008/introduction-to-linq-extension-methods-and-lambda-expressions/)
+        [link1](https://github.com/TelerikAcademy/Object-Oriented-Programming/blob/master/Topics/03.%20Extension-Methods-Delegates-Lambda-LINQ/README.md) - [link2](https://www.dotnetperls.com/delegate) - [link3](https://www.oreilly.com/library/view/c-70-in/9781491987643/ch04.html) - [link4](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) - [link5](https://stackoverflow.com/questions/852916/how-to-create-extension-methods-with-lambda-expressions) - [link6](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) - [link7](https://www.c-sharpcorner.com/uploadfile/ashish_2008/introduction-to-linq-extension-methods-and-lambda-expressions/)
 
 - ### Tasarım Terminolojisi
 
