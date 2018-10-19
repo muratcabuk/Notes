@@ -3,10 +3,24 @@
 - ### Başlamadan Önce
 
     - Öğrenilmesi gereken tasarım desenleri
+
+        - Creatinal Design Patterns
     
       Builder Design Pattern 
       
-      Abstract Design Pattern
+      Abstract Factory Design Pattern
+      
+      Factory Design Pattern
+      
+        - Behavioral design Patterns
+      
+      Observer Design Pattern 
+      
+        - Structural Design Patterns
+      
+      Decorator Design Patterns
+      
+      
       
       Options pattern - [link](https://weblog.west-wind.com/posts/2016/May/23/Strongly-Typed-Configuration-Settings-in-ASPNET-Core#Using-String-Configuration-Values) - [link](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-2.1)
       
