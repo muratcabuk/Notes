@@ -17,7 +17,21 @@
       
       [Thread Safety - Multi Thread Locking](http://www.albahari.com/threading/part2.aspx)
       
-      [Factoty Based Middleware] (https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/extensibility?view=aspnetcore-2.1)
+      [Application Startup](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-2.1)
+      
+      [external assembly in ASP.NET Core with IHostingStartup](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/platform-specific-configuration?view=aspnetcore-2.1&tabs=linux)
+      
+      [Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-2.1)
+      
+      [Options](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-2.1)
+      
+      [WebHost](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-2.1)
+      
+      [Background tasks with hosted services](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-2.1)
+      
+      [Change Tokens](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/change-tokens?view=aspnetcore-2.1)
+      
+      [Factoty Based Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/extensibility?view=aspnetcore-2.1)
       
       [ASP.Net Core Fundamentals sayfası](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-2.1) detaylı şekilde alt linklerle birlikte hazmedilmeli
       
