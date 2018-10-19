@@ -20,6 +20,24 @@
       [Factoty Based Middleware] (https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/extensibility?view=aspnetcore-2.1)
       
       [ASP.Net Core Fundamentals sayfası](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-2.1) detaylı şekilde alt linklerle birlikte hazmedilmeli
+      
+      
+https://github.com/TelerikAcademy/Object-Oriented-Programming/blob/master/Topics/03.%20Extension-Methods-Delegates-Lambda-LINQ/README.md
+
+https://www.dotnetperls.com/delegate
+
+https://www.oreilly.com/library/view/c-70-in/9781491987643/ch04.html
+
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods
+
+https://stackoverflow.com/questions/852916/how-to-create-extension-methods-with-lambda-expressions
+
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions
+
+
+https://www.c-sharpcorner.com/uploadfile/ashish_2008/introduction-to-linq-extension-methods-and-lambda-expressions/
+
+
 
 
 - ### Tasarım Terminolojisi
