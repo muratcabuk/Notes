@@ -349,6 +349,29 @@ Orchard CMS deki anlatım :
   
   Module Manifest
   
+  
+- ### SHELL
+
+Burada Shell projeleri tanent seviyesinde sitler arasında izolasyon sağlamak için kullanılır.
+çünki host bütün app için singleton olarak create edilir. halbuki tanent ların  herbiri kendi içinde sağlam bir izolasyona ihtiyaç duyar. bunun için multitanent olmayan bir uygulamda dahi aslında defaultanent olarak bir tanent vardır ve host yüklendikten hemen sonra buna ait shell yüklenerek o tanent ait ayarlar veriler shell yardımıyla işletilir.
+
+- ### HOST
+
+    1. uygulamanın bir web server host edilmesi
+    2. web sitesinin console üzerinden host edilmesi
+    3. web servisinin servis üerinden host edilmesi
+    
+    
+ayrıca bir de projelerde OrchardCore.Hosting,Console uygulaması görülecektir.
+bu proje orchard ın eski sürümünde de görüleceği üzere orchard ın console üzerinde yönetilebilmesine yönelik bir uygulama. Beta 2 sürümünde bir işlevselliği şuan yok gibi görünüyor ancak ileride bir çok işin yapılabileceği bir CLI olacak. Sharepoint kullanıcıalrının Powershell yardımıyla sistemi yönetmesi gibi bir işlevi olacak.
+
+
+- ### COMMAND
+
+CLI ile (veya webhost gibi bir ortamdan) gelen komutları tanımlama, 
+metod ve argumanları ayrıştırmaya yarayan comutlardaki hataları bulmaya vs yarayan projedir.
+
+  
 - ### [YESSQL](https://github.com/krisajenkins/yesql)
 
   Yesql ORM değildir yazarın tabiriyle DRN ()
