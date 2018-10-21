@@ -1,6 +1,6 @@
-## Orchard Core 
+## ORCHARD CORE
 
-- ### Başlamadan Önce
+- ### BAŞLAMADAN ÖNCE
 
     - Öğrenilmesi gereken tasarım desenleri
 
@@ -60,7 +60,20 @@
       
         [link1](https://github.com/TelerikAcademy/Object-Oriented-Programming/blob/master/Topics/03.%20Extension-Methods-Delegates-Lambda-LINQ/README.md) - [link2](https://www.dotnetperls.com/delegate) - [link3](https://www.oreilly.com/library/view/c-70-in/9781491987643/ch04.html) - [link4](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) - [link5](https://stackoverflow.com/questions/852916/how-to-create-extension-methods-with-lambda-expressions) - [link6](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) - [link7](https://www.c-sharpcorner.com/uploadfile/ashish_2008/introduction-to-linq-extension-methods-and-lambda-expressions/)
 
-- ### Tasarım Terminolojisi
+
+- ### NASIL ÇALIŞIR?
+
+    Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/)
+  
+    [video1](https://www.youtube.com/watch?v=2XP_klGjg40)
+  
+        Capabilities
+    [video2](https://www.youtube.com/watch?v=6ZaqWmq8Pog)
+  
+
+
+
+- ### TASARIM TERMİNOLOJİSİ
 
     - CMS Types
       1. Standart CMS : Sunucu taraflı ve istemci taraflı tüm işlerim tek altyapıyla sağlandığı CMS ler. örneğin orchard core theme giydirme işlerinin yapıldığı ve sayfanın HTML render işlemlerinin de bu theme in kullanılarak server tarafından yapılarak çalıştırılan CMS buna örnektir.
@@ -392,9 +405,9 @@ metod ve argumanları ayrıştırmaya yarayan comutlardaki hataları bulmaya vs 
   
   [YESSQL Example](https://github.com/sebastienros/yessql/tree/master/samples)
    
-- ### Routing
+- ### ROUTING
 
-- ### Localization
+- ### LOCALIZATION
 
 Localization hakkında Orchard Core daki Localization Module sayfası: [adres](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Localization/README/)
 
@@ -402,42 +415,32 @@ Orchard CMS deki linkler: [adres](http://docs.orchardproject.net/en/latest/Docum
 
 Orchard CMS deki Laclization nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Creating-global-ready-applications/#localizing-the-orchard-application-and-orchard-modules)
 
-- ### Resources
+- ### RESOURCES
 
 https://www.youtube.com/watch?v=-CX98nfXfo0
 
 
-- ### Module
+- ### MODULES
 
 [Video1](https://www.youtube.com/watch?v=LoPlECp31Oo)
 
 
-- ### Multitanent Website
+- ### MMULTITENANCY
 
 [Nasıl Yapılır Video](https://www.youtube.com/watch?v=yWpz8p-oaKg)
 
 [Saas Framework Video](https://www.youtube.com/watch?v=Bqgnd2mfRQY)
 
 
-- ### Workflow
+- ### WORKFLOW
 
-burada kullanılan bir kütüphahne var JINT onun kullanımı ile ilgili [video](https://www.youtube.com/watch?v=yCs6UmogKEg) ve ilgili [GitHub sayfası](https://github.com/sebastienros/jint). Bu kütüphane javascript kodunu server da çalıştırmak için geliştirilmiş (yine de kontrol edilmeli). 
+     burada kullanılan bir kütüphahne var JINT onun kullanımı ile ilgili [video](https://www.youtube.com/watch?v=yCs6UmogKEg) ve ilgili [GitHub sayfası](https://github.com/sebastienros/jint). Bu kütüphane javascript kodunu server da çalıştırmak için geliştirilmiş (yine de kontrol edilmeli). 
+
+    [Workflows](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Workflows/README/) 
 
 
 
-- ### Nasıl Çalışır
-
-  Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/)
   
-  [video1](https://www.youtube.com/watch?v=2XP_klGjg40)
-  
-  Capabilities
-  [video2](https://www.youtube.com/watch?v=6ZaqWmq8Pog)
-  
-  
-- ### [Workflows](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Workflows/README/)  
-  
-
 
 - ### Links
   - #### Definitions
