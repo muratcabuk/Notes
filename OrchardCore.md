@@ -71,37 +71,37 @@
 
     - #### Liquid ve Fluid 
     
-    Fluid Sebastian ın Liquid Template Language ı asp.net core a uyarlaması.
+        Fluid Sebastian ın Liquid Template Language ı asp.net core a uyarlaması.
     
-    Liquid için [adres](https://shopify.github.io/liquid/). Tag lardan ve filterlardan oluşur.
+        Liquid için [adres](https://shopify.github.io/liquid/). Tag lardan ve filterlardan oluşur.
     
-    Fluid için [adres](https://github.com/sebastienros/fluid)
+        Fluid için [adres](https://github.com/sebastienros/fluid)
     
 
     - #### [Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#available-templates)
 
     - #### [Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/)
         
-    [video1](https://www.youtube.com/watch?v=wtAIgn4gYXc&index=7&list=PLuskKJW0FhJfOAN3dL0Y0KBMdG1pKESVn)
-    [video2](https://www.youtube.com/watch?v=bt3Stgb_wbI)
+        [video1](https://www.youtube.com/watch?v=wtAIgn4gYXc&index=7&list=PLuskKJW0FhJfOAN3dL0Y0KBMdG1pKESVn)
+        [video2](https://www.youtube.com/watch?v=bt3Stgb_wbI)
   
-    Orchard CMS deki anlatım: [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes)
+        Orchard CMS deki anlatım: [adres](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#themes)
   
-    Orchard CMS de Theme nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Writing-a-new-theme)
+        Orchard CMS de Theme nasıl yapılır sayfası: [adres](http://docs.orchardproject.net/en/latest/Documentation/Writing-a-new-theme)
   
   
-  Buradaki theme yukarıda bahsi geçen "[Standart CMS](https://github.com/muratcabuk/Notes/blob/master/OrchardCore.md#tasar%C4%B1m-terminolojisi)" 
+    Buradaki theme yukarıda bahsi geçen "[Standart CMS](https://github.com/muratcabuk/Notes/blob/master/OrchardCore.md#tasar%C4%B1m-terminolojisi)" 
   
   ##### Adım Adım theme oluşturma
   1. Öncelikle OrchardCore.Themes sanal klasörüne Theme projesi oluşturuyoruz class library olarak. Agency Theme proj dodyasını editkeme modunda açıp içeriğğini yeni oluşturduğumuz TheCreativeTheme projesinin proj doyasına editleme modunda  açıp yapıştırıyoruz. 
   
-  projeyi CMS projesine eklemeni iki yolu var: birinci yol CMS projesine referans olark eklemek; ikinci yol ise OrchardCore.Application.Cms.Targets.proj dosyasına  en alta alttaki satırı eklemektir. biz bu yöntemi tercih ettik.
+    projeyi CMS projesine eklemeni iki yolu var: birinci yol CMS projesine referans olark eklemek; ikinci yol ise OrchardCore.Application.Cms.Targets.proj dosyasına  en alta alttaki satırı eklemektir. biz bu yöntemi tercih ettik.
   
-  <ProjectReference Include="..\..\OrchardCore.Themes\TheCreativeTheme\TheCreativeTheme.csproj" PrivateAssets="none" />
+   < ProjectReference Include="..\..\OrchardCore.Themes\TheCreativeTheme\TheCreativeTheme.csproj" PrivateAssets="none" />
   
   
   
-  kopyalama yaptığımız proj dosyası içindeki embeddedresources itemgroup nodu silinmeli
+    kopyalama yaptığımız proj dosyası içindeki embeddedresources itemgroup nodu silinmeli
   
   2. Manifest dosyasını theagenttheme den kopyalarıp değştiriyoruz.
   
@@ -187,62 +187,62 @@
           
          - Sayfadaki (Layout.liquid dosyasındaki) ana kısmda yer alan title ı ve diğer içerikleri teme içinden alarak yönetim panelinden editlenebilecek şekle getirmemiz lazım. bunun için yönetim panelinde templates menusunde yer alan  Content__Landing templatei için TheCreativeTheme temamıza Content-LandingPage.liquid adında bir sayfa oluşturuyoruz. Theme içindeki header tagı ile başlayıp < section id="contact" > section ını da dahil ederek bu sayfaya kesip kopyalıyoruz. bu şekli ile sayfamızı çalıştırdığımızda sayfamızın çalıştığını görebiliriz ancak sayfadaki hiç bir içerik yönetim panelinden güncellenemez halde olacaktır. Bunun için yönetim panelinde content items altında yer alan  content type ı "Landing Page" olan "Orchard Core Website" başlıklı içeriğe göre ilgili içerikleri listeleyebilecek zone ları ayarlamamız gerekmektedir. 
     
-    Konu ile alakalı [Orchard Core Template sayfasına](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/) da bakılabilir.
+        Konu ile alakalı [Orchard Core Template sayfasına](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/) da bakılabilir.
          
-     Daha sonra ansayfa içeriklerini Layout.liquid e ekleyabilmek için içeriği kesip aldığımız alana  alttaki satırları ekliyoruz . yonetim panelinde layers lara TemplateHeader adında bir html içerikli layer ekliyoruz. TemplateHeader koduna içerikteki header tagını kopyalayabiliriz.
+        Daha sonra ansayfa içeriklerini Layout.liquid e ekleyabilmek için içeriği kesip aldığımız alana  alttaki satırları ekliyoruz . yonetim panelinde layers lara TemplateHeader adında bir html içerikli layer ekliyoruz. TemplateHeader koduna içerikteki header tagını kopyalayabiliriz.
          
-     {% render_section "TemplateHeader", required: false %}  
+        {% render_section "TemplateHeader", required: false %}  
                    
-     {% render_section "Content" %}
+        {% render_section "Content" %}
          
-     Bu noktoda şunu hatırlamamız gerekiyor. aslında veri tabanındaki içeriklerin aynı olması gerekiyor.  Ancak uyguladığımız theme Agent theme anssayfasından farklı olduğu için default içerik olarak agent theme altındaki içerikleri alacağız. yani tasarımımız içerik olarak biraz değişecek.
+        Bu noktoda şunu hatırlamamız gerekiyor. aslında veri tabanındaki içeriklerin aynı olması gerekiyor.  Ancak uyguladığımız theme Agent theme anssayfasından farklı olduğu için default içerik olarak agent theme altındaki içerikleri alacağız. yani tasarımımız içerik olarak biraz değişecek.
      
-     Content-LandingPage.liquid içeriğini yönetim panelinde Template altındaki Content__LandingPage içeriğine göre güncelliyoruz. veri tabanından gelen verileri çekip tasarıma basacak şekilde liquid kodlarını sayfamıza taşıyoruz.
+        Content-LandingPage.liquid içeriğini yönetim panelinde Template altındaki Content__LandingPage içeriğine göre güncelliyoruz. veri tabanından gelen verileri çekip tasarıma basacak şekilde liquid kodlarını sayfamıza taşıyoruz.
      
-     bu işlemden sonra ilgilialanlar artık editlenebilir şekle gelecektir. konu ile ilgili [video](https://www.youtube.com/watch?v=wtAIgn4gYXc)
+        bu işlemden sonra ilgilialanlar artık editlenebilir şekle gelecektir. konu ile ilgili [video](https://www.youtube.com/watch?v=wtAIgn4gYXc)
      
-     ayrıca kesinlikle şu adrese de bakılmalı [Orchard Core Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/).
+        ayrıca kesinlikle şu adrese de bakılmalı [Orchard Core Theme](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Themes/README/).
      
      
 
     - #### [Types, Parts, and Fields](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
   
-  Örneğin, bir blog yayını, bir ürün ve bir video klibin hepsinin yönlendirilebilir bir adresi, yorumları ve etiketleri olabilir. Bu nedenle yönlendirilebilir adres, yorumlar ve etiketlerin her biri Orchard'da ayrı bir içerik parçası (content part) olarak ele alınır. Bu şekilde, yorum yönetimi modülünün yalnızca bir kez geliştirilmesine ihtiyaç vardır ve yorumlama modülünün yazarının bilmediği içerikler de dahil olmak üzere keyfi içerik türlerine (content type) uygulanabilir.
+    Örneğin, bir blog yayını, bir ürün ve bir video klibin hepsinin yönlendirilebilir bir adresi, yorumları ve etiketleri olabilir. Bu nedenle yönlendirilebilir adres, yorumlar ve etiketlerin her biri Orchard'da ayrı bir içerik parçası (content part) olarak ele alınır. Bu şekilde, yorum yönetimi modülünün yalnızca bir kez geliştirilmesine ihtiyaç vardır ve yorumlama modülünün yazarının bilmediği içerikler de dahil olmak üzere keyfi içerik türlerine (content type) uygulanabilir.
   
-  Alanlar (fields), parçalardan daha fine grain bir yapıdadır ([fine grain vs coarse grain](https://stackoverflow.com/questions/3766845/coarse-grained-vs-fine-grained), [diğer kaynak](https://www.quora.com/What-is-the-difference-between-coarse-grained-and-fine-grained)). Örneğin, bir alan türü (field type) bir telefon numarasını veya bir koordinatı açıklayabilir, oysa bir bölüm (part) genellikle yorum yapma veya etiketleme gibi bir endişeyi açıklar.
+    Alanlar (fields), parçalardan daha fine grain bir yapıdadır ([fine grain vs coarse grain](https://stackoverflow.com/questions/3766845/coarse-grained-vs-fine-grained), [diğer kaynak](https://www.quora.com/What-is-the-difference-between-coarse-grained-and-fine-grained)). Örneğin, bir alan türü (field type) bir telefon numarasını veya bir koordinatı açıklayabilir, oysa bir bölüm (part) genellikle yorum yapma veya etiketleme gibi bir endişeyi açıklar.
   
-  Parçaların (parts) kendileri özellik ve içerik alanlarına sahip olabilir. İçerik alanları da (content field), parçaların (part) kullanıldığı gibi tekrar tekrar kullanılabilir. Belirli bir alan türü (field type) çeşitli parça (part) ve içerik türleri (content type) tarafından kullanılabilir. Parçalar (part) ve alanlar (field) arasındaki fark, çalıştıkları ölçekte ve semantiklerinde (anlamsallıklarında) bulunur. Fakat buradaki önemli fark, semantiktir (anlamsaldır): Eğer bir ilişkiyi uygularsa bir parça yazmak istersiniz ve eğer bir ilişkiyi kurarsa bir alan yazarsınız. 
+    Parçaların (parts) kendileri özellik ve içerik alanlarına sahip olabilir. İçerik alanları da (content field), parçaların (part) kullanıldığı gibi tekrar tekrar kullanılabilir. Belirli bir alan türü (field type) çeşitli parça (part) ve içerik türleri (content type) tarafından kullanılabilir. Parçalar (part) ve alanlar (field) arasındaki fark, çalıştıkları ölçekte ve semantiklerinde (anlamsallıklarında) bulunur. Fakat buradaki önemli fark, semantiktir (anlamsaldır): Eğer bir ilişkiyi uygularsa bir parça yazmak istersiniz ve eğer bir ilişkiyi kurarsa bir alan yazarsınız. 
   
-  Örneğin, bir gömlek bir üründür ve bir SKU'su ve bir fiyatı vardır. Ancak bir tişörtün bir ürünü olduğunu veya bizzat bir gömleğin fiyat veya SKU oldunu söyleyemeyiz. Bundan dolayı Gömlek içerik türünün (content type) bir Ürün parçasından (part) yapılacağını ve bu Ürün parçasının (part) "fiyat" adlı bir Para alanından (field) ve SKU adlı bir String alanından (field) oluşturulacağını tahmin edebiliriz.
+    Örneğin, bir gömlek bir üründür ve bir SKU'su ve bir fiyatı vardır. Ancak bir tişörtün bir ürünü olduğunu veya bizzat bir gömleğin fiyat veya SKU oldunu söyleyemeyiz. Bundan dolayı Gömlek içerik türünün (content type) bir Ürün parçasından (part) yapılacağını ve bu Ürün parçasının (part) "fiyat" adlı bir Para alanından (field) ve SKU adlı bir String alanından (field) oluşturulacağını tahmin edebiliriz.
   
-  Diğer bir fark ise, içerik türü (content type) başına belirli bir türün (type) yalnızça bir parçasına (part) sahip olabilmemizdir. Ancak bir parça (part) belirli bir tür (type) için birçok alana (field) sahip olabilir. Bunu anlatmanın bir diğer yolu ise şudur: parça (part) üzerindeki alanlar (field), alanın türüne (field's type) ait değerlerin string dictionary si iken, içerik türü (content type) ise parça türlerinin (part type) bir listesi (isimler olmaksızın) olmasıdır.
+    Diğer bir fark ise, içerik türü (content type) başına belirli bir türün (type) yalnızça bir parçasına (part) sahip olabilmemizdir. Ancak bir parça (part) belirli bir tür (type) için birçok alana (field) sahip olabilir. Bunu anlatmanın bir diğer yolu ise şudur: parça (part) üzerindeki alanlar (field), alanın türüne (field's type) ait değerlerin string dictionary si iken, içerik türü (content type) ise parça türlerinin (part type) bir listesi (isimler olmaksızın) olmasıdır.
       
-[content type anatomisi (okumalısın)](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
+    [content type anatomisi (okumalısın)](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
 
 
 
    - #### Content Type
 
-  Orchars CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Content-types/#content-type)
+    Orchars CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Content-types/#content-type)
   
-  Content Type content in kategorisi olarak görülebilir. content in ne sunduğunun tanımıdır. örneğin bir blog sitesindeki   bir post veya fotoğraf gibi.
+    Content Type content in kategorisi olarak görülebilir. content in ne sunduğunun tanımıdır. örneğin bir blog sitesindeki   bir post veya fotoğraf gibi.
   
-  [anatomy of content type](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
+    [anatomy of content type](http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/#content-type-system)
   
   
-  Content Type create ederken Bag ile List arasındaki temek fark, Bag in ilgili contenet type dışında kullanılamasıdır. List ise oluşturulduktan sonra içinde bulunduğu content type dan bağımsız kullanılabilir.
+    Content Type create ederken Bag ile List arasındaki temek fark, Bag in ilgili contenet type dışında kullanılamasıdır. List ise oluşturulduktan sonra içinde bulunduğu content type dan bağımsız kullanılabilir.
 
    - #### [Content](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Contents/README/)
 
-  Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#content)
+    Orchard CMS deki anlatım : [adres](http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/#content)
   
-  Kısaca içinde bilgi bulunan ve kullanıcıya sunulan hertürlü içerik. 
+    Kısaca içinde bilgi bulunan ve kullanıcıya sunulan hertürlü içerik. 
 
    - #### [Content Template](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/#content-templates)
 
    - #### [Content Field](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.ContentFields/README/)
 
-İçerik alanları (content field), bir içerik türüne (content type) eklenebilecek bilgi parçalarıdır. İçerik alanlarının (content field) bir adı ve türü vardır ve bir içerik türüne özgüdür. Herhangi bir içerik türünde (content type) her alan (field)  türünden birkaç tane olabilir. Örneğin, bir Ürün içerik türü, SKU'sunu temsil eden bir metin alanına, fiyatını temsil eden bir sayısal alana ve ağırlığını temsil eden başka bir sayısal alana sahip olabilir.
+    İçerik alanları (content field), bir içerik türüne (content type) eklenebilecek bilgi parçalarıdır. İçerik alanlarının (content field) bir adı ve türü vardır ve bir içerik türüne özgüdür. Herhangi bir içerik türünde (content type) her alan (field)  türünden birkaç tane olabilir. Örneğin, bir Ürün içerik türü, SKU'sunu temsil eden bir metin alanına, fiyatını temsil eden bir sayısal alana ve ağırlığını temsil eden başka bir sayısal alana sahip olabilir.
 
   [Field lar nasıl kullanılır](http://docs.orchardproject.net/en/latest/Documentation/Getting-Started-with-Modules-Part-3/#using-fields)
 
