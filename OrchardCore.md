@@ -405,6 +405,8 @@ metod ve argumanları ayrıştırmaya yarayan comutlardaki hataları bulmaya vs 
   
   [YESSQL Example](https://github.com/sebastienros/yessql/tree/master/samples)
    
+   şu issue mutlaka okunmalı : https://github.com/sebastienros/yessql/issues/21
+   
 - ### ROUTING
 
 - ### LOCALIZATION
