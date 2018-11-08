@@ -1,6 +1,6 @@
 http://www.ilkimdilara.com/agile-is-analistinin-bilmesi-gereken-teknikler/
 
-_Kitaplar_
+*Kitaplar*
 
 Agile ı Anlamak
 
