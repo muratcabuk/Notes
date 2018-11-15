@@ -8,6 +8,9 @@ https://www.codementor.io/pmbanugo/working-with-mongodb-in-net-1-basics-g4frivcv
 
 https://docs.mongodb.com/ecosystem/drivers/csharp/
 
+relationship
+
+http://learnmongodbthehardway.com/schema/schemabasics
 
 core
 
