@@ -23,3 +23,11 @@ https://www.codeproject.com/Articles/1151842/Using-MongoDB-NET-Driver-with-NET-C
 
 https://www.dotnetcurry.com/aspnet-mvc/1267/using-mongodb-nosql-database-with-aspnet-webapi-core
 
+sql to mongo
+
+https://www.mongodb.com/blog/post/transitioning-from-relational-databases-to-mongodb
+     
+     
+     https://docs.mongodb.com/manual/reference/sql-comparison/
+     
+     
