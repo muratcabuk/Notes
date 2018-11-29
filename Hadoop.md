@@ -1,4 +1,25 @@
-Downolad 
+Teknolojiler
+
+Data Access: Pig, Hive
+
+Data Storage: HBase, Cassandra
+
+Interecation, Visualization, Execution, Development : HCatalog, Lucene, Hama, Crunch
+
+Data Serialization: Avro, Thrift
+
+Data Intelligence: Drill, Mohout
+
+Data Integration: Sqoop, Flume, Chuwka
+
+Management: Ambari(Portal)
+
+Monitoring: Zookeeper
+
+Orchestration: Oozie
+
+
+Download 
 
 https://hadoop.apache.org/releases.html
 
