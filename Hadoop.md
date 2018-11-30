@@ -25,6 +25,8 @@ https://hadoop.apache.org/releases.html
 
 Multi Node Install
 
+https://www.linode.com/docs/databases/hadoop/how-to-install-and-set-up-hadoop-cluster/
+
 https://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-common/ClusterSetup.html
 
 http://gaurav3ansal.blogspot.com/2017/08/installing-hadoop-300-alpha-4-multi.html
