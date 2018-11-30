@@ -5,7 +5,9 @@ flatpak
 snap
 
 
+### Useful Commands
 
+check home directory : grep hadoopuser /etc/passwd | cut -d ":" -f6
 
 
 ### Partitions
