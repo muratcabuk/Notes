@@ -18,8 +18,7 @@ Monitoring: Zookeeper
 
 Orchestration: Oozie
 
-security: Apache Sentry is a system for enforcing fine grained role based authorization to data and metadata stored on a Hadoop cluster.
-
+security: Sentry, Knox, Ranger
 
 Download 
 
