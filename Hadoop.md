@@ -44,3 +44,17 @@ Pseudo Cluster
 
 https://blog.usejournal.com/hadoop-3-0-installation-on-ubuntu-18-04-step-by-step-pseudo-distributed-mode-2808f6b8e71f
 
+
+Kudu
+
+Kudu kaynakdan kurulum yaparken 
+
+sudo ./kudu-master --fs_data_dirs="/opt/apache-kudu-1.8.0/fs/fsdatadirs/data1" --fs_wal_dir="/opt/apache-kudu-1.8.0/fs/fswaldir"
+
+sudo ./kudu-tserver --fs_data_dirs="/opt/apache-kudu-1.8.0/fstserver/fsdatadirs/data1" --fs_wal_dir="/opt/apache-kudu-1.8.0/fstserver/fswaldir"
+
+
+
+
+
+
