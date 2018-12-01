@@ -9,6 +9,14 @@ snap
 
 check home directory : grep hadoopuser /etc/passwd | cut -d ":" -f6
 
+create symblink : ln -fs target-path source-path-and-filename
+
+get all symb links : find ./ -type l
+
+get real path symb link : readlink -f [sybmlynk name]
+
+
+
 
 ### Partitions
 
