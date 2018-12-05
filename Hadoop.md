@@ -1,26 +1,46 @@
-Teknolojiler
+## Teknolojiler
 
-Data Access: Pig, Hive
+### Data Access: 
 
-Data Storage: HBase, Cassandra
+#### Pig, Hive
 
-Interecation, Visualization, Execution, Development : HCatalog, Lucene, Hama, Crunch
+### Data Storage:
 
-Data Serialization: Avro, Thrift
+#### HBase, Cassandra
 
-Data Intelligence: Drill, Mohout
+### Interecation, Visualization, Execution, Development : HCatalog, Lucene, Hama, Crunch
 
-Data Integration: Sqoop, Flume, Chuwka
+### Data Serialization:
 
-Management: Ambari(Portal)
+#### Avro, Thrift
 
-Monitoring: Zookeeper
+### Data Intelligence:
 
-Orchestration: Oozie
+#### Drill, Mohout, Spark ML
 
-security: Sentry, Knox, Ranger
+### Data Integration: 
 
-Download 
+Sqoop, Flume, Chuwka, Kafka
+
+#### Kafka: Burada dikkat edilmesi gereken önemli noktalardan birisi de Kafka'nın kullanım amacı. Büyük veriyi tutmak için değil bunları toplayıp ilgili sistemelere hatasız ve hızlı biçimde aktarmak için kullanılan bir mesajlaşma hizmeti olarak değerlendirmek daha doğru gibi. Bu sebeple çoğunlukla tek başına ele alınmamakta. Kafka'yı kullanarak verinin ElasticSearch, Hadoop, Spark gibi sistemlere akıtılması söz konusu. Bunun belli başlı motivasyon kaynakları var. Her şeyden önce ilgili verinin aktarılacağı sistemler kapalı olsa bile bir süre Kafka'da tutma imkanı bulunmakta. Bu yetenek uç sistemlerden birinin çökmesi durumunda mesaj kaybını da engellemekte. Diğer bir motivasyon sebebi de verinin büyüklüğü. Büyük veriyi diğer sistemlere taşırken paralel çalışabilen ölçeklenebilir bir dağıtık sistemin arada olması önemlidir.
+
+### Management:
+
+#### Ambari(Portal)
+
+### Monitoring:
+
+#### Zookeeper
+
+### Orchestration:
+
+#### Oozie
+
+### security: 
+
+#### Sentry, Knox, Ranger
+
+### Download 
 
 https://hadoop.apache.org/releases.html
 
