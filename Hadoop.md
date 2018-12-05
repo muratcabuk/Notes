@@ -58,6 +58,18 @@ Burada dikkat edilmesi gereken önemli noktalardan birisi de Kafka'nın kullanı
 
 #### Ranger
 
+### Real Time (Stream Data) Analysis
+
+#### Kudu
+Kudu is specifically designed for use cases that require fast analytics on fast (rapidly changing) data. Engineered to take advantage of next-generation hardware and in-memory processing, Kudu lowers query latency significantly for Apache Impala (incubating) and Apache Spark (initially, with other execution engines to come).
+
+### Real Time (Stream Data) Data Collection And Ontegration
+
+#### Flume
+
+Flume is a distributed, reliable, and available service for efficiently collecting, aggregating, and moving large amounts of log data. It has a simple and flexible architecture based on streaming data flows. It is robust and fault tolerant with tunable reliability mechanisms and many failover and recovery mechanisms. It uses a simple extensible data model that allows for online analytic application.
+
+
 ### Download 
 
 https://hadoop.apache.org/releases.html
