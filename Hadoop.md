@@ -8,7 +8,15 @@
 
 #### HBase, Cassandra
 
-### Interecation, Visualization, Execution, Development : HCatalog, Lucene, Hama, Crunch
+### Interecation, Visualization, Execution, Development
+
+#### HCatalog
+
+#### Lucene
+
+#### Hama
+
+#### Crunch
 
 ### Data Serialization:
 
@@ -20,9 +28,15 @@
 
 ### Data Integration: 
 
-Sqoop, Flume, Chuwka, Kafka
+#### Sqoop
 
-#### Kafka: Burada dikkat edilmesi gereken önemli noktalardan birisi de Kafka'nın kullanım amacı. Büyük veriyi tutmak için değil bunları toplayıp ilgili sistemelere hatasız ve hızlı biçimde aktarmak için kullanılan bir mesajlaşma hizmeti olarak değerlendirmek daha doğru gibi. Bu sebeple çoğunlukla tek başına ele alınmamakta. Kafka'yı kullanarak verinin ElasticSearch, Hadoop, Spark gibi sistemlere akıtılması söz konusu. Bunun belli başlı motivasyon kaynakları var. Her şeyden önce ilgili verinin aktarılacağı sistemler kapalı olsa bile bir süre Kafka'da tutma imkanı bulunmakta. Bu yetenek uç sistemlerden birinin çökmesi durumunda mesaj kaybını da engellemekte. Diğer bir motivasyon sebebi de verinin büyüklüğü. Büyük veriyi diğer sistemlere taşırken paralel çalışabilen ölçeklenebilir bir dağıtık sistemin arada olması önemlidir.
+#### Flume
+
+#### Chuwka
+
+#### Kafka: 
+
+Burada dikkat edilmesi gereken önemli noktalardan birisi de Kafka'nın kullanım amacı. Büyük veriyi tutmak için değil bunları toplayıp ilgili sistemelere hatasız ve hızlı biçimde aktarmak için kullanılan bir mesajlaşma hizmeti olarak değerlendirmek daha doğru gibi. Bu sebeple çoğunlukla tek başına ele alınmamakta. Kafka'yı kullanarak verinin ElasticSearch, Hadoop, Spark gibi sistemlere akıtılması söz konusu. Bunun belli başlı motivasyon kaynakları var. Her şeyden önce ilgili verinin aktarılacağı sistemler kapalı olsa bile bir süre Kafka'da tutma imkanı bulunmakta. Bu yetenek uç sistemlerden birinin çökmesi durumunda mesaj kaybını da engellemekte. Diğer bir motivasyon sebebi de verinin büyüklüğü. Büyük veriyi diğer sistemlere taşırken paralel çalışabilen ölçeklenebilir bir dağıtık sistemin arada olması önemlidir.
 
 ### Management:
 
@@ -38,7 +52,11 @@ Sqoop, Flume, Chuwka, Kafka
 
 ### security: 
 
-#### Sentry, Knox, Ranger
+#### Sentry
+
+#### Knox
+
+#### Ranger
 
 ### Download 
 
