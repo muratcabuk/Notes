@@ -48,7 +48,21 @@ Avro provides functionality similar to systems such as Thrift, Protocol Buffers,
 
 ## Data Intelligence:
 
-#### Drill, Mohout, Spark ML
+#### Drill
+
+Drill supports a variety of NoSQL databases and file systems, including HBase, MongoDB, MapR-DB, HDFS, MapR-FS, Amazon S3, Azure Blob Storage, Google Cloud Storage, Swift, NAS and local files. A single query can join data from multiple datastores. For example, you can join a user profile collection in MongoDB with a directory of event logs in Hadoop.
+
+Drill's datastore-aware optimizer automatically restructures a query plan to leverage the datastore's internal processing capabilities. In addition, Drill supports data locality, so it's a good idea to co-locate Drill and the datastore on the same nodes.
+
+#### Mohout
+
+Apache Mahout(TM) is a distributed linear algebra framework and mathematically expressive Scala DSL designed to let mathematicians, statisticians, and data scientists quickly implement their own algorithms. Apache Spark is the recommended out-of-the-box distributed back-end, or can be extended to other distributed backends.
+
+- Mathematically Expressive Scala DSL
+- Support for Multiple Distributed Backends (including Apache Spark)
+- Modular Native Solvers for CPU/GPU/CUDA Acceleration
+
+#### Spark ML
 
 ## Data Integration: 
 
