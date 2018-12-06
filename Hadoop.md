@@ -34,19 +34,24 @@ Impala Comparing Impala to Hive & Pig
 
 ## Data Storage:
 
-#### HBase
+#### Apache Ignite (Database and Caching Platform)
+Ignite™ is a memory-centric distributed database, caching, and processing platform for  transactional, analytical, and streaming workloads delivering in-memory speeds at petabyte scale.
+
+Achieve horizontal scalability, strong consistency, and high availability with Ignite™ distributed SQL.
+
+
+#### HBase (NoSQL Database - Column Base)
 
 Use Apache HBase™ when you need random, realtime read/write access to your Big Data. This project's goal is the hosting of very large tables -- billions of rows X millions of columns -- atop clusters of commodity hardware. Apache HBase is an open-source, distributed, versioned, non-relational database modeled after Google's Bigtable: A Distributed Storage System for Structured Data by Chang et al. Just as Bigtable leverages the distributed data storage provided by the Google File System, Apache HBase provides Bigtable-like capabilities on top of Hadoop and HDFS.
 
 https://www.scnsoft.com/blog/cassandra-vs-hbase
 
-#### Cassandra
+#### Cassandra  (NoSQL Database - Column Base)
 
 Apache Cassandra is a free and open-source, distributed, wide column store, NoSQL database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple datacenters, with asynchronous masterless replication allowing low latency operations for all clients.
 
 https://www.scnsoft.com/blog/cassandra-vs-hbase
 
-## Interecation, Visualization, Execution, Development
 
 #### HCatalog
 
@@ -178,7 +183,7 @@ Oozie is integrated with the rest of the Hadoop stack supporting several types o
 
 ## Real Time (Stream Data) Analysis
 
-#### Kudu
+#### Kudu (NoSQL Database - Column Base)
 Kudu is specifically designed for use cases that require fast analytics on fast (rapidly changing) data. Engineered to take advantage of next-generation hardware and in-memory processing, Kudu lowers query latency significantly for Apache Impala (incubating) and Apache Spark (initially, with other execution engines to come).
 
 Kudu kaynakdan kurulum yaparken 
