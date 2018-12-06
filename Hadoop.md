@@ -205,6 +205,10 @@ Unlike Flume and Kafka, NiFi. can handle messages with arbitrary sizes. Behind a
 
 https://data-flair.training/blogs/hadoop-ecosystem-components/
 
+https://www.edureka.co/blog/hadoop-ecosystem
+
+https://hadoopecosystemtable.github.io/
+
 ## Download 
 
 https://hadoop.apache.org/releases.html
