@@ -46,7 +46,9 @@ Avro provides functionality similar to systems such as Thrift, Protocol Buffers,
 
 
 
-## Data Intelligence:
+## Data Intelligence and Analysis
+
+https://dzone.com/articles/big-data-ingestion-flume-kafka-and-nifi
 
 #### Drill
 
@@ -64,13 +66,22 @@ Apache Mahout(TM) is a distributed linear algebra framework and mathematically e
 
 #### Spark ML
 
+MLlib fits into Spark's APIs and interoperates with NumPy in Python (as of Spark 0.9) and R libraries (as of Spark 1.5). You can use any Hadoop data source (e.g. HDFS, HBase, or local files), making it easy to plug into Hadoop workflows.
+
 ## Data Integration: 
 
 #### Sqoop
+Apache Sqoop(TM) is a tool designed for efficiently transferring bulk data between Apache Hadoop and structured datastores such as relational databases.
 
-#### Flume
+#### Flume (Real Time Data)
+
+Flume is a distributed, reliable, and available service for efficiently collecting, aggregating, and moving large amounts of log data. It has a simple and flexible architecture based on streaming data flows. It is robust and fault tolerant with tunable reliability mechanisms and many failover and recovery mechanisms. It uses a simple extensible data model that allows for online analytic application.
 
 #### Chuwka
+
+Apache Chukwa is an open source data collection system for monitoring large distributed systems. Apache Chukwa is built on top of the Hadoop Distributed File System (HDFS) and Map/Reduce framework and inherits Hadoop’s scalability and robustness. Apache Chukwa also includes a ﬂexible and powerful toolkit for displaying, monitoring and analyzing results to make the best use of the collected data.
+
+Chukwa is a Hadoop subproject that bridges that gap between log handling and MapReduce. It provides a scalable distributed system for monitoring and analysis of log-based data. Some of the durability features include agent-side replying of data to recover from errors. See also Flume.
 
 #### Kafka: 
 
@@ -81,6 +92,11 @@ Kafka vs Flink
 The fundamental differences between a Flink and a Streams API program lie in the way these are deployed and managed and how the parallel processing including fault tolerance is coordinated.
 
 Flink is a cluster framework, which means that the framework takes care of deploying the application, either in standalone Flink clusters, or using YARN, Mesos, or containers (Docker, Kubernetes).
+
+
+#### Nifi
+Unlike Flume and Kafka, NiFi. can handle messages with arbitrary sizes. Behind a drag-and-drop Web-based UI, NiFi runs in a cluster and provides real-time control that makes it easy to manage the movement of data between any source and any destination. It supports disparate and distributed sources of differing formats, schema, protocols, speeds, and sizes.
+
 
 ## Management:
 
@@ -166,6 +182,10 @@ Flume is a distributed, reliable, and available service for efficiently collecti
 Flink is built to be both, a DataStream API for stream analytics and a DataSet API for batch analytics on top of the underlying stream processing engine.
 
 Apache Flink supports programs written in Java or Scala, which get automatically compiled and optimized into data flow programs. Flink does not have its data storage system. The input data can come from a distributed storage system like HDFS or HBase. For data stream processing, Flink can consume data from message queues such as Kafka.
+
+#### Nifi
+Unlike Flume and Kafka, NiFi. can handle messages with arbitrary sizes. Behind a drag-and-drop Web-based UI, NiFi runs in a cluster and provides real-time control that makes it easy to manage the movement of data between any source and any destination. It supports disparate and distributed sources of differing formats, schema, protocols, speeds, and sizes.
+
 
 ### Links
 
