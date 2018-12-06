@@ -8,18 +8,27 @@ Impala Comparing Impala to Hive & Pig
 
 - Similarities:
  -- Queries expressed in high-level languages
+ 
  -- Alternatives to writting mapreduce code
+ 
  -- Used to analyze data stored on Hadoop clusters
+ 
  -- Impala shares the meta store with Hive (Tables created in Hive as visible in Impala (viceversa))
 
 - Contrasting Impala to Hive & Pig
 
  -- Hive & Pig answers queries by running Mapreduce jobs.Map reduce over heads results in high latency.(even a trivial query takes 10sec or more)
+ 
  -- Impala does not use mapreduce.It uses a custom execution engine build specifically for Impala.
+ 
  -- Queries can complete in a fraction of sec.
+ 
  -- Hive & Pig are best suited long-running batch processes (Data Transformation Tasks).Impala best for interactive/Adhoc queries.
+ 
  -- Impala can't handle complex data types(Array,Map or Struct)
+ 
  -- No support for binary data type.
+ 
  -- If a node fails in Hive or Pig, They answers queries by running mapreduce jobs in other nodes. But,incase of impala if the node fails during a query,the query will fails and it has to be re-run
 
 
