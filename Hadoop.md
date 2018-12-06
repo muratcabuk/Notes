@@ -5,15 +5,29 @@
 
 ## Data Storage:
 
-#### HBase, Cassandra
+#### HBase
+
+Use Apache HBase™ when you need random, realtime read/write access to your Big Data. This project's goal is the hosting of very large tables -- billions of rows X millions of columns -- atop clusters of commodity hardware. Apache HBase is an open-source, distributed, versioned, non-relational database modeled after Google's Bigtable: A Distributed Storage System for Structured Data by Chang et al. Just as Bigtable leverages the distributed data storage provided by the Google File System, Apache HBase provides Bigtable-like capabilities on top of Hadoop and HDFS.
+
+https://www.scnsoft.com/blog/cassandra-vs-hbase
+
+#### Cassandra
+
+Apache Cassandra is a free and open-source, distributed, wide column store, NoSQL database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple datacenters, with asynchronous masterless replication allowing low latency operations for all clients.
+
+https://www.scnsoft.com/blog/cassandra-vs-hbase
 
 ## Interecation, Visualization, Execution, Development
 
 #### HCatalog
 
+HCatalog is a table and storage management layer for Hadoop that enables users with different data processing tools — Pig, MapReduce — to more easily read and write data on the grid.
+
 #### Lucene
 
 #### Hama
+
+Apache HamaTM is a framework for Big Data analytics which uses the Bulk Synchronous Parallel (BSP) computing model, which was established in 2012 as a Top-Level Project of The Apache Software Foundation. 
 
 #### Crunch
 
