@@ -47,13 +47,23 @@ Flink is a cluster framework, which means that the framework takes care of deplo
 
 #### Ambari(Portal)
 
-## Monitoring:
+## Monitoring, Orchestration and Scheduler
 
 #### Zookeeper
 
-## Orchestration:
+Orchestration Tool
+
+ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. All of these kinds of services are used in some form or another by distributed applications. Each time they are implemented there is a lot of work that goes into fixing the bugs and race conditions that are inevitable. Because of the difficulty of implementing these kinds of services, applications initially usually skimp on them ,which make them brittle in the presence of change and difficult to manage. Even when done correctly, different implementations of these services lead to management complexity when the applications are deployed.
 
 #### Oozie
+
+Oozie is a workflow scheduler system to manage Apache Hadoop jobs.
+
+Oozie Workflow jobs are Directed Acyclical Graphs (DAGs) of actions.
+
+Oozie Coordinator jobs are recurrent Oozie Workflow jobs triggered by time (frequency) and data availability.
+
+Oozie is integrated with the rest of the Hadoop stack supporting several types of Hadoop jobs out of the box (such as Java map-reduce, Streaming map-reduce, Pig, Hive, Sqoop and Distcp) as well as system specific jobs (such as Java programs and shell scripts).
 
 ## security: 
 
@@ -117,6 +127,10 @@ Flume is a distributed, reliable, and available service for efficiently collecti
 Flink is built to be both, a DataStream API for stream analytics and a DataSet API for batch analytics on top of the underlying stream processing engine.
 
 Apache Flink supports programs written in Java or Scala, which get automatically compiled and optimized into data flow programs. Flink does not have its data storage system. The input data can come from a distributed storage system like HDFS or HBase. For data stream processing, Flink can consume data from message queues such as Kafka.
+
+### Links
+
+https://data-flair.training/blogs/hadoop-ecosystem-components/
 
 ## Download 
 
