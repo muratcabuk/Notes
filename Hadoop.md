@@ -37,6 +37,12 @@
 
 Burada dikkat edilmesi gereken önemli noktalardan birisi de Kafka'nın kullanım amacı. Büyük veriyi tutmak için değil bunları toplayıp ilgili sistemelere hatasız ve hızlı biçimde aktarmak için kullanılan bir mesajlaşma hizmeti olarak değerlendirmek daha doğru gibi. Bu sebeple çoğunlukla tek başına ele alınmamakta. Kafka'yı kullanarak verinin ElasticSearch, Hadoop, Spark gibi sistemlere akıtılması söz konusu. Bunun belli başlı motivasyon kaynakları var. Her şeyden önce ilgili verinin aktarılacağı sistemler kapalı olsa bile bir süre Kafka'da tutma imkanı bulunmakta. Bu yetenek uç sistemlerden birinin çökmesi durumunda mesaj kaybını da engellemekte. Diğer bir motivasyon sebebi de verinin büyüklüğü. Büyük veriyi diğer sistemlere taşırken paralel çalışabilen ölçeklenebilir bir dağıtık sistemin arada olması önemlidir.
 
+Kafka vs Flink
+
+The fundamental differences between a Flink and a Streams API program lie in the way these are deployed and managed and how the parallel processing including fault tolerance is coordinated.
+
+Flink is a cluster framework, which means that the framework takes care of deploying the application, either in standalone Flink clusters, or using YARN, Mesos, or containers (Docker, Kubernetes).
+
 ## Management:
 
 #### Ambari(Portal)
@@ -74,11 +80,23 @@ Flink is built to be both, a DataStream API for stream analytics and a DataSet A
 
 Apache Flink supports programs written in Java or Scala, which get automatically compiled and optimized into data flow programs. Flink does not have its data storage system. The input data can come from a distributed storage system like HDFS or HBase. For data stream processing, Flink can consume data from message queues such as Kafka.
 
+Spark Stream vs Flink
+
 Spark processes data in batch mode while Flink processes streaming data in real time. Spark processes chunks of data, known as RDDs while Flink can process rows after rows of data in real time. So, while a minimum data latency is always there with Spark, it is not so with Flink.
+
+Kafka vs Flink
+
+The fundamental differences between a Flink and a Streams API program lie in the way these are deployed and managed and how the parallel processing including fault tolerance is coordinated.
+
+Flink is a cluster framework, which means that the framework takes care of deploying the application, either in standalone Flink clusters, or using YARN, Mesos, or containers (Docker, Kubernetes).
 
 #### Spark Streaming
 
 Apache Spark, when combined with Apache Kafka, delivers a powerful stream processing environment.
+
+Spark Stream vs Flink
+
+Spark processes data in batch mode while Flink processes streaming data in real time. Spark processes chunks of data, known as RDDs while Flink can process rows after rows of data in real time. So, while a minimum data latency is always there with Spark, it is not so with Flink.
 
 #### Storm 
 
