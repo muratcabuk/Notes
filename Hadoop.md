@@ -3,6 +3,26 @@
 
 #### Pig, Hive, Impala
 
+
+Impala Comparing Impala to Hive & Pig
+
+- Similarities:
+-- Queries expressed in high-level languages
+-- Alternatives to writting mapreduce code
+-- Used to analyze data stored on Hadoop clusters
+-- Impala shares the meta store with Hive (Tables created in Hive as visible in Impala (viceversa))
+
+-Contrasting Impala to Hive & Pig
+
+-- Hive & Pig answers queries by running Mapreduce jobs.Map reduce over heads results in high latency.(even a trivial query takes 10sec or more)
+-- Impala does not use mapreduce.It uses a custom execution engine build specifically for Impala.
+-- Queries can complete in a fraction of sec.
+-- Hive & Pig are best suited long-running batch processes (Data Transformation Tasks).Impala best for interactive/Adhoc queries.
+-- Impala can't handle complex data types(Array,Map or Struct)
+-- No support for binary data type.
+-- If a node fails in Hive or Pig, They answers queries by running mapreduce jobs in other nodes. But,incase of impala if the node fails during a query,the query will fails and it has to be re-run
+
+
 ## Data Storage:
 
 #### HBase
@@ -23,7 +43,9 @@ https://www.scnsoft.com/blog/cassandra-vs-hbase
 
 HCatalog is a table and storage management layer for Hadoop that enables users with different data processing tools — Pig, MapReduce — to more easily read and write data on the grid.
 
-#### Lucene
+#### Lucene/Solr
+
+There is but one tool for indexing large blocks of unstructured text, and it’s a natural partner for Hadoop. Written in Java, Lucene integrates easily with Hadoop, creating one big tool for distributed text management. Lucene handles the indexing; Hadoop distributes queries across the cluster.
 
 #### Hama
 
@@ -85,6 +107,7 @@ MLlib fits into Spark's APIs and interoperates with NumPy in Python (as of Spark
 ## Data Integration: 
 
 #### Sqoop
+
 Apache Sqoop(TM) is a tool designed for efficiently transferring bulk data between Apache Hadoop and structured datastores such as relational databases.
 
 #### Flume (Real Time Data)
@@ -113,6 +136,8 @@ Unlike Flume and Kafka, NiFi. can handle messages with arbitrary sizes. Behind a
 
 
 ## Management:
+
+#### Cloudera Management
 
 #### Ambari(Portal)
 
@@ -208,6 +233,8 @@ https://data-flair.training/blogs/hadoop-ecosystem-components/
 https://www.edureka.co/blog/hadoop-ecosystem
 
 https://hadoopecosystemtable.github.io/
+
+https://bigdata-madesimple.com/20-essential-hadoop-tools-for-crunching-big-data/
 
 ## Download 
 
