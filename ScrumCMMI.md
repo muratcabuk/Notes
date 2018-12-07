@@ -1,6 +1,12 @@
 
 User Story için sırasıyla okunmalı
 
+
+Theme --> Epic --> Feature --> Backlog Item --> Task/Bug
+
+Bu terimlerin kafada iyi oturması lazım. Linkleri takip ediniz.
+
+
 [link](https://www.pem360.com/blog/Agile/Theme-Konu-User-Story-Kullanici-Hikayesi-ve-Epic-Destan-Kavramlari/213)
 
 ![Feature Epic backlog Item](https://github.com/muratcabuk/Notes/blob/master/EpicFeatureBacklogitem.jpg)
