@@ -17,6 +17,13 @@ Feature Epic Backlog Item Zaman ayrımı
 ![Feature Epic backlog Item](https://github.com/muratcabuk/Notes/blob/master/Requirements-size-Epic-Feature-PBI-User-Story-Task-1.png)
 
 
+![Feature Epic backlog Item](https://github.com/muratcabuk/Notes/blob/master/UserStories2.png)
+
+
+![Feature Epic backlog Item](https://github.com/muratcabuk/Notes/blob/master/ThemeEpicFeatureUSerStory.jpg)
+
+
+
 [link](http://www.ilkimdilara.com/kullanici-hikayesi/),
 
 [link](http://www.ilkimdilara.com/kullanici-hikayesi-detaylandirma-yontemleri/)
