@@ -8,6 +8,11 @@ Theme --> Epic --> Feature --> Backlog Item --> Task/Bug
 
 3 adet çeviri kitap için Yılmaz Cihan'a teşekkürler. [kaynak](http://www.yilmazcihan.com/ceviri-kitaplarim/)
 
+[Scrum Klavuzu](http://www.yilmazcihan.com/scrum-kilavuzu/)
+[Scrum Klavuzu Kitap Linki](https://github.com/muratcabuk/Notes/blob/master/scrum-guide-tr.pdf)
+
+
+
 [link](https://www.pem360.com/blog/Agile/Theme-Konu-User-Story-Kullanici-Hikayesi-ve-Epic-Destan-Kavramlari/213), 
 [link](http://www.ilkimdilara.com/kullanici-hikayesi/),
 [link](http://www.ilkimdilara.com/kullanici-hikayesi-detaylandirma-yontemleri/),
