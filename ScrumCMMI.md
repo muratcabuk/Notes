@@ -6,6 +6,7 @@ Herşey user Sory ama kapsamına göre farklı isimler alıyor.
 
 Theme --> Epic --> Feature --> Backlog Item --> Task/Bug
 
+3 adet çeviri kitap için Yılmaz Cihan'a teşekkürler. [kaynak](http://www.yilmazcihan.com/ceviri-kitaplarim/)
 
 [link](https://www.pem360.com/blog/Agile/Theme-Konu-User-Story-Kullanici-Hikayesi-ve-Epic-Destan-Kavramlari/213), 
 [link](http://www.ilkimdilara.com/kullanici-hikayesi/),
