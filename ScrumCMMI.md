@@ -22,6 +22,8 @@ Theme --> Epic --> Feature --> Backlog Item --> Task/Bug
 
 - [link](https://docs.ca.com/en-us/ca-agile-central/saas/writing-great-user-story)
 
+- [link](https://sherpa.blog/makale/use-case-mi-user-story-mi)
+
 ![Feature Epic backlog Item](https://github.com/muratcabuk/Notes/blob/master/EpicFeatureBacklogitem.jpg)
 
 
