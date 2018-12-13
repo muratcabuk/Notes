@@ -16,6 +16,10 @@ https://www.devpy.me/snapcraft-appimage-flatpak/
 
 - [digiKam](https://www.digikam.org/download/)
 
+- pidgin
+
+
+
 
 
 
