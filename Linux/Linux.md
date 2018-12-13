@@ -4,6 +4,12 @@ flatpak
 
 snapcraft
 
+AppImage
+
+https://www.devpy.me/snapcraft-appimage-flatpak/
+
+
+
 
 ### Useful Commands
 
