@@ -12,4 +12,10 @@
 ### [Scrum CMMI](https://github.com/muratcabuk/Notes/blob/master/ScrumCMMI/ScrumCMMI.md)
 ### [C# CLI Parser](https://github.com/muratcabuk/Notes/blob/master/AspNetCore/CSharpCLI.md)
 ### [Asp.net Core](https://github.com/muratcabuk/Notes/blob/master/AspNetCore.md)
-
+### [MongoDB](https://github.com/muratcabuk/Notes/blob/master/MongoDb/MongoDBCSharp.md)
+### [Microsoft Graph](https://github.com/muratcabuk/Notes/blob/master/MicrosoftGraph/readme.md)
+### [Redis](https://github.com/muratcabuk/Notes/blob/master/Redis/Redis.md)
+### [SimplCommerce](https://github.com/muratcabuk/Notes/blob/master/SimplCommerce/SimplCommerce.md)
+### [Virtualization](https://github.com/muratcabuk/Notes/blob/master/Virtualization/Virtualization.md)
+### [WebAssembly](https://github.com/muratcabuk/Notes/blob/master/WebAssembly/WebAssemblyBlazor.md)
+### [Big Data](https://github.com/muratcabuk/Notes/blob/master/BigData/Hadoop.md)
