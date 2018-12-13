@@ -2,7 +2,7 @@
 
 flatpak
 
-snap
+snapcraft
 
 
 ### Useful Commands
