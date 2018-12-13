@@ -10,6 +10,14 @@ https://www.devpy.me/snapcraft-appimage-flatpak/
 
 
 
+### Programs
+
+- [Krita](https://krita.org/en/download/krita-desktop/)
+
+- [digiKam](https://www.digikam.org/download/)
+
+
+
 
 ### Useful Commands
 
