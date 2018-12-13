@@ -9,7 +9,6 @@ AppImage
 https://www.devpy.me/snapcraft-appimage-flatpak/
 
 
-
 ### Programs
 
 - [Krita](https://krita.org/en/download/krita-desktop/)
@@ -17,10 +16,6 @@ https://www.devpy.me/snapcraft-appimage-flatpak/
 - [digiKam](https://www.digikam.org/download/)
 
 - pidgin
-
-
-
-
 
 
 ### Useful Commands
@@ -32,6 +27,23 @@ create symblink : ln -fs target-path source-path-and-filename
 get all symb links : find ./ -type l
 
 get real path symb link : readlink -f [sybmlynk name]
+
+
+### bin, sbin, usr/bin , usr/sbin split
+
+http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
+
+
+- /bin : For binaries usable before the /usr partition is mounted. This is used for trivial binaries used in the very early boot stage or ones that you need to have available in booting single-user mode. Think of binaries like cat, ls, etc.
+
+- /sbin : Same, but for binaries with superuser (root) privileges required.
+
+- /usr/bin : Same as first, but for general system-wide binaries.
+
+- /usr/sbin : Same as above, but for binaries with superuser (root) privileges required.
+
+
+
 
 
 
