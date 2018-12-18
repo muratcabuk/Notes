@@ -122,4 +122,9 @@ Agile ı Anlamak
 
 İki katı işi yarı zamanda yapma sanatı
 
+İleri Seviye Konular  : 
+	
+SCRUM: Usta Sorulara Uzman Cevaplar
+
+
 
