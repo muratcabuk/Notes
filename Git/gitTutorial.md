@@ -1,6 +1,8 @@
 
 https://git-scm.com/book/tr/v2/Ba%C5%9Flang%C4%B1%C3%A7-Git%E2%80%99in-Temelleri
 
+https://medium.com/@osmanhomek/git-mi-git-flow-mu-d7573e75269d
+
 https://git-scm.com/book/tr/v1/Git-te-Dallanma-Rebasing-Tekrar-Adresleme
 https://aliozgur.gitbooks.io/git101/content/bolum_1_-_baslangic/
 
@@ -28,4 +30,6 @@ http://rogerdudler.github.io/git-guide/
 
 https://jameschambers.co/writing/git-team-workflow-cheatsheet/
 
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
+https://pewat.blogspot.com/2017/02/git-flow-nedir.html
