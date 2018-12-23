@@ -16,13 +16,16 @@ https://fatihhayrioglu.com/git/
 
 https://github.com/vigo/git-puf-noktalari/blob/master/bolum-01/patch-mod-git-add.md
 
-
-
-
-
-
 http://marklodato.github.io/visual-git-guide/index-en.html
 
 https://medium.com/data-science-tr/git-ve-github-2ad10716fb83
 
 http://rogerdudler.github.io/git-guide/
+
+
+
+## Team
+
+https://jameschambers.co/writing/git-team-workflow-cheatsheet/
+
+
