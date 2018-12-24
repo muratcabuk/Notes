@@ -34,6 +34,11 @@ see all groups: nano /etc/groups
 
 see diectory permission: ls -ld /foldername
 
+run program on terminal without log (e.g vs code) : code &
+
+run program on terminal without log (e.g vs code) if we already open termianal, just change the session : setsid program-name &>/dev/null
+
+
 ### bin, sbin, usr/bin , usr/sbin split
 
 http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
