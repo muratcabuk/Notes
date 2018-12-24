@@ -28,6 +28,11 @@ get all symb links : find ./ -type l
 
 get real path symb link : readlink -f [sybmlynk name]
 
+see all users : nano /etc/users
+
+see all groups: nano /etc/groups
+
+see diectory permission: ls -ld /foldername
 
 ### bin, sbin, usr/bin , usr/sbin split
 
