@@ -130,10 +130,14 @@
           OrchardCore.Settings projesi siteye ait settingsleri farklı akaynaklardan toplar.
           
           OrchardCore.DisplayManagement.Title projesi ise Title partnın kullanacağı html title ı oluşturur. Sayfanın herhangi bir yerinde title ı çağırıp html olarak eklran abasmak için lazım. Aynı zamanda HTML içindeki title tag ının (segmentinin) oluşturlmasını nı sağlar (GenerateTitle() fonksiyonu).
+          <head>
           
           {% render_section "HeadMeta", required: false %}
-          
+                     
           <title>{% page_title Site.SiteName %}</title>
+          
+          </head>
+          
           
           ayrıca body tag ı içine 
           
