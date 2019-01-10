@@ -62,7 +62,7 @@ http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
 ### Driver and Firmware
 
 [kernel firmware list](http://mirrors.kernel.org/ubuntu/pool/main/l/linux-firmware)
-
+[mainborad linux component](https://github.com/armbian)
 
 ### Partitions
 
