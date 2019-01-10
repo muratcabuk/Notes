@@ -1,3 +1,7 @@
+## Network
+
+[Source](https://www.maketecheasier.com/fix-wi-fi-not-working-ubuntu/)
+
 ### Issue One: Device not detected
 
 1. If the wireless device is not detected by Ubuntu (or any distro for that matter), 
