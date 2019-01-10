@@ -55,7 +55,9 @@ http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
 - /usr/sbin : Same as above, but for binaries with superuser (root) privileges required.
 
 
+### network
 
+[WiFi](https://www.linux.com/learn/how-configure-wireless-any-linux-desktop)
 
 
 
