@@ -41,6 +41,15 @@ run program on terminal without log (e.g vs code) : code &
 run program on terminal without log (e.g vs code) if we already open termianal, just change the session : setsid program-name &>/dev/null
 
 
+### SSH
+
+ssh-add id_rsa
+
+Error : Could not open a connection to your authentication agent.
+
+Resolution : eval ssh-agent -s
+
+
 ### bin, sbin, usr/bin , usr/sbin split
 
 http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
