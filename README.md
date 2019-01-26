@@ -20,16 +20,16 @@
 ### [WebAssembly](https://github.com/muratcabuk/Notes/blob/master/WebAssembly/WebAssemblyBlazor.md)
 ### [Big Data](https://github.com/muratcabuk/Notes/blob/master/BigData/Hadoop.md)
 
-algoritma analizi
 
 
-http://hanmurat.com/blog/algoritma-analizi-ders-notlari/
+
+- [Algoritme Analizi Ders Notları]http://hanmurat.com/blog/algoritma-analizi-ders-notlari/
 
 
-https://medium.com/deep-learning-turkiye/yapay-zeka-kullan%C4%B1m-alanlar%C4%B1-ve-uygulamalar%C4%B1na-derinlemesine-bir-bak%C4%B1%C5%9F-d0fecaf7f61b
+- [Yapay Zeka uygulamaları](https://medium.com/deep-learning-turkiye/yapay-zeka-kullan%C4%B1m-alanlar%C4%B1-ve-uygulamalar%C4%B1na-derinlemesine-bir-bak%C4%B1%C5%9F-d0fecaf7f61b)
 
 
-http://evren.info/?p=3163
+- [Machine Learning konusunda takip edilmesi gereken 85 kişi](http://evren.info/?p=3163)
 
 
 
