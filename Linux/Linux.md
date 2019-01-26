@@ -41,6 +41,15 @@ run program on terminal without log (e.g vs code) : code &
 run program on terminal without log (e.g vs code) if we already open termianal, just change the session : setsid program-name &>/dev/null
 
 
+### SSH
+
+ssh-add id_rsa
+
+Error : Could not open a connection to your authentication agent.
+
+Resolution : eval ssh-agent -s
+
+
 ### bin, sbin, usr/bin , usr/sbin split
 
 http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
@@ -55,10 +64,14 @@ http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
 - /usr/sbin : Same as above, but for binaries with superuser (root) privileges required.
 
 
+### network
 
+[WiFi](https://www.linux.com/learn/how-configure-wireless-any-linux-desktop)
 
+### Driver and Firmware
 
-
+[kernel firmware list](http://mirrors.kernel.org/ubuntu/pool/main/l/linux-firmware)
+[mainborad linux component](https://github.com/armbian)
 
 ### Partitions
 
