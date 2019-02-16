@@ -88,18 +88,6 @@ Karşılaştırmalı örnek tavsiye olunur: [Link](https://tech.gsa.gov/guides/u
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 #### Azure DevOps 
 
 Define Feature and Epic: 
@@ -125,6 +113,13 @@ Agile ı Anlamak
 İleri Seviye Konular  : 
 	
 SCRUM: Usta Sorulara Uzman Cevaplar
+
+
+#### Videolar
+
+[Türkçe güzel video](https://www.youtube.com/watch?v=slZ9iA4JH40)
+
+
 
 
 
