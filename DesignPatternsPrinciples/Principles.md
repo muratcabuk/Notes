@@ -114,6 +114,20 @@ Object Oriented dillerde bu bağı tamamen kaldırmak imkansızdır. bu  nedenle
 Bir neste başka bşr nesne içinde create edilirken interface üzerinden create edilir.
 
 
+## Don't Repeat Yourself (DRY)
+Don't repeat yourself means don't try to write the same code again and again. The idea is if you are writing a few lines of code again and again, then you should combine them in one function and then call that function.
+
+The biggest benefit is that now if you want to update those particular lines of code, you can update that in just one place. Otherwise, you will have to search all the places where code is written.
+
+I have been hesitant to apply this principle. This is because in an old programming book, I have read that writing a separate function will cause your processor to work extra. For example, when you call a function, there is always an additional call in the assembly language and that is called 'JUMP' call.
+
+This jump call incurs additional cost of execution. Now if the function is in a loop that is executing a 1 million times, that means that you have 1 million extra instructions to be executed by the processor.
+
+Hmmm. Costly!!
+
+This hindered me for a long period of time. There is a solution to that too. Now the compilers are so much optimized that they don't jump to the function. Instead, when you call a function, these compilers just replace the function calls with the actual lines of code. Hence, when the processor is running, there is no additional cost of 'JUMP'.
+
+Everything else is also taken care by the compiler. So use the DRY principles as much as you like but make sure that your compiler is smart enough :).
 
 
 ## Hollywood Principle
@@ -193,6 +207,45 @@ atayabilirisiniz.
 PersistantStorage, Connection, ...
 
 
+## OOP Basic Preciples
+
+- __Abstraction (Soyutlama)__
+
+Abstraction in OOPs is very easy to understand when you relate it to the real time example. For example, when you drive your car you do not have to be concerned with the exact internal working of your car. What you are concerned with is interacting with your car via its interfaces like steering wheel, brake pedal, accelerator pedal etc. Here the knowledge you have of your car is abstract.
+
+
+- __Encapsulation (Sarmalama / Paketleme)__
+
+
+Wrapping data and methods within classes in combination with implementation hiding (through access control) is often called encapsulation in OOPs. The result is a data type with characteristics and behaviors. Encapsulation essentially has both i.e. information hiding and implementation hiding.
+
+Encapsulation serves three useful purposes:
+
+1. It permits the protection of these properties and methods from any outside tampering.
+
+2. It allows the inclusion of validation code to help catch errors in the use of the public interface. For instance, it permits us to prevent the client of the employee software component from setting an employee’s salary to a negative number.
+
+3. It frees the user from having to know the details of how the properties and methods are implemented
+
+
+- __Inheritance (Miras Alma)__
+
+Inheritance is another important concept in object oriented programming. Inheritance in Java is a mechanism by which one object acquires the properties and behaviors of the parent object. It’s essentially creating a parent-child relationship between classes. In Java, you will use inheritance mainly for code re-usability and maintainability.
+
+It lets programmers create new classes that share some of the attributes of existing classes. This lets us build on previous work without reinventing the wheel.
+
+- __Polymorphism (Çok Biçimlilik )__
+
+
+Polymorphism is the ability by which, we can create functions or reference variables which behaves differently in different programmatic context.
+
+In java language, polymorphism is essentially considered into two versions:
+
+Compile time polymorphism (static binding or method overloading)
+
+Runtime polymorphism (dynamic binding or method overriding)
+
+
 #### Kısaca GRASP
 
 - Controller: Sistem sorumluluğunu üzerine alacak sınıfı belirleyin.
@@ -214,7 +267,8 @@ PersistantStorage, Connection, ...
 - [Gençay Yıldız Liskov Notları](https://www.gencayyildiz.com/blog/liskovun-yerine-gecme-prensibiliskov-substitution-principle-lsp/)
 - [Burak Selim Şenyurt] (https://buraksenyurt.com/post/Tasarim-Prensipleri-Liskov-Substitution)
 - [Beycan Kahraman GRASP](http://www.beycan.net/eklenen/GoF_ve_GRASP.pdf)
-
+- [Safari Books](https://www.oreilly.com/library/view/vbnet-language-in/0596003080/ch04s02.html)
+- [How To Do in Java](https://howtodoinjava.com/oops/object-oriented-principles/)
 
 
 

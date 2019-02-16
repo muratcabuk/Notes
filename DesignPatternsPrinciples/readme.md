@@ -143,13 +143,11 @@ one should "depend upon abstractions, [not] concretions."
 
 
 
-### Design Pattern
+### Summary Of Patterns
+
 It provides low level solution (implementation) for the commonly occurring object oriented problem. In another word, design pattern suggest specific implementation for the specific object oriented programming problem. For example, if you want create a class that can only have one object at a time then you can use Singleton design pattern which suggests the best way to create a class that can only have one object.
 
 Design patterns are tested by others and safe to follow. E.g. Gang of Four patterns: Abstract Factory, Factory, Singleton, Command etc.
-
-
-
 
 
 
@@ -159,7 +157,4 @@ Design patterns are tested by others and safe to follow. E.g. Gang of Four patte
 
 - [Beycan Kahraman GRASP](http://www.beycan.net/eklenen/GoF_ve_GRASP.pdf)
 
-
-
-### Summary Of Patterns
 
