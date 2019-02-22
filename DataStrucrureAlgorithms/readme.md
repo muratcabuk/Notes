@@ -1,4 +1,4 @@
-# Data Structures And Algorithms
+# Data Structures And Algorithms Analysis
 
 
 
@@ -6,7 +6,86 @@
 
 ## English 
 
+
+- __Typical steps in the development of algorithms:__
+
+1. Problem definition
+2. Development of a model
+3. Specification of the algorithm
+4. Designing an algorithm
+5. Checking the correctness of the algorithm
+6. Analysis of algorithm
+7. Implementation of algorithm
+8. Program testing
+9. Documentation preparation
+
+
+
+- __Algoritmaların Sınıflandırılması__
+
+ By Implementation
+
+ 1. Recursion
+ 2. Logical (Mantıksal)
+ 3. Serial, Parallel or Distributed
+ 4. Deterministic (parametreleri iyi bilinen, belli ibr gidişle aynı sonucu veren ve içinde olasılık barındırmayan modeller, stokastik modeller tam tersidir.) or Non-Determininistic
+ 5. Exact or Approximate
+
+
+
+By Design Paradigm
+
+1. Brute-force or Exhaustive (Kapsamlı) Search
+2. Divide and Conquer (Bil ve Fethet) : Merge Sorting, Quicksort
+3. Search and Enumeration
+4. Randomized Algorithm
+5. Reduction of Complexity : This technique involves solving a difficult problem by transforming it into a better-known problem for which we have (hopefully) asymptotically optimal algorithms. 
+6. Back Tracking
+
+
+By Field of Study
+
+Every field of science has its own problems and needs efficient algorithms. Related problems in one field are often studied together. Some example classes are 
+
+1. search algorithms, 
+2. sorting algorithms, 
+3. merge algorithms, 
+4. numerical algorithms, 
+5. graph algorithms, 
+6. string algorithms, 
+7. computational geometric algorithms, 
+8. combinatorial algorithms, 
+9. medical algorithms, 
+10. machine learning, 
+11. cryptography, 
+12. data compression algorithms and parsing techniques.
+
+Fields tend to overlap with each other, and algorithm advances in one field may improve those of other, sometimes completely unrelated, fields. For example, dynamic programming was invented for optimization of resource consumption in industry but is now used in solving a broad range of problems in many fields.
+
+
+Optimization Problems
+
+- Linear Programming
+- Dynamic Programming: When a problem shows optimal substructures—meaning the optimal solution to a problem can be constructed from optimal solutions to subproblems—and overlapping subproblems, meaning the same subproblems are used to solve many different problem instances, a quicker approach called dynamic programming avoids recomputing solutions that have already been computed. For example, Floyd–Warshall algorithm, the shortest path to a goal from a vertex in a weighted graph can be found by using the shortest path to the goal from all adjacent vertices. Dynamic programming and memoization go together. The main difference between dynamic programming and divide and conquer is that subproblems are more or less independent in divide and conquer, whereas subproblems overlap in dynamic programming. 
+- The Greedy Algorithm: The most popular use of greedy algorithms is for finding the minimal spanning tree where finding the optimal solution is possible with this method. Huffman Tree, Kruskal, Prim, Sollin are greedy algorithms that can solve this optimization problem.
+- The Heuristic Algorithm : In optimization problems, heuristic algorithms can be used to find a solution close to the optimal solution in cases where finding the optimal solution is impractical. 
+
+
+
+
+
+
+
 ## Turkçe
+
+
+### __Veri Yapıları__
+
+
+[link](http://hanmurat.com/blog/algoritma-analizi-ders-notlari/)
+
+[veri yapıları](http://hanmurat.com/blog/veri-yapilari-ders-notlari/)
+
 
 [Bilgisayar Kavramları - C ile Video Ders](https://www.youtube.com/watch?v=r3uOBb3BM-0&list=PLh9ECzBB8tJN9bckI6FbWB03HkmogKrFT) 
 
@@ -85,6 +164,20 @@ silinen node un solundakilerden en büyüğü veya sağındakilerin en küçüğ
 
 
 
+### __Algoritmalar__
+
+1. [Sıralama Algoritmaları - Sorting Algorithms](SortingAlgorithms.md)
+2. [Arama Algoritmaları - Search algorithms](SearchAlgorithms.md) 
+3. merge algorithms, 
+4. numerical algorithms, 
+5. graph algorithms, 
+6. string algorithms, 
+7. computational geometric algorithms, 
+8. combinatorial algorithms, 
+9. medical algorithms, 
+10. machine learning, 
+11. cryptography, 
+12. data compression algorithms and parsing techniques.
 
 
 

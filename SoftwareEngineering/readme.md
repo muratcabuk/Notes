@@ -1,3 +1,6 @@
+[Bilgisayar Kavramları - YAzılım Mühendisliği Video Serisi](https://www.youtube.com/watch?v=pUGHbEGQj0g&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV)
+
+
 [Ders Notları](https://akademik.adu.edu.tr/fakulte/muhendislik/personel/sbasarici/dersler)
 
 [Ders Notları2](https://www.e-adys.com/adys/OpenCourse/Course/Yaz%C4%B1l%C4%B1m_M%C3%BChendisli%C4%9Fi/105)
