@@ -120,6 +120,19 @@ SCRUM: Usta Sorulara Uzman Cevaplar
 [Türkçe güzel video](https://www.youtube.com/watch?v=slZ9iA4JH40)
 
 
+[Bilgisayar Kavramları Agile Methodogy](https://www.youtube.com/watch?v=nHv3-VtiP38&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV&index=23)
+
+- XP Planning Game [Bilgisayar Kavramları XP 1](https://www.youtube.com/watch?v=o5s0ZgQUMVQ&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV&index=24)
+
+
+
+- XP Diğer kavramlar[Bilgisayar Kavramları XP 2](https://www.youtube.com/watch?v=3uDrW74xiPk&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV&index=25)
+
+
+- SCRUM [Bilgisayar Kavramları - SCRUM](https://www.youtube.com/watch?v=Lk7N1zd7Mv8&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV&index=26)
+
+
+
 
 
 
