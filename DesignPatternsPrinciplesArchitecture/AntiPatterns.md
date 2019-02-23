@@ -1,0 +1,1 @@
+https://www.buraksenyurt.com/post/AntiPatterns-Ders-Notlarc4b1m

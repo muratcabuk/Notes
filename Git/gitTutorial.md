@@ -24,6 +24,7 @@ https://medium.com/data-science-tr/git-ve-github-2ad10716fb83
 
 http://rogerdudler.github.io/git-guide/
 
+https://www.youtube.com/watch?v=TymF3DpidJ8
 
 
 ## Team
@@ -33,3 +34,5 @@ https://jameschambers.co/writing/git-team-workflow-cheatsheet/
 https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
 https://pewat.blogspot.com/2017/02/git-flow-nedir.html
+
+

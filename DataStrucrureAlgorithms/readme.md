@@ -163,6 +163,12 @@ __Optimization Problems__
 
 [Güzel Kaynak](http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/)
 
+- __FIFO and LIFO__
+
+- First In, First Out (Queue, Heap): Aynı gerçek hayattaki kuyruklar gibi, sıraya ilk giren ilk otöbüse binendir.
+
+
+- Last In, First Out (Stack) : bir depoyu doldurmak gibidir. depo boşaltılırkende en önce en son girenler çıkacaktır. Buna örnek olarak 
 
 
 
@@ -172,6 +178,9 @@ __Optimization Problems__
 
 [Good Explanation Video -  C# - Java](https://www.youtube.com/watch?v=clOUdVDDzIM&spfreload=5)
 
+kendi Heap (queue) kodumuzu yazmak istediğimizde ya arraylari kullanarak her seferinde ilk çıkan yerine arrayi tekrar düzenleyeceğiz ki bu çok verimli değil Yada   Binary Heap yazacağız. İkili heap ler [Sıralama Algoritmalrında](SortingAlgorithms.md) Yığınlama Sıralaması (Heap Sort) başlığında anlatıldı.
+
+Ayrıca [Bilgisayar Kavramları Videosu](https://www.youtube.com/watch?v=HYLiT2wffUE) da izlenebilir ya da [buradan](http://bilgisayarkavramlari.sadievrenseker.com/2008/08/09/yigin-agaci-heap/) okunabilir.
 
 - __Hash Table ve Hash Fonksiyonu__
 
@@ -203,14 +212,109 @@ Bilinen hash fonksiyonları.
 
 
 
-
-
-
 __Boxing ve Unboxing Kavramları__
 
+Boxing , Stack’te bulunan değer türlerinin heap bulunan referans tiplerine dönüştürmektir.
+
+Unboxing, ise heap da bulunana değer tipinin tekar eski değer tipine dönüştürülmesidir.
+
+[Burak Selim Şenyurt - Boxing ve Unboxing Kritiği](https://buraksenyurt.com/post/Boxing-ve-Unboxing-Performans-Kritigi-bsenyurt-com-dan
+)
 
 
-TODO: I will add some content
+
+
+__C# daki Ienum, ICollection ve IList sınıfları__
+
+[Bütün Liste Tipleri - Güzel Anlatım Collection, List, IEnumarable, Queu, Stack...vs](http://zetcode.com/lang/csharp/collections/)
+
+[Microoft Docs - Liste Tipleri](https://docs.microsoft.com/en-us/dotnet/standard/collections/commonly-used-collection-types)
+
+- Karşılaştırma
+
+![C# Liste karşılaştırmaları](files/CSharpLists.png)
+
+
+__The Original Collections: System.Collections namespace__
+
+The original collection classes are largely considered deprecated by developers and by Microsoft itself. In fact they indicate that for the most part you should always favor the generic or concurrent collections, and only use the original collections when you are dealing with legacy .NET code.
+
+Because these collections are out of vogue, let's just briefly mention the original collection and their generic equivalents:
+
+1. ArrayList
+    - A dynamic, contiguous collection of objects.
+    - Favor the generic collection List<T> instead.
+2. Hashtable
+    - Associative, unordered collection of key-value pairs of objects.
+    - Favor the generic collection Dictionary<TKey,TValue> instead.
+3. Queue
+    - First-in-first-out (FIFO) collection of objects.
+    - Favor the generic collection Queue<T> instead.
+4. SortedList
+    - Associative, ordered collection of key-value pairs of objects.
+    - Favor the generic collection SortedList<T> instead.
+5. Stack
+    - Last-in-first-out (LIFO) collection of objects.
+    - Favor the generic collection Stack<T> instead.
+In general, the older collections are non-type-safe and in some cases less performant than their generic counterparts. Once again, the only reason you should fall back on these older collections is for backward compatibility with legacy code and libraries only.
+
+__The Concurrent Collections: System.Collections.Concurrent namespace__
+
+The concurrent collections are new as of .NET 4.0 and are included in the System.Collections.Concurrent namespace. These collections are optimized for use in situations where multi-threaded read and write access of a collection is desired.
+
+The concurrent queue, stack, and dictionary work much as you'd expect. The bag and blocking collection are more unique. Below is the summary of each with a link to a blog post I did on each of them.
+
+1. ConcurrentQueue
+    - Thread-safe version of a queue (FIFO).
+2. ConcurrentStack
+    - Thread-safe version of a stack (LIFO).
+3. ConcurrentBag
+    - Thread-safe unordered collection of objects.
+    - Optimized for situations where a thread may be bother reader and writer.
+4. ConcurrentDictionary
+    - Thread-safe version of a dictionary.
+    - Optimized for multiple readers (allows multiple readers under same lock).
+5. BlockingCollection
+    - Wrapper collection that implement producers & consumers paradigm.
+    - Readers can block until items are available to read.
+    - Writers can block until space is available to write (if bounded).
+
+
+
+C# Queu tipi bulunmaktadır. şu fonksiyonları vardır.
+
+- Enqueue() – adds an element to the end of the Queue
+- Dequeue() – removes the oldest element from the Queue
+- Peek() – returns the oldest element at the start of the Queue without removing it from the Queue
+
+C# da Stack veri tipi de bulunmaktadır
+C# Stacks
+
+
+
+
+Interface|Scenario
+---------|--------
+IEnumerable, IEnumerable<T> | The only thing you want is to iterate over the elements in a collection. You only need read-only access to that collection.
+ICollection, ICollection<T>|You want to modify the collection or you care about its size.
+IList, IList<T>|You want to modify the collection and you care about the ordering and / or positioning of the elements in the collection.
+List, List<T>|Since in object oriented design you want to depend on abstractions instead of implementations, you should never have a member of your own implementations with the concrete type List/List.
+
+
+- Dictionary
+1. Dictionary is generic type Dictionary<TKey,TValue>
+2. Dictionary class is a strong type < TKey,TValue > Hence, you must specify the data types for key and value.
+3. There is no need of boxing/unboxing.
+4. When you try to access non existing key dictionary, it gives runtime error.
+5. Dictionary maintains an order of the stored values.
+6. There is no need of boxing/unboxing, so it is faster than Hashtable.
+- Hashtable
+1. Hashtable is non-generic type.
+2. Hashtable is a weakly typed data structure, so you can add keys and values of any object type.
+3. Values need to have boxing/unboxing.
+4. When you try to access non existing key Hashtable, it gives null values.
+5. Hashtable never maintains an order of the stored values.
+6. Hashtable needs boxing/unboxing, so it is slower than Dictionary.
 
 
 

@@ -2,6 +2,12 @@
 
 
 
+![Design Patterns Relationships 1](files/DesignPatternRelationships.png)
+
+![Design Patterns Relationships 2](files/DesignPatternRelationships.png)
+
+
+
 
 
 ## 1. [Creational patterns](CreationalPatterns.md)

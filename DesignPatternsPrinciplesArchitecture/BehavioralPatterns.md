@@ -1,6 +1,11 @@
 
 ## 3. Behavioral patterns
 
+
+Belirli görevlerin bu işleri yapmak üzere tasarlanmış nesnelere gönderilmesi ve geri dönen sonuçların işlenmesi davranışsal tasarım kalıpları içerisinde yapılan bir işlemdir. Davranışsal tarım kalıpları içerisinde bilinen ve sıklıkla kullanılan kalıplar şu şekildedir.
+
+[Davranışsal Tasarım Desenleri Özet](http://bidb.itu.edu.tr/seyir-defteri/blog/2013/09/08/davran%C4%B1%C5%9Fsal-kal%C4%B1plar-(behavioral-patterns))
+
 ### 3.1. Blackboard
 
 ### 3.2. Chain of responsibility

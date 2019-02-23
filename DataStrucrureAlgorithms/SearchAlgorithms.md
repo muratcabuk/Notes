@@ -392,7 +392,16 @@ B-ağaçlarının bir özelliği ağacın her düğümündeki anahtarların sır
 
 [B-Tree vs Binary Tree](https://techdifferences.com/difference-between-b-tree-and-binary-tree.html) 
 
+![btree vs binary tree](files/Btree-BinaryTree.jpg)
 
+
+
+BASIS FOR COMPARISON|B-TREE|BINARY TREE
+--------------------|------|-----------
+Essential constraint|A node can have at max M number of child nodes(where M is the order of the tree).|A node can have at max 2 number of subtrees.
+Used|It is used when data is stored on disk.|It is used when records and data are stored in RAM.
+Height of the tree|LogM N (where m is the order of the M-way tree)|log2 N
+Application|Code indexing data structure in many DBMS.|Code optimization, Huffman coding, etc.
 
 
 

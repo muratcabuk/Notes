@@ -151,6 +151,12 @@ Design patterns are tested by others and safe to follow. E.g. Gang of Four patte
 
 
 
+### [Anti Patterns](AntiPatterns.md)
+
+
+
+
+
 ### References
 
 - [Arif Erol - Yazılım Tsarım Teknikleri](http://yazilimgelistirmeyontemleri.blogspot.com/2015/02/yazlm-tasarm-teknikleri-grasp.html)
