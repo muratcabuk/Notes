@@ -16,4 +16,7 @@ Algoritmalar 1 = https://acikders.ankara.edu.tr/course/view.php?id=3608
 Algoritmalar 2 = https://acikders.ankara.edu.tr/course/view.php?id=5214
 
 
+[Maliyet Hesaplama](https://www.youtube.com/watch?v=Lk7N1zd7Mv8&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV&index=26)
+
+
 

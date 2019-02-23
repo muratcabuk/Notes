@@ -1,3 +1,6 @@
+[Bilgisayar KAvramları](https://www.youtube.com/watch?v=ji1sEscrqZs&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV&index=3)
+
+
 [Requirement Analysis](http://www.wikizero.biz/index.php?q=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVxdWlyZW1lbnRzX2FuYWx5c2lz)
 
 [Software Requirements Specification](http://www.wikizero.biz/index.php?q=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU29mdHdhcmVfUmVxdWlyZW1lbnRzX1NwZWNpZmljYXRpb24)
