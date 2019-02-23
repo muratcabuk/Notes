@@ -135,7 +135,7 @@ ancak Heap larda böyle bir iliişki yoktur
 
 2. BST de aşağı ve yukarı doğru arama yapılırken pointer lar kullanılır. yani ebeveynler çocuklarını pointer yardımıyla bilir.
 
-![Heap Tree](heapTree.png)
+![Heap Tree](files/heapTree.png)
 
 
 Heap larda ise diziler yardımıyla tutulur. örneğin max heap da herhzaman en üst değer en üstte durur. Her bir node  da iki çocuk olur sol ve sağ. seçilen bir node un index(i) i kullanılarak node un sol çocuğunu bulmak için (2*i)+1 sağ çocuk için (2*i)+2  formülü kullanılır.
@@ -158,7 +158,7 @@ Algoritmanın karmaşıklığı O(nlogn) dir. yani eleman sayısı kadar logn li
 
 Algoritmanın Çalışması Örnek Naimasyon
 
-![Heap Tree example](Heapsort-example.gif)
+![Heap Tree example](files/Heapsort-example.gif)
 
 
 Kayhan Ayar - Videolu Anlatım.
@@ -194,7 +194,7 @@ Kabarcık Sıralaması (ing. Bubble Sort) algoritması aynı Seçmeli Sıralama 
 Algoritmanın saf hali her durumda O(n^2)’de çalışır fakat aşağıda da açıklayacağımız gibi, algoritmaya küçük bir ekleme ile iyi bir geliştirme yapılabilir. Bu durumda algoritma en iyi durumda (ing. best-case) doğrusal (ing. linear) bir zaman karmaşıklığına erişebilir.(yani zaman karmaşıklığı O(n) olur.) 
 
 
-![Bubble Sort example](BubbleSort.jpg)
+![Bubble Sort example](files/BubbleSort.jpg)
 
 5,7,2,9,6,1,3
 

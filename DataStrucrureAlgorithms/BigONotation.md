@@ -6,6 +6,8 @@
 [Big-O Cheatsheet](http://bigocheatsheet.com/)
 
 
+[Big-O good video tutorial](https://www.youtube.com/watch?v=D6xkbGLQesk)
+
 ### __English__
 
 
@@ -236,7 +238,7 @@ Her algoritma aşağıdaki kriterleri sağlamalıdır.
 - Bir Fonksyonun Büyüme Hızı (Big-O)
 
 
-![Big-o Chart](big0chart.png)
+![Big-o Chart](files/big0chart.png)
 
 [Big-O Cheatsheet](http://bigocheatsheet.com/)
 
@@ -270,7 +272,7 @@ ayrıca n^2, 2^n  den daha iyi bir durumdur.
 
 Polinom  (n^2, n^3 vb üstel durumlarda) zamanda çözülebilen algoritmalara uysal (tractable), polinom zamandan daha hızlı büyüyen algorştmalara uysal olmayan (untracktable) ismi verilir.
 
-![Big-O Complexity Classes](BigOComplexityClasses.jpg)
+![Big-O Complexity Classes](files/BigOComplexityClasses.jpg)
 
 
 - __Karmaşıklık Sınıfları (Complexity Classes)__
@@ -284,7 +286,7 @@ yer karmaşıklığı hafızada tutulacak yere göre hesaplanır. zaman karmaş�
 
 
 
-![Big-O Complexity Classes](Complexity.png)
+![Big-O Complexity Classes](files/Complexity.png)
 
 [Kaynak: Bilgisayar Kavramları](http://bilgisayarkavramlari.sadievrenseker.com/2010/06/17/karmasiklik-siniflari-complexity-classes/)
 
