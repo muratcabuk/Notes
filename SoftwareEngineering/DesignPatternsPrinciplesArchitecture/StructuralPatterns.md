@@ -988,6 +988,8 @@ borrower: Customer #2
 
 ### 2.5. Extension object
 
+TODO: içerik gelecek
+
 ### 2.6. Facade
 
 
@@ -1717,7 +1719,11 @@ namespace FlyWeight
 
 ### 2.8. Front controller
 
+TODO : içerik gelecek
+
 ### 2.9. Marker
+
+TODO: içerik gelecek
 
 ### 2.10. Module
 
@@ -1990,6 +1996,13 @@ __jQuery Plugin Module Design Pattern__
 
 [Jquery Code Organization and RequireJS and Deferreds](https://learn.jquery.com/code-organization/)
 
+[Videolu anlatım](http://gregfranko.com/blog/modular-jquery-plugins/)
+
+[Güzel Anlatım](https://www.smashingmagazine.com/2011/10/essential-jquery-plugin-patterns/)
+
+[Kendi Plugin ninizi nassıl yazarsınız](https://blog.teamtreehouse.com/writing-your-own-jquery-plugins)
+
+[Türkçe plugin nasıl yazılır](http://beltslib.net/jquery-eklentisi-yazmak.html)
 
 
 
@@ -2130,4 +2143,262 @@ class ConsoleDemo {
 
 ### 2.11. Proxy
 
+
+
+Proxy tasarım deseni çalışma maliyeti yüksek işlemlerin olduğu yapılarda, web servisi kullanılan yapılarda, remoting uygulamalarında, operasyonun gerçekleştirilmesinden önce hazırlık yapılması veya ön işlem yapılması durumlarında kullanılır. Uygulanışı basit bir tasarım desenidir. 
+
+
+Yaratılması pahalı bir çok işlem yapan bir nesneyi taklit eden bir başka nesnenin kullanılmasıdır. Örneğin bir nesne yarattığımızda veya bir nesnenin bir yordamını çağırdığımızda, bu çağırım bellekte çok yer tutan daha başka bir çok nesne yaratabilir veya ağa bağlanma, veritabanından büyük bir veri alma gibi pahalı işlemler yapabilir. Fakat uygulamanın akışına göre, bu işlemleri gerçekten yapmaya ihtiyaç olmayabilir. İşte bu durumlarda, bu pahalı işlemlerden doğan zaman ve kaynak kayıplarını önlemek için özdeş nesne kullanılır. Gerçekten bu pahalı işlem çağırılırsa, gerçek nesne oluşturulup, bu pahalı işlemler ihtiyaç olduğunda yapılır. Bu tasarım deseni kullanılarak, sisteme yük getiren gereksiz pahalı işlemler önlenir, böylece sistem daha hızlı ve sağlıklı hale gelir.
+
+
+Ne zaman Kullanılır? [Kaynak](http://www.codesenior.com/tutorial/Vekil-Proxy-Tasarim-Deseni)
+
+1. Remote nesne kullanmak istediğimizde kullanılır.(Remote proxy, farklı adres uzayında bulunan bir nesneye lokal temsilci sağlar) 
+2. Masraflı nesnelerin ihtiyaç duyulduğunda yaratılmasını sağlamak için(Örneğin resim yüklenmeden önce yükleniyor yazısı göstermek için. Bazı resimlerin boyutu büyük olduğu için yüklenmesi geç olabilmektedir. Burada belirtilen masraflı ifadesi büyük resim nesnesini temsil eder) kullanılır. Bu tarz proxy'lere virtual proxy denir. 
+3. Client'ın yetkisine göre işlem yapılıp yapılmamasını belirlemek için kullanılır. (Protection proxy) 
+
+
+Üç farklı durumda Proxy D.P. kullanılır.
+
+1. Remote(Uzak) Proxy : Remote(uzak) bir nesne kullanılacağı durumlarda kullanılabilir. Uzaktaki nesneye local bir temsilci sağlar ve gerekli kontrolleri yapmamıza olanak tanır.
+2. Virtual Proxy : Üretimi yahut kullanımı maliyetli nesnelerin oluşturulması veya kullanılması için tercih edilir. Buna örnek olarak genelde herkesin dillendirdiği resim yükleme işlevini verebiliriz. Yüksek boyutlu bir resmin boyutundan dolayı geç yüklenmesi durumunda verilen -yükleniyor- mesajı ve ardından yükleme işlemi bittiği anda resmin gösterilmesinde kullanılabilir.
+3. Protection Proxy : Yetkilendirme yahut login durumlarında kullanılabilir.
+
+
+Proxy desenini uygularken bu üç duruma genel olarak aşağıdaki terminolojiyle hareket edilecektir.
+
+1. Client:  İstemcidir.
+2. Subject: İstemcinin tek bir tip ile çalışmasını sağlayacak olan Interface yahut abstract class’ımızdır. Real Subject ve Proxy nesnelerimizin türediği yapıdır.
+3. Real Subject:  O anki işin asıl çalışmasını gerçekleştirecek olan gerçek nesnemizdir.
+4. Proxy : Vekil sınıfımızdır. İçerisinde Real Subject referansını taşıyarak istemcinin isteklerine cevap verecektir. Doğal olarak istemci gerçek nesneye dolaylı yoldan Proxy üzerinden erişebilecektir.
+
+
+
+![Proxy UML](files/proxyUML.png)
+
+![Proxy 1](files/proxy1.png)
+
+![Proxy 2](files/proxy2.png)
+
+
+
+``` C#
+using System;
+ 
+namespace DoFactory.GangOfFour.Proxy.Structural
+{
+  /// <summary>
+
+  /// MainApp startup class for Structural
+
+  /// Proxy Design Pattern.
+
+  /// </summary>
+
+  class MainApp
+
+  {
+    /// <summary>
+
+    /// Entry point into console application.
+
+    /// </summary>
+
+    static void Main()
+    {
+      // Create proxy and request a service
+
+      Proxy proxy = new Proxy();
+      proxy.Request();
+ 
+      // Wait for user
+
+      Console.ReadKey();
+    }
+  }
+ 
+  /// <summary>
+
+  /// The 'Subject' abstract class
+
+  /// </summary>
+
+  abstract class Subject
+
+  {
+    public abstract void Request();
+  }
+ 
+  /// <summary>
+
+  /// The 'RealSubject' class
+
+  /// </summary>
+
+  class RealSubject : Subject
+
+  {
+    public override void Request()
+    {
+      Console.WriteLine("Called RealSubject.Request()");
+    }
+  }
+ 
+  /// <summary>
+
+  /// The 'Proxy' class
+
+  /// </summary>
+
+  class Proxy : Subject
+
+  {
+    private RealSubject _realSubject;
+ 
+    public override void Request()
+    {
+      // Use 'lazy initialization'
+
+      if (_realSubject == null)
+      {
+        _realSubject = new RealSubject();
+      }
+ 
+      _realSubject.Request();
+    }
+  }
+}
+ 
+```
+Sonuç
+
+``` C#
+//Called RealSubject.Request()
+```
+[Kaynak](https://www.dofactory.com/net/proxy-design-pattern)
+
+
+Gerçek hayat örneği
+
+``` C#
+
+using System;
+ 
+namespace DoFactory.GangOfFour.Proxy.RealWorld
+{
+  /// <summary>
+
+  /// MainApp startup class for Real-World 
+
+  /// Proxy Design Pattern.
+
+  /// </summary>
+
+  class MainApp
+
+  {
+    /// <summary>
+
+    /// Entry point into console application.
+
+    /// </summary>
+
+    static void Main()
+    {
+      // Create math proxy
+
+      MathProxy proxy = new MathProxy();
+ 
+      // Do the math
+
+      Console.WriteLine("4 + 2 = " + proxy.Add(4, 2));
+      Console.WriteLine("4 - 2 = " + proxy.Sub(4, 2));
+      Console.WriteLine("4 * 2 = " + proxy.Mul(4, 2));
+      Console.WriteLine("4 / 2 = " + proxy.Div(4, 2));
+ 
+      // Wait for user
+
+      Console.ReadKey();
+    }
+  }
+ 
+  /// <summary>
+
+  /// The 'Subject interface
+
+  /// </summary>
+
+  public interface IMath
+
+  {
+    double Add(double x, double y);
+    double Sub(double x, double y);
+    double Mul(double x, double y);
+    double Div(double x, double y);
+  }
+ 
+  /// <summary>
+
+  /// The 'RealSubject' class
+
+  /// </summary>
+
+  class Math : IMath
+
+  {
+    public double Add(double x, double y) { return x + y; }
+    public double Sub(double x, double y) { return x - y; }
+    public double Mul(double x, double y) { return x * y; }
+    public double Div(double x, double y) { return x / y; }
+  }
+ 
+  /// <summary>
+
+  /// The 'Proxy Object' class
+
+  /// </summary>
+
+  class MathProxy : IMath
+
+  {
+    private Math _math = new Math();
+ 
+    public double Add(double x, double y)
+    {
+      return _math.Add(x, y);
+    }
+    public double Sub(double x, double y)
+    {
+      return _math.Sub(x, y);
+    }
+    public double Mul(double x, double y)
+    {
+      return _math.Mul(x, y);
+    }
+    public double Div(double x, double y)
+    {
+      return _math.Div(x, y);
+    }
+  }
+}
+
+
+
+```
+
+Sonuç
+
+``` C#
+
+//4 + 2 = 6
+//4 - 2 = 2
+//4 * 2 = 8
+//4 / 2 = 2
+
+```
+[Kaynak](https://www.dofactory.com/net/proxy-design-pattern)
+
+
 ### 2.12. Twin
+
+TODO: içerik gelecek

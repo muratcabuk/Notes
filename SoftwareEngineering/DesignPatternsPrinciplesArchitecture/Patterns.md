@@ -1,6 +1,11 @@
 # Design Patterns (Tasarım Desenleri)
 
 
+Dörtlü Çete (GOF) Kimdir?
+
+1994’te, dört yazar Erich Gamma, Richard Helm, Ralph Johnson ve John Vlissides, Yazılım Geliştirmede Tasarım Kalıbı kavramını başlatan Tasarım Örüntüleri:Tekrar kullanılabilir Nesneye Yönelik Yazılımın Temelleri __Design Patterns: Elements of Reusable Object-Oriented Software__) adlı bir kitap yayınladılar.
+
+
 
 ![Design Patterns Relationships 1](files/DesignPatternRelationships.png)
 

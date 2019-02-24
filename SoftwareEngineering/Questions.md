@@ -5,4 +5,10 @@ heap vs stack
 
 
 
+Abstract ile Interface Farkları
+
+
+
+
+
 
