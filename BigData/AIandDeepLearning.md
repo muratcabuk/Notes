@@ -24,3 +24,4 @@ http://w3.gazi.edu.tr/~akcayol/BEBB5001.htm
 
 
 
+[Metin Madenciliği](https://www.youtube.com/watch?v=0mtH7uBsRrg&list=PLh9ECzBB8tJP_ROlCIdRcC4RGL0gpZfTB)

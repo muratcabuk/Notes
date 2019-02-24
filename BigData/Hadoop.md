@@ -1,4 +1,6 @@
 
+https://www.youtube.com/watch?v=DidEZ6qbcbI&list=PLh9ECzBB8tJOFZwrh12DAYIhy0oz3FR-s
+
 ## SQL Data Access: 
 
 #### Pig, Hive, Impala
