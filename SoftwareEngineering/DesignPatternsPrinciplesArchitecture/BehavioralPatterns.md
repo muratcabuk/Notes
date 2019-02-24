@@ -833,7 +833,7 @@ Bu tasarım desenindeki amaç, özelleşmiş bir bilgisayar dilinin yorumlanmas�
 Dil bilgisi kuralları gibi kalıplar içerisinde yer alan ifadelerin yorumlanması amacıyla kullanılması tercih edilmektedir. 
 
 
-![interpreterUML](files/inpreter.gif)
+![interpreterUML](files/interpreter.gif)
 
 __Bileşenleri__
 
