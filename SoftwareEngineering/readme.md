@@ -1,3 +1,14 @@
+
+## [Data Structure and Algorithms](DataStrucrureAlgorithms)
+
+## [Analysis and Design Document](AnalysisDesignDocument)
+
+## [Design Patterns, Priciples and Architecture](DesignPatternsPrinciplesArchitecture)
+
+## __To be continued__
+
+
+
 [Bilgisayar Kavramları - YAzılım Mühendisliği Video Serisi](https://www.youtube.com/watch?v=pUGHbEGQj0g&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV)
 
 
