@@ -36,3 +36,55 @@ https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 https://pewat.blogspot.com/2017/02/git-flow-nedir.html
 
 
+
+## Komutlar
+
+1. Workspace de yapılan değişikliği en son committen dönmek için 
+- git checkout -- dosyaadi
+aslında bu komut son versyonu bir önceki versiyona alıyor.
+
+iki version arasında  geçiş yapmak için aşağıdaki komut kullanılır. Nokta tüm dosyaları o versiyondaki haline gitmesi gerektiğini söyler.
+
+- git checkout versionhashkodu -- . 
+
+2. Son Commiti bir önceki commite dönmek için alttaki komut çalıştırılır.  bu en son yaptığımız commiti master da geri ancak workspace de geri alınacaksa ozaman üstteki kod çalıştırılır.
+
+- git reset HEAD dosyaadi
+
+yada istenilen ir commite tam (kesin) dönmek için --hard eki kullanılır. bu şu anlama gelir. bu committen sonrasını sil.
+
+- git reset commitid --hard 
+
+eğer kesin dönüş yapılmak istenmiyorsa --soft kulanılır.
+
+- git reset commitid --soft
+
+3.Logları tek satır halinde yazdırmak için
+
+- git log --oneline
+
+4. istenilen herhangibir committe yapılıan değişikliği silmek için yani işlemi tamamen geri almak için revert komutu kullanılır
+
+- git revert commitid 
+
+bu komut çalıştırıldığında direkt karşımıza otomatik oluşturulmuş commit mesaj ekranı çıkar. kaydedildiinde işlem geri alınmış olur.
+
+5. hem stage e add yapmak hem de aynı zaman da mesaj eklemek için
+
+- git commit -a -m "message"
+
+6. daha önceki commit e ekleme yapmak için
+
+- git commit -amend
+
+7. branch oluşturmak için
+
+- git branch branchadi
+
+8. 
+
+
+
+
+
+
