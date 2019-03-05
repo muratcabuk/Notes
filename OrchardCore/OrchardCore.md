@@ -17,11 +17,19 @@
             Observer Design Pattern 
             
             Command design Pattern
+
+            Interpreter Design Pattern
+
+            State Design Pattern
       
       
         - Structural Design Patterns
       
-            Decorator Design Patterns
+            Decorator Design Pattern
+            
+            Adapter Design Pattern
+
+            Proxy Design Pattern
       
       
       
