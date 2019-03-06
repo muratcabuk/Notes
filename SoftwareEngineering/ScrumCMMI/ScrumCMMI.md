@@ -132,6 +132,31 @@ SCRUM: Usta Sorulara Uzman Cevaplar
 - SCRUM [Bilgisayar Kavramları - SCRUM](https://www.youtube.com/watch?v=Lk7N1zd7Mv8&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV&index=26)
 
 
+#### Sınav Hazırlık
+
+- https://erkancinko.wordpress.com/2015/04/20/professional-scrum-master-i-psm-i-sertifikasi-hakkinda/
+
+- https://erkancinko.wordpress.com/tag/psm-1/
+
+- http://www.yildirimmustafa.com/2015/07/scrum-psm-1-sertifikasi-almak/
+
+- https://www.linkedin.com/pulse/csm-ve-psm-i-sertifikalar%C4%B1-kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rmas%C4%B1-suha-selcuk
+
+- http://www.emrebuyukkurkcu.com/psm-i-sertifika-hazirlik-rehberi/
+
+- http://www.burakavci.com.tr/2016/11/professional-scrum-master.html
+
+- https://www.selsoft.academy/course/agile101-temel-seviye-agilescrum-ve-professional-scrum-master-i-psm-i-sinavina-hazirlik-egitimi/
+
+- http://www.gozdeberberoglu.com/2018/01/12/professional-scrum-master-1-psm-1-sinavina-hazirlik/
+
+
+### HAzırlık Sorular
+
+- https://www.thescrummaster.co.uk/professional-scrum-master-i-psm-i-practice-assessment
+
+- http://jaganinfo.com/blog/professional-scrum-master-exam-questions-answers-psm1/
+
 
 
 
