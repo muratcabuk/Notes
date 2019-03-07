@@ -36,4 +36,13 @@
 - [Go Lang Türkçe Öğrenim](https://go-tour-turkish.appspot.com/welcome/1)
 - [Go Lang Learning WebSites](https://github.com/golang/go/wiki/Learn)
 
+- 
+https://martinfowler.com/eaaCatalog/
+
+https://martinfowler.com/articles/enterprisePatterns.html
+
+
+https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/ddd-oriented-microservice
+
+
 
