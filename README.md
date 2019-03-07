@@ -34,5 +34,6 @@
 
 
 - [Go Lang Türkçe Öğrenim](https://go-tour-turkish.appspot.com/welcome/1)
+- [Go Lang Learning WebSites](https://github.com/golang/go/wiki/Learn)
 
 
