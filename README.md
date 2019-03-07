@@ -46,3 +46,33 @@ https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/micr
 
 
 
+https://www.codeproject.com/Articles/339725/Domain-Driven-Design-Clear-Your-Concepts-Before-Yo
+
+
+http://dddcommunity.org
+
+
+
+http://www.wikizeroo.net/index.php?q=aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9Eb21haW4tZHJpdmVuX2Rlc2lnbg
+
+
+
+
+https://www.infoq.com/articles/ddd-in-practice
+
+
+
+
+https://www.mirkosertic.de/blog/2013/04/domain-driven-design-example/
+
+
+
+
+
+
+
+
+
+
+
+
