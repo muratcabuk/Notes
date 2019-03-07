@@ -33,6 +33,6 @@
 
 
 
-
+- [Go Lang Türkçe Öğrenim](https://go-tour-turkish.appspot.com/welcome/1)
 
 
