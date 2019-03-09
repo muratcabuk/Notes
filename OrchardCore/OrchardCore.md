@@ -129,7 +129,7 @@
   3. Bootstrap sayfasından indridiğimiz [Creative Theme](https://startbootstrap.com/template-overviews/creative/) dosyalarını wwwroot klasörüne yapıştırıyoruz. gulp.js ve package.json dahil
   
   4.  daha sonra ilk olarak Layout u oluşturmaya başlayacağız.
-        - bunun için wwwroot altına koyaladığımız index.html adını Layout.liquıd olarak değiştirip Views klasörü altına koyaplıyoruz. Zone olarak ayarlanacak yerleri daha sonra yarlayacağız. Daha sonra TheAgentTheme deki Layout.liquid dosyaından gerekli yerleri kopyala yapıştır yapacağız.
+        - bunun için wwwroot altına koyaladığımız index.html adını Layout.liquıd olarak değiştirip Views klasörü altına koyaplıyoruz. Zone olarak ayarlanacak yerleri daha sonra yarlayacağız. Daha sonra TheAgentTheme deki Layout.liquid dosyaından gerekli yerleri kopyala yapıştır yapacağız. [ZONES](https://www.davidhayden.me/blog/adding-a-new-zone-to-the-blog-theme-layout-in-orchard-core-cms)
         - Layout.liquid içindeki bütün statik (css, js, image ... vs) dosyalarınınbaşına template in adını yazıyoruz. bizim durumumuzda TheCreativeTemplate ekliyoruz.
         - Head tagı içine alttaki satırları ekliyoruz. render_section alanı razor engine deki section lar gibi. partial view leri yüklemek için kullanılır. burada çalışma zamanında eklemek istediğimiz meta datalar, js ve css ler için kullanıyoruz.
         
