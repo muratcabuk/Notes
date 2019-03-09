@@ -460,6 +460,12 @@ https://www.youtube.com/watch?v=-CX98nfXfo0
 
 - ### Links
   - #### Definitions
+  
+  Orchard Core ile ilgili dersler
+  https://www.davidhayden.me/blog
+  
+  
+  
   bu artık eskimiş bi tanımlama sayfası ama mantığı anlatması açısından iyi sayılır
   http://docs.orchardproject.net/en/latest/Documentation/Definitions/
   
