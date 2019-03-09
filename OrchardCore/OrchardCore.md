@@ -168,6 +168,8 @@
           
           yonetim panelinde layers lara TemplateFooter adında bir html içerikli layer ekliyoruz. şuan içeriği boş olabilir.
           
+          eklediğimiz sectionları daha sonra yönetim panelinde "zones" altına virgülle ayrılmış şekilde eklemeliyiz. 
+          
           {% render_section "TemplateFooter", required: false %}      
       
         - Navigasyon için gereklei alattaki işlemleri yapıyoruz.
@@ -214,7 +216,7 @@
     
         Konu ile alakalı [Orchard Core Template sayfasına](https://orchardcore.readthedocs.io/en/latest/OrchardCore.Modules/OrchardCore.Templates/README/) da bakılabilir.
          
-        Daha sonra ansayfa içeriklerini Layout.liquid e ekleyabilmek için içeriği kesip aldığımız alana  alttaki satırları ekliyoruz . yonetim panelinde layers lara TemplateHeader adında bir html içerikli layer ekliyoruz. TemplateHeader koduna içerikteki header tagını kopyalayabiliriz.
+        Daha sonra ansayfa içeriklerini Layout.liquid e ekleyabilmek için içeriği kesip aldığımız alana  alttaki satırları ekliyoruz . yonetim panelinde layers lara TemplateHeader adında bir html içerikli layer ekliyoruz. TemplateHeader koduna içerikteki header tagını kopyalayabiliriz. bu section ları yönetim panelindeki "zones" altına eklemeliyiz.
          
         {% render_section "TemplateHeader", required: false %}  
                    
