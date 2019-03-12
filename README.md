@@ -74,7 +74,7 @@ http://www.yilmazcihan.com/cevik-donusumlerde-zorluklar-ve-basari-etkenleri/
 
 
 
-
+http://www.borakasmer.com/net-coreda-elasticsearch/
 
 
 
