@@ -279,6 +279,25 @@ https://blog.usejournal.com/hadoop-3-0-installation-on-ubuntu-18-04-step-by-step
 
 
 
+## Türkçe Kaynaklar
+
+
+https://www.b3lab.org/zookeeper-nedir/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
