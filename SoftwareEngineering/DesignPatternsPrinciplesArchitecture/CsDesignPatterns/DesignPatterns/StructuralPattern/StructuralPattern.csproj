@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D1CEE56-5F0C-4D3F-803E-8D5F4B7CBD79}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StructuralPattern</RootNamespace>
+    <AssemblyName>StructuralPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\DateTimeExample\DateScreen.cs" />
+    <Compile Include="Adapter\DateTimeExample\DateTimeDate.cs" />
+    <Compile Include="Adapter\DateTimeExample\DateTimeString.cs" />
+    <Compile Include="Adapter\DateTimeExample\IDateTimeShow.cs" />
+    <Compile Include="Adapter\IReaderAdapter.cs" />
+    <Compile Include="Adapter\Reader.cs" />
+    <Compile Include="Adapter\TxtReader.cs" />
+    <Compile Include="Adapter\WordReader.cs" />
+    <Compile Include="Bridge\Connection\DatabaseManger.cs" />
+    <Compile Include="Bridge\Connection\IConnection.cs" />
+    <Compile Include="Bridge\Connection\MsSqlConnection.cs" />
+    <Compile Include="Bridge\Connection\OracleConnection.cs" />
+    <Compile Include="Bridge\Connection\OracleManager.cs" />
+    <Compile Include="Bridge\Connection\SqlServerManager.cs" />
+    <Compile Include="Bridge\DesktopFormat.cs" />
+    <Compile Include="Bridge\IReportFormat.cs" />
+    <Compile Include="Bridge\PerformanceReport.cs" />
+    <Compile Include="Bridge\Report.cs" />
+    <Compile Include="Bridge\TestReport.cs" />
+    <Compile Include="Bridge\WebFormat.cs" />
+    <Compile Include="Composite\CompositeCreator.cs" />
+    <Compile Include="Composite\INode.cs" />
+    <Compile Include="Composite\Node.cs" />
+    <Compile Include="Composite\Tree.cs" />
+    <Compile Include="Decorator\Decorator.cs" />
+    <Compile Include="Decorator\EncryptMail.cs" />
+    <Compile Include="Decorator\Imail.cs" />
+    <Compile Include="Decorator\Mail.cs" />
+    <Compile Include="Decorator\SignMail.cs" />
+    <Compile Include="Facade\Works.cs" />
+    <Compile Include="Flyweight\Image.cs" />
+    <Compile Include="Flyweight\ImageProcessor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\ProxyBank.cs" />
+    <Compile Include="Proxy\Bank.cs" />
+    <Compile Include="Proxy\IBank.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D002CD07-34B7-4E66-A871-B5FA57D03AC3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BehavioralPattern</RootNamespace>
+    <AssemblyName>BehavioralPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChainOfResponsibility\Amount.cs" />
+    <Compile Include="ChainOfResponsibility\Bankamatic.cs" />
+    <Compile Include="ChainOfResponsibility\Banknote.cs" />
+    <Compile Include="ChainOfResponsibility\Money1.cs" />
+    <Compile Include="ChainOfResponsibility\Money10.cs" />
+    <Compile Include="ChainOfResponsibility\Money100.cs" />
+    <Compile Include="Command\ClientCommand.cs" />
+    <Compile Include="Command\CommandPerson.cs" />
+    <Compile Include="Command\CommandPersonAdd.cs" />
+    <Compile Include="Command\CommandPersonDelete.cs" />
+    <Compile Include="Command\Person.cs" />
+    <Compile Include="Command\PersonInvoker.cs" />
+    <Compile Include="Command\PersonManager.cs" />
+    <Compile Include="Interpreter\ClientInterpreter.cs" />
+    <Compile Include="Interpreter\Context.cs" />
+    <Compile Include="Interpreter\DepartmentExpression.cs" />
+    <Compile Include="Interpreter\HRDepartmentExpression.cs" />
+    <Compile Include="Interpreter\InterpreterRun.cs" />
+    <Compile Include="Interpreter\SalesDepartmentExpression.cs" />
+    <Compile Include="Interpreter\SoftwareDepartmentExpression.cs" />
+    <Compile Include="Iterator\ClientIterator.cs" />
+    <Compile Include="Iterator\DateTimeAggregate.cs" />
+    <Compile Include="Iterator\DateTimeIterator.cs" />
+    <Compile Include="Iterator\IAggregator.cs" />
+    <Compile Include="Iterator\IIterator.cs" />
+    <Compile Include="Mediator\AirPlane.cs" />
+    <Compile Include="Mediator\ClientMediator.cs" />
+    <Compile Include="Mediator\EsenbogaTower.cs" />
+    <Compile Include="Mediator\ITower.cs" />
+    <Compile Include="Mediator\JFKTower.cs" />
+    <Compile Include="Mediator\THYAirplane.cs" />
+    <Compile Include="Mediator\USAirplane.cs" />
+    <Compile Include="Memento\ClientMemento.cs" />
+    <Compile Include="Memento\Person.cs" />
+    <Compile Include="Memento\PersonMemento.cs" />
+    <Compile Include="Memento\PersonMemory.cs" />
+    <Compile Include="Observer\ClientObsorver.cs" />
+    <Compile Include="Observer\IMember.cs" />
+    <Compile Include="Observer\BaseProduct.cs" />
+    <Compile Include="Observer\Member.cs" />
+    <Compile Include="Observer\Product.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="State\TextFile1.txt" />
+    <Content Include="Strategy\TextFile1.txt" />
+    <Content Include="TemplateMethod\TextFile1.txt" />
+    <Content Include="Visitor\TextFile1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

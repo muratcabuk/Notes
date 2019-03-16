@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB7A60B4-010D-4B25-B7F3-8AA3F970BACD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CreationalPattern</RootNamespace>
+    <AssemblyName>CreationPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\AbstractFactory.cs" />
+    <Compile Include="AbstractFactory\Bank\AbstractFactory.cs" />
+    <Compile Include="AbstractFactory\Bank\Bankamatic.cs" />
+    <Compile Include="AbstractFactory\Bank\Deposit.cs" />
+    <Compile Include="AbstractFactory\Bank\DepositProcess.cs" />
+    <Compile Include="AbstractFactory\Bank\Process.cs" />
+    <Compile Include="AbstractFactory\Bank\ProcessPhases.cs" />
+    <Compile Include="AbstractFactory\Bank\Withdraw.cs" />
+    <Compile Include="AbstractFactory\Bank\WithdrawProcess.cs" />
+    <Compile Include="AbstractFactory\Box.cs" />
+    <Compile Include="AbstractFactory\BoxProduction.cs" />
+    <Compile Include="AbstractFactory\Colors.cs" />
+    <Compile Include="AbstractFactory\ColorSettings.cs" />
+    <Compile Include="AbstractFactory\SaleExample\AbstractFactory.cs" />
+    <Compile Include="AbstractFactory\SaleExample\DiscountedProduct.cs" />
+    <Compile Include="AbstractFactory\SaleExample\Process.cs" />
+    <Compile Include="AbstractFactory\SaleExample\DiscountProcess.cs" />
+    <Compile Include="AbstractFactory\SaleExample\ProcessPhases.cs" />
+    <Compile Include="AbstractFactory\SaleExample\TaxAppliedProduct.cs" />
+    <Compile Include="AbstractFactory\SaleExample\TaxProcess.cs" />
+    <Compile Include="AbstractFactory\OtherSettings.cs" />
+    <Compile Include="AbstractFactory\ProductionProcess.cs" />
+    <Compile Include="AbstractFactory\SizeSettings.cs" />
+    <Compile Include="AbstractFactory\SmallBoxProductionProcess.cs" />
+    <Compile Include="AbstractFactory\SmallBoxColorSettings.cs" />
+    <Compile Include="AbstractFactory\SmallBoxOtherSettings.cs" />
+    <Compile Include="AbstractFactory\SmallBoxSizeSettings.cs" />
+    <Compile Include="Builder\Menu.cs" />
+    <Compile Include="Builder\Menu2.cs" />
+    <Compile Include="Builder\Menu3.cs" />
+    <Compile Include="Builder\Menu1.cs" />
+    <Compile Include="Builder\MenuBuilder.cs" />
+    <Compile Include="Builder\MessageExample\FeastMessage.cs" />
+    <Compile Include="Builder\MessageExample\Message.cs" />
+    <Compile Include="Builder\MessageExample\MessageBuilder.cs" />
+    <Compile Include="Builder\MessageExample\MessageManager.cs" />
+    <Compile Include="Builder\Order.cs" />
+    <Compile Include="FactoryPrototype\Admin.cs" />
+    <Compile Include="FactoryPrototype\ContentAddPermission.cs" />
+    <Compile Include="FactoryPrototype\ContentUpdatePermission.cs" />
+    <Compile Include="FactoryPrototype\Editor.cs" />
+    <Compile Include="FactoryPrototype\Permission.cs" />
+    <Compile Include="FactoryPrototype\Role.cs" />
+    <Compile Include="FactoryPrototype\User.cs" />
+    <Compile Include="FactoryPrototype\UserPrototype.cs" />
+    <Compile Include="FactoryPrototype\UserAddPermission.cs" />
+    <Compile Include="FactoryPrototype\UserFactory.cs" />
+    <Compile Include="FactoryPrototype\UserUpdatePermission.cs" />
+    <Compile Include="Factory\Cake.cs" />
+    <Compile Include="Factory\Factory.cs" />
+    <Compile Include="Factory\Halvah.cs" />
+    <Compile Include="Factory\Ingredient.cs" />
+    <Compile Include="Factory\Powder.cs" />
+    <Compile Include="Factory\Product.cs" />
+    <Compile Include="Factory\Roles\ContentAddPermission.cs" />
+    <Compile Include="Factory\Roles\Admin.cs" />
+    <Compile Include="Factory\Roles\ContentUpdatePermission.cs" />
+    <Compile Include="Factory\Roles\Editor.cs" />
+    <Compile Include="Factory\Roles\Permission.cs" />
+    <Compile Include="Factory\Roles\Role.cs" />
+    <Compile Include="Factory\Roles\User.cs" />
+    <Compile Include="Factory\Roles\UserAddPermission.cs" />
+    <Compile Include="Factory\Roles\UserFactory.cs" />
+    <Compile Include="Factory\Roles\UserUpdatePermission.cs" />
+    <Compile Include="Factory\Sugar.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prototype\Client.cs" />
+    <Compile Include="Prototype\MySite.cs" />
+    <Compile Include="Prototype\User.cs" />
+    <Compile Include="Singleton\Plug.cs" />
+    <Compile Include="Singleton\PlugCreator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AbstractFactory\Publisher\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
