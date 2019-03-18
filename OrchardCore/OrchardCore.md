@@ -441,6 +441,12 @@ https://www.youtube.com/watch?v=-CX98nfXfo0
 [Video1](https://www.youtube.com/watch?v=LoPlECp31Oo)
 
 
+
+https://youtu.be/LoPlECp31Oo
+
+
+
+
 - ### MMULTITENANCY
 
 [Nasıl Yapılır Video](https://www.youtube.com/watch?v=yWpz8p-oaKg)
