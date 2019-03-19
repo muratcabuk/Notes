@@ -454,6 +454,10 @@ https://youtu.be/LoPlECp31Oo
 [Saas Framework Video](https://www.youtube.com/watch?v=Bqgnd2mfRQY)
 
 
+https://medium.com/rtl-tech/building-multi-tenant-asp-net-core-applications-with-orchard-core-dffb404558c3
+
+
+
 - ### WORKFLOW
 
      burada kullanılan bir kütüphahne var JINT onun kullanımı ile ilgili [video](https://www.youtube.com/watch?v=yCs6UmogKEg) ve ilgili [GitHub sayfası](https://github.com/sebastienros/jint). Bu kütüphane javascript kodunu server da çalıştırmak için geliştirilmiş (yine de kontrol edilmeli). 
