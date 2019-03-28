@@ -78,3 +78,14 @@ http://www.borakasmer.com/net-coreda-elasticsearch/
 
 
 
+security alanı aç
+
+
+
+
+
+http://halilozturkci.com/microsoft-tehdit-modelleme-araci-ile-guvenli-yazilim-gelistirme/
+
+
+
+
