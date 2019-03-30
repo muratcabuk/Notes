@@ -23,7 +23,19 @@
 
 - [5 Soruda Kanban](https://listelist.com/kanban-nedir/)
 
+- [6 Maddede Product Owner](https://listelist.com/6-maddede-urun-sahibi-product-owner-kimdir-ne-yapar/)
 
+- [Başarılı Agile Koçlarının Özellikleri](https://listelist.com/basarili-cevik-koclarin-ozellikleri/
+)
+
+- [5 Maddede Scrum Master](https://listelist.com/scrum-master-kimdir-ne-yapar/
+)
+
+- [Kullanıcı Hikayesi Detaylandirma - İklim Dilara](http://www.ilkimdilara.com/kullanici-hikayesi-detaylandirma-yontemleri/)
+
+- [Kullanıcı Hikayesi Detaylandırma](https://blog.kloia.com/kullanıcı-hikayesi-detaylandırma-yöntemleri-893680a03a31)
+
+- []()
 
 #### User Story Kavramı ve örnekleri
 
@@ -44,7 +56,7 @@ Theme --> Epic --> Feature --> Backlog Item --> Task/Bug
 
 - [link](http://www.ilkimdilara.com/kullanici-hikayesi/)
 
-- [link](http://www.ilkimdilara.com/kullanici-hikayesi-detaylandirma-yontemleri/)
+
 
 - [link](https://docs.ca.com/en-us/ca-agile-central/saas/writing-great-user-story)
 
