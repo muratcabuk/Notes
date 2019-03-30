@@ -24,17 +24,17 @@ Theme --> Epic --> Feature --> Backlog Item --> Task/Bug
 
 - [link](https://sherpa.blog/makale/use-case-mi-user-story-mi)
 
-![Feature Epic backlog Item](https://github.com/muratcabuk/Notes/blob/master/ScrumCMMI/EpicFeatureBacklogitem.jpg)
+![Feature Epic backlog Item](files/EpicFeatureBacklogitem.jpg)
 
 
 Feature Epic Backlog Item Zaman ayrımı
 
-![Feature Epic backlog Item](https://github.com/muratcabuk/Notes/blob/master/ScrumCMMI/Requirements-size-Epic-Feature-PBI-User-Story-Task-1.png)
+![Feature Epic backlog Item](files/Requirements-size-Epic-Feature-PBI-User-Story-Task-1.png)
 
-![Feature Epic backlog Item](https://github.com/muratcabuk/Notes/blob/master/ScrumCMMI/UserStories2.png)
+![Feature Epic backlog Item](files/UserStories2.png)
 
 
-![Feature Epic backlog Item](https://github.com/muratcabuk/Notes/blob/master/ScrumCMMI/ThemeEpicFeatureUSerStory.jpg)
+![Feature Epic backlog Item](files/ThemeEpicFeatureUSerStory.jpg)
 
 
 User Story (Kullanıcı Hikayesi), developer ın bir iterasyonda yapabileceği belli bir iş değeri olan iş parçalarıdır.
@@ -94,13 +94,13 @@ Define Feature and Epic:
 
 [link](https://docs.microsoft.com/tr-tr/azure/devops/boards/backlogs/define-features-epics?view=vsts&tabs=new-nav)
 
-![Portfolio](https://github.com/muratcabuk/Notes/blob/master/ScrumCMMI/management-team-backlog-epics.png)
+![Portfolio](files/management-team-backlog-epics.png)
 
 Create a Backlog :[link](https://docs.microsoft.com/en-us/azure/devops/boards/backlogs/create-your-backlog?view=vsts&tabs=new-nav)
 
 Portfolio Management : [link](https://docs.microsoft.com/en-us/azure/devops/boards/plans/portfolio-management?view=vsts&tabs=new-nav)
 
-![Portfolio Management](https://github.com/muratcabuk/Notes/blob/master/ScrumCMMI/five-levels-portfolio-backlogs.png)
+![Portfolio Management](files/five-levels-portfolio-backlogs.png)
 
 [İş Analistinin Bilmesi Gerekenler](http://www.ilkimdilara.com/agile-is-analistinin-bilmesi-gereken-teknikler/)
 
