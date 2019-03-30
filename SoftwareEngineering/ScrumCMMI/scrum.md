@@ -1,3 +1,29 @@
+#### Agile ve Scrum Süreçleri
+
+- [Agile Süreci ve Scrum](http://www.defnesarlioglu.com/agile-sureci-ve-scrum/)
+
+- [Scrum Roller ve Sorumluluklar - Yılmaz Cihan](http://www.yilmazcihan.com/scrum-roller-ve-sorumluluklar/)
+
+- [Kanban](http://www.yilmazcihan.com/kanban-metodunun-ilkeleri/)
+
+- [Kanban vs Scrum](http://www.yilmazcihan.com/scrum-ve-kanban-arasindaki-benzerlikler-ve-farkliliklar/)
+
+- [Scrum Master Gelişim Programı - Cihan Yılmaz](http://www.yilmazcihan.com/download/scrum-master-gelisim-programi-kitapcigi/)
+
+- [7 Maddede Scrum Çatısı - ListeList](https://listelist.com/scrum-framework-scrum-catisi/amp/)
+
+- [https://listelist.com/scrum-framework-scrum-catisi/amp/](https://listelist.com/cevik-agile-retrospektif-teknikleri/
+)
+
+- [https://listelist.com/cevik-agile-retrospektif-teknikleri/
+](Etkili Toplantılar İçin 5 Çevik (Agile) Retrospektif Tekniği)
+
+- [https://listelist.com/ayakta-toplanti/
+](7 Soruyla Günlük Ayakta Toplantının (Daily Stand-Up Meeting) İncelikleri)
+
+- [5 Soruda Kanban](https://listelist.com/kanban-nedir/)
+
+
 
 #### User Story Kavramı ve örnekleri
 
