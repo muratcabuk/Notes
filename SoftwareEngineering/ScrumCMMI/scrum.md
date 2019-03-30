@@ -1,4 +1,4 @@
-#### Agile ve Scrum Süreçleri
+#### __Agile ve Scrum Süreçleri__
 
 - [Agile Süreci ve Scrum](http://www.defnesarlioglu.com/agile-sureci-ve-scrum/)
 
@@ -35,9 +35,25 @@
 
 - [Kullanıcı Hikayesi Detaylandırma](https://blog.kloia.com/kullanıcı-hikayesi-detaylandırma-yöntemleri-893680a03a31)
 
-- []()
+- [Tema (Theme), Destanlar (Epics), Kullanıcı Hikayeleri (User Stories), Görevler (Tasks). Peki ne anlama gelirler?](https://medium.com/@hakirac/tema-theme-destanlar-epics-kullanıcı-hikayeleri-user-stories-i̇şler-tasks-9d6c2e140e1a)
 
-#### User Story Kavramı ve örnekleri
+- [Theme (Konu), User Story (Kullanıcı Hikayesi) ve Epic (Destan) Kavramları](https://www.pem360.com/blog/Agile/Theme-Konu-User-Story-Kullanici-Hikayesi-ve-Epic-Destan-Kavramlari/213)
+
+- [The Basics: Epics, Stories, Themes & Features](https://thedigitalbusinessanalyst.co.uk/epics-stories-themes-and-features-4637712cff5c)
+
+- [Themes vs Epics vs Features vs User Stories](https://www.kbp.media/themes-epics-features-user-stories/)
+
+- [Agile Best Practices](https://www.atlassian.com/agile)
+
+- [Stories versus Themes versus Epics](https://www.scrumalliance.org/community/articles/2014/march/stories-versus-themes-versus-epics)
+
+- [Define features and epics](https://docs.microsoft.com/en-us/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)
+
+- [Relationship between user story, feature, and epic?](https://softwareengineering.stackexchange.com/questions/182158/relationship-between-user-story-feature-and-epic)
+
+
+
+#### __User Story Kavramı ve örnekleri__
 
 Bu terimlerin kafada iyi oturması lazım. Linkleri takip ediniz. Şekilleri inceleyiniz.
 Herşey user Sory ama kapsamına göre farklı isimler alıyor.
@@ -102,7 +118,7 @@ As a <user type>, I want to <function> so that <benefit> .
 - A team member can view a table of stories with rank , name, size, package , owner and status.
 - A team member can click a red button to expand the table to include detail, which lists all the tasks, with rank, name, estimate, owner, status.
 
-#### Doğru yazılmış örnekler
+#### __Doğru yazılmış örnekler__
 
 - As a consumer, I want shopping cart functionality to easily purchase items online.
 - As an executive, I want to generate a report to understand which departments need to improve their productivity.
@@ -126,7 +142,7 @@ Karşılaştırmalı örnek tavsiye olunur: [Link](https://tech.gsa.gov/guides/u
 
 
 
-#### Azure DevOps 
+#### __Azure DevOps__ 
 
 Define Feature and Epic: 
 
@@ -142,7 +158,7 @@ Portfolio Management : [link](https://docs.microsoft.com/en-us/azure/devops/boar
 
 [İş Analistinin Bilmesi Gerekenler](http://www.ilkimdilara.com/agile-is-analistinin-bilmesi-gereken-teknikler/)
 
-#### Kitaplar
+#### __Kitaplar__
 
 Agile ı Anlamak
 
@@ -153,7 +169,7 @@ Agile ı Anlamak
 SCRUM: Usta Sorulara Uzman Cevaplar
 
 
-#### Videolar
+#### __Videolar__
 
 [Türkçe güzel video](https://www.youtube.com/watch?v=slZ9iA4JH40)
 
@@ -170,7 +186,7 @@ SCRUM: Usta Sorulara Uzman Cevaplar
 - SCRUM [Bilgisayar Kavramları - SCRUM](https://www.youtube.com/watch?v=Lk7N1zd7Mv8&list=PLh9ECzBB8tJOmOydGaV7xr9h13ooEjBkV&index=26)
 
 
-#### Sınav Hazırlık
+#### __Sınav Hazırlık__
 
 - https://erkancinko.wordpress.com/2015/04/20/professional-scrum-master-i-psm-i-sertifikasi-hakkinda/
 
@@ -189,7 +205,7 @@ SCRUM: Usta Sorulara Uzman Cevaplar
 - http://www.gozdeberberoglu.com/2018/01/12/professional-scrum-master-1-psm-1-sinavina-hazirlik/
 
 
-### HAzırlık Sorular
+### __HAzırlık Sorular__
 
 - https://www.thescrummaster.co.uk/professional-scrum-master-i-psm-i-practice-assessment
 
