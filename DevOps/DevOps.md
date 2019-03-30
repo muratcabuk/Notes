@@ -1,9 +1,15 @@
+https://www.upguard.com/articles/the-7-configuration-management-tools-you-need-to-know?hs_amp=true
 
-jenkins
-
-gitea
-
-taiga
+http://www.mshowto.org/powershell-dsc-nedir-ornek-kullanim-senaryolari.html
 
 
-https://www.youtube.com/watch?v=WxjJlYFIWtI
+
+### __Free And Open Sourced Tools__
+
+1. jenkins
+2. gitea
+3. taiga
+
+- https://www.youtube.com/watch?v=WxjJlYFIWtI
+
+### 
