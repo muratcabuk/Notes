@@ -2,6 +2,7 @@ https://www.upguard.com/articles/the-7-configuration-management-tools-you-need-t
 
 http://www.mshowto.org/powershell-dsc-nedir-ornek-kullanim-senaryolari.html
 
+http://vcloud-lab.com/entries/powershell/powershell-remoting-over-https-using-self-signed-ssl-certificate
 
 
 ### __Free And Open Sourced Tools__
