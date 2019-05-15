@@ -11,3 +11,10 @@ http://enehana.nohea.com/general/continuous-deployment-for-asp-net-using-git-msb
 https://blog.codeinside.eu/2010/11/21/howto-msdeploy-msbuild/
 
 
+### bamboo example
+
+http://www.22bugs.co/post/ms-web-deploy-with-bamboo/
+
+
+
+
