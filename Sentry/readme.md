@@ -1,6 +1,8 @@
 - offical url: https://sentry.io
-- offical github url: https:// 
-- offical docker hub url: https://
+- offical github url: https://github.com/getsentry/onpremise
+- offical docker hub url: https://hub.docker.com/_/sentry/
+
+- Configuration : https://docs.sentry.io/server/config/
 
 - __install with compose__
 - https://github.com/getsentry
