@@ -7,6 +7,7 @@
 - __install with compose__
 - https://github.com/getsentry
 - https://mikedombrowski.com/2018/03/self-hosting-sentry-with-docker-and-docker-compose/
+- https://mikedombrowski.com/2018/03/self-hosting-sentry-with-docker-and-docker-compose/
 - https://github.com/yhirano55/sentry-docker-compose/blob/master/docker-compose.yml
 - https://medium.com/@prasincs/running-sentry-in-docker-compose-63b1c2683493
 - https://gist.github.com/prasincs/b3bf25570b500a7c9b8b9241731ab7da#file-readme-md
