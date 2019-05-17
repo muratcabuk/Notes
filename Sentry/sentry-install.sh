@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Generate a random secret key and put it into the environment variable file
-sed -i "$ s/$/$(docker-compose run --rm sentry-base sentry config generate-secret-key)/" sentry.env
+docker-compose run --rm sentry-base sentry config generate-secret-key
 
 # Run database migrations (build the database)
 docker-compose run --rm sentry-base sentry upgrade --noinput
