@@ -88,4 +88,12 @@ http://halilozturkci.com/microsoft-tehdit-modelleme-araci-ile-guvenli-yazilim-ge
 
 
 
+mastodon
+
+https://github.com/tootsuite/mastodon
+
+http://devnot.com/2017/mastodon-nedir/
+
+
+
 
