@@ -4,11 +4,18 @@ services:
   # OPTIONAL: If you want to get emails from sentry include this docker container
   smtp:
     image: 'tianon/exim4:latest'
+    restart: unless-stopped
     environment:
-      GMAIL_USER: 'GMAIL_USER@gmail.com'
-      GMAIL_PASSWORD: 'GMAIL_PASSWORD_OR_GMAIL_APP_PASSWORD'
+      SENTRY_SMTP_HOSTNAME: 'smtp.aaaaa.com'
+      SENTRY_SMTP_PORT: '25'
+      SENTRY_SMTP_HOST: '0.0.0.0'
+      SENTRY_EMAIL_PASSWORD: 'password'
+      SENTRY_EMAIL_USER: 'bbb@aaaaa.com'
+      SENTRY_SERVER_EMAIL: 'bbb@aaaaa.com'
+      SENTRY_SECRET_KEY: 'my_secret_key'
 
   sentry-base:
+    container_name: sentry
     image: 'sentry:latest'
     container_name: sentry-base
     restart: unless-stopped
@@ -19,14 +26,19 @@ services:
       - sentry-redis
       - sentry-postgres
     ports:
-      - 880:9000
+      - 9000:9000
+    stdin_open: true
+    tty: true
     env_file:
       - sentry.env
     volumes:
       - /srv/sentry/sentry:/var/lib/sentry/files
 
+
+
   sentry-cron:
     image: 'sentry:latest'
+    container_name: sentry-cron
     restart: unless-stopped
     depends_on:
       - sentry-base
@@ -39,7 +51,9 @@ services:
     volumes:
       - /srv/sentry/sentry:/var/lib/sentry/files
 
-  sentry-worker:
+
+ sentry-worker:
+    container_name: sentry-worker
     image: 'sentry:latest'
     depends_on:
       - sentry-base
@@ -53,12 +67,30 @@ services:
       - /srv/sentry/sentry:/var/lib/sentry/files
 
   sentry-redis:
+    container_name: sentry-redis
     image: 'redis:latest'
-  sentry-postgres:
+    restart: unless-stopped
+    volumes:
+      - /srv/sentry/redis:/var/lib/redis/data
+    ports:
+      - '6379:6379'
+  memcached:
+    container_name: sentry-memcached
+    image: 'memcached:latest'
+    restart: unless-stopped
+ sentry-postgres:
+    container_name: sentry-postgres
     image: 'postgres:latest'
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: sentry
-      POSTGRES_PASSWORD: sentry
-      POSTGRES_DB: sentry 
+      POSTGRES_USER: 'sentry'
+      POSTGRES_PASSWORD: 'password'
+      POSTGRES_DB: 'sentry'
     volumes:
       - /srv/sentry/postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+
+
+
