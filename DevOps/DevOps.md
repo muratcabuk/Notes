@@ -1,3 +1,6 @@
+
+https://hackernoon.com/digital-transformation-for-modern-enterprises-through-devops-a-complete-guide-6f595463c7dd
+
 https://www.upguard.com/articles/the-7-configuration-management-tools-you-need-to-know?hs_amp=true
 
 http://www.mshowto.org/powershell-dsc-nedir-ornek-kullanim-senaryolari.html
