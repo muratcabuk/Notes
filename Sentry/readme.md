@@ -19,6 +19,28 @@
 
 
 
+iki dosya düzenlendikten sonra alttaki komutlar vasıtasıyla docker container lar çalıştırılır.
+
+# Generate a random secret key and put it into the environment variable file
+docker-compose run --rm sentry-base sentry config generate-secret-key
+
+
+# Run database migrations (build the database)
+docker-compose run --rm sentry-base sentry upgrade --noinput
+
+
+# Startup the whole service
+docker-compose up -d
+
+
+
+#create a super user account
+
+docker-compose exec sentry-base sentry createuser --email YOUR_EMAIL --password YOUR_NEW_PASSWORD --superuser --no-input
+
+
+
+
 
 
 
