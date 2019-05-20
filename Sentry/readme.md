@@ -23,28 +23,28 @@
 
 
 
-iki dosya düzenlendikten sonra alttaki komutlar vasıtasıyla docker container lar çalıştırılır.
+## __iki dosya düzenlendikten sonra alttaki komutlar vasıtasıyla docker container lar çalıştırılır.__
 
 - docker-compose.yml	
 - sentry.env
 
-- Generate a random secret key and put it into the environment variable file
+- __Generate a random secret key and put it into the environment variable file__
 
 docker-compose run --rm sentry-base sentry config generate-secret-key
 
 
-- Run database migrations (build the database)
+- __Run database migrations (build the database)__
 
 docker-compose run --rm sentry-base sentry upgrade --noinput
 
 
-- Startup the whole service
+- __Startup the whole service__
 
 docker-compose up -d
 
 
 
-- create a super user account
+- __create a super user account__
 
 docker-compose exec sentry-base sentry createuser --email YOUR_EMAIL --password YOUR_NEW_PASSWORD --superuser --no-input
 
