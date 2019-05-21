@@ -5,6 +5,9 @@ services:
   smtp:
     image: 'tianon/exim4:latest'
     restart: unless-stopped
+    container_name: sentry-smtp
+    ports:
+      - 25:25
     environment:
       SENTRY_SMTP_HOSTNAME: 'smtp.aaaaa.com'
       SENTRY_SMTP_PORT: '25'
@@ -22,11 +25,16 @@ services:
     depends_on:
       - sentry-redis
       - sentry-postgres
+      - sentry-memcached
+      - smtp
     links:
       - sentry-redis
       - sentry-postgres
+      - smtp
+      - sentry-memcached
     ports:
       - 9000:9000
+      - 25:25
     stdin_open: true
     tty: true
     env_file:
