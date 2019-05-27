@@ -94,6 +94,18 @@ https://github.com/tootsuite/mastodon
 
 http://devnot.com/2017/mastodon-nedir/
 
+Core WorkFlow
+
+https://github.com/danielgerlag/workflow-core
+
+https://www.tomware.ch/2018/04/30/building-a-simple-workflow-system-with-asp-net-core/
+
+https://github.com/UiPath/corewf
+
+https://github.com/dotnet-state-machine/stateless?WT.mc_id=-blog-scottha
+
+
+
 
 
 
