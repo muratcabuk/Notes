@@ -2,6 +2,8 @@ eğer web deploy 3.6 kurulmya çalılıldığında üst versiyon kurulu diyorsa 
 
 https://github.com/aspnet/websdk
 
+https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/visual-studio-publish-profiles?view=aspnetcore-2.2
+
 https://mattmillican.com/blog/build-deploy-aspnetcore-bamboo
 
 https://www.codeproject.com/Articles/1184858/Deploying-a-Web-App-from-a-Command-Line-using-MSBu
