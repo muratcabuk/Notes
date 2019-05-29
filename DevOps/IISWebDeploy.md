@@ -1,5 +1,13 @@
 eğer web deploy 3.6 kurulmya çalılıldığında üst versiyon kurulu diyorsa ya da kurulu olduğu görüldüğü halde IIS de Managemet Delegation serice görünmüyorsa, sistemde VS kurulu olabilir bu durumda IIS modulu olmayan web deploeyment 4 versiyonu kurulmuş olabilir.
 
+
+### Asp.Net Web Form Deployment
+
+https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/
+
+
+
+
 https://github.com/aspnet/websdk
 
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/visual-studio-publish-profiles?view=aspnetcore-2.2
