@@ -4,6 +4,12 @@ https://github.com/aspnet/websdk
 
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/visual-studio-publish-profiles?view=aspnetcore-2.2
 
+
+https://gist.github.com/nul800sebastiaan/5866613
+
+
+
+
 https://mattmillican.com/blog/build-deploy-aspnetcore-bamboo
 
 https://www.codeproject.com/Articles/1184858/Deploying-a-Web-App-from-a-Command-Line-using-MSBu
