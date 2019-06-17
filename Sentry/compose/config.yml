@@ -10,12 +10,12 @@
  mail.backend: smtp  # Use dummy if you want to disable email entirely
  mail.host: smtp.gmail.com
  mail.port: 587
- mail.username: kizilaydevops@gmail.com
- mail.password: Kizilay-2789!
+ mail.username: mail@gmail.com
+ mail.password: pass
  mail.use-tls: true
- system.url-prefix: http://sentry.kizilay.org.tr
+ system.url-prefix: http://sentry.address.com
 # The email address to send on behalf of
- mail.from: kizilaydevops@gmail.com
+ mail.from: mail@gmail.com
 
 # If you'd like to configure email replies, enable this.
  mail.enable-replies: false

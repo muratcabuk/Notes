@@ -24,12 +24,12 @@ x-defaults: &defaults
     SENTRY_EMAIL_HOST: smtp.gmail.com
     SENTRY_SMTP_HOSTNAME: localhost
     SENTRY_EMAIL_PORT: 587
-    SENTRY_EMAIL_PASSWORD: Pers-2789! 
-    SENTRY_EMAIL_USER: mcabuk@gmail.com
+    SENTRY_EMAIL_PASSWORD: pass 
+    SENTRY_EMAIL_USER: mail@gmail.com
     SENTRY_EMAIL_USE_TLS: "true"
-    SENTRY_SERVER_EMAIL: mcabuk@gmail.com
+    SENTRY_SERVER_EMAIL: mail@gmail.com
     SENTRY_DB_USER: sentry
-    SENTRY_DB_PASSWORD: Sentry-123!+
+    SENTRY_DB_PASSWORD: SentryPass
   volumes:
     - sentry-data:/var/lib/sentry/files
 
@@ -52,7 +52,7 @@ services:
     image: postgres:9.5
     environment:
       POSTGRES_USER: sentry
-      POSTGRES_PASSWORD: Sentry-123!+
+      POSTGRES_PASSWORD: SentryPass
       POSTGRES_DB: sentry
     volumes:
       - sentry-postgres:/var/lib/postgresql/data
