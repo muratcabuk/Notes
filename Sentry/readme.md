@@ -25,6 +25,8 @@
 
 ## __iki dosya düzenlendikten sonra alttaki komutlar vasıtasıyla docker container lar çalıştırılır.__
 
+Compose klasöründeki iki dosya düzenlenir
+
 - docker-compose.yml	
 - sentry.env
 
@@ -47,6 +49,11 @@ docker-compose up -d
 - __create a super user account__
 
 docker-compose exec sentry-base sentry createuser --email YOUR_EMAIL --password YOUR_NEW_PASSWORD --superuser --no-input
+
+
+- __If you want to chage someting in sentry docker just edit two files and run the following command__
+
+ sudo docker-compose up --build -d
 
 
 
