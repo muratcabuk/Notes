@@ -34,11 +34,12 @@ This table shows the main advantages and disadvantages of each deployment approa
 
 
 
+### __Web Deploy Providers__
 
 
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569040(v=ws.10)
 
-
-### __Web Deploy runCommanf Provider__
+### __Web Deploy runCommand Provider__
 
 https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619740(v=ws.10)
 
