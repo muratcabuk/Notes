@@ -44,6 +44,13 @@ https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server
 
 
 
+
+__Operations on application pools as admin and non-admin__
+
+https://blogs.iis.net/msdeploy/operations-on-application-pools-as-admin-and-non-admin
+
+
+
 ### __Configuring a Web Server for Web Deploy Publishing (Web Deploy Handler)__
 
 https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler
