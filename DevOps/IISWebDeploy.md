@@ -3,7 +3,7 @@ eğer web deploy 3.6 kurulmya çalılıldığında üst versiyon kurulu diyorsa 
 
 
 
-### __Uygun Ops,yonu seçmek__
+### __Uygun Opsiyonu seçmek__
 
 __Choosing the Right Approach to Web Deployment__
 
