@@ -23,7 +23,7 @@ More information on this entry can be found here
 
 To allow the WMSVC the right to use the runCommand functionality we need to grant it the right to  __replace a Process level token__. Note: you can try granting this right through the local security policy but I could not get this to work, so I used SC Privs wmsvc  command.
 From a command prompt type __sc privs wmsvc SeChangeNotifyPrivilege/SeImpersonatePrivilege/SeAssignPrimaryTokenPrivilege__
-__Run  sc qprivs wmsvc to make sure SeAssignPrimaryTokenPrivilege has been added to existing privileges__. More information on this can be found [here](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619740(v=ws.10)).
+__Run  sc qprivs wmsvc to make sure SeAssignPrimaryTokenPrivilege has been added to existing privileges__. More information on this can be found [here](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619740(v=ws.10)). runCommand provider ile aynı ayarı recycleApp için de yapmak gerekiyor yani.
 
 Recycle WMSVC with the following commands at a command prompt
 
