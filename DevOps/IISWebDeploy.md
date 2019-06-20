@@ -114,7 +114,9 @@ https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/configurin
 
 
 
+### __Web Deoplay PowerShell Cmdlets__
 
+https://docs.microsoft.com/en-us/iis/publish/using-web-deploy/web-deploy-powershell-cmdlets
 
 
 
