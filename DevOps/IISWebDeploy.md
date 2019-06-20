@@ -1,5 +1,51 @@
 eğer web deploy 3.6 kurulmya çalılıldığında üst versiyon kurulu diyorsa ya da kurulu olduğu görüldüğü halde IIS de Managemet Delegation serice görünmüyorsa, sistemde VS kurulu olabilir bu durumda IIS modulu olmayan web deploeyment 4 versiyonu kurulmuş olabilir.
 
+### __herşey doğru yapılduğı halde nonadmin giriş yapamaıyorsa__
+
+https://blogs.technet.microsoft.com/leesab/2014/08/13/how-to-use-web-deploy-for-administration-of-application-pools-by-non-administrators/
+
+şu komutu çalıştırmayı unutma
+
+
+
+
+
+Set Permissions required for WMSVC to use the __runCommand, recycleApp__
+
+WMSVC by default runs with basic authentication, to change this to use NTLM we need to create the following registry key. (As always back up your registry before making changes).
+
+From a command prompt type regedit.
+
+Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WebManagement\Server
+Right click on Server and select new DWORD 32bit. For Value Name enter __WindowsAuthenticationEnabled set the Value data to 1__. Close regedit.
+
+More information on this entry can be found here 
+
+To allow the WMSVC the right to use the runCommand functionality we need to grant it the right to  __replace a Process level token__. Note: you can try granting this right through the local security policy but I could not get this to work, so I used SC Privs wmsvc  command.
+From a command prompt type __sc privs wmsvc SeChangeNotifyPrivilege/SeImpersonatePrivilege/SeAssignPrimaryTokenPrivilege__
+__Run  sc qprivs wmsvc to make sure SeAssignPrimaryTokenPrivilege has been added to existing privileges__. More information on this can be found [here](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619740(v=ws.10)).
+
+Recycle WMSVC with the following commands at a command prompt
+
+- net stop wmsvc
+- net start wmsvc
+
+Let’s test our configuration!  Log in with an account that is allowed to log in locally but is not an administrator and is part of contoso\app admins.
+
+Open a command prompt and issue the following command cd “c: \Program Files\IIS\Microsoft Web Deploy V3” This will put us in the directory for msdeploy.
+
+First let get a list of application pools using the run Command. My Web application is called SharePoint – 80 so the command looks like below:
+
+msdeploy.exe -verb:sync -source:runcommand -dest:runcommand="C:\Windows\System32\inetsrv\appcmd.exe list apppool",wmsvc="http://sp2010:8172/msdeploy.axd?site=SharePoint - 80",AuthType=NTLM –allowUntrusted
+
+
+
+
+
+
+
+
+
 
 
 
@@ -33,6 +79,10 @@ This table shows the main advantages and disadvantages of each deployment approa
 |Offline Deployment|It is very easy to set up. It is suitable for isolated environments.|The server administrator must manually copy and import the web package every time.|Internet-facing production environments. Isolated network environments.|
 
 
+
+### __Detaylı Kurulum Anlatım__
+
+https://blogs.technet.microsoft.com/leesab/2014/08/13/how-to-use-web-deploy-for-administration-of-application-pools-by-non-administrators/
 
 ### __Web Deploy Providers__
 
