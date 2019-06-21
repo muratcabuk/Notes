@@ -205,5 +205,17 @@ https://blog.codeinside.eu/2010/11/21/howto-msdeploy-msbuild/
 http://www.22bugs.co/post/ms-web-deploy-with-bamboo/
 
 
+### __msdeploy komutlar__
+
+- apppool u stop etmek için
+
+.\msdeploy.exe -verb:sync -source:recycleApp -dest:recycleApp="sitename",recycleMode="StopAppPool",computerName="https://servername:8172/msdeploy.axd",authType="Basic",userName="servername\username",password="password" -allowUntrusted
+
+
+- apppool start etmek için
+
+.\msdeploy.exe -verb:sync -source:recycleApp -dest:recycleApp="sitename",recycleMode="StartAppPool",computerName="https://servername:8172/msdeploy.axd",authType="Basic",userName="servername\username",password="password" -allowUntrusted
+
+
 
 
