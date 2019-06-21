@@ -218,4 +218,15 @@ http://www.22bugs.co/post/ms-web-deploy-with-bamboo/
 
 
 
+### __msbuild komutlar__
+
+- dotnet msbuild zip file
+
+dotnet publish -c release /p:WebPublishMethod=Package /p:PackageFileName="c:\publish\package.zip" /p:DesktopBuildPackageLocation="c:\publish\package.zip" /p:PackageAsSingleFile=true /p:DeployTarget=Package /p:PackageLocation="c:\publish\package.zip"
+
+
+
+
+
+
 
