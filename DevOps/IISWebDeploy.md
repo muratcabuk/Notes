@@ -218,6 +218,21 @@ http://www.22bugs.co/post/ms-web-deploy-with-bamboo/
 
 
 
+- deploy ornek
+
+msdeploy.exe
+-source:package='C:\SomeWebProject\obj\Release\Package\SomeWebProject.zip'
+-dest:auto,ComputerName='https://TargetServer:8172/MsDeploy.axd?site=TargetWebSite',UserName='Username',Password='Password',IncludeAcls='False',AuthType='Basic'
+-verb:sync
+-disableLink:AppPoolExtension
+-disableLink:ContentExtension
+-disableLink:CertificateExtension
+-allowUntrusted
+-retryAttempts=2
+-setParam:'IIS Web Application Name'='TargetWebSite/TargetWebApp'
+
+
+
 ### __msbuild komutlar__
 
 - dotnet msbuild zip file
