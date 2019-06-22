@@ -232,12 +232,57 @@ msdeploy.exe
 -setParam:'IIS Web Application Name'='TargetWebSite/TargetWebApp'
 
 
+- klasoru ziplemek için
+
+msdeploy.exe -verb:sync -source:contentPath="d:\myProject" -dest:package="c:\myZipFile.zip"
+
+
+
+
 
 ### __msbuild komutlar__
 
 - dotnet msbuild zip file
 
 dotnet publish -c release /p:WebPublishMethod=Package /p:PackageFileName="c:\publish\package.zip" /p:DesktopBuildPackageLocation="c:\publish\package.zip" /p:PackageAsSingleFile=true /p:DeployTarget=Package /p:PackageLocation="c:\publish\package.zip"
+
+
+
+### __Örnek Bazı Komutlar__
+
+
+Example usages
+1) Synchronize the contents of the default Web site to a package file.
+
+msdeploy.exe -verb:sync -source:contentPath="Default Web Site" -dest:package=c:\DWS.zip
+
+2) Return the paths of the files in a package file.
+
+msdeploy.exe -verb:dump -source:package=c:\DWS.zip
+
+3) Return, in XML format, the paths and attributes of the files in a package file.
+
+msdeploy.exe -verb:dump -source:package=c:\DWS.zip -xml
+
+4) Synchronize the output of the appHostConfig provider for the default Web site to a package file.
+
+msdeploy.exe -verb:sync -source:appHostConfig="Default Web Site" -dest:package=c:\DWS.zip
+
+5) Synchronize the contents of a package file to the site lm/wm3svc/2.
+
+msdeploy.exe -verb:sync -source:package=c:\Site1.zip -dest:metaKey=lm/w3svc/2
+
+6) Set the "defaultpage" parameter to the value "MyDefaultWebPage.htm" and synchronize the ParameterPackage.zip file to its destination.
+
+msdeploy -verb:sync -source:package=ParameterPackage.zip -dest:auto -setParam:name=defaultpage,value=MyDefaultWebPage.htm
+
+7) Unpackage the contents of the Package.zip file and put them in the C:\temp folder. Do not delete other files that already exist in the destination folder.
+
+msdeploy.exe -verb:sync -source:package=C:\package.zip -dest:contentpath=C:\temp -enableRule:DoNotDeleteRule
+
+8) Unpackage the contents of the Package.zip file and put them in the C:\temp folder. Remove any files in the destination folder that are not present in the package.
+
+msdeploy.exe -verb:sync -source:package=C:\package.zip -dest:contentpath=C:\temp
 
 
 
