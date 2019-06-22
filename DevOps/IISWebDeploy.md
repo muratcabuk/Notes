@@ -207,6 +207,25 @@ http://www.22bugs.co/post/ms-web-deploy-with-bamboo/
 
 ### __msdeploy komutlar__
 
+
+- Enabling metaKey="siteName" Syntax
+
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff968984(v=ws.10)
+
+- msdeploy (web deploy) operation settings 
+
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569089%28v%3dws.10%29
+
+
+- msdeploy (web deploy) rules
+
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd568992%28v%3dws.10%29
+
+
+
+
+
+
 - apppool u stop etmek için
 
 .\msdeploy.exe -verb:sync -source:recycleApp -dest:recycleApp="sitename",recycleMode="StopAppPool",computerName="https://servername:8172/msdeploy.axd",authType="Basic",userName="servername\username",password="password" -allowUntrusted
@@ -236,6 +255,22 @@ msdeploy.exe
 
 msdeploy.exe -verb:sync -source:contentPath="d:\myProject" -dest:package="c:\myZipFile.zip"
 
+
+- uygulamayı publish oncesi offline a çekmek
+
+msdeploy.exe -verb:sync -source:iisApp=mySite -dest:auto,computername=<publishUrl> -enableRule:AppOffline
+  
+- uygulama yayına alınırken hata olursa
+ 
+ If an error occurred during publishing, the htm file will remain in the site root to keep it offline because it is now in an unknown state. After fixing your publishing issue, you will need to bring the application back online. To do this, you can either manually delete the App_Offline.htm file from your application root on the server, or republish your site. Here is an example of how to delete the App_Offline.htm file from the command line:
+ 
+ msdeploy.exe -verb:delete -dest:contentPath=siteName/App_Offline.htm,computername=<publishUrl>
+  
+- Halihazırda çalışan web siteyi backup restore yapmak
+
+msdeploy.exe -verb:sync -source:apphostconfig="Default Web Site" -dest:package=c:\dws.zip > DWSpackage7.log
+
+msdeploy.exe -verb:sync -source:package=c:\dws.zip -dest:apphostconfig="Default Web Site" > DWSpackage7.log
 
 
 
