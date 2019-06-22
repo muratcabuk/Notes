@@ -203,6 +203,21 @@ http://www.22bugs.co/post/ms-web-deploy-with-bamboo/
 ### __msdeploy komutlar__
 
 
+
+__Web Deploy Link Extensions__
+
+Link extensions include data that would not normally be included by a provider in a Web Deploy operation. Link extensions and providers work together to create a view of a Web server that can be dumped, archived, or synchronized. Link extensions are executed for all Web Deploy verbs, including dump operations.
+
+örneğin
+
+You can use the -enableLink  and -disableLink  settings to enable or disable a Web Deploy link extension. For example, if you specify -disableLink:ContentExtension on the command line, you can prevent content from being included in a sync operation. This enables you to synchronize two Web servers without moving any content.
+
+
+- web deploy quick lookup
+
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569103(v=ws.10)
+
+
 - yeni başlayanlar için temel msdeploy komutları
 
 https://blogs.iis.net/timamm/web-deploy-quot-starter-quot-commands-for-common-scenarios
@@ -217,7 +232,11 @@ https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server
 |IIS 6.0|metaKey=/lm/w3svc/1|webServer60|
 |IIS 7|appHostConfig="Default Web Site"|webServer|
 
+- msdeploy operations
 
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd568989(v=ws.10)
+
+delete, sync, dump
 
 - msdeploy (web deploy) operation settings 
 
