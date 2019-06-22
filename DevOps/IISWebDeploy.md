@@ -208,9 +208,16 @@ http://www.22bugs.co/post/ms-web-deploy-with-bamboo/
 ### __msdeploy komutlar__
 
 
-- Enabling metaKey="siteName" Syntax
+- Enabling metaKey="siteName" Syntax  (IIS 6 ve oncesinde geçerli)
 
 https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff968984(v=ws.10)
+
+|IIS Version|Web site|Web server|
+|-----------|--------|----------|
+|IIS 6.0|metaKey=/lm/w3svc/1|webServer60|
+|IIS 7|appHostConfig="Default Web Site"|webServer|
+
+
 
 - msdeploy (web deploy) operation settings 
 
@@ -271,6 +278,11 @@ msdeploy.exe -verb:sync -source:iisApp=mySite -dest:auto,computername=<publishUr
 msdeploy.exe -verb:sync -source:apphostconfig="Default Web Site" -dest:package=c:\dws.zip > DWSpackage7.log
 
 msdeploy.exe -verb:sync -source:package=c:\dws.zip -dest:apphostconfig="Default Web Site" > DWSpackage7.log
+
+
+_ paketleri kullanarak senkronize etmek
+
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff800880(v=ws.10)
 
 
 
