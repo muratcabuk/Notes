@@ -177,16 +177,11 @@ https://docs.microsoft.com/en-us/iis/publish/using-web-deploy/web-deploy-powersh
 https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/
 
 
-
-
 https://github.com/aspnet/websdk
 
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/visual-studio-publish-profiles?view=aspnetcore-2.2
 
-
 https://gist.github.com/nul800sebastiaan/5866613
-
-
 
 
 https://mattmillican.com/blog/build-deploy-aspnetcore-bamboo
@@ -206,6 +201,11 @@ http://www.22bugs.co/post/ms-web-deploy-with-bamboo/
 
 
 ### __msdeploy komutlar__
+
+
+- yeni başlayanlar için temel msdeploy komutları
+
+https://blogs.iis.net/timamm/web-deploy-quot-starter-quot-commands-for-common-scenarios
 
 
 - Enabling metaKey="siteName" Syntax  (IIS 6 ve oncesinde geçerli)
