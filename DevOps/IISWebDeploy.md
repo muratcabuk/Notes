@@ -355,6 +355,17 @@ msdeploy.exe -verb:sync -source:package=C:\package.zip -dest:contentpath=C:\temp
 
 https://github.com/aspnet/websdk#microsoftnetsdkpublish
 
+http://blog.chudinov.net/how-to-build-and-deploy-web-deployment-package-using-msbuild/
+
+https://blog.greatrexpectations.com/2013/02/02/publish-an-azure-web-site-from-the-command-line
+
+https://forums.iis.net/t/1228804.aspx?MSBuild+and+Publish+Profile
+
+
+__buna bakmalısın__
+
+https://stackoverflow.com/questions/48484457/extracting-msdeploy-zip-package-using-variables
+
 
 
 
