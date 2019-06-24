@@ -303,6 +303,21 @@ _ paketleri kullanarak senkronize etmek
 
 https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff800880(v=ws.10)
 
+- zip dosyasından deploy etmek
+
+echo bolümü işin toplam bitiş zamanını görmek için eklendi
+
+echo %time%	
+"C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -verb:sync -source:package="C:\publish\publish.zip" -dest:contentpath="C:\inetpub\testsite",computerName="https://domainname:8172/msdeploy.axd",authType="Basic",userName="servername\username",password="password" -allowUntrusted -disableLink:AppPoolExtension -disableLink:ContentExtension -disableLink:CertificateExtension
+echo %time%
+
+
+echo bolümü işin toplam bitiş zamanını görmek için eklendi
+
+echo %time%	
+"C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -verb:sync -source:contentpath="C:\publish\publish3" -dest:contentpath="C:\inetpub\testsite",computerName="https://domainname:8172/msdeploy.axd",authType="Basic",userName="servername\username",password="password"  -allowUntrusted -disableLink:AppPoolExtension -disableLink:ContentExtension -disableLink:CertificateExtension
+echo %time%
+
 
 
 
