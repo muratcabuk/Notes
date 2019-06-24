@@ -351,6 +351,10 @@ msdeploy.exe -verb:sync -source:package=C:\package.zip -dest:contentpath=C:\temp
 msdeploy.exe -verb:sync -source:package=C:\package.zip -dest:contentpath=C:\temp
 
 
+### __Toplu İşlemler__
+
+https://github.com/aspnet/websdk#microsoftnetsdkpublish
+
 
 
 
