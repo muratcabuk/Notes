@@ -20,9 +20,9 @@ Ceph uses object storage, which means it stores data in binary objects spread ou
 
 Gluster uses block storage, which stores a set of data in chunks on open space in connected Linux computers. It builds a highly scalable system with access to more traditional storage and file transfer protocols, and can scale quickly and without a single point of failure. That means you can store huge amounts of older data without losing accessibility or security. An April 2014 study by IOP Science showed that Gluster outperformed Ceph, but still showed some instabilities that resulted in partial or total data loss.
 
-!(resim)[https://www.maketecheasier.com/assets/uploads/2019/03/gluster-vs-ceph-ceph-solution-storage-cluster.png]
+![resim](https://www.maketecheasier.com/assets/uploads/2019/03/gluster-vs-ceph-ceph-solution-storage-cluster.png)
 
-!(resim2)[https://www.maketecheasier.com/assets/uploads/2019/03/glusterfs-gluster-fsintroduction-11-638.jpg]
+![resim2](https://www.maketecheasier.com/assets/uploads/2019/03/glusterfs-gluster-fsintroduction-11-638.jpg)
 
 Ceph is an object-based system, meaning it manages stored data as objects rather than as a file hierarchy, spreading binary data across the cluster. Similar object storage methods are used by Facebook to store images and Dropbox to store client files. In general, object storage supports massive unstructured data, so it’s perfect for large-scale data storage. The system is maintained by a network of daemons in the form of cluster monitors, metadata servers, and journaled storage. These combine to make Ceph capable but more complex than the competition.
 
