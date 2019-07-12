@@ -20,6 +20,8 @@ https://alex.dzyoba.com/blog/redis-ha/
 
 https://alex.dzyoba.com/blog/redis-cluster/
 
+https://github.com/nrk/predis/issues/370
+
 In simple words, the fundamental difference between the two concepts is that Sharding is used to scale Writes while Replication is used to scale Reads. As Alex already mentioned, Replication is also one of the solutions to achieve HA.
 
 Suppose you have the following tuples: [1:Apple], [2:Banana], [3:Cherry], [4:Durian] and we have two machines A and B. With Sharding, we might store keys 2,4 on machine A; and keys 1,3 on machine B. With Replication, we store keys 1,2,3,4 on machine A and 1,2,3,4 on machine B.
