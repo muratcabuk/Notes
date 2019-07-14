@@ -1,3 +1,8 @@
+
+https://alex.dzyoba.com/blog/redis-ha/
+
+
+
 https://redislabs.com/ebook/appendix-a/a-3-installing-on-windows/a-3-2-installing-redis-on-window/
 
 https://stackoverflow.com/questions/2139443/redis-replication-and-redis-sharding-cluster-difference
