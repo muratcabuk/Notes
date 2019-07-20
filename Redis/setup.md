@@ -33,6 +33,7 @@ redis slave -sentinel 3 ipaddress_sentinel2_redisslave
 
 
 REDIS KURULUM - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,sentinel1_ipaddress,sentinel2_redismaster_ipaddress,sentinel3_redisslave_ipaddress)
+
 ----------------------------------------------------------------------------
 
 
@@ -136,6 +137,7 @@ redis 5.0.5
 
 
 SENTINEL KURULUM  - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,201,202,203)
+
 -----------------------------------------------------------------------------
 
 
@@ -182,6 +184,7 @@ sudo systemctl enable redis-sentinel
 
 
 MASTER REDIS KONFIGURASYON (ipaddress_sentinel2_redismster) redis 5.0.5
+
 -------------------------------------------------------------------
 
 
@@ -213,6 +216,7 @@ requirepass masterpassword
 
 
 MASTER SENTINEL KONFIGURASYONU  (ipaddress_sentinel2_redismster) redis 5.0.5
+
 -------------------------------------------------------------------------
 
 Sentinel ayarları sırasında Cluster yapımıza bir isim vermemiz gerekiyor. Ben burada cluster için REDISCLUSTER ismini kullanacağım
@@ -276,6 +280,7 @@ sudo systemctl restart redis-sentinel
 
 
 REDIS SLAVE 01 KONFIGURASYONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
+
 -------------------------------------------------------------------------
  
 sudo mkdir -p /var/log/redis/
@@ -309,6 +314,7 @@ logfile /var/log/redis/redis.log
 
 
 REDIS SLAVE 01 SENTINEL KONFIGURASYIONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
+
 ---------------------------------------------------------------------
 
 sudo mkdir -p /var/log/redis-sentinel/
@@ -421,6 +427,7 @@ sudo systemctl restart redis-sentinel
 
 
 TUM SUNUCLARDA KONTROL AMAÇLI
+
 =================================
 ps -ef | grep redis
 
@@ -437,6 +444,7 @@ adminis+ 19501  3728  0 14:22 pts/0    00:00:00 grep --color=auto redis
 
 
 REDIS CLI redis 5.0.5
+
 ===================================
 
 redis-cli -p 6379 -h ip-address -a masterpassword 
@@ -494,6 +502,7 @@ https://github.com/falsecz/haredis
 
 
 HAPROXY KURULUMU ipaddress_haproxy
+
 =========================================
 
 apt update
