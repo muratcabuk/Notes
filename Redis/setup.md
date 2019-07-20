@@ -1,5 +1,5 @@
 
-4 makinamız var
+4 makinam var
 
 - 1 tane haproxy
 - 1 sadece sentinel 1 makinası
@@ -30,10 +30,11 @@ redis slave -sentinel 3 ipaddress_sentinel2_redisslave
 
 
 
-# REDIS KURULUM - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,sentinel1_ipaddress,sentinel2_redismaster_ipaddress,sentinel3_redisslave_ipaddress)
+## REDIS KURULUM - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,sentinel1_ipaddress,sentinel2_redismaster_ipaddress,sentinel3_redisslave_ipaddress)
 
 
 sudo apt update
+
 sudo apt install build-essential tcl
 
 
@@ -53,9 +54,13 @@ Redis Kurulumu için aşağıdaki komutu çalıştırmamız yeterli;
 
 
 make
+
 make test
+
 cd src/
+
 make test
+
 make install
 
 
@@ -82,6 +87,7 @@ sysctl -w net.core.somaxconn=65535
 
 exit 0
 ```
+
 daha sonra kullanıcı oluşturuyoruz. klasörleri oluşturup yetkileri veiyoruz
 
 ```
@@ -95,6 +101,7 @@ sudo cp /home/administrator/redis/redis-stable/sentinel.conf /etc/redis/sentinel
 sudo mkdir /var/lib/redis
 sudo chown redisusr:redisusr /var/lib/redis
 sudo chmod 770 /var/lib/redis
+
 ```
 
 alttaki komutla service create edip bir alttaki komutları giriyoruz
@@ -103,6 +110,7 @@ alttaki komutla service create edip bir alttaki komutları giriyoruz
 sudo nano /etc/systemd/system/redis-server.service
 
 ``` 
+
 [Unit]
 Description=Redis In-Memory Data Store
 After=network.target
@@ -130,17 +138,19 @@ test için
 ```
 
 redis-cli
+
 set baskent ankara
+
 get baskent
 
-```
+
 
 redis 5.0.5
 
 
 
 
-# SENTINEL KURULUM  - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,201,202,203)
+## SENTINEL KURULUM  - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,201,202,203)
 
 redis doğru kurulduysa alttaki kmutla sentinelin kurup kurulmadığı kontrol edilebilir
 
@@ -185,7 +195,7 @@ Servisin başlangıçta sorunsuz bir şekilde başlaması için servisi etkinle�
 sudo systemctl enable redis-sentinel
 
 
-# MASTER REDIS KONFIGURASYON (ipaddress_sentinel2_redismster) redis 5.0.5
+## MASTER REDIS KONFIGURASYON (ipaddress_sentinel2_redismster) redis 5.0.5
 
 
 
@@ -218,7 +228,7 @@ requirepass masterpassword
 
 
 
-# MASTER SENTINEL KONFIGURASYONU  (ipaddress_sentinel2_redismster) redis 5.0.5
+## MASTER SENTINEL KONFIGURASYONU  (ipaddress_sentinel2_redismster) redis 5.0.5
 
 
 
@@ -283,7 +293,7 @@ sudo systemctl restart redis-sentinel
 
 
 
-# REDIS SLAVE 01 KONFIGURASYONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
+## REDIS SLAVE 01 KONFIGURASYONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
 
 
  ```
@@ -317,7 +327,7 @@ logfile /var/log/redis/redis.log
 ```
 
 
-# REDIS SLAVE 01 SENTINEL KONFIGURASYIONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
+## REDIS SLAVE 01 SENTINEL KONFIGURASYIONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
 
 ```
 sudo mkdir -p /var/log/redis-sentinel/
@@ -370,7 +380,7 @@ sudo chown redisusr:redisusr /etc/redis/sentinel.conf
 sudo systemctl restart redis-sentinel
 
 
-# SENTINEL 1 MAKINASI IÇIN SENTINEL KONFIGURASYONU (ipaddress_sentinel1) redis 5.0.5
+## SENTINEL 1 MAKINASI IÇIN SENTINEL KONFIGURASYONU (ipaddress_sentinel1) redis 5.0.5
 
 
 bu makinadaki redis slave olarak tanımlanmadı. 
@@ -430,7 +440,7 @@ sudo chown redisusr:redisusr /etc/redis/sentinel.conf
 sudo systemctl restart redis-sentinel
 
 
-# TUM SUNUCLARDA KONTROL AMAÇLI
+## TUM SUNUCLARDA KONTROL AMAÇLI
 
 
 
@@ -450,7 +460,7 @@ adminis+ 19501  3728  0 14:22 pts/0    00:00:00 grep --color=auto redis
 
 
 
-# REDIS CLI redis 5.0.5
+## REDIS CLI redis 5.0.5
 
 
 ```
@@ -459,9 +469,10 @@ redis-cli -p 6379 -h ip-address -a masterpassword
 MONITOR (sistemi monitor etmeye başlar)
 MEMORY STATS command returns an Array reply about the memory usage of the server.
 client list
+
 ```
 
-# SENTINEL CLI 
+## SENTINEL CLI 
 
 redis-cli -p 26739
 
@@ -470,7 +481,7 @@ redis-cli -p 26739 -h ip-address
 info                                                # full info
 
 
-# bizim cluster id miz REDISCLUSTER 
+__bizim cluster id miz REDISCLUSTER__ 
 
 sentinel masters                                    # to get all masters (or if you don't know the cluster name)
 
@@ -487,7 +498,7 @@ sentinel master REDISCLUSTER  (bütün sentinel makinlarda bu kos çalıştırı
 
 
 
-# KAYNAKLAR
+## KAYNAKLAR
 
 - https://medium.com/@amila922/redis-sentinel-high-availability-everything-you-need-to-know-from-dev-to-prod-complete-guide-deb198e70ea6
 
@@ -503,7 +514,7 @@ sentinel master REDISCLUSTER  (bütün sentinel makinlarda bu kos çalıştırı
 
 
 
-# HAPROXY KURULUMU ipaddress_haproxy
+## HAPROXY KURULUMU ipaddress_haproxy
 
 
 
