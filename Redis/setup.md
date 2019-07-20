@@ -1,4 +1,16 @@
 
+4 makinam var
+
+1 tane haproxy
+1 sadece sentinel 1 makinası
+1 sentinel 2. makina ve aynı zamanda redis master
+1 sentinel 3. makina ve aynı zamanda redis slave
+
+
+
+
+
+
 redis 6379
 sentinel 26379 
 
