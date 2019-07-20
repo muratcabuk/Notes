@@ -1,10 +1,10 @@
 
-4 makinam var
+4 makinamız var
 
-1 tane haproxy
-1 sadece sentinel 1 makinası
-1 sentinel 2. makina ve aynı zamanda redis master
-1 sentinel 3. makina ve aynı zamanda redis slave
+- 1 tane haproxy
+- 1 sadece sentinel 1 makinası
+- 1 sentinel 2. makina ve aynı zamanda redis master
+- 1 sentinel 3. makina ve aynı zamanda redis slave
 
 
 
@@ -12,6 +12,7 @@
 
 
 redis 6379
+
 sentinel 26379 
 
 portunda  çalışır.
@@ -22,19 +23,14 @@ HAPROXY de 6379 posrtu üzerinden tcp ile komut göndererek master nodu kontrol 
 HaProxy makinası ipaddress_haproxy
 
 sentinel 1 ipaddress_sentinel1 (sadece sentinel çalışacak redis çalışmayacak)
+
 redis master - sentinel 2 ipaddress_sentinel2_redismster
+
 redis slave -sentinel 3 ipaddress_sentinel2_redisslave
 
 
 
-
-
-
-
-
-REDIS KURULUM - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,sentinel1_ipaddress,sentinel2_redismaster_ipaddress,sentinel3_redisslave_ipaddress)
-
-----------------------------------------------------------------------------
+# REDIS KURULUM - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,sentinel1_ipaddress,sentinel2_redismaster_ipaddress,sentinel3_redisslave_ipaddress)
 
 
 sudo apt update
@@ -77,15 +73,18 @@ sudo nano /etc/rc.local
 
 dosyasını açarak en alt kısmına aşağıdaki kodu ekliyoruz.
 
+
+```
 if test -f /sys/kernel/mm/transparent_hugepage/enabled; then
   echo never > /sys/kernel/mm/transparent_hugepage/enabled
 fi
 sysctl -w net.core.somaxconn=65535
 
 exit 0
+```
+daha sonra kullanıcı oluşturuyoruz. klasörleri oluşturup yetkileri veiyoruz
 
-
-
+```
 sudo adduser --system --group --no-create-home redisusr
 
 
@@ -96,12 +95,14 @@ sudo cp /home/administrator/redis/redis-stable/sentinel.conf /etc/redis/sentinel
 sudo mkdir /var/lib/redis
 sudo chown redisusr:redisusr /var/lib/redis
 sudo chmod 770 /var/lib/redis
+```
 
+alttaki komutla service create edip bir alttaki komutları giriyoruz
 
 
 sudo nano /etc/systemd/system/redis-server.service
 
-
+``` 
 [Unit]
 Description=Redis In-Memory Data Store
 After=network.target
@@ -124,41 +125,41 @@ sudo systemctl status redis-server
 sudo systemctl enable redis-server
 
 
+test için
+
+```
 
 redis-cli
 set baskent ankara
 get baskent
 
-
+```
 
 redis 5.0.5
 
 
 
 
-SENTINEL KURULUM  - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,201,202,203)
+# SENTINEL KURULUM  - REDIS MAKINALARINDA YAPILACAK (ipaddress_haproxy,201,202,203)
 
------------------------------------------------------------------------------
-
-
+redis doğru kurulduysa alttaki kmutla sentinelin kurup kurulmadığı kontrol edilebilir
 
 redis-sentinel
 
 
 Sentinel için gerekli olan klasör ve yetkileri tanımlıyoruz.
-
+```
 sudo mkdir /var/lib/redis-sentinel
 sudo chown redisusr:redisusr /var/lib/redis-sentinel
 sudo chmod 770 /var/lib/redis-sentinel
 sudo chown redisusr:redisusr /etc/redis/sentinel.conf
-
+```
 
 Servis olarak çalışması için öncelikle redis-sentinel.service isimli bir servis oluşturarak
 
 sudo nano /etc/systemd/system/redis-sentinel.service
 
-içeriği ekleyelim
-
+```
 [Unit]
 Description=Sentinel for Redis
 After=network.target
@@ -169,6 +170,7 @@ ExecStart=/usr/local/bin/redis-sentinel /etc/redis/sentinel.conf
 [Install]
 WantedBy=multi-user.target
 
+```
 
 Yukarıdaki şekilde servis dosyasını oluşturup kayıt ettikten sonra aşağıdaki komut ile servisi çalıştırabiliriz.
 
@@ -183,45 +185,46 @@ Servisin başlangıçta sorunsuz bir şekilde başlaması için servisi etkinle�
 sudo systemctl enable redis-sentinel
 
 
-MASTER REDIS KONFIGURASYON (ipaddress_sentinel2_redismster) redis 5.0.5
+# MASTER REDIS KONFIGURASYON (ipaddress_sentinel2_redismster) redis 5.0.5
 
--------------------------------------------------------------------
+
 
 
 log dosyasını değiştirmek istiyorsanız öncelikle bir log dosyası oluşturarak gerekli izinleri vermelisiniz.
 
+```
 sudo mkdir -p /var/log/redis/
 sudo touch /var/log/redis/redis.log
 sudo chown redisusr:redisusr /var/log/redis/redis.log
 
-
+```
 
 sudo nano /etc/redis/redis.conf
 
-# Orjinal Hali
+```
 bind 127.0.0.1 (10.131.62.82) ==============> BURAYA MAKİNANIN NETWORK IP SI YAZILMALI bizde ipaddress_sentinel2_redismster
-# Orjinal Hali
+
 dir /var/lib/redis
-# Orjinal Hali
+
 supervised systemd
-# Orjinal Hali
+
 logfile /var/log/redis/redis.log
 
 masterauth masterpassword
 
 requirepass masterpassword
 
+```
 
 
 
+# MASTER SENTINEL KONFIGURASYONU  (ipaddress_sentinel2_redismster) redis 5.0.5
 
-MASTER SENTINEL KONFIGURASYONU  (ipaddress_sentinel2_redismster) redis 5.0.5
 
--------------------------------------------------------------------------
 
 Sentinel ayarları sırasında Cluster yapımıza bir isim vermemiz gerekiyor. Ben burada cluster için REDISCLUSTER ismini kullanacağım
 
-
+```
 
 sudo mkdir -p /var/log/redis-sentinel/
 sudo touch /var/log/redis-sentinel/redis-sentinel.log
@@ -230,28 +233,28 @@ sudo chown redisusr:redisusr /var/log/redis-sentinel/redis-sentinel.log
 
 sudo nano /etc/redis/sentinel.conf
 
-# Orjinal Hali
+
 dir /var/lib/redis-sentinel
 
-# Orjinal Hali
+
 sentinel monitor REDISCLUSTER (10.131.62.82 YANI MASTER REDIS IN IP SI bizde ipaddress_sentinel2_redismster) 6379 2
 
-# Orjinal Hali
+
 dir /var/lib/redis-sentinel
 
-# Orjinal Hali
+
 sentinel down-after-milliseconds REDISCLUSTER 10000
 
-# Orjinal Hali
+
 sentinel parallel-syncs REDISCLUSTER 1
 
-# Orjinal Hali
+
 sentinel failover-timeout REDISCLUSTER 20000
 
-# Orjinal Hali
+
 sentinel leader-epoch REDISCLUSTER 0
 
-# Orjinal Hali
+
 sentinel config-epoch REDISCLUSTER 0
 
 
@@ -261,13 +264,14 @@ sentinel auth-pass REDISCLUSTER masterpassword
 logfile  "/var/log/redis-sentinel/redis-sentinel.log"   ==========> izinleri vermeyi unutma (yukarıda verdin zaten)
 
 
-
+```
 
 
 
 
 
 Önemli bir not sentinel.conf dosyasının ile satırına sunucun ip adresini yazmamız gerekiyor.
+
 bind 10.131.62.82  =========> bizde ipaddress_sentinel2_redismster
 
 Son olarak seninel.conf a gerekli izinleri veriyoruz ve sentinel i yeniden başlatıyoruz.
@@ -279,25 +283,25 @@ sudo systemctl restart redis-sentinel
 
 
 
-REDIS SLAVE 01 KONFIGURASYONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
+# REDIS SLAVE 01 KONFIGURASYONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
 
--------------------------------------------------------------------------
- 
+
+ ```
 sudo mkdir -p /var/log/redis/
 sudo touch /var/log/redis/redis.log
 sudo chown redisusr:redisusr /var/log/redis/redis.log
 
 sudo nano /etc/redis/redis.conf
-# Orjinal Hali
+
 bind 127.0.0.1 (10.131.44.177) =======================bizde ipaddress_sentinel2_redisslave
 
-# Orjinal Hali
+
 dir /var/lib/redis
 
-# Orjinal Hali
+
 supervised systemd
 
-# Orjinal Hali
+
 slaveof 10.131.62.82 6379 #master redis ip adresi ==============> bizde ipaddress_sentinel2_redismster
 
 # yeni versyonda burası replicaof
@@ -305,18 +309,17 @@ slaveof 10.131.62.82 6379 #master redis ip adresi ==============> bizde ipaddres
 masterauth masterpassword
 
 
-# Orjinal Hali
+
 slave-priority 150
 
-# Orjinal Hali
+
 logfile /var/log/redis/redis.log
+```
 
 
+# REDIS SLAVE 01 SENTINEL KONFIGURASYIONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
 
-REDIS SLAVE 01 SENTINEL KONFIGURASYIONU  (ipaddress_sentinel2_redisslave) redis 5.0.5
-
----------------------------------------------------------------------
-
+```
 sudo mkdir -p /var/log/redis-sentinel/
 sudo touch /var/log/redis-sentinel/redis-sentinel.log
 sudo chown redisusr:redisusr /var/log/redis-sentinel/redis-sentinel.log
@@ -324,28 +327,28 @@ sudo chown redisusr:redisusr /var/log/redis-sentinel/redis-sentinel.log
 sudo nano /etc/redis/sentinel.conf
 
 
-# Orjinal Hali
+
 dir /var/lib/redis-sentinel
 
-# Orjinal Hali
+
 sentinel monitor REDISCLUSTER 10.131.62.82 6379 2  =============> bizde ipaddress_sentinel2_redismster
 
-# Orjinal Hali
+
 dir /var/lib/redis-sentinel
 
-# Orjinal Hali
+
 sentinel down-after-milliseconds REDISCLUSTER 10000
 
-# Orjinal Hali
+
 sentinel parallel-syncs REDISCLUSTER 1
 
-# Orjinal Hali
+
 sentinel failover-timeout REDISCLUSTER 20000
 
-# Orjinal Hali
+
 sentinel leader-epoch REDISCLUSTER 0
 
-# Orjinal Hali
+
 sentinel config-epoch REDISCLUSTER 0
 
 
@@ -358,21 +361,24 @@ logfile  "/var/log/redis-sentinel/redis-sentinel.log"
 Önemli bir not sentinel.conf dosyasının ile satırına sunucun ip adresini yazmamız gerekiyor.
 bind 10.131.44.177     ===========================> bu bizde ipaddress_sentinel2_redisslave
 
+```
+
 Son olarak seninel.conf a gerekli izinleri veriyoruz ve sentinel i yeniden başlatıyoruz.
 
 sudo chown redisusr:redisusr /etc/redis/sentinel.conf
+
 sudo systemctl restart redis-sentinel
 
 
+# SENTINEL 1 MAKINASI IÇIN SENTINEL KONFIGURASYONU (ipaddress_sentinel1) redis 5.0.5
 
 
-SENTINEL 1 MAKINASI IÇIN SENTINEL KONFIGURASYONU (ipaddress_sentinel1) redis 5.0.5
---------------------------------------------------
 bu makinadaki redis slave olarak tanımlanmadı. 
+
 yani buradaki sentinel sadece geriye kan 2 makinadaki sentinellerle haberleşmekk için ayağa kaldırılmış olacak.
 
 
-
+```
 
 sudo mkdir -p /var/log/redis-sentinel/
 sudo touch /var/log/redis-sentinel/redis-sentinel.log
@@ -381,27 +387,27 @@ sudo chown redisusr:redisusr /var/log/redis-sentinel/redis-sentinel.log
 sudo nano /etc/redis/sentinel.conf
 
 
-# Orjinal Hali
+
 dir /var/lib/redis-sentinel
 
-# Orjinal Hali
+
 sentinel monitor REDISCLUSTER 10.131.62.82 6379 2  =============> bizde ipaddress_sentinel2_redismster
-# Orjinal Hali
+
 dir /var/lib/redis-sentinel
 
-# Orjinal Hali
+
 sentinel down-after-milliseconds REDISCLUSTER 10000
 
-# Orjinal Hali
+
 sentinel parallel-syncs REDISCLUSTER 1
 
-# Orjinal Hali
+
 sentinel failover-timeout REDISCLUSTER 20000
 
-# Orjinal Hali
+
 sentinel leader-epoch REDISCLUSTER 0
 
-# Orjinal Hali
+
 sentinel config-epoch REDISCLUSTER 0
 
 
@@ -414,56 +420,52 @@ logfile  "/var/log/redis-sentinel/redis-sentinel.log"
 Önemli bir not sentinel.conf dosyasının ile satırına sunucun ip adresini yazmamız gerekiyor.
 bind 10.131.44.177     ===========================> bu bizde ipaddress_sentinel1
 
+
+```
 Son olarak seninel.conf a gerekli izinleri veriyoruz ve sentinel i yeniden başlatıyoruz.
 
+
 sudo chown redisusr:redisusr /etc/redis/sentinel.conf
+
 sudo systemctl restart redis-sentinel
 
 
+# TUM SUNUCLARDA KONTROL AMAÇLI
 
 
 
-
-
-
-TUM SUNUCLARDA KONTROL AMAÇLI
-
-=================================
 ps -ef | grep redis
 
 iki tane servis çaışıyor olması lazım
 
-sonuç
+__sonuç__
 
 redisusr 19454     1  0 13:46 ?        00:00:02 /usr/local/bin/redis-server 127.0.0.1:6379
+
 redisusr 19461     1  0 13:46 ?        00:00:03 /usr/local/bin/redis-sentinel 127.0.0.1:26379 [sentinel]
+
 adminis+ 19501  3728  0 14:22 pts/0    00:00:00 grep --color=auto redis
 
 
 
 
 
-REDIS CLI redis 5.0.5
+# REDIS CLI redis 5.0.5
 
-===================================
 
+```
 redis-cli -p 6379 -h ip-address -a masterpassword 
 
->MONITOR (sistemi monitor etmeye başlar)
->MEMORY STATS command returns an Array reply about the memory usage of the server.
+MONITOR (sistemi monitor etmeye başlar)
+MEMORY STATS command returns an Array reply about the memory usage of the server.
+client list
+```
 
->client list
+# SENTINEL CLI 
 
-
-
-
-
-
-SENTINEL CLI 
-===================================
 redis-cli -p 26739
-redis-cli -p 26739 -h ip-address
 
+redis-cli -p 26739 -h ip-address
 
 info                                                # full info
 
@@ -471,9 +473,10 @@ info                                                # full info
 # bizim cluster id miz REDISCLUSTER 
 
 sentinel masters                                    # to get all masters (or if you don't know the cluster name)
-sentinel master <your cluster id>                   # get current sentinel master
-sentinel get-master-addr-by-name <your cluster id>  # get current sentinel master IP
 
+sentinel master <your cluster id>                   # get current sentinel master
+
+sentinel get-master-addr-by-name <your cluster id>  # get current sentinel master IP
 
 sentinel slaves <your cluster id>
 
@@ -484,41 +487,39 @@ sentinel master REDISCLUSTER  (bütün sentinel makinlarda bu kos çalıştırı
 
 
 
+# KAYNAKLAR
 
-KAYNAKLAR
+- https://medium.com/@amila922/redis-sentinel-high-availability-everything-you-need-to-know-from-dev-to-prod-complete-guide-deb198e70ea6
 
-https://medium.com/@amila922/redis-sentinel-high-availability-everything-you-need-to-know-from-dev-to-prod-complete-guide-deb198e70ea6
+- https://medium.com/@bozyol/redis-replication-sentinel-haproxy-kurulum-b%C3%B6l%C3%BCm-1-384a0bcd71e7
+- https://medium.com/@bozyol/redis-replication-sentinel-haproxy-konfig%C3%BCrasyonlar-b%C3%B6l%C3%BCm-2-5f7ad92a6627
+- https://medium.com/@bozyol/redis-replication-sentinel-haproxy-kurulum-b%C3%B6l%C3%BCm-3-7abf5cbdc83c
 
-https://medium.com/@bozyol/redis-replication-sentinel-haproxy-kurulum-b%C3%B6l%C3%BCm-1-384a0bcd71e7
-https://medium.com/@bozyol/redis-replication-sentinel-haproxy-konfig%C3%BCrasyonlar-b%C3%B6l%C3%BCm-2-5f7ad92a6627
-https://medium.com/@bozyol/redis-replication-sentinel-haproxy-kurulum-b%C3%B6l%C3%BCm-3-7abf5cbdc83c
+- https://jameshfisher.com/2019/01/08/how-to-run-redis-sentinel/
 
-https://jameshfisher.com/2019/01/08/how-to-run-redis-sentinel/
+- https://www.mustafaaltinkaynak.com/haproxy-kurulumu-ve-yapilandirma.html
 
-https://www.mustafaaltinkaynak.com/haproxy-kurulumu-ve-yapilandirma.html
-
-https://github.com/falsecz/haredis
-
+- https://github.com/falsecz/haredis
 
 
-HAPROXY KURULUMU ipaddress_haproxy
 
-=========================================
+# HAPROXY KURULUMU ipaddress_haproxy
+
+
 
 apt update
+
 apt install haproxy
 
 varsion : 1.8.8
 
 nano /etc/haproxy/haproxy.cfg
 
-
-
 Aşağıdaki gibi olacak
 
 
 
-
+```
 
 global
         log /dev/log    local0
@@ -563,3 +564,4 @@ backend backend_redis
         server R1 ipaddress_sentinel2_redismster:6379 check inter 1s
         server R2 ipaddress_sentinel2_redisslave:6379 check inter 1s
 
+```
