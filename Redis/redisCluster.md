@@ -121,23 +121,6 @@ redis 5.0.5
 
 
 
-HAProxy (load balancer)
-Redis Master 1
-Redis Slave 3
-Redis Master 2
-Redis Slave 1
-Redis Master 3
-Redis Slave 2
-1
-1
-1
-Client
-haproxy_ip
-redis1_ip
-redis2_ip
-redis3_ip
-
-
 
 kaynak : http://codeflex.co/configuring-redis-cluster-on-linux/
 
