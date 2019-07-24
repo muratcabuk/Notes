@@ -10,9 +10,10 @@ daha sonra .bashrc ye JAVA_HOME eklenir
 
 sudo nano ~/.bashrc
 
-
+```
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 export PATH=$JAVA_HOME/bin:$PATH
+```
 
 tekrar yüklemek için
 
@@ -43,9 +44,10 @@ daha sonra .bashrc ye IGNITE_HOME eklenir
 
 sudo nano ~/.bashrc
 
-
+```
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 export PATH=$JAVA_HOME/bin:$PATH
+```
 
 tekrar yüklemek için
 
