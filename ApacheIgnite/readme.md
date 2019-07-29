@@ -60,14 +60,84 @@ daha sonra .bashrc ye IGNITE_HOME eklenir
 
 sudo nano ~/.bashrc
 
+
 ```
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+export IGNITE_HOME=/usr/share/apache-ignite/
 export PATH=$JAVA_HOME/bin:$PATH
 ```
 
 tekrar yüklemek için
 
 source  ~/.bashrc
+
+
+## 3. Cluster Ayarları Yapılır
+
+
+https://apacheignite.readme.io/docs/clustering
+
+```
+sudo nano  /etc/apache-ignite/default-config.xml
+
+```
+cluster ın discovery yapılabilmesi için 2 yöntem var. Zookeeper ve TCPIP, biz TCP yi tercih ediyoruz. İlgili sayfadan static Ip Finder kullanrak ip leri listeliyoruz
+
+
+
+https://apacheignite.readme.io/docs/tcpip-discovery
+
+```
+<bean class="org.apache.ignite.configuration.IgniteConfiguration">
+  ...
+  <property name="discoverySpi">
+    <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
+      <property name="ipFinder">
+        <bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder">
+          <property name="addresses">
+            <list>
+              <!-- 
+              Explicitly specifying address of a local node to let it start and
+              operate normally even if there is no more nodes in the cluster. 
+              You can also optionally specify an individual port or port range.
+              -->
+              <value>1.2.3.4</value>
+              
+              <!-- 
+              IP Address and optional port range of a remote node.
+              You can also optionally specify an individual port.
+              -->
+              <value>1.2.3.5:47500..47509</value>
+            </list>
+          </property>
+        </bean>
+      </property>
+    </bean>
+  </property>
+</bean>
+
+```
+__Shell ile de aşağıdaki şekile yapılabilir__
+
+```
+# The configuration should use TcpDiscoveryVmIpFinder without addresses specified:
+
+IGNITE_TCP_DISCOVERY_ADDRESSES=1.2.3.4,1.2.3.5:47500..47509 bin/ignite.sh -v config/default-config.xml
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 
 
