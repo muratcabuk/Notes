@@ -1,5 +1,16 @@
 # Notes
 
+
+## __identity management__
+
+http://syncope.apache.org/docs/reference-guide.html#architecture
+
+https://www.keycloak.org/about.html
+
+https://evolveum.com/about-us/references/tubitak/
+
+
+
 - [Algoritme Analizi Ders Notları]http://hanmurat.com/blog/algoritma-analizi-ders-notlari/
 
 
