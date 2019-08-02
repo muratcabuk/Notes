@@ -132,6 +132,10 @@ IGNITE_TCP_DISCOVERY_ADDRESSES=1.2.3.4,1.2.3.5:47500..47509 bin/ignite.sh -v con
 
 https://apacheignite-tools.readme.io/docs/build-and-deploy
 
+### __Python Örnekleri__
+
+https://github.com/apache/ignite/tree/master/modules/platforms/python/examples
+
 
 
 
