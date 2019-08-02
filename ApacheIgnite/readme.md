@@ -128,6 +128,11 @@ IGNITE_TCP_DISCOVERY_ADDRESSES=1.2.3.4,1.2.3.5:47500..47509 bin/ignite.sh -v con
 
 
 
+### __Apache Ignite Web Console__
+
+https://apacheignite-tools.readme.io/docs/build-and-deploy
+
+
 
 
 
