@@ -93,7 +93,10 @@ https://github.com/UiPath/corewf
 https://github.com/dotnet-state-machine/stateless?WT.mc_id=-blog-scottha
 
 
+### yapay sinir ağları - derin öğrenme
+https://github.com/deeplearningturkiye/turkce-yapay-zeka-kaynaklari#kitaplar
 
+https://medium.com/yavuzkomecoglu/stanford-cs-229-makine-%C3%B6%C4%9Frenmesi-ve-cs-230-derin-%C3%B6%C4%9Frenme-el-kitaplar%C4%B1-art%C4%B1k-t%C3%BCrk%C3%A7e-ed734ad76bed
 
 
 
