@@ -3,6 +3,9 @@
 vmware latest version direct link : https://www.vmware.com/go/getworkstation-linux
 
 
+https://www.wikigain.com/fix-macos-mojave-imessage-icloud-app-store-vmware/
+
+
 ### 1. if you have a MacOS Download Mac OS from app store
 
 https://www.youtube.com/watch?v=gM6rQ8GWboQ
