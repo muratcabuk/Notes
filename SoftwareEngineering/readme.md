@@ -34,3 +34,21 @@ Algoritmalar 2 = https://acikders.ankara.edu.tr/course/view.php?id=5214
 
 
 
+AOP
+
+https://denizirgin.com/aspect-oriented-programming-kavram%C4%B1-2a3a31ab020f
+
+https://www.gokhan-gokalp.com/aspect-oriented-programming-aop-giris-ve-ornek-bir-proje/amp/
+
+
+https://www.gokhan-gokalp.com/aspect-oriented-programming-aop-giris-ve-ornek-bir-proje/
+
+
+
+
+
+
+
+
+
+
