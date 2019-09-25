@@ -132,3 +132,38 @@ http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
 /var :	This stands for variable and is a place for files that are in a changeable state. Such as size going up and down.
 
 /swap :	The swap partition is where you extend the system memory by dedicating part of the hard drive to it.
+
+
+### Disk
+
+bir path a bir diski veya basşka bir path i mount ettikten sonra aynı yere başka bir folder ı veya disk mount edersek önceki mount ettiğimiz yer ne olur? 
+
+cevap: sadece görünmez olur aynı alanı tekrar MOUNT DEĞİL BIND ederek tekrar görebiliriz.
+
+https://unix.stackexchange.com/questions/198542/what-happens-when-you-mount-over-an-existing-folder-with-contents
+
+
+diyelimki /tmp alanına bir disk i mount ettik eki eski tmp kalsörüne oldu
+
+
+What happens to the actual content of /tmp when my hard drive is mounted?
+
+Pretty much nothing. They're just hidden from view, not reachable via normal filesystem traversal.
+
+Is it possible to perform r/w operations on the actual content of /tmp while the hard drive is mounted?
+
+Yes. Processes that had open file handles inside your "original" /tmp will continue to be able to use them. You can also make the "reappear" somewhere else by bind-mounting / elsewhere.
+
+```
+# mount -o bind / /somewhere/else
+# ls /somewhere/else/tmp  
+```
+
+
+
+
+
+
+
+
+
