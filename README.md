@@ -1,6 +1,12 @@
 # Notes
 
 
+await ana threat ve ona bagli alt threat lerin takip edilebilmesi icin acilir. eger await ejlemzsek ornegin httpcontex e erisemeyiz.
+
+
+
+
+
 ## __identity management__
 
 http://syncope.apache.org/docs/reference-guide.html#architecture
