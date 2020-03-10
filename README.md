@@ -26,7 +26,9 @@ Systems, protocols and technologies supporting user authentication (how Users ar
 
 
 
-- [Algoritme Analizi Ders Notları]http://hanmurat.com/blog/algoritma-analizi-ders-notlari/
+
+
+- [Algoritme Analizi Ders Notları](http://hanmurat.com/blog/algoritma-analizi-ders-notlari/)
 
 
 - [Yapay Zeka uygulamaları](https://medium.com/deep-learning-turkiye/yapay-zeka-kullan%C4%B1m-alanlar%C4%B1-ve-uygulamalar%C4%B1na-derinlemesine-bir-bak%C4%B1%C5%9F-d0fecaf7f61b)
