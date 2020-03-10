@@ -17,6 +17,15 @@ https://evolveum.com/about-us/references/tubitak/
 
 
 
+
+- Identity Management
+Tools and practices to keep identity data consistent and synchronized across repositories, data formats and models.
+
+- Access Management
+Systems, protocols and technologies supporting user authentication (how Users are let accessing a given system) and authorization (which capabilities each user owns on a given system).
+
+
+
 - [Algoritme Analizi Ders Notları]http://hanmurat.com/blog/algoritma-analizi-ders-notlari/
 
 
