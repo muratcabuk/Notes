@@ -82,8 +82,51 @@ http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
 
 ### network
 
-[WiFi](https://www.linux.com/learn/how-configure-wireless-any-linux-desktop)
+- [WiFi](https://www.linux.com/learn/how-configure-wireless-any-linux-desktop)
 
+- [Add Network Interface](https://www.digitalocean.com/docs/networking/private-networking/how-to/enable/)
+
+```
+lshw -class network
+```
+ekrana kullancağımız mac address gelecek
+
+```
+/etc/netplan/50-cloud-init.yaml
+```
+alttaki satıraklar eth1 ile yukarıdan eth0 kopyala yapıştır yapılır
+```
+eth1:
+    addresses:
+    - 198.51.100.0/16
+    match:
+        macaddress: ex:am:pl:e3:65:13
+    set-name: eth1
+```
+debug yapmak için
+
+```
+sudo netplan apply --debug
+```
+daha sonra
+
+```
+sudo ifconfig
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 ### Driver and Firmware
 
 [kernel firmware list](http://mirrors.kernel.org/ubuntu/pool/main/l/linux-firmware)

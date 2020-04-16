@@ -51,7 +51,17 @@
 
 - [Relationship between user story, feature, and epic?](https://softwareengineering.stackexchange.com/questions/182158/relationship-between-user-story-feature-and-epic)
 
+#### _Story Point and Story Mapping__
+- [Cheat Sheet for Story Point Sizing](https://www.linkedin.com/pulse/cheat-sheet-story-point-sizing-neeraj-bachani/)
 
+As a definition, STORY POINT is a unitless measurement of the size that encompasses the 3 parameters of a user story - COMPLEXITY, UNCERTAINTY and EFFORT.
+- ![Story Point](files/StoryPoint.png)
+- [Story Point İyi anlatım video](https://www.mountaingoatsoftware.com/blog/dont-equate-story-points-to-hours)
+- [Story Point](https://medium.com/serious-scrum/12-common-mistakes-made-when-using-story-points-f0bb9212d2f7)
+
+- [FAQ: Why Story points? Why not map story points with time? What’s the issue?](http://www.agilebuddha.com/agile/faq-why-story-points-why-not-map-story-points-with-time-whats-the-issue/)
+- [Story Mapping, Visual Way of Building Product Backlog](https://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog)
+- [An introduction to user story mapping](https://manifesto.co.uk/user-story-mapping/)
 
 #### __User Story Kavramı ve örnekleri__
 
