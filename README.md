@@ -17,7 +17,18 @@ https://evolveum.com/about-us/references/tubitak/
 
 
 
-- [Algoritme Analizi Ders Notları]http://hanmurat.com/blog/algoritma-analizi-ders-notlari/
+
+- Identity Management
+Tools and practices to keep identity data consistent and synchronized across repositories, data formats and models.
+
+- Access Management
+Systems, protocols and technologies supporting user authentication (how Users are let accessing a given system) and authorization (which capabilities each user owns on a given system).
+
+
+
+
+
+- [Algoritme Analizi Ders Notları](http://hanmurat.com/blog/algoritma-analizi-ders-notlari/)
 
 
 - [Yapay Zeka uygulamaları](https://medium.com/deep-learning-turkiye/yapay-zeka-kullan%C4%B1m-alanlar%C4%B1-ve-uygulamalar%C4%B1na-derinlemesine-bir-bak%C4%B1%C5%9F-d0fecaf7f61b)
