@@ -1,0 +1,35 @@
+[mons]
+mceph1 ansible_ssh_private_key_file=~/.ssh/private
+mceph2 ansible_ssh_private_key_file=~/.ssh/private
+mceph3 ansible_ssh_private_key_file=~/.ssh/private
+
+[osds]
+mceph1 ansible_ssh_private_key_file=~/.ssh/private
+mceph2 ansible_ssh_private_key_file=~/.ssh/private
+mceph3 ansible_ssh_private_key_file=~/.ssh/private
+
+[mgrs]
+mceph1 ansible_ssh_private_key_file=~/.ssh/private
+
+[rgws]
+mceph2 ansible_ssh_private_key_file=~/.ssh/private
+
+[grafana-server]
+mceph3 ansible_ssh_private_key_file=~/.ssh/private
+
+[iscsigws]
+mceph2 ansible_ssh_private_key_file=~/.ssh/private
+
+
+[clients]
+mceph1 ansible_ssh_private_key_file=~/.ssh/private
+mceph2 ansible_ssh_private_key_file=~/.ssh/private
+mceph3 ansible_ssh_private_key_file=~/.ssh/private
+
+[mdss]
+mceph3 ansible_ssh_private_key_file=~/.ssh/private
+
+[nfss]
+mceph1 ansible_ssh_private_key_file=~/.ssh/private
+mceph2 ansible_ssh_private_key_file=~/.ssh/private
+mceph3 ansible_ssh_private_key_file=~/.ssh/private
