@@ -1,0 +1,1 @@
+https://www.cozumpark.com/proxmox-6-0-ile-hyper-converged-sistem-kurulumu/
