@@ -143,10 +143,10 @@ valid_ceph_repository:
 #
 # Enabled when ceph_repository == 'community'
 #
-ceph_mirror: http://download.ceph.com
-ceph_stable_key: https://download.ceph.com/keys/release.asc
-ceph_stable_release: octopus
-ceph_stable_repo: "{{ ceph_mirror }}/debian-{{ ceph_stable_release }}"
+# ceph_mirror: http://download.ceph.com
+# ceph_stable_key: https://download.ceph.com/keys/release.asc
+# ceph_stable_release: octopus
+# ceph_stable_repo: "{{ ceph_mirror }}/debian-{{ ceph_stable_release }}"
 
 # nfs_ganesha_stable: true # use stable repos for nfs-ganesha
 # nfs_ganesha_stable_branch: V3.2-stable
