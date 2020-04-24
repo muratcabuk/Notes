@@ -17,8 +17,10 @@ görüldüğü üzere monitoring ve manager ı il makinaya koyuyoruz normalde bu
 
 yani 4 makinaya ihtiyaç var
 
+- https://medium.com/@bkayranci/ceph-7c16b983fbde
+
 - https://kifarunix.com/setup-three-node-ceph-storage-cluster-on-ubuntu-18-04/
-- -https://computingforgeeks.com/how-to-deploy-ceph-storage-cluster-on-ubuntu-18-04-lts/
+- https://computingforgeeks.com/how-to-deploy-ceph-storage-cluster-on-ubuntu-18-04-lts/
 
 - https://github.com/infn-bari-school/cloud-storage-tutorials/wiki/Ceph-cluster-installation-(jewel-on-Ubuntu-xenial)
 
