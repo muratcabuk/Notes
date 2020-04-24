@@ -82,7 +82,7 @@ cluster: ceph
 ############
 # PACKAGES #
 ############
-debian_package_dependencies: ['chronyd']
+#debian_package_dependencies: ['chrony']
 
 #centos_package_dependencies:
 #  - epel-release
