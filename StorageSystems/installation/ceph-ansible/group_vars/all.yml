@@ -153,6 +153,13 @@ ceph_stable_release: octopus
 # nfs_ganesha_stable_deb_repo: "{{ ceph_mirror }}/nfs-ganesha/deb-{{ nfs_ganesha_stable_branch }}/{{ ceph_stable_release }}"
 
 
+nfs_ganesha_stable: true # use stable repos for nfs-ganesha
+nfs_ganesha_stable_branch: 3.2-ubuntu1~bionic4
+nfs_ganesha_stable_deb_repo: "deb http://ppa.launchpad.net/nfs-ganesha/nfs-ganesha-3.0/ubuntu bionic main"
+
+# deb http://download.ceph.com/nfs-ganesha/deb-V3.2-stable/octopus bionic main
+
+
 # Use the option below to specify your applicable package tree, eg. when using non-LTS Ubuntu versions
 # # for a list of available Debian distributions, visit http://download.ceph.com/debian-{{ ceph_stable_release }}/dists/
 # for more info read: https://github.com/ceph/ceph-ansible/issues/305
