@@ -1,28 +1,10 @@
-# Notes
+﻿# Notes
 
 
 await ana threat ve ona bagli alt threat lerin takip edilebilmesi icin acilir. eger await ejlemzsek ornegin httpcontex e erisemeyiz.
 
 
 
-
-
-## __identity management__
-
-http://syncope.apache.org/docs/reference-guide.html#architecture
-
-https://www.keycloak.org/about.html
-
-https://evolveum.com/about-us/references/tubitak/
-
-
-
-
-- Identity Management
-Tools and practices to keep identity data consistent and synchronized across repositories, data formats and models.
-
-- Access Management
-Systems, protocols and technologies supporting user authentication (how Users are let accessing a given system) and authorization (which capabilities each user owns on a given system).
 
 
 
