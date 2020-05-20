@@ -62,12 +62,27 @@ https://www.thegeekstuff.com/2017/06/brctl-bridge/
 
 iki subnet ibirbiriyle habrleştirmek için routing yapılır.
 
+
+farklı routin teknikleri
+```
+ip route add {NETWORK/MASK} via {GATEWAYIP}
+ip route add {NETWORK/MASK} dev {DEVICE}
+ip route add default {NETWORK/MASK} dev {DEVICE}
+ip route add default {NETWORK/MASK} via {GATEWAYIP}
+```
+
+
+- https://www.oreilly.com/library/view/linux-network-administrators/1565924002/ch02s04.html
+- https://www.cyberciti.biz/faq/ip-route-add-network-command-for-linux-explained/
+- https://www.cyberciti.biz/faq/linux-route-add/
 - https://unix.stackexchange.com/questions/311752/routing-between-multiple-subnets
 - https://superuser.com/questions/1230318/routing-network-traffic-between-2-subnets-using-a-raspberry-pi
 - https://superuser.com/questions/1007200/connect-two-subnets-on-linux
 - https://serverfault.com/questions/593448/routing-between-two-subnets-using-a-linux-box-with-two-nics
 - https://askubuntu.com/questions/726664/connect-two-subnets-so-that-they-can-see-each-other
 - https://www.linux.com/training-tutorials/linux-routing-subnets-tips-and-tricks/
+- https://opensource.com/business/16/8/introduction-linux-network-routing
+- 
 
 
 Network Address Translation (NAT) converts local ip to global ip. Routing is the process to route the data packet from one network to the other.

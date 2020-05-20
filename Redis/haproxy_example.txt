@@ -1,0 +1,239 @@
+global
+        log /dev/log    local0
+        log /dev/log    local1 notice
+        chroot /var/lib/haproxy
+        stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners
+        stats timeout 30s
+        user haproxy
+        group haproxy
+        daemon
+
+        # Default SSL material locations
+        #ca-base /etc/ssl/certs
+        #crt-base /etc/ssl/private
+
+        # Default ciphers to use on SSL-enabled listening sockets.
+        # For more information, see ciphers(1SSL). This list is from:
+        #  https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
+        # An alternative list with additional directives can be obtained from
+        #  https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=haproxy
+        #ssl-default-bind-ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AE$
+        #ssl-default-bind-options no-sslv3
+
+defaults
+        log     global
+        mode    http
+
+        #option httplog
+        #option dontlognull
+        timeout connect 5000
+        timeout client  50000
+        timeout server  50000
+        errorfile 400 /etc/haproxy/errors/400.http
+        errorfile 403 /etc/haproxy/errors/403.http
+        errorfile 408 /etc/haproxy/errors/408.http
+        errorfile 500 /etc/haproxy/errors/500.http
+        errorfile 502 /etc/haproxy/errors/502.http
+        errorfile 503 /etc/haproxy/errors/503.http
+        errorfile 504 /etc/haproxy/errors/504.http
+
+
+
+listen stats
+        mode http
+        bind *:8404
+        stats enable
+        stats uri /
+        stats realm Haproxy\ Statistics
+        stats refresh 10s
+        stats hide-version
+        stats auth atlassianusr:Atlassian-2789#
+
+frontend http_in
+        mode http
+        option httplog
+        bind *:80
+        bind *:9000 #sonar
+        bind *:7990 #bitbucket ssh
+        bind *:8095 #crowd
+        bind *:8085 #bamboo
+        bind *:9090 #jenkins
+        bind *:9300 #elastic search for bitbucket API
+        bind *:8080 #jira
+        bind *:8060 #crucible
+        option forwardfor
+        acl host_crucible hdr(host) -i crucible.kizilay.org.tr
+        acl host_sonar hdr(host) -i sonar.kizilay.org.tr
+        acl host_git hdr(host) -i git.kizilay.org.tr
+        acl host_crowd hdr(host) -i crowd.kizilay.org.tr
+        acl host_bamboo hdr(host) -i bamboo.kizilay.org.tr
+        acl host_devops hdr(host) -i devops.kizilay.org.tr
+        acl host_jenkins hdr(host) -i jenkins.kizilay.org.tr
+        acl host_esatlassian hdr(host) -i esatlassian.kizilay.org.tr
+
+        use_backend http_crucible_backend if host_crucible
+        use_backend http_sonar_backend if host_sonar
+        use_backend http_git_backend if host_git
+        use_backend http_crowd_backend if host_crowd
+        use_backend http_bamboo_backend if host_bamboo
+        use_backend http_bamboo_backend if host_devops
+        use_backend http_jenkins_backend if host_jenkins
+        use_backend http_esatlassian_backend if host_esatlassian
+
+
+frontend https_in
+        mode http
+        option httplog
+        bind *:443 ssl crt /etc/ssl/certs/Kizilaywithpass.pem
+        reqadd X-Forwarded-Proto:\ https
+        option forwardfor
+        acl host_wiki hdr(host) -i wiki.kizilay.org.tr
+        acl host_jira hdr(host) -i jira.kizilay.org.tr
+
+
+        use_backend https_wiki_backend if host_wiki
+        use_backend https_jira_backend if host_jira
+
+
+# ---------------------------------- wiki ssl
+
+backend https_wiki_backend
+
+        http-request set-header X-Forwarded-Port %[dst_port]
+        http-request add-header X-Forwarded-Proto https if { ssl_fc }
+        balance leastconn
+        option httpclose
+        option forwardfor
+        cookie JSESSIONID prefix
+        server confluence1ssl 10.0.43.61:8090 check port 8090
+
+#--------------------------------------crucible
+
+backend http_crucible_backend
+
+        balance leastconn
+        option httpclose
+        option forwardfor
+        cookie JSESSIONID prefix
+        server crucible 10.0.43.62:8060 check port 8060
+
+
+
+# ---------------------------------- jira ssl
+
+backend https_jira_backend
+        http-request set-header X-Forwarded-Port %[dst_port]
+        http-request add-header X-Forwarded-Proto https if { ssl_fc }
+        balance leastconn
+        option httpclose
+        option forwardfor
+        cookie JSESSIONID prefix
+        server jira1ssl 10.0.43.62:8080 check port 8080
+
+
+#--------------------------------------sonar
+
+backend http_sonar_backend
+
+        balance leastconn
+        option httpclose
+        option forwardfor
+        cookie JSESSIONID prefix
+        server sonar1 10.0.43.62:9000 check port 9000
+
+#-------------------------------git
+backend http_git_backend
+        balance leastconn
+        option httpclose
+        option forwardfor
+        cookie JSESSIONID prefix
+        server bitbucket1  10.0.43.61:7990 check port 7990
+
+# ---------------------------------- git ssh
+
+frontend bitbucket_ssh_frontend
+    bind *:7999
+    default_backend bitbucket_ssh_backend
+    timeout client 15m
+    maxconn 50
+backend bitbucket_ssh_backend
+    balance roundrobin
+    server bitbucket01 10.0.43.61:7999 check port 7999
+    timeout server 15m
+
+#------------------------------------crowd
+
+
+backend http_crowd_backend
+        balance leastconn
+        option httpclose
+        option forwardfor
+        cookie JSESSIONID prefix
+        server crowd1 10.0.43.62:8095 check port 8095
+
+#------------------------------------ bamboo
+frontend tcp_bamboomb #bamboo message broker for agen
+        mode tcp
+        option tcplog
+        bind *:54663
+        use_backend tcp_bamboomb_backend
+
+
+backend tcp_bamboomb_backend
+        mode tcp
+        balance leastconn
+        option httpclose
+        option forwardfor
+#        cookie JSESSIONID prefix
+        server bamboomb1 10.0.43.61:54663 check port 54663
+
+backend http_bamboo_backend
+        balance leastconn
+        option httpclose
+        option forwardfor
+        cookie JSESSIONID prefix
+        server bamboo1 10.0.43.61:8085 check port 8085
+
+#--------------------------------- jenkins
+
+backend http_jenkins_backend
+        balance leastconn
+        option httpclose
+        option forwardfor
+        cookie JSESSIONID prefix
+        server jenkins1 10.0.43.62:9090 check port 9090
+
+
+#-------------------------------- elasticsearch for bitbucket API
+
+
+frontend http_esatlassian
+        mode http
+        option httplog
+        bind *:9300
+        option forwardfor
+        use_backend http_esatlassian_backend
+
+
+backend http_esatlassian_backend
+        balance leastconn
+        option httpclose
+        option forwardfor
+        cookie JSESSIONID prefix
+        server esatllassian1 10.0.43.64:9300 check port 9300
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

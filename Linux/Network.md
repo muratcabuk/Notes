@@ -493,3 +493,28 @@ Ağ üzerinden akan trafiği elde etmenin en çok bilinen ve kullanılan yöntem
 - http://www.epdata.com.tr/%C3%A7%C3%B6z%C3%BCmler/network-tab-cihaz%C4%B1
 
 
+### tüm açık / kullanılan portları görmek için
+
+linux deki tüm açık portlar
+
+```
+sudo netstat -tunlp
+```
+
+-t Show TCP ports.
+-u Show UDP ports.
+-n Show numerical addresses instead of resolving hosts.
+-l Show only listening ports.
+-p Show the PID and name of the listener’s process.
+
+
+```
+
+
+
+
+yada ss i kullanabiliriz
+
+```
+sudo ss -tunlp
+```

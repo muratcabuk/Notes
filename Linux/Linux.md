@@ -1,4 +1,4 @@
-### Repositories
+﻿### Repositories
 
 flatpak
 
@@ -30,7 +30,11 @@ pidgin installation for office 365 skype for business
     8. Use the following as the User Agent: UCCAPI/15.0.4420.1017 OC/15.0.4420.1017
     Enjoy!!
 
+### Ulimit
 
+http://www.belgeler.org/bashref/bashref_bash.builtins-ulimit.html
+
+http://www.belgeler.org/bashref/bashref_bash.builtins-ulimit.html
 
 
 
@@ -203,10 +207,15 @@ Yes. Processes that had open file handles inside your "original" /tmp will conti
 ```
 
 
+Diskte bulunan dizindeki kalsörlerin boyutlarını veren kod
 
+https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/
 
-
-
-
-
-
+bir rakamı kaç level alta gidileğini söylüyor
+```
+sudo du -h -d 1 --exclude=/proc --exclude=/run /
+```
+buda aynı işi yapıyor 
+```
+ sudo du -hs * | sort -rh | head -5
+ ```
