@@ -62,6 +62,9 @@ openssl x509 -in cert.crt -inform der -outform pem -out cert.pem
 __Hazır örnek__
 [Tübitak PDF örnek](files/ssl_sayisal_sertifikalar.pdf)
 
+__Gökhan Şengün Örnek__
+[Git](https://github.com/gokhansengun/nginx-tls) --  [Youtube](https://youtu.be/gdI71QhJ1H0?t=6207)
+
 
 Bu bölümde Certificate Authority sertifikası, intermediate sertifikası ve domain sertifikası oluşturacağız. alttaki kaynaklarda olan hazır bir örnek üzerinden gideceğiz. bu arada sertifika oluşturmak için bir çok araç var. openssl, cfssl,vault ve letsencryp gibi bir çok araç var. 
 
@@ -568,6 +571,11 @@ error 23 at 0 depth lookup:certificate revoked
 ```
 
 
+şunu unutmamak lazım sertifikayı sitemize koyup çağırdığımızda untrasted olduğu için root ve intermediate sertifikalarımız browser hata verecektir. çünki işletim sisiteminde ya da firefox için borowser ın kendisinde bu ikis itrasted olark default da gelmiyor. bu nedenle bizim manule olark güvenileir dememiz lazm
+
+![untrasted](files/untrusted.jpg)
+
+
 
 ### Kaynaklar
 
@@ -583,4 +591,4 @@ error 23 at 0 depth lookup:certificate revoked
 - https://www.fastly.com/blog/addressing-challenges-tls-revocation-and-ocsp
 - https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
 - https://arstechnica.com/information-technology/2017/07/https-certificate-revocation-is-broken-and-its-time-for-some-new-tools/ (kesin bakılmalı detaylı resimli anlatım)
-- 
+- http://www.fatlan.com/tag/openssl/
