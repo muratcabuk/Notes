@@ -11,6 +11,10 @@ __dosya uzantıları ve anlamları__
   - Extensions used for PEM certificates are .cer, .crt, .pem, .key files
   - Apache and similar server uses PEM format certificates
  
+- CER Format:
+
+  alternate form of .crt (Microsoft Convention) You can use MS to convert .crt to .cer (.both DER encoded .cer, or base64[PEM] encoded .cer)  The .cer file extension is also recognized by IE as a command to run a MS cryptoAPI command (specifically rundll32.exe cryptext.dll,CryptExtOpenCER) which displays a dialogue for importing and/or viewing certificate contents.
+
 - DER Format
  
   - The DER format is the binary form of the certificate
@@ -31,6 +35,29 @@ __dosya uzantıları ve anlamları__
   - The PKCS#12 or PFX/P12 format is a binary format for storing the server certificate, intermediate certificates, and the private key in one encryptable file
   - These files usually have extensions such as .pfx and .p12
   - They are typically used on Windows machines to import and export certificates and private keys
+
+
+__Transform__
+```
+# View PEM encoded certificate
+
+openssl x509 -in cert.pem -text -noout
+openssl x509 -in cert.cer -text -noout
+openssl x509 -in cert.crt -text -noout
+
+# View DER encoded Certificate
+openssl x509 -in certificate.der -inform der -text -noout
+
+#PEM to DER
+openssl x509 -in cert.crt -outform der -out cert.der
+
+#DER to PEM
+openssl x509 -in cert.crt -inform der -outform pem -out cert.pem
+
+
+```
+
+
 
 __Hazır örnek__
 [Tübitak PDF örnek](files/ssl_sayisal_sertifikalar.pdf)

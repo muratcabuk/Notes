@@ -62,14 +62,14 @@ frontend http_in
         bind *:8080 #jira
         bind *:8060 #crucible
         option forwardfor
-        acl host_crucible hdr(host) -i crucible.kizilay.org.tr
-        acl host_sonar hdr(host) -i sonar.kizilay.org.tr
-        acl host_git hdr(host) -i git.kizilay.org.tr
-        acl host_crowd hdr(host) -i crowd.kizilay.org.tr
-        acl host_bamboo hdr(host) -i bamboo.kizilay.org.tr
-        acl host_devops hdr(host) -i devops.kizilay.org.tr
-        acl host_jenkins hdr(host) -i jenkins.kizilay.org.tr
-        acl host_esatlassian hdr(host) -i esatlassian.kizilay.org.tr
+        acl host_crucible hdr(host) -i crucible.abc.com
+        acl host_sonar hdr(host) -i sonar.abc.com
+        acl host_git hdr(host) -i git.abc.com
+        acl host_crowd hdr(host) -i crowd.abc.com
+        acl host_bamboo hdr(host) -i bamboo.abc.com
+        acl host_devops hdr(host) -i devops.abc.com
+        acl host_jenkins hdr(host) -i jenkins.abc.com
+        acl host_esatlassian hdr(host) -i esatlassian.abc.com
 
         use_backend http_crucible_backend if host_crucible
         use_backend http_sonar_backend if host_sonar
@@ -87,8 +87,8 @@ frontend https_in
         bind *:443 ssl crt /etc/ssl/certs/Kizilaywithpass.pem
         reqadd X-Forwarded-Proto:\ https
         option forwardfor
-        acl host_wiki hdr(host) -i wiki.kizilay.org.tr
-        acl host_jira hdr(host) -i jira.kizilay.org.tr
+        acl host_wiki hdr(host) -i wiki.abc.com
+        acl host_jira hdr(host) -i jira.abc.com
 
 
         use_backend https_wiki_backend if host_wiki
