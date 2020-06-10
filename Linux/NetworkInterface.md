@@ -7,6 +7,82 @@
   
 Network Address Translation (NAT) converts local ip to global ip. Routing is the process to route the data packet from one network to the other.
 
+### Network Konfigürasyonu 
+
+- [kaynak](https://vitux.com/ubuntu-network-configuration/?__cf_chl_jschl_tk__=ab2d271528f9597f8acbca778eb5c13aa219deb6-1588001835-0-AQ129IaZUde0CuugHTXMcXRkVI4oiA4sPsB8I0ljmUGPPVQJ6dMdyYUelJGmlD17fK3J1D_posoUateu2orDvrFtDQHAscFrX7_zj0uwNUHr-8su0366Kl5DE_IUJj_eSpSUKSQs1gCfCcpZK-iQJPPKxOIlhVUVXss4K8xCgrzSbB8mRnE-nIZ4lm8o_Ywk5m9J-kBgEEnr8NihmG-yEO753vCqUJgHym9q6MP6PeinEMNKpgq9n2qrSnyVziRtVx6lEbO9q7d6QOH1bUa5mhjMfPatXEFewjA-RLpbwWDquhoGLqDbsZpMg1aNRPIZROo6vD-1UPVHewn3VmV4OTn97LRsYmHLgc8Qg18aBKaEUzZZYsCnyF6ET0eHxkPyEg)
+
+bu yolda 
+
+```
+sudo nano /etc/network/interfaces
+```
+
+
+komutu ile 
+
+örneğin alttaki satırları ekleyerek yeni bir ethernet tanımlanabilir
+
+```
+auto eth1
+  iface eth1 inet static
+  address 192.168.72.8
+  netmask 255.255.255.0
+  gateway 192.168.72.1
+  dns-nameservers 8.8.8.8 4.4.2.2
+```
+ubuntu 18.04 ile birlikte Ubuntu Netplan a geçiş yaptı burada artık netwotk özelliklerini conf (yaml) dosyası ile configure edebiliyoruz.
+
+bu şekilde configurasyon yapmak için öcelikle mac adresine ihtiyacımız olacak.
+
+```
+$ lshw -class network
+
+. . .
+*-network:1
+    description: Ethernet controller
+    . . .
+    *-virtio1 DISABLED
+        description: Ethernet interface
+        physical id: 0
+        bus info: virtio@1
+        logical name: ens4
+        serial: ex:am:pl:e3:65:13
+. . .
+
+```
+
+seria yazan yer mac adresimiz.
+
+daha sonra /etc/netplan/50-cloud-init.yaml dosyasını editleyerek alttaki satıalrı ekliyoruz.
+
+```
+eth1:
+    addresses:
+    - 198.51.100.0/16
+    match:
+        macaddress: ex:am:pl:e3:65:13
+    set-name: eth1
+```
+daha sonra alttaki komutla appliy ediyoruz
+
+```
+sudo netplan apply --debug
+```
+
+
+
+şu sayfaya kesin bak
+
+https://netplan.io/examples
+
+
+
+
+
+
+
+
+
 ### identify physical network device by interface name in linux
 
 I have multiple USB to ethernet devices which are plugged to the same pc.
