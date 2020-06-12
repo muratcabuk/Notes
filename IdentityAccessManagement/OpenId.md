@@ -32,12 +32,16 @@ https://www.oauth.com/playground/ (kesinlikle bakılmalı)
 
 
 
-
-
-
 OpenId aslında direk karşılaştırma yapcaksak Saml in müadili olabilir.
 
 https://www.softwaresecured.com/federated-identities-openid-vs-saml-vs-oauth/
+
+
+kavramları OpenID ile karşılaştıraca olursak.
+
+**IDP / SP vs. OP / RP**
+- SAML' de kullanıcı Service Provider (SP) dan Identity Provider (IdP) a yönlendirilir. OpenId de ise kullanıcı Relying Party (RP)' den OpenId Provider (OP) a yönlendirilir.
+- SAML'de SP herzaman websitedir, OpenId' de RP web sitesi veya möobile app de olabilir. bu nedenle daha genereric bir isim olan client olarak adlandırlırılar.
 
 
 ### OpenID Connect Spec
