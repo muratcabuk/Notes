@@ -5,6 +5,10 @@ okunması lazım
 
 https://jvns.ca/blog/2017/09/03/network-interfaces/
 
+https://en.wikipedia.org/wiki/Netfilter
+
+https://www.booleanworld.com/depth-guide-iptables-linux-firewall/
+
 about interfaces
 
 - they can be physical network interfaces (like eth0) or virtual interfaces (like lo and docker0)
@@ -12,7 +16,6 @@ about interfaces
 - if you don’t have any network interfaces, your packets don’t enter the linux network stack at all really. To go through the network stack you need network interfaces.
 - When you send a packet to an IP address, your route table decides which network interface that packet goes through. This is one of the first things that happens in the network stack.
 - tcpdump captures packets after they’re routed (assigned an interface) Though there’s a PREROUTING chain in iptables that happens before routing!`
-
 
 #### Linux ip list interfaces
 
@@ -508,13 +511,28 @@ sudo netstat -tunlp
 -p Show the PID and name of the listener’s process.
 
 
-```
-
-
-
-
 yada ss i kullanabiliriz
 
 ```
 sudo ss -tunlp
 ```
+
+### IPTABLES AND CONNECTION TRACKING
+
+You can inspect and restrict connections to services based on their connection state. A module within iptables uses a method called connection tracking to store information about incoming connections. You can allow or deny access based on the following connection states:
+- NEW — A packet requesting a new connection, such as an HTTP request.
+- ESTABLISHED — A packet that is part of an existing connection.
+- RELATED — A packet that is requesting a new connection but is part of an existing connection. For example, FTP uses port 21 to establish a connection, but data is transferred on a different port (typically port 20).
+- INVALID — A packet that is not part of any connections in the connection tracking table.
+You can use the stateful functionality of iptables connection tracking with any network protocol, even if the protocol itself is stateless (such as UDP). The following example shows a rule that uses connection tracking to forward only the packets that are associated with an established connection:
+
+```
+~]# iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+```
+
+
+
+- [The art of port forwarding on Linux](https://www.digi77.com/the-art-of-port-forwarding-on-linux/)
+- [Conn Tracking System](https://www.usenix.org/system/files/login/articles/892-neira.pdf)
+- https://www.booleanworld.com/depth-guide-iptables-linux-firewall/
+
