@@ -11,9 +11,11 @@ https://www.devpy.me/snapcraft-appimage-flatpak/
 
 ### Programs
 
-- [Krita](https://krita.org/en/download/krita-desktop/) vector
+- [Krita](https://krita.org/en/download/krita-desktop/) phptpshop alternative
 
-- [digiKam](https://www.digikam.org/download/) photoshop
+- [digiKam](https://www.digikam.org/download/) photo archive
+
+- [inkspace](http://inkscape.org/) vector illustrator alternative
 
 - [Kdenlive](https://kdenlive.org/en/) video editing
 
