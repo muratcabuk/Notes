@@ -2,6 +2,8 @@ adapter çalışmadığında
 
 https://forum.manjaro.org/t/solved-bluetooth-dont-discovers-device-bluetoothctl-no-default-controller/90699
 
+https://www.linux-magazine.com/Issues/2017/197/Command-Line-bluetoothctl
+
 ```
 sudo systemctl enable bluetooth
 ```
