@@ -1,5 +1,7 @@
 adapter çalışmadığında
 
+http://www.thinkwiki.org/wiki/How_to_setup_Bluetooth
+http://www.thinkwiki.org/wiki/How_to_setup_Bluetooth
 https://forum.manjaro.org/t/solved-bluetooth-dont-discovers-device-bluetoothctl-no-default-controller/90699
 
 https://www.linux-magazine.com/Issues/2017/197/Command-Line-bluetoothctl
