@@ -41,3 +41,21 @@ Code:
 sudo modprobe btusb
 ```
 .. and then try the previous lsmod command again. If loaded modules now appear, you could try restarting your systemd bluetooth service with the first command and reporting the output of the status command again. If it then appears as loaded and started, you should be able to see your bluetooth device in whatever gui app you are using. 
+
+
+thinkpad e480 için
+
+after 5-10 bios resets to re-enable bluetooth during the last two years I decided to investigate this issue again. looks like there is a bluetooth switch emulation in the thinkpad_acpi module. turn this on via module options et voila -> working bluetooth!
+
+echo options thinkpad_acpi dbg_bluetoothemul=1 bluetooth_state=1 | sudo tee -a /etc/modprobe.d/thinkpad_acpi.conf
+
+reboot && block/unblock bluetooth as needed:
+
+rfkill unblock all
+
+
+
+
+
+
+
