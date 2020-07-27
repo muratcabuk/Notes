@@ -41,7 +41,7 @@ Advice aslında programlama dünyasında yeni bir kavram değil, oldukçada geni
 
 Bu noktadan sonra artık AOP kavramının kafanızda oturduğunu düşünüyorum. Sürekli kodumuzun execution’ı esnasında araya girmeden, interception’dan bahsettik. Peki bu kavramın pratikte uygulanması nasıl oluyor? İşte bu aşamda hayatımıza Weaving kavramı giriyor.
 
-##Aspect-Oriented Weaver Kavramı##
+## Aspect-Oriented Weaver Kavramı ##
 
 Weaving bir kod parçasının çalıştırılması (executing) esnasında bir aspect’in araya nasıl gireceği yöntemiyle alakalı. Yani interception model’i. Bu aşamadan sonra konuyu .Net Platformu açısından ele almak istiyorum. .Net Platformu AOP’u direkt olarak desteklemiyor. Ama bir kaç belirgin yöntem var. Aslında burada sorulması gereken konu, yazdığımız kodu ne seviye intercept etmek istiyoruz. Çünkü kullandığımız yönteme göre teorik olarak satır bazında bile yapabiliriz. Tabi yine burada karşımıza taş, kurbağa denklemi çıkıyor.
 Attığımız taş, ürküttüğümüz kurbağaya değecek mi? Eh aslında bu bir developer olarak atacağımız her adımda kendimize sorduğumuz bir soru sanırım.
