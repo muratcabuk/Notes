@@ -1,9 +1,29 @@
+
+AOP aşağıda anlatılıyor
+
+__Similarities and Differences between DI and AOP__
+
+There are some similarities in the objectives of DI and AOP:
+
+- Both achieve a loosely coupled architecture.
+- Both achieve a better separation of concerns.
+- Both offload some concerns from the base code.
+
+However, DI and AOP differ significantly in situations where they are found to be useful:
+
+- DI is good when you have a dependency on a component, you just don’t know to which implementation.
+- AOP is good when you need to apply a common behavior to a large number of elements of code. The target code is not necessarily dependent on this behavior to be applied.
+
+__Dynamic Proxy__
+
+It’s simply that the DI pattern makes it easy to add behaviors to components. Here’s how: when you ask a dependency from the container, you expect to receive an implementation of an interface. You can probably guess which implementation you will receive, but since you play the game, you just program to the interface. And you’re right. If you ask the container to add a behavior (for instance tracing) to the component, you will not receive the component itself; instead, you will receive a dynamic proxy. 
+
+
+__AOP__
+
 ÇOk iyi bir kaynak. Kesinlikle okunmalı. Aşağıda yazılanlar bu makaleden alınmıştır. 
 
 https://denizirgin.com/aspect-oriented-programming-kavram%C4%B1-2a3a31ab020f
-
-
-
 
 
 __Concern__
@@ -171,7 +191,18 @@ Oldukça yetenekli bir library nasıl kullanılacağı ile ilgili Castle projesi
 
 Ayrıca yine günümüzün en popüler IOC Container’larından biri olan Castle Windsor ile entegre bir şekilde çalışıyor ki çok büyük avantaj.
 
-__donet coıre System.Runtime.DispatchProxy kütüphnesi ile birlikte geliyor. Bu kütüphane sayesinde proxy objesi oluşturmak mümkün ancak 
+__donet core System.Runtime.DispatchProxy kütüphnesi ile birlikte geliyor. Bu kütüphane sayesinde proxy objesi oluşturmak mümkün ancak yetenekleri hem az hemde bezı şeyleri yapmak örneğin castle core kadar kolay değil__
+
+https://www.codeproject.com/Articles/1219720/Aspect-Oriented-Programming-in-Csharp-using-Dispat
+
+https://medium.com/@nik96a/using-di-with-dispatchproxy-based-decorators-in-c-net-core-ac02f02c5fe5
+
+https://developpaper.com/net-core-class-library-system-reflection-dispatchproxy-implementing-simple-aop-method/
+
+
+https://www.c-sharpcorner.com/article/aspect-oriented-programming-in-c-sharp-using-dispatchproxy/
+
+
 
 
 
