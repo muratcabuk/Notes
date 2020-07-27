@@ -191,7 +191,7 @@ Oldukça yetenekli bir library nasıl kullanılacağı ile ilgili Castle projesi
 
 Ayrıca yine günümüzün en popüler IOC Container’larından biri olan Castle Windsor ile entegre bir şekilde çalışıyor ki çok büyük avantaj.
 
-__donet core System.Runtime.DispatchProxy kütüphnesi ile birlikte geliyor. Bu kütüphane sayesinde proxy objesi oluşturmak mümkün ancak yetenekleri hem az hemde bezı şeyleri yapmak örneğin castle core kadar kolay değil__
+__donet core System.Runtime.DispatchProxy kütüphnesi ile birlikte geliyor. Bu kütüphane sayesinde proxy objesi oluşturmak mümkün ancak yetenekleri hem az hemde bezı şeyleri yapmak örneğin castle core veya aoutofac kadar kolay değil__
 
 https://www.codeproject.com/Articles/1219720/Aspect-Oriented-Programming-in-Csharp-using-Dispat
 
