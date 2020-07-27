@@ -203,6 +203,15 @@ https://developpaper.com/net-core-class-library-system-reflection-dispatchproxy-
 https://www.c-sharpcorner.com/article/aspect-oriented-programming-in-c-sharp-using-dispatchproxy/
 
 
+https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/
+
+https://ardall.wordpress.com/2019/04/11/aop-in-net-core-using-autofac-and-dynamicproxy/
+
+https://autofaccn.readthedocs.io/en/latest/advanced/interceptors.html
+
+
+
+https://aspnetboilerplate.com/Pages/Documents/Articles/Aspect-Oriented-Programming-using-Interceptors/index.html
 
 
 
