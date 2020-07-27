@@ -50,7 +50,7 @@ Attığımız taş, ürküttüğümüz kurbağaya değecek mi? Eh aslında bu bi
 Compile-Time Weaving ve Run-Time Weaving. Aslında şu an daha kabul görmüş ve sık kullanılanı ve de uygulanması daha az maliyetli olanı Run-Time Weaving. Ama teorik bilgi açısından ikisinide anlatacağım. Bunları söylememin sebebi, compile-time weaving mevzusunu okuduktan sonra “bu iş bukadar zor mu yav” diyerek AOP’dan soğumamanız :D
 AOP günümüzde oldukça kolay uygulanan bir yöntem. Detaylı olarak anlatacağım.
 
-####Compile-Time Weaving####
+#### Compile-Time Weaving ####
 
 Bu yöntem de kendi arasında 3'e ayrılıyor. Aslında hepsi temelde derleme zamanında(compile time) koda müdehale ediyor.
 Bu aşamada source kodun başka bir formata nasıl dönüştüğünü anlatmakta yarar görüyorum. Çok detaylı bir konu o yüzden kısaca üzerinden geçeceğim. Genelde 3 aşamada gerçekleşir.
@@ -79,11 +79,11 @@ Source-Level Weaving
 
 Bu yöntemle koda parse aşamasında müdehale ediyoruz. Yani aspect uygulamak için kod içerisinde standart dışı kendimize ait ifadele yer verip, parsing esnasında bu ifadelerin compiler’ın anlayacağı standart AST’ye çevrilmesi işini bizim yapmamız. Dezavantajı tahmin edeceğiniz üzere böyle birşey yapmak oldukça zor, programlama dilleri üzerinde çok bilgili olmanız lazım. Lexing, parsing, semantic gibi konularda bilgi sahibi olmanız gerekiyor. Avantajı ise böyle birşeyi yapabilecek kadar yetkiliğiniz varsa hemen hemen dibine kadar aspect uygulayabilirsiniz. Bkz : Taş-Kurbağa denklemi.
 
-####Kendi compiler’ınızı yazmak####
+#### Kendi compiler’ınızı yazmak ####
 
 En baştan kendi compiler’ınızı yazmak ve ya open-source compiler’lardan birini alıp istediğiniz değişiklikleri yapmak. Dezavantajlarından bahsetmeme gerek yok heralde. Avantajı ise teorik olarak aspect istediğiniz seviyede uygulama imkanına sahip olmanız. Şiddetli Bkz : Taş-Kurbağa denklemi. Bu yöntemle ilgili Iowa Universitesini bir çalışması var. EOS
 
-####Byte-Code, MSIL üzerinde değişiklik yapmak####
+#### Byte-Code, MSIL üzerinde değişiklik yapmak ####
 
 Compile-Time Weaving’ler arasında en popüler olanı bu. Compiler işini yapsın, biz de çıkan byte-code, MSIL üzerinde değişikliklerimizi, eklemelerimizi yapalım.
 Bu işi hali hazırda yapan paralı bir ürün var. PostSharp. Yeri gelmişken biraz PostSharp’dan bahsetmek istiyorum. PostSharp’ı yıllar öncesinden daha bedava ve beta halindeyken kullanmıştım. Temel mantık, yukarıda yaptığım Örnek B gibi kodunuzu yazmanız, aspect’lerinizi ise C# Attribute’lerine taşımanız üzerine. PostSharp size kendi Attribute’ünüzü türetmeniz için bir Base Attribute veriyor. Siz bu Attribute içerisindeki çeşitli method’ları override ediyorsunuz. Yukarıdaki Bankacılık örneği üzerinden gidelim ;
@@ -113,12 +113,12 @@ Bu yöntemde dikkat etmeniz gereken birkaç şey var. PostSharp’ı yüklediği
 Not : Örnekler elbetteki konseptsel olarak yazıldı. Gerçek hayat dikkate alınmadı. Mesela LogginAspect içerisinde method argumanlarının tipleri kontrol edilmeli vs…
 Şimdi gelelim diğer Weaving yöntemimiz olan Run-Time Weaving’e.
 
-####Run-Time Weaving####
+#### Run-Time Weaving ####
 
 Bu yöntem .Net dünyasında AOP uygulanırken en sık kullanılan yöntem. Bunun sebeplerinden biri de son yıllarda gittikçe popülerleşen IOC Container’larla (bkz: Dependency Inversion Principle) kolay entegre olmaları. Bir sürü open-source library var, hepsinin performans vs. açısından dez avantajları ve avantajları var. Aspect’lerimizi run-time’da uyguladığımızdan dolayı, run-time’da aspect’lerimizi değiştirme gibi imkanlarımız oluyor bu açıdan bir takım avantajları var fakat nesnelerimizi bir proxy ile sarmaladığımızdan dolayı Compile-Time Weaving’e göre daha az performanslı. Ayrıca join point’lerimiz en çok method seviyesine inebiliyorlar gerçi yukarıda da bahsettiğim gibi kendi parser veya compiler’ınızı yazmadığınız sürece daha alt seviyelere inmek pek mümkün değil ki buna da zaten genelde ihtiyaç olmuyor, o yüzden bir dezavantaj olduğunu düşünmüyorum. Zaten kendim de yıllardır katıldığım projelerde ve kendi open-source projelerimde bu şekilde AOP uygulmaktayım ve method seviyesinde join point kullanımının bana bir kısıtlama yarattığına şahit olmadım.
 Run-Time Weaving’in uygulanmasında da birkaç yöntem var bunlardan belirgin olanlarını burada yazacağım.
 
-####ContextBoundObject ve MarshalByRefObject Yöntemi####
+#### ContextBoundObject ve MarshalByRefObject Yöntemi ####
 
 .Net dünyasında nispeten eski yöntemlerden birisi. Remoting ile uğraşmış ve ya en basidinden web service, wcf gibi kavramlara aşina kişilerin kafalarında proxy diyince eminim birşeyler canlanıyordur. Buradaki mantık da aynı. Client bir remote nesneyi kullanır ki aslında o bir proxydir yani bütün aspect’lerimiz gerçek nesneyi sarmalamış olan proxy sınıflarımız tarafından uygulanır.
 
@@ -153,7 +153,7 @@ ContextBoundObject’den türemiş bir nesneniz varsa, bu nesnenin instance’si
 
 Günümüzde yukarıdaki şekilde AOP uygulamak artık gereksiz. Hem uygulaması zor hem de konuyla alakasız, tamamen başka bir iş için kullanılan .Net Remoting alt yapısını kullanmak durumundayız. Ayrıca MarshalByRefObject nesnesi büyük bir nesne. Her ne kadar büyük olmasının yanında oldukça yetenekli bir nesne olsa da, bu yeteneklerin çoğu konumuzla alakalı değil :) .
 
-####Dynamic Proxy Yöntemi####
+#### Dynamic Proxy Yöntemi ####
 
 Run-time Weaving yöntemleri arasında en popüler olanı. Gönül rahatlığıyla artık günümüzde bu yöntemi kullanıyoruz diyebiliriz. Bu yöntemin öncülerinden biri Castle Projesi.
 Castle DynamicProxy run-time esnasında havada hafif proxy’ler oluşturmanıza imkan veriyor. Yazdığınız sınıfların intercept edilebilmesi için bu sınıflarınızı MarshalByRefObject gibi bir nesneden türetmeye gerek yok, dolayısla sınıflarınızda ekstradan herhangi birşeyler yazmanıza, birşeyleri override etmeye gerek yok. Bu açıdan bakıldığı zaman size daha temiz kod yazma imkanı sağlıyor.
