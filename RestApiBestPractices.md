@@ -17,7 +17,12 @@
 
 |endpoint|method|desc|
 |--------|------|----|
-|/users|get|tüm kullanıcılar|
+|/users|get|tüm kullanıcıların listesi|
+|/users|post|yeni kullanıcıekler|
+|/users/5|put|idsi 5 olan kullanıcıyı günceller|
+|/me|get|oturumu verilen kullanıcının bilgilerini getirir|
+|/me/followers|get|oturumu verilen kullanıcının takipçilerini getirir|
+|/me/followers/5/block|post|oturumu verilen kullanıcının 5 idli follower ını engeller|
 
 
 
