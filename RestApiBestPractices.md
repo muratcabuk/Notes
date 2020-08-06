@@ -13,3 +13,11 @@
 - Doğrulam (Validation)
 
 
+örnekler 
+
+|endpoint|method|desc|
+|--------|------|----|
+|/users|get|tüm kullanıcılar|
+
+
+
