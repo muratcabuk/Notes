@@ -12,8 +12,9 @@
 - Az Bağımlılık (Less Dependence)
 - Doğrulam (Validation)
 
+#### isimlendirme
 
-örnekler 
+isimlendirme örnekler 
 
 |endpoint|method|desc|
 |--------|------|----|
@@ -23,6 +24,28 @@
 |/me|get|oturumu verilen kullanıcının bilgilerini getirir|
 |/me/followers|get|oturumu verilen kullanıcının takipçilerini getirir|
 |/me/followers/5/block|post|oturumu verilen kullanıcının 5 idli follower ını engeller|
+
+patch ise belli alanları değişiyorsa patch kullanılır anacka post da kullanılabilir.
+
+ayrıca /me/followers şu şekilde de yazılabilirdi /users/me/followers. İlk versiyonun aslında fiziksel bir karşılığı yok ancak semantik kullanım açısından kullanımı daha anlaşışır.burada arkada aslında yine /users/me/followers a yönlendşrmiş oluyoruz.
+
+
+#### ilişkili API uçları
+
+|endpoint|method|desc|
+|--------|------|----|
+|/customers/5/bills|get|id si 5 olan kullanıcının fatularını getirir|
+|/users|post|id si 5 olan kullanıcıya fatura ekler|
+
+
+
+
+
+
+
+
+
+
 
 
 
