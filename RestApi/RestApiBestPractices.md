@@ -38,10 +38,45 @@ ayrıca /me/followers şu şekilde de yazılabilirdi /users/me/followers. İlk v
 |/users|post|id si 5 olan kullanıcıya fatura ekler|
 
 
+#### ortak cevap modeli
+
+![ortak cevap modeli](files/ortakcevap.png)
+
+resimdeki mesajlşardali code zaruri değil. ancak yazılırsa iyi olur. örneğin arada proxy varsa http code değüişebilir bu durumda client mesajı yanlış alabilir. 
+
+burada örneğin mesaj için her model de aynı sisitem kullanılırsa sistemn anlaşılır olacaktır.
+
+#### Ayrıştırılmış istek ve data modeli 
+
+katmanlarda model entity vs faklı olmalı (DTO).
+
+zaten SOLID ve ve güvenlik açısından da böyle olmalı.
+
+gereksiz işlenmeyen alanları modelden kaldırmak lazım. bunlar kullanılarak saldırı yapılabilir.
+
+#### caching
+
+cache de header bilgisi kullanılarak client bilgilendirebilir cache in ne zaman yenileceği veya ne kadar süre tutulkduğu ile alakalaı. böylece belki client da kendi cache ini kullanabilir. vakti gelince güncel veriyi sunucudan çekebilir.
+
+
+#### çoklu dil desteği 
+
+accept language header 
+
+UTC to local
+
+kullanıcının bulunduğu lokasyona dikkaet edersek ve UC olark kydedersek. kullanıcıcın bulunduğu lokjasyoına göre saat gösterilebilir.
+
+
+#### versiyonlama
 
 
 
-
+|endpoint|version|
+|--------|------|----|
+|/v1/users|1.0.0|
+|/v1.1.3/users|1.1.3|
+|/users|latest|
 
 
 

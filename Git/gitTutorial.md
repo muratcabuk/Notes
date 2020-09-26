@@ -73,6 +73,7 @@ rebase komutu
 
 1. Workspace de yapılan değişikliği en son committen dönmek için 
 - git checkout -- dosyaadi
+
 aslında bu komut son versyonu bir önceki versiyona alıyor.
 
 iki version arasında  geçiş yapmak için aşağıdaki komut kullanılır. Nokta tüm dosyaları o versiyondaki haline gitmesi gerektiğini söyler.

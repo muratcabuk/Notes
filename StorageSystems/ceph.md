@@ -12,7 +12,7 @@ https://bidb.itu.edu.tr/seyir-defteri/blog/2013/09/06/linux-dosya-sistemleri
 https://www.technopat.net/2018/05/31/linux-dosya-sistemlerini-anlamak-ext4-ve-otesi/
 
 
-
+https://www.cozumpark.com/proxmox-6-0-ile-hyper-converged-sistem-kurulumu/
 
 
 
