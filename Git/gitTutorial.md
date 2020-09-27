@@ -241,7 +241,15 @@ buradan görülebilir
 
 - git checkout -b yeni_branch_adi --track origin/master
 
-33. 
+33. consol ekranında tree olarak görmek için
+
+git log --oneline --graph --color --all --decorate
+
+34. detaylı log
+
+git reflog
+
+35. 
 
 
 
