@@ -148,6 +148,44 @@ ip route add default {NETWORK/MASK} via {GATEWAYIP}
 ```
 
 
+
+### network Interface
+
+- [WiFi](https://www.linux.com/learn/how-configure-wireless-any-linux-desktop)
+
+- [Add Network Interface](https://www.digitalocean.com/docs/networking/private-networking/how-to/enable/)
+
+```
+lshw -class network
+```
+ekrana kullancağımız mac address gelecek
+
+```
+/etc/netplan/50-cloud-init.yaml
+```
+alttaki satıraklar eth1 ile yukarıdan eth0 kopyala yapıştır yapılır
+```
+eth1:
+    addresses:
+    - 198.51.100.0/16
+    match:
+        macaddress: ex:am:pl:e3:65:13
+    set-name: eth1
+```
+debug yapmak için
+
+```
+sudo netplan apply --debug
+```
+daha sonra
+
+```
+sudo ifconfig
+```
+
+
+
+
 - https://www.oreilly.com/library/view/linux-network-administrators/1565924002/ch02s04.html
 - https://www.cyberciti.biz/faq/ip-route-add-network-command-for-linux-explained/
 - https://www.cyberciti.biz/faq/linux-route-add/

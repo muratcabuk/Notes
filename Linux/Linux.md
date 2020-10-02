@@ -9,6 +9,10 @@ AppImage
 https://www.devpy.me/snapcraft-appimage-flatpak/
 
 
+
+https://demirten.gitbooks.io/linux-sistem-programlama/content/intro/history.html
+
+
 ### Programs
 
 - [Krita](https://krita.org/en/download/krita-desktop/) phptpshop alternative
@@ -87,53 +91,6 @@ http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
 
 - /usr/sbin : Same as above, but for binaries with superuser (root) privileges required.
 
-
-### network
-
-- [WiFi](https://www.linux.com/learn/how-configure-wireless-any-linux-desktop)
-
-- [Add Network Interface](https://www.digitalocean.com/docs/networking/private-networking/how-to/enable/)
-
-```
-lshw -class network
-```
-ekrana kullancağımız mac address gelecek
-
-```
-/etc/netplan/50-cloud-init.yaml
-```
-alttaki satıraklar eth1 ile yukarıdan eth0 kopyala yapıştır yapılır
-```
-eth1:
-    addresses:
-    - 198.51.100.0/16
-    match:
-        macaddress: ex:am:pl:e3:65:13
-    set-name: eth1
-```
-debug yapmak için
-
-```
-sudo netplan apply --debug
-```
-daha sonra
-
-```
-sudo ifconfig
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
  
 ### Driver and Firmware
 
@@ -184,42 +141,4 @@ sudo ifconfig
 
 /swap :	The swap partition is where you extend the system memory by dedicating part of the hard drive to it.
 
-
-### Disk
-
-bir path a bir diski veya basşka bir path i mount ettikten sonra aynı yere başka bir folder ı veya disk mount edersek önceki mount ettiğimiz yer ne olur? 
-
-cevap: sadece görünmez olur aynı alanı tekrar MOUNT DEĞİL BIND ederek tekrar görebiliriz.
-
-https://unix.stackexchange.com/questions/198542/what-happens-when-you-mount-over-an-existing-folder-with-contents
-
-
-diyelimki /tmp alanına bir disk i mount ettik eki eski tmp kalsörüne oldu
-
-
-What happens to the actual content of /tmp when my hard drive is mounted?
-
-Pretty much nothing. They're just hidden from view, not reachable via normal filesystem traversal.
-
-Is it possible to perform r/w operations on the actual content of /tmp while the hard drive is mounted?
-
-Yes. Processes that had open file handles inside your "original" /tmp will continue to be able to use them. You can also make the "reappear" somewhere else by bind-mounting / elsewhere.
-
-```
-# mount -o bind / /somewhere/else
-# ls /somewhere/else/tmp  
-```
-
-
-Diskte bulunan dizindeki kalsörlerin boyutlarını veren kod
-
-https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/
-
-bir rakamı kaç level alta gidileğini söylüyor
-```
-sudo du -h -d 1 --exclude=/proc --exclude=/run /
-```
-buda aynı işi yapıyor 
-```
- sudo du -hs * | sort -rh | head -5
- ```
+ 

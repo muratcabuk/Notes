@@ -149,7 +149,7 @@ $ git checkout v0.1.0
 $ git tag -a "v0.1.0-test"
 ```
 
-13. tam bu esnada feature3 ün ecelopdan alındığını ve başladığını varsayalım.
+13. tam bu esnada feature3 ün developdan alındığını ve başladığını varsayalım.
 
 ```
 $ git branch feature/feature3 develope

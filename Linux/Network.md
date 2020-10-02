@@ -19,6 +19,44 @@ about interfaces
 
 #### Linux ip list interfaces
 
+
+
+- [WiFi](https://www.linux.com/learn/how-configure-wireless-any-linux-desktop)
+
+- [Add Network Interface](https://www.digitalocean.com/docs/networking/private-networking/how-to/enable/)
+
+```
+lshw -class network
+```
+ekrana kullancağımız mac address gelecek
+
+```
+/etc/netplan/50-cloud-init.yaml
+```
+alttaki satıraklar eth1 ile yukarıdan eth0 kopyala yapıştır yapılır
+```
+eth1:
+    addresses:
+    - 198.51.100.0/16
+    match:
+        macaddress: ex:am:pl:e3:65:13
+    set-name: eth1
+```
+debug yapmak için
+
+```
+sudo netplan apply --debug
+```
+daha sonra
+
+```
+sudo ifconfig
+```
+
+
+
+
+
 ```
 $ ifconfig -a 
 ```

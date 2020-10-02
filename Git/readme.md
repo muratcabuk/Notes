@@ -215,3 +215,5 @@ alttaki komutlr yani --onto ile topic branchinde ne kadar geriye gidileceği bel
 
 ![transport3](files/rebase2.png)
 
+
+

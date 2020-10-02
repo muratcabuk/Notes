@@ -1,4 +1,14 @@
-﻿# Notes
+﻿
+# Takımlar
+
+
+Platform Takımları
+
+
+
+
+
+# Notes
 
 
 await ana threat ve ona bagli alt threat lerin takip edilebilmesi icin acilir. eger await ejlemzsek ornegin httpcontex e erisemeyiz.
