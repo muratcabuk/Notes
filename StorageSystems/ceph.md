@@ -1,23 +1,57 @@
-https://blog.storagecraft.com/object-storage-systems/
-https://ubuntu.com/blog/what-are-the-different-types-of-storage-block-object-and-file
-https://cloudian.com/blog/object-storage-vs-block-storage/
-https://www.druva.com/blog/object-storage-versus-block-storage-understanding-technology-differences/
+- https://blog.storagecraft.com/object-storage-systems/
+- https://ubuntu.com/blog/what-are-the-different-types-of-storage-block-object-and-file
+- https://cloudian.com/blog/object-storage-vs-block-storage/
+- https://www.druva.com/blog/object-storage-versus-block-storage-understanding-technology-differences/
 
-gluster
-ceph
-minio
+- https://bidb.itu.edu.tr/seyir-defteri/blog/2013/09/06/linux-dosya-sistemleri
 
-https://bidb.itu.edu.tr/seyir-defteri/blog/2013/09/06/linux-dosya-sistemleri
-
-https://www.technopat.net/2018/05/31/linux-dosya-sistemlerini-anlamak-ext4-ve-otesi/
+- https://www.technopat.net/2018/05/31/linux-dosya-sistemlerini-anlamak-ext4-ve-otesi/
 
 
-https://www.cozumpark.com/proxmox-6-0-ile-hyper-converged-sistem-kurulumu/
+- https://www.cozumpark.com/proxmox-6-0-ile-hyper-converged-sistem-kurulumu/
+
+
+**önemli kaynaklar**
+
+- https://www.youtube.com/watch?v=OFBGeP4WVLw
+- https://www.youtube.com/watch?v=2uPhxGXe9gQ
+- https://www.youtube.com/watch?v=3cLgCTHLFWc
+- https://youtu.be/61b12Y8cMSg?t=1379 (yaşanan zorlukjlara değinmiş)
+- http://bulutwiki.ulakbim.gov.tr/index.php/CEPH_Kurulumu (özellikle parametereler içişn okunmalıdır)
+
+**iki bölümlük yazoı dizisi**
+- https://www.linkedin.com/pulse/red-hat-ceph-storage-asiye-yigit/
+- https://www.linkedin.com/pulse/ceph-storage-b%C3%B6l%C3%BCm-2-asiye-yigit/
 
 
 
 # CEPH
 kaynak: https://huseyincotuk.com/2017/06/06/ceph-mimarisi-ceph-uzerinde-veri-yerlesimi/
+
+- https://nxtgen.com/ceph_unified_storage_simplified
+
+- https://docs.ceph.com/en/latest/architecture/ (çok iyi)
+
+
+- https://alanxelsys.com/ceph-hands-on-guide/ (baştan sona tutorial, güzel hazırlanmış)
+
+
+- https://huseyincotuk.com/2018/12/02/ceph-bluestore/ (bluestore nedir)
+- https://huseyincotuk.com/2017/12/03/ceph-turkiye-4-meetup-istanbul-ceph-kurulumu/ 
+- https://huseyincotuk.com/2017/11/27/ceph-turkiye-3-meetup-ankara-ceph-tasariminda-dikkat-edilecek-hususlar/
+- https://huseyincotuk.com/2017/10/15/ceph-turkiye-2-meetup-istanbul-ceph-yapitaslari-ceph-mimarisi-openstack-entegrasyonu/
+- https://huseyincotuk.com/2017/06/12/ceph-tasariminda-dikkat-edilmesi-gereken-hususlar/(metin metin olarak güzel hazırlanmış)
+- https://ichi.pro/tr/ceph-deneyimimizden-3-vaka-215980997403943
+- https://ceph.io/geen-categorie/crushmap-example-of-a-hierarchical-cluster-map/ (crush map le alakalı güzel bi yazı)
+
+
+
+
+### Rook Best Practices for Running Ceph on Kubernetes 
+
+https://documentation.suse.com/sbp/all/html/SBP-rook-ceph-kubernetes/index.html
+
+
 
 ### Ceph Mimarisi
 
@@ -92,24 +126,6 @@ CRUSH map rolü ve sorumlulukları aşağıdaki gibidir:
   
 Örnek bir CRUSH map hiyerarşisi aşağıda gösterilmiştir.
 
-```
-Ceph bu placement group (PG)’yi kullanarak aktif küme haritası (cluster map) ve kuralları dahil ederek kullanılacak OSD’leri hesaplar.
-
-CRUSH(‘5.13CE’) = [ 7, 26, 16 ]
-
-Burada OSD.7 birincil, OSD.26 ikincil ve OSD.16 üçüncül OSD olarak belirlenmiş olur. Daha önce bahsedildiği gibi buradaki sayı replika sayısına bağlıdır.
-
-Arka planda algortima, depolama ünitesinin nasıl organize edildiğini (cihaz lokasyonları, hiyerarşik dizilişleri, v.b.) bilmesi gerekir. Tüm bu tanımlar CRUSH map ile yapılır.
-
-CRUSH map rolü ve sorumlulukları aşağıdaki gibidir:
-
-Her hiyerarşik yapı için tanımlanan kurallarla birlikte Ceph’in veriyi nasıl saklayacağını belirler.
-Çok aşamalı olabileceği gibi en az bir düğüm ve yaprak hiyerarşisine sahip olmalıdır.
-Hiyerarşideki her düğüm sepet (bucket) olarak adlandırılır ve her sepetin bir tipi vardır.
-Verileri tutan nesneler disklere verilebilecek ağırlıklara disklere dağıtılır.
-İhtiyaca göre istenilen esneklikte hiyerarşik yapı tanımlanabilir. Tek kısıt en alttaki yaprak ismi verilen düğümler OSD’leri temsil etmelidir. Ayrıca her yaprak düğüm bir sunucuya ya da başka bir tipteki sepete bağlı olmalıdır.
-Örnek bir CRUSH map hiyerarşisi aşağıda gösterilmiştir.
-```
 
 Bu örnekte 5 adet Ceph OSD sunucusunda hem SSD tipinde hem de NL-SAS tipinde diskler bulunmaktadır. Bu diskler farklı yaprak (leaf) düğümler şeklinde tanımlanıp ilgili sunuculara eklenmiştir.
 

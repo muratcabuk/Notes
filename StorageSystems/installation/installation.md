@@ -1,3 +1,10 @@
+### Intro
+
+ansible ile octobus ceph 15 kurulumu ancak tam destek olmadığında denemiştim tam çalışmadı. yeni versiyon için installation4 klasörüne bakınız.
+
+
+
+
 şuna benzer bir yapı kurmaya çalışcağız.
 
 ![topoloji](files/ceph-deployment-architecture.jpg)
