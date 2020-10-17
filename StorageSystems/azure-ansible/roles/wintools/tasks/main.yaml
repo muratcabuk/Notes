@@ -1,0 +1,140 @@
+# - name: Get whoami information
+#   win_whoami:
+
+# chocolatey özellikle belirli bir versyon kurmak için ps1 dosyasında yazdığı üzere env değişkenlerine chocolateyVersion ekliyoruz
+- name: install Chocolatey and reload environment variables
+  win_shell: |
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User"); 
+    $env:chocolateyVersion = '0.10.15';
+    $version = choco -V;
+    if(!($version -eq "0.10.15")) { Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) } else {echo "chocolatey zaten kurulu"};
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+
+  args:
+    chdir: D:\
+    executable: powershell
+  register: install_chocolatey_result
+
+- debug:
+    msg: "{{ install_chocolatey_result }}"
+
+- name: Ensure 7-Zip is installed via Chocolatey
+  win_chocolatey:
+    name: 7zip
+    state: present
+
+- name: download python
+  win_shell: |
+    if(!(Test-Path D:\python-{{ windows_python_version }}-amd64.exe)){Invoke-WebRequest -Uri "https://www.python.org/ftp/python/{{ windows_python_version }}/python-{{ windows_python_version }}-amd64.exe" -OutFile "D:\python-{{ windows_python_version }}-amd64.exe"}
+  args:
+    chdir: C:\
+    executable: powershell
+  register: download_python_result
+
+- debug:
+    msg: "{{ download_python_result }}"
+
+
+# https://www.server-world.info/en/note?os=Windows_Server_2019&p=python
+- name: install python and reload environment variables
+  win_shell: |
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User"); 
+    $version = python --version;
+    if(!($version -eq "Python {{ windows_python_version }}")){.\python-{{ windows_python_version }}-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0}else{echo "python zaten kurulu"};
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+
+  args:
+    chdir: D:\
+    executable: powershell
+  register: install_python_result
+
+- debug:
+    msg: "{{ install_python_result }}"
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# bunun için öncelikle opessh kurulmalı
+# https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
+
+# daha sonra docker kurulmalı : 
+# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server
+
+
+
+# Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+
+# # This should return the following output:
+
+# Name  : OpenSSH.Client~~~~0.0.1.0
+# State : NotPresent
+# Name  : OpenSSH.Server~~~~0.0.1.0
+# State : NotPresent
+
+# # Install the OpenSSH Client
+# Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+
+# # Install the OpenSSH Server
+# Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+
+# # Both of these should return the following output:
+
+# Path          :
+# Online        : True
+# RestartNeeded : False
+
+
+
+# known_hosts ve authorization_keys için
+
+#Note that if you are setting up keys for an administrator user, 
+#putting the public key to %USERPROFILE%/.ssh/authorized_keys will not work. 
+#You must append the public key to %PROGRAMDATA%/ssh/administrators_authorized_keys instead.
+
+
+#%WINDIR%\System32\OpenSSH
+
+# https://www.youtube.com/watch?v=XCtdkr6FfLU
+# https://www.youtube.com/watch?v=Cs3wBl_mMH0
+
+# https://www.concurrency.com/blog/may-2019/key-based-authentication-for-openssh-on-windows
+
+# https://winscp.net/eng/docs/guide_windows_openssh_server#key_authentication
+
+# https://serverpilot.io/docs/how-to-use-ssh-public-key-authentication/
+
+
+# problemler için
+
+# https://stackoverflow.com/questions/1556056/permission-denied-publickey-keyboard-interactive
+

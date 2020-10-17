@@ -1,0 +1,53 @@
+all:
+
+  hosts:
+
+  children:
+
+    loadbalancer:
+      hosts:
+        linux10:
+          ansible_host: 40.115.1.249
+          ansible_user: adminuser
+          ansible_connection: ssh
+#          ansible_ssh_private_key_file: "{{ansible_ssh_private_key_file_path}}"
+    vmmasters:
+      hosts:
+        linux20:
+          ansible_host: 13.80.152.191
+          ansible_user: adminuser
+          ansible_connection: ssh
+#          ansible_ssh_private_key_file: "{{ansible_ssh_private_key_file_path}}"
+        linux30:
+          ansible_host: 40.115.13.121
+          ansible_user: adminuser
+          ansible_connection: ssh
+#          ansible_ssh_private_key_file: "{{ansible_ssh_private_key_file_path}}"
+        linux40:
+          ansible_host: 40.68.77.13
+          ansible_user: adminuser
+          ansible_connection: ssh
+#          ansible_ssh_private_key_file: "{{ansible_ssh_private_key_file_path}}"
+    vmworkers:
+      children:
+        vmmasters:
+
+    vmwindows:
+      hosts:
+        windows10:
+          ansible_host: 51.137.206.42
+          ansible_user: adminuser
+          ansible_password: Passw@rd1
+          ansible_connection: ssh
+          ansible_shell_type: cmd
+        windows20:
+          ansible_host: 51.137.206.54
+          ansible_user: adminuser
+          ansible_password: Passw@rd1
+          ansible_connection: ssh
+          ansible_shell_type: cmd
+
+
+
+
+

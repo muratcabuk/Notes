@@ -1,0 +1,54 @@
+# https://dev.to/cloudskills/deploy-a-windows-vm-to-azure-with-ansible-2l9m
+# https://www.ansible.com/blog/connecting-to-a-windows-host
+---
+- name: Create a Windows VMs
+  azure_rm_virtualmachine:
+    resource_group: "{{ resource_group_name }}"
+    name: "{{ item.name }}"
+    admin_username: "{{ item.vm_username }}"
+    admin_password: "{{ item.vm_password }}"
+  # https://docs.microsoft.com/en-us/azure/virtual-machines/av2-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json      
+    vm_size: Standard_A4_v2
+    storage_account: "{{ storage_account_name }}"
+    managed_disk_type: "Standard_LRS"
+    os_type: Windows
+    network_interfaces: "{{ item.name }}ni"
+    state: present
+    started: yes
+    image:
+      offer: WindowsServer
+      publisher: MicrosoftWindowsServer
+      sku: 2019-Datacenter
+      version: latest
+  async: 3600
+  poll: 0
+  register: task_result
+  strategy: free  # bu satır vm ler create edilirken birbirlerini beklemmesini ifade ediyor yani parallel çalıştırıyor.
+  with_items: "{{ windows_servers }}"
+
+
+- debug: 
+    msg: "{{ task_result }}"
+
+
+## disk eklemiyoruz çünki amacımız Ceph den paylaşım yapmak
+
+# - name: Create managed windows system disk from page blob for Data disk
+#   azure_rm_manageddisk:
+#     name: "{{ item.name  }}_disk"
+#     resource_group:  "{{ resource_group_name }}"
+#     create_option: empty
+#     disk_size_gb: 128
+#     os_type: windows
+#     storage_account_type: Standard_LRS
+#     managed_by: "{{ item.name }}"
+#     state: present
+#   register: windows_mandisk_result
+#   with_items: "{{ windows_servers }}"
+
+# - debug:
+#     msg: "{{ windows_mandisk_result }}"
+
+
+
+

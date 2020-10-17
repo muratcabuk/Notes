@@ -1,0 +1,21 @@
+- name: Create virtual network inteface with Public IP cards for linux VMs
+  azure_rm_networkinterface:
+    resource_group: "{{ resource_group_name }}"
+    name: "{{ item.name }}ni"
+    virtual_network: "{{ virtual_network_name }}"
+    subnet: "{{ subnet_name }}"
+    security_group_name: "{{ security_group_name }}"
+    state: present
+    ip_configurations:
+      - name: ipconfigs
+        primary: True
+        public_ip_allocation_method: Dynamic
+        public_ip_name: "{{ item.name }}publicip"
+  register: vni_result_public_ip
+  with_items: "{{ linux_servers }}"
+
+
+- debug:
+    msg: "virtual network inteface with public ip is created for linux. {{ vni_result_public_ip }}"
+
+

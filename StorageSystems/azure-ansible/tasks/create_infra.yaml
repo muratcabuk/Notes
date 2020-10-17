@@ -1,0 +1,44 @@
+- name: create a resource group
+  azure_rm_resourcegroup:
+    name: "{{ resource_group_name }}"
+    location: westeurope
+    state: present
+
+
+- name: create a virtual network
+  azure_rm_virtualnetwork:
+    resource_group: "{{ resource_group_name }}"
+    name: "{{ virtual_network_name }}"
+    address_prefixes_cidr:
+      - "10.0.0.0/16"
+    state: present
+  register: vn_result
+
+- debug:
+    msg: "virtual network is created. {{vn_result}}"
+
+
+- name: create a subnet
+  azure_rm_subnet:
+    resource_group: "{{ resource_group_name }}"
+    virtual_network_name: "{{ virtual_network_name }}"
+    name: "{{ subnet_name }}"
+    address_prefix: "10.0.1.0/24"
+    state: present    
+  register: sn_result
+
+- debug:
+    msg: "subnet is created. {{sn_result}}"
+
+
+- name: create a storage account
+  azure_rm_storageaccount:
+    resource_group: "{{ resource_group_name }}"
+    name: "{{ storage_account_name }}"
+    account_type: Standard_LRS
+    kind: StorageV2
+    state: present
+  register: sa_result
+
+- debug:
+    msg: "storage account is created. {{ sa_result }}"

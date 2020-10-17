@@ -1,0 +1,22 @@
+- name: update packages
+  raw: sudo apt update
+  register: linux_apt_update
+
+- debug:
+    msg: "{{ linux_apt_update }}"
+
+
+- name: install ansible
+  pip:
+    name: ansible==2.9.12
+
+- name: install netaddr
+  pip:
+    name: 
+      - ansible==2.9.12
+      - jinja2==2.11.1
+      - netaddr==0.7.19
+      - pbr==5.4.4
+      - hvac==0.10.0
+      - jmespath==0.9.5
+      - ruamel.yaml==0.16.10

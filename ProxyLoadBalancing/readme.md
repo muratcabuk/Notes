@@ -12,7 +12,16 @@ proxy de biraz amaç client ı gizlemktir. Reverse Proxy de ama sunucuları gizl
 
 #### Reverse Proxy
 
+Proxy'de sunucular client'ı bilmezler. Revers Proxy de ise Client'lar sunucu bilmezler. 
+Şu [video]((https://youtu.be/ozhe__GdWC8?t=323)) güzel anlatmış.
+
+proxy de biraz amaç client ı gizlemktir. Reverse Proxy de ama sunucuları gizlemektir. (gizlemek perspektifinden bakıldığında)
+
+
+
 #### Load Balancer
+
+
 
 #### Failover Clustering
 
@@ -50,3 +59,9 @@ Which is best for you depends on your situation: keepalived is a good fit for ro
 #### Pacemaker
 
 #### Heartbeat
+
+#### Nginx
+
+#### HaProxy
+
+

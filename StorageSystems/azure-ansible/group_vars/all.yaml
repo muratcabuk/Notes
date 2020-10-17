@@ -1,0 +1,20 @@
+ansible_python_interpreter: /usr/bin/python3
+resource_group_name: rg_kubernetes
+virtual_network_name: vn_kubernetes
+subnet_name: sn_kubernetes
+public_ip_for_lb_name: pip_kubernetes
+storage_account_name: sakubernetes2
+security_group_name: sgkubernetes2
+ssh_pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCsfE+nmRYqvy8g2yqLa5SFy4r7BqQLcCbc+1fmImxnUwTVTBaHaSHAPYdsv6hJG4LjE8TCEXfHGs1XgjoHIxfmHpocxkuGs1u33gXgdEWNH1SlcfKwANa5HTzu+NXTySNLmW2gW1Opi0+FNl2IN82EGyfyHIcjIT9sUNDqod/y1gvVBpXB9qNIMt1wngDFczt6m5ZnIWb+SuY7sBtKAH449QpST66SOgR9S0WrNeKi5CHDykCochc8gyLvFOQPxXs2unqtt7WqTWYk9nXImQl76vl5bu11GEXVTSelKak3+htV22r5mceat+n9TXepiR5PVvlhLdJZObUw26/obiTE1EYy3gcFnnTdJ11RXOyZYHKTl5HU0Rz6G+TeYJO4H58Wo6TAn+URv2Jmzoo6L1dqWzKW/iKu8LFk4PPPXinmMGSlmIK3p9tkJH1muSn3wna/rHR4OkxoPyQBMacguVLiY76LxNmlCbJ9By74WHjW/StFWJsujoekG2ofFkMPtjM= muratcabuk@muratcabukpc"
+ansible_ssh_private_key_file_path: ~/Projects/Github/Notes/StorageSystems/azure-ansible/keys/id_rsa
+shared_folder_server_hostname: windows10
+swarm_advertise_addr: {ipaddr: 10.0.0.4, name: windows10}
+windows_python_version: 3.8.2
+linux_servers:
+  - {name: linux10, objective: "setup machine", vm_username: adminuser, vm_password: Passw@rd1}
+  - {name: linux20, objective: "etcd1 master1 worker1", vm_username: adminuser, vm_password: Passw@rd1}
+  - {name: linux30, objective: "etcd2 master2 worker2", vm_username: adminuser, vm_password: Passw@rd1}
+  - {name: linux40, objective: "etcd3 master3 worker3", vm_username: adminuser, vm_password: Passw@rd1}
+windows_servers:
+  - {name: windows10, objective: "swarm1" , vm_username: adminuser, vm_password: Passw@rd1}
+  - {name: windows20, objective: "swarm2", vm_username: adminuser, vm_password: Passw@rd1}

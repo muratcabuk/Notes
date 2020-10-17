@@ -1,0 +1,18 @@
+---
+- name: Create Infra
+  hosts: localhost
+  tasks:
+    - include: tasks/create_infra.yaml
+    - include: tasks/create_infra_linux.yaml
+    - include: tasks/create_infra_windows.yaml
+
+
+- name: Create Azure Linux Servers
+  hosts: localhost
+  tasks:
+    - include: tasks/create_linux_servers.yaml
+
+- name: Create Azure Windows Servers
+  hosts: localhost
+  tasks:
+   - include: tasks/create_windows_servers.yaml

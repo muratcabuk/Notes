@@ -1,0 +1,33 @@
+---
+- name: test
+  hosts: localhost
+  tasks:
+    - name: test
+      debug: 
+        msg: "{% for item in linux_servers  | rejectattr(\"name\", \"equalto\", nfs_server_hostname)  %} {{ item.objective }} {% endfor %}"
+  
+
+- name: when hostname test
+  hosts: vmwindows
+  tasks:
+    - name: test 2
+      win_shell: |
+        echo "test sdf sdfsd asdf asdf adsf asdfa sdasd ds"
+      args:
+        chdir: C:\
+        executable: powershell
+
+      when: inventory_hostname == "windows10" 
+# | selectattr("name", "equalto", nfs_server_hostname
+# | rejectattr("name", "equalto", nfs_server_hostname
+
+
+
+- name: display multiple file contents
+  hosts: localhost
+  tasks:
+    - name: test
+      debug: 
+        msg: item
+      with_file:
+        - "./roles/haproxy/templates/haproxy.cfg.j2"

@@ -26,6 +26,55 @@
 
 
 # CEPH
+
+
+
+
+CephFS is a filesystem, rbd is a block device.  CephFS is a lot like NFS;
+it's a filesystem shared over the network where different machines can
+access it all at the same time.  RBD is more like a hard disk image, shared
+over the network.  It's easy to put a normal filesystem (like ext2) on top
+of it and mount it on a computer, but if you mount the same RBD device on
+multiple computers at once then Really Bad Things are going to happen to
+the filesystem.
+
+
+In general, if you want to share a bunch of files between multiple
+machines, then CephFS is your best bet.  If you want to store a disk image,
+perhaps for use with virtual machines, then you want RBD.  If you want
+storage that is mostly compatible with Amazon's S3, then use radosgw.
+
+
+![index.png](files/index.png)
+
+
+
+ganesha : NFS veya samba gibi bir file sharing sistemi
+
+
+
+
+Ceph file sistem kullabilmek için
+
+cephfs ve MDS (meda data server) kurulu olmalı. Çünki burada klasör yapısı ceph tarafından kontrol ediliyor bu nedenle meta data bilgisnin kontrol edilmesi gerekiyor.
+
+
+### Cache Tiering
+
+![CacheTiering.png](files/CacheTiering.png)
+
+
+gerçek diske yazmadan öne arada örneğin SSD ye yazarak daha sonra HDD ye kopyalanması.
+
+
+
+**RBD vs iSCSi**
+
+The connections are made via iSCSI initiators, which are available for Linux, Windows and VMware. While fast, iSCSI still must overcome an extra layer of complexity. Performance can be quite good, but if your target is Linux, rbd is the better option. For Windows and VMware, though,iSCSI is currently the only option.
+
+
+
+
 kaynak: https://huseyincotuk.com/2017/06/06/ceph-mimarisi-ceph-uzerinde-veri-yerlesimi/
 
 - https://nxtgen.com/ceph_unified_storage_simplified
@@ -47,9 +96,71 @@ kaynak: https://huseyincotuk.com/2017/06/06/ceph-mimarisi-ceph-uzerinde-veri-yer
 
 
 
+
+- **POC Environment** — Can have a minimum of 3 physical nodes with 10 OSD’s each. This provides 66% cluster availability upon a physical node failure and 97% uptime upon an OSD failure. RGW and Monitor nodes can be put on OSD  nodes but this may impact performance  and not recommended for production.
+
+- **Production Environment** — a minimum of 5 physically separated nodes and minimum of 100 OSD @ 4TB per OSD the cluster capacity is over 130TB  and provides 80% uptime on physical node failure and 99% uptime on OSD failure. RGW and Monitors should be on separate nodes.
+
+
+
+
+How to plan a successful Ceph implementation
+
+
+- Do use 10 G networking as a minimum
+- Do research and test the correctly sized hardware you wish to use
+- Don't use the no barrier mount option with filestore
+- Don't configure pools with a size of two or a min_size of one
+- Don't use consumer SSDs
+- Don't use raid controllers in write back mode without battery protection
+- Don't use configuration options you don't understand
+- Do implement some form of change management
+- Do carry out power-loss testing
+- Do have an agreed backup and recovery plan
+
+
+
+
+
+Erasure-coded pools should be configured in a similar manner so that there is a minimum of two erasure-coded chunks for recovery. An example would be k=4 m=2; this would give the same durability as a size=3 replicated pool, but with double the usable capacity.
+
+
+The min_size variable controls how many copies the cluster must write to acknowledge the write back to a client. A min_size of 2 means that the cluster must at least write two copies of data before acknowledging the write; this can mean that, in a severely degraded cluster scenario, write operations are blocked if the PG has only one remaining copy and will continue to be blocked until the PG has recovered enough to have two copies of the object. This is the reason you might want to decrease min_size to 1, so that, in this event, cluster operations can still continue, and if availability is more important than consistency, then this can be a valid decision. However, with a min_size of 1, data may be written to only one OSD, and there is no guarantee that the number of desired copies will be met anytime soon. 
+
+
+
+### OSD, POOL, PG (Placement Group)
+
+- **OSD** : her disk için bir OSD düşünebiliriz.
+- **Pool** : örneğin disklerin SSD, HDD vb grouplarndırılması
+![pool_pg.jpg](files/pool_pg.jpg)
+- **Placement Group** : Pool içindeki objelerin mantıksal olarak gruplandırılması
+
+
+**örnek pool ayarlama crushmap** 
+
+![pool_crush_map.png](files/pool_crush_map.png)
+
+yapılandırmadan sonra örnek osd tree
+
+![pool_osd_tree](files/pool_osd_tree.jpg)
+
+
+
+
+
+
+
+
 ### Rook Best Practices for Running Ceph on Kubernetes 
 
 https://documentation.suse.com/sbp/all/html/SBP-rook-ceph-kubernetes/index.html
+
+
+
+
+
+
 
 
 

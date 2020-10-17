@@ -1,0 +1,68 @@
+---
+- name: Create a Linux VMs
+  azure_rm_virtualmachine:
+    resource_group: "{{ resource_group_name }}"
+    name: "{{ item.name }}"
+    # admin_username: "{{ item.vm_username }}"
+    # admin_password: "{{ item.vm_password }}"
+    # ssh_password_enabled: true
+    admin_username: "{{ item.vm_username }}"
+    ssh_password_enabled: false
+    ssh_public_keys:
+      - path: "/home/{{ item.vm_username }}/.ssh/authorized_keys"
+        key_data: "{{ ssh_pub_key }}"
+  # https://docs.microsoft.com/en-us/azure/virtual-machines/av2-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json      
+    vm_size: Standard_A4_v2
+    storage_account: "{{ storage_account_name }}"
+    managed_disk_type: "Standard_LRS"
+    os_type: Linux
+    network_interfaces: "{{ item.name }}ni"
+    state: present
+    started: yes
+    image:
+      offer: UbuntuServer
+      publisher: Canonical
+      sku: 18.04-LTS
+      version: latest       
+  async: 3600
+  poll: 0
+  register: task_result
+ #  strategy: free  # bu satır vm ler create edilirken birbirlerini beklemmesini ifade ediyor yani parallel çalıştırıyor.
+  # forks: ile bir task içinde  aynı anda kaç connection yapılcağı belirlenebilir (bağlantı yapılması ile kaç node da iş yapabilc eği ayrı konular)
+  # serial: ile bir çalışmada (run execution) kaç makinadada iş  yapılcağını belirtir.
+  # örnek : bu sayfanın en altında
+  # https://medium.com/devops-srilanka/difference-between-forks-and-serial-in-ansible-48677ebe3f36
+  with_items: "{{ linux_servers }}"
+
+- debug: 
+    msg: "{{ task_result }}"
+
+
+- name: Create managed linux system disk from page blob for Data disk
+  azure_rm_manageddisk:
+    name: "{{ item.name  }}_disk"
+    resource_group:  "{{ resource_group_name }}"
+    create_option: empty
+    disk_size_gb: 128
+    os_type: linux
+    storage_account_type: Standard_LRS
+    managed_by: "{{ item.name }}"
+    state: present
+  register: linux_mandisk_result
+  with_items: "{{ linux_servers }}"
+
+
+- debug:
+    msg: "{{ linux_mandisk_result }}"
+
+#https://adam.younglogic.com/2018/03/ansible-azure-and-managed-disks/
+
+
+
+# Suppose you have 4 nodes (nodeA, nodeB, nodeC, nodeD) in inventory, 2 tasks in playbook, forks =5 (by default)
+#     First task process on all 4 nodes (nodeA, nodeB, nodeC, nodeD)simultaneously, then Second task process on all 4 nodes (nodeA, nodeB, nodeC, nodeD) simultaneously. If we assume processing time for each task is 5 seconds;
+#     Time take for 1st task = 5s (nodeA, nodeB, nodeC, nodeD)
+#     Time take for 2nd task = 5s (nodeA, nodeB, nodeC, nodeD)
+#     Total time taken for playbook = 10s
+
+
