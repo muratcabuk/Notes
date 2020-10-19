@@ -16,7 +16,7 @@ dummy:
 ######################################
 # Releases name to number dictionary #
 ######################################
-ceph_release_num: 15
+ceph_release_num: octopus
 #  dumpling: 0.67
 #  emperor: 0.72
 #  firefly: 0.80
