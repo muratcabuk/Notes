@@ -35,7 +35,7 @@ copy_admin_key: true
 
 devices:
   - /dev/sdb
-#  - /dev/sdc
+  - /dev/sda
 #  - /dev/sdd
 #  - /dev/sde
 
