@@ -7,6 +7,23 @@
 
 ### Cephadm ile kurulum
 
+- https://docs.ceph.com/en/latest/cephadm/#cephadm
+
+
+- alttaki link cepphadm i anisible a yedirerek kurlum yapıyor. kodlar incelendiğinde aslında cephadm kurulumu görülebilir. 
+https://computingforgeeks.com/install-ceph-storage-cluster-on-ubuntu-linux-servers/
+
+
+
+
+
+
+
+
+---
+
+### Resources
+
 - https://docs.ceph.com/en/latest/cephadm/
 - https://vmknowledge.wordpress.com/2015/12/30/ceph-kurulumu/
 

@@ -1,6 +1,7 @@
 ### Ceph Hardway Installation 
 
 - Video: https://www.youtube.com/watch?v=mgC488kLFuk&t=2s
+- örnek kurulum : https://www.server-world.info/en/note?os=CentOS_8&p=ceph15&f=1
 - Dokuman: https://docs.ceph.com/en/latest/install/index_manual/#deploy-a-cluster-manually
 - https://docs.ceph.com/en/latest/install/manual-deployment/
 
@@ -485,7 +486,7 @@ $ ceph -s
 ```
 
 
-buraya kadar resimdeki en alat katmanı oluşturmuş olduk
+buraya kadar resimdeki en alt katmanı oluşturmuş olduk
 
 ![ceph.png](files/ceph.png)
 
@@ -516,6 +517,16 @@ $ ceph orch host ls
 $ ceph orch daemon add osd <host>:device1,device2
 
 ```
+
+### Ceph Orchestrator ile Ceph componentlerinin yönetimi
+
+**Orchestration CLI** : https://docs.ceph.com/en/latest/mgr/orchestrator/#orchestrator-cli
+
+- ODS : https://docs.ceph.com/en/latest/cephadm/install/#deploy-osds
+- MDS: https://docs.ceph.com/en/latest/cephadm/install/#deploy-mdss
+- RGW: https://docs.ceph.com/en/latest/cephadm/install/#deploy-rgws
+- Deploying NFS ganesha: https://docs.ceph.com/en/latest/cephadm/install/#deploying-nfs-ganesha
+
 
 ### Kurulan Ceph Cluster ın Yönetimi
 

@@ -1,6 +1,89 @@
 ### stable-5.0 Supports Ceph version octopus. This branch requires Ansible version 2.9.
 
 
+https://docs.ceph.com/projects/ceph-ansible/en/latest/#installation
+
+
+### Ceph Cluster Componenets
+
+Components of Ceph storage cluster
+
+The basic components of a Ceph storage cluster
+
+- Monitors: A Ceph Monitor (ceph-mon) maintains maps of the cluster state, including the monitor map, manager map, the OSD map, and the CRUSH map
+- Ceph OSDs: A Ceph OSD (object storage daemon, ceph-osd) stores data, handles data replication, recovery, rebalancing, and provides some monitoring information to Ceph Monitors and Managers by checking other Ceph OSD Daemons for a heartbeat. At least 3 Ceph OSDs are normally required for redundancy and high availability.
+- MDSs: A Ceph Metadata Server (MDS, ceph-mds) stores metadata on behalf of the Ceph Filesystem (i.e., Ceph Block Devices and Ceph Object Storage do not use MDS). Ceph Metadata Servers allow POSIX file system users to execute basic commands (like,ls, find etc.) without placing an enormous burden on the Ceph Storage Cluster.\
+- Managers: A Ceph Manager daemon (ceph-mgr) is responsible for keeping track of runtime metrics and the current state of the Ceph cluster, including storage utilization, current performance metrics, and system load.
+
+
+### Başlamadan Önce
+
+
+eğer azure da ortamı kurmak isterseniz azure-ansible klasöründeki ansible playbook larını çalıştırabilirsiniz.
+
+bu sistem 3 ceph makinası, 1 load balancer ve tet edebilmek için ayrıca 2 windows makimnası ayağa kalddıracaktır.
+
+- bütün makinalara ssh ile bağlanabilişyor olmak lazım. Cluster için kullanılacak 3 makinada extradan takılmış 3 adet disk olması lazım. 
+
+- Azure sitemde biz 3 adet klasik disk takmış olacağız.
+
+
+**Ubuntu Andisible 2.9 kurulumu**
+
+```
+$ sudo apt update
+$ sudo add-apt-repository ppa:ansible/ansible-2.9
+$ sudo apt install ansible
+```
+
+yada 
+
+```
+$ sudo apt-get install python3-pip python3-dev
+$ sudo -H pip3 install ansible==2.9
+``` 
+
+
+
+
+### Kurulum
+
+1. Clone the repository:
+
+```
+$ git clone https://github.com/ceph/ceph-ansible.git
+```
+
+
+2. Next, you must decide which branch of ceph-ansible you wish to use. There are stable branches to choose from or you could use the master branch:
+
+
+biz burada stable-5.0  kullanacağzı çünki octobus u bu sürüm deteklemeye başladı
+
+```
+$ git checkout $branch (stable-5.0 )
+```
+
+3. Next, use pip and the provided requirements.txt to install Ansible and other needed Python libraries:
+
+,,,
+$ pip install -r requirements.txt
+,,,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **Recommendations**
 
 - https://docs.ceph.com/en/latest/start/hardware-recommendations/ (hardware recommendations)
@@ -8,13 +91,13 @@
 
 --------------------
 
+- örnek kurlum (ceph-ansible ile): https://computingforgeeks.com/install-and-configure-ceph-storage-cluster-on-centos-linux/
+- örnek kurlum (cephadm ansible yedirilmiş): https://computingforgeeks.com/install-ceph-storage-cluster-on-ubuntu-linux-servers/
 
-örnek kurlum: https://computingforgeeks.com/install-ceph-storage-cluster-on-ubuntu-linux-servers/
+- resmi dokuman: https://docs.ceph.com/projects/ceph-ansible/en/stable-5.0/
 
-resmi dokuman: https://docs.ceph.com/projects/ceph-ansible/en/stable-5.0/
-
-video: https://www.youtube.com/watch?v=RiLvPL7Dh3k
-
+- video: https://www.youtube.com/watch?v=RiLvPL7Dh3k
+---
 - https://huseyincotuk.com/2017/06/12/ceph-tasariminda-dikkat-edilmesi-gereken-hususlar/(metin metin olarak güzel hazırlanmış)
 - http://bulutwiki.ulakbim.gov.tr/index.php/CEPH_Kurulumu (özellikle parametereler içişn okunmalıdır)
 - https://huseyincotuk.com/2018/12/02/ceph-bluestore/ (bluestore nedir)

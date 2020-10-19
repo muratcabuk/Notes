@@ -147,7 +147,17 @@ yapılandırmadan sonra örnek osd tree
 
 
 
+https://docs.ceph.com/en/latest/rados/operations/placement-groups/#how-are-placement-groups-used
 
+placement group (PG) aggregates objects within a pool because tracking object placement and object metadata on a per-object basis is computationally expensive–i.e., a system with millions of objects cannot realistically track placement on a per-object basis.
+
+
+### Choosing the number of Placement Groups and How to use it
+
+https://docs.ceph.com/en/latest/rados/operations/placement-groups/#choosing-the-number-of-placement-groups
+
+
+https://docs.ceph.com/en/latest/rados/operations/placement-groups/#how-are-placement-groups-used
 
 
 
@@ -155,12 +165,6 @@ yapılandırmadan sonra örnek osd tree
 ### Rook Best Practices for Running Ceph on Kubernetes 
 
 https://documentation.suse.com/sbp/all/html/SBP-rook-ceph-kubernetes/index.html
-
-
-
-
-
-
 
 
 
@@ -207,6 +211,10 @@ Buna göre herhangi bir istemci bir veri yazma talebinde bulunduğu zaman aşağ
 - CRUSH tarafından belirlenen birincil OSD’ye yazma işlemi tamamlanınca, verinin kopyası replika sayısına bağlı olarak diğer OSD’lere yazılır. Örneğin replika sayısı 3 ise birincil OSD’ye yazılan veri 2 ayrı OSD’ye daha kopyalanır. Bu OSD’ler varsayılan CRUSH map ayarlarında farklı sunucular üzerinde olacak şekilde ayarlanmıştır. Tüm kopyalar yazıldıktan sonra istemciye yazma işleminin başarılı olduğu bilgisi verilir.
 
 ### CRUSH Algoritması
+
+
+
+- Manually editing a CRUSH Map: https://docs.ceph.com/en/latest/rados/operations/crush-map-edits/
 
 CRUSH (Controlled Replication Under Scalable Hashing), Ceph üzerinde verinin nereye yazılıp nereden okunacağını bir hesaplama yaparak belirleyen ve hem istemci hem de sunucularda bulunan, bu sayede veri lokasyonu için ikinci bir işlem gerektirmeyen bir algoritmadır. Daha önce bahsedildiği gibi Ceph bu yaklaşım sayesinde yüksek ölçeklere rahatlıkla çıkabilmektedir.
 
