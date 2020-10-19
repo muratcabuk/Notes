@@ -16,7 +16,7 @@ dummy:
 ######################################
 # Releases name to number dictionary #
 ######################################
-ceph_release_num: octopus
+ceph_release_num: 15
 #  dumpling: 0.67
 #  emperor: 0.72
 #  firefly: 0.80
@@ -144,14 +144,14 @@ ceph_repository: community
 #
 # Enabled when ceph_repository == 'community'
 #
-ceph_mirror: http://download.ceph.com
-ceph_stable_key: https://download.ceph.com/keys/release.asc
-ceph_stable_release: dummy
-ceph_stable_repo: "{{ ceph_mirror }}/debian-{{ ceph_stable_release }}"
+# ceph_mirror: http://download.ceph.com
+# ceph_stable_key: https://download.ceph.com/keys/release.asc
+# ceph_stable_release: dummy
+# ceph_stable_repo: "{{ ceph_mirror }}/debian-{{ ceph_stable_release }}"
 
-nfs_ganesha_stable: true # use stable repos for nfs-ganesha
-nfs_ganesha_stable_branch: V3.3-stable
-nfs_ganesha_stable_deb_repo: "{{ ceph_mirror }}/nfs-ganesha/deb-{{ nfs_ganesha_stable_branch }}/{{ ceph_stable_release }}"
+# nfs_ganesha_stable: true # use stable repos for nfs-ganesha
+# nfs_ganesha_stable_branch: V3.3-stable
+# nfs_ganesha_stable_deb_repo: "{{ ceph_mirror }}/nfs-ganesha/deb-{{ nfs_ganesha_stable_branch }}/{{ ceph_stable_release }}"
 
 
 # Use the option below to specify your applicable package tree, eg. when using non-LTS Ubuntu versions
