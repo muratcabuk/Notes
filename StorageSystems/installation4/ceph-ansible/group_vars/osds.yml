@@ -33,10 +33,10 @@ copy_admin_key: true
 # All scenario(except 3rd) inherit from the following device declaration
 # Note: This scenario uses the ceph-volume lvm batch method to provision OSDs
 
-# devices:
-#   - /dev/sda
-#   - /dev/sdb
-#   - /dev/sdc
+devices:
+  - /dev/sda
+  - /dev/sdb
+  - /dev/sdc
 #   - /dev/sdd
 #   - /dev/sde
 
