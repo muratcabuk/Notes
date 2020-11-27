@@ -1,4 +1,14 @@
- 
+https://forums.kali.org/showthread.php?45021-rtl8822be-wifi-not-working-after-updated-to-kernel-5-2-0
+
+https://itsfoss.community/t/how-to-install-realtek-wifi-drivers-in-ubuntu-tutorial/2808
+
+https://itectec.com/ubuntu/ubuntu-rtl8822be-wifi-driver-ubuntu-20-04-hp-15-da1009ne/
+
+
+https://www.onooks.com/rtl8822be-driver-for-ubuntu-18-04-and-20-04/
+
+https://forums.kali.org/showthread.php?45021-rtl8822be-wifi-not-working-after-updated-to-kernel-5-2-0
+
 
 Code:
 
