@@ -55,6 +55,17 @@ reboot && block/unblock bluetooth as needed:
 
 rfkill unblock all
 
+Ayrıca Ubuntunun kullandığı blutooth yönetim aracını kaldırıp blueman/blue manager ı yüklemek mantıklı gibi
+
+birde alttaki komutlar denenebilir
+
+```
+sudo rmmod btusb
+
+sudo modprobe btusb
+
+```
+
 
 
 

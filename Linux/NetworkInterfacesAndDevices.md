@@ -1,3 +1,15 @@
+## NETWORK 
+- https://www.youtube.com/playlist?list=PL966g7O8Fr34Z-PsTCM1YBzB6COiu0uZp (Temel Network)
+- https://www.youtube.com/playlist?list=PLXaBFPQgxYavJseF_HAXOeNH13OuHjI7s (Temel Network - Sistem Yöneticiliği)
+- https://www.youtube.com/playlist?list=PL5MqbnhzqrZQmKns4KyFfFnZlHUet9caW (Temel NEtwork)
+- https://www.youtube.com/watch?v=pDn2u65rQbQ&t=1341s (Güzel anlatım 30 dk da network)
+- https://www.youtube.com/watch?v=haBM0e-5UL0 (Temel Network : Bir Paketin Yolculuğu)
+- https://www.youtube.com/playlist?list=PLXU1gWXx72mbez4ZKziBlud1sjhukaCqW (temel network)
+
+
+
+
+
 ## VIRTUAL VE FİZİKSEL CİHAZLAR
 
 ### Hub
@@ -10,7 +22,7 @@ Hublar aktif ve pasif olmak üzere 2 sınıfa ayrılır. Aktif hub, kendisine ge
 
 ### Switch - Open vSwitch
 
-
+- https://www.youtube.com/playlist?list=PLSNNzog5eydtmcbcbc1b8pVRkgre3vNUy
 
 
 **open vswitch**
@@ -133,7 +145,16 @@ Bridge, Hub’dan çok karışıktır. Layer-2’de çalışır. Hub’dan farkl
 
 
 
-### Router
+### Router, Router Table, BGP
+
+
+
+- https://www.youtube.com/watch?v=BqycNMntf5c&list=PLXaBFPQgxYavJseF_HAXOeNH13OuHjI7s&index=18 (Routing Temelleri)
+- https://www.youtube.com/watch?v=SBY_Q4h2KCA&list=PLXaBFPQgxYavJseF_HAXOeNH13OuHjI7s&index=19 (statik Routing)
+- https://www.youtube.com/watch?v=rXOqO62iSbM&list=PLXaBFPQgxYavJseF_HAXOeNH13OuHjI7s&index=32 (dinamik routing)
+- https://www.youtube.com/watch?v=N9agdL72RaE&list=PLXaBFPQgxYavJseF_HAXOeNH13OuHjI7s&index=41 (Dimnaimk BGP)
+- https://www.youtube.com/watch?v=pJnqQqPJMVM&list=PLXaBFPQgxYavJseF_HAXOeNH13OuHjI7s&index=42 (BGP tracer uygulaması)
+- https://www.youtube.com/playlist?list=PLSNNzog5eydtmcbcbc1b8pVRkgre3vNUy (Switching and Routing hakkında video serisi)
 
 
 ### Repeater
@@ -172,6 +193,10 @@ Bridge, Hub’dan çok karışıktır. Layer-2’de çalışır. Hub’dan farkl
 
 
 ## VIRTUAL TANIMLAR
+
+
+
+- https://www.youtube.com/watch?v=BB_q-75Snsk (virtualbox üzerinden anlatım)
 
 Alttaki Nat ve Bridge sanallaştırma sistemlerinde sıklıkla karşımıza çıkar. Bu ikisinin haricinde ayrıca Host Only ve  Internal bulunmaktadır.
 
@@ -233,15 +258,63 @@ Subnet is a small network composed by a group of IP addresses. It is part of a l
 |Major Benefit|VLAN is extremely flexible, it brings better work performance, less traffic, and more efficiency.|A Subnet will not be affected when other Subnets going down or having technical breakdowns.|
 
 
-
-
-
-
-
-
-
-
 ### NAT
+
+- https://www.youtube.com/watch?v=NR5G2Vy9mpk&list=PLXaBFPQgxYavJseF_HAXOeNH13OuHjI7s&index=44 (statik NAT packet tracer)
+- https://medium.com/@gokhansengun/nat-network-address-translation-nedir-ve-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-a2c8b6291de8
+- https://www.sysnettechsolutions.com/nat-nedir-ne-ise-yarar/
+
+
+**video anlatım**
+- https://www.youtube.com/watch?v=uda8t2wAtgs
+- https://www.youtube.com/watch?v=wg8Hosr20yw
+- https://www.youtube.com/watch?v=dUfKR2wC1Y4
+
+
+ NAT (Network Address Translation), aynı ağ içerisinde bulunan birden fazla cihazın aynı public IP’yi kullanarak internete erişebilmesini sağlayan yöntemdir.
+ 
+![nattable.jpg](files/nattable.jpg)
+ 
+
+ buradaki mantık aslında basitçe şu şekilde, içeride bir çok cihaz olabilir bunları dışarı bağlamak için tek bir noktadan (örneğin router dan) cihazlar dışarı açılır. Dışar ıçıkarken bütün cihazlar router ın dış ucunun ipsi ile dışarı çıkarlar.
+ 
+ ![nat](files/nat.jpg)
+ 
+Dışarıdan içeri istek atıldığında tek bir noktadan (roueter) içeri girildiği için içeride hanci chza isteğin ynedireleği belirlemek gerekiyor. Burada da devreye PAT giriyor. dışarıdan geln isteğin angi portdan yapıldığına göre içeride o portla ilişki (o porta cevap vermesi beklenen) cihaza yönlendirme yapılır. 
+ 
+ 
+![PAT.gif](files/PAT.gif)
+ 
+ 
+
+
+
+**NAT üç şekilde yapılır:**
+
+
+1. **Static NAT (SNAT)** = Local deki ıp yi dışarıdaki ıp ye birebir çevirmedir ve sadece kendi tanımladığımız ıp ler reel ıp ile internete çıkabilirler.Pek kullanışlı değildir.
+2. **Dynamic NAT (DNAT)** = Bir havuz oluşturarak dinamik olarak içerdeki adresleri bu havuzdaki dış IP bloklarıyla eşlemedir.Hemen hemen Static NAT ın aynısıdır fakat dinamiktir.
+
+Hangi ıp ilk önce eşleşirse ilk önce internete o çıkar.Birden fazla reel ıp varsa o zaman duruma göre hepsi çıkabilir.Şu anda herhangi bir yerde kullanımı yoktur.
+
+3. **NAT Overload (PAT,NAPT)** = IP artı portların değiştirilmesi denebilir.65535-(eksi) 1024 tane bilgisayar aynı anda portu kullanabilir.Herbirisi aynı ıp yi farklı portlardan
+
+kullanarak internete çıkar.Router, kaynak ıp ve kaynak portu değiştirir,kendi üzerindeki NAT tablosuna yazar.
+
+
+![static source NAT](files/Nat-and-PAT-a-complete-explanation-static-source-nat.png)
+
+![dynamic source NAT](files/Nat-and-PAT-a-complete-explanation-dynamic-source-nat.png)
+
+![static pat](files/Nat-and-PAT-a-complete-explanation-static-pat.png)
+
+PAT ve NAT beraber kullanıldığında Overloaded olur
+
+![pat - nat overload](files/Nat-and-PAT-a-complete-explanation-pat-nat-overload.png)
+
+
+### ARP, ARP TABLE
+
 
 
 ### BRIDGE
@@ -335,9 +408,24 @@ https://www.practicalnetworking.net/stand-alone/configuring-vlans/
 şu iki video terimleri anlatıyor.
 - https://www.youtube.com/watch?v=GtxMpIDB5Fk
 - https://www.youtube.com/watch?v=nAbElY9zEjs
+- https://www.youtube.com/watch?v=r9Yfz0GyqVQ&list=PLXaBFPQgxYavJseF_HAXOeNH13OuHjI7s&index=17
+- https://www.youtube.com/playlist?list=PLSNNzog5eydurp2zcB4xs6gdeeVW3cMOW (video serisi)
 
 
-### VETH
+### ETHERNET, NIC (NETWORK INTERFACE CARD) ,  VETH
+
+
+- https://www.youtube.com/watch?v=03HWtTizG4c&list=PL966g7O8Fr34Z-PsTCM1YBzB6COiu0uZp&index=10 (Ethernet nedir)
+- https://www.youtube.com/playlist?list=PLSNNzog5eydvAxPHJiDybPomC1fFHf1KE (Ethernet hakkıkında seri video - hepsi çok gerekli olmayabilir.)
+- https://www.youtube.com/watch?v=FkH_J-IZbpU&list=PLSNNzog5eydvAxPHJiDybPomC1fFHf1KE
+
+**nic**
+- https://www.youtube.com/watch?v=m9evUZtkEAc
+
+
+
+
+
 
 ### VXLA
 
