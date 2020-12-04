@@ -3,7 +3,7 @@
 
 ### proxy
 ------------------
-2 core 4 ram 50 gb disk
+4 core 4 ram 50 gb disk >>>>> ssl offloding yacak birde 
 
 
 ### veritabanı
@@ -62,12 +62,14 @@ Officially, Jira only supports x86 hardware and 64-bit derivatives of it. When r
 **insights plugin**
 - https://documentation.mindville.com/display/INSSERV/Installation+Guide
 - https://documentation.mindville.com/insight/latest/system-requirements-33466680.html
+- https://wiki.softwareplant.com/display/DOCUMENTATION/BigPicture+Sizing+Guide
 
 
 bu durumda tek başına jira için 4 core işlemci ve 8 ram en azından gemektedir. ayrıca tek başına 7200 rpm dik lazım
 
 
-insigts için 10.000 asset için 4gb ram gerekşiyor ekstradan (100.000 için 8 ram)
+insigts için 10.000 asset için 2 core 4gb ram gerekşiyor ekstradan (100.000 için 8 ram)
+big picture için fazaladan 2 core 4 ram gerekmektedir. 
 
 
 4 core 8 ram 100 gb disk
@@ -104,6 +106,13 @@ peki üstünü nasıl belirleyeceğiz. : https://confluence.atlassian.com/bitbuc
 
 
 elasticsearch : https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-cli-run-prod-mode
+
+
+### Crucible
+---------------
+artık yavaş yavaş marketten çekşiliyor
+
+https://confluence.atlassian.com/crucible/fisheye-and-crucible-are-in-basic-maintenance-mode-987143986.html
 
 
 
@@ -179,4 +188,114 @@ A starting configuration should include at least:
 - elasticsearch : https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-cli-run-prod-mode
 
 
+### Nexus3
+-----------
+
+https://help.sonatype.com/repomanager3/installation/system-requirements
+
+
+8 Core 16 ram 16 Ram  750 gb
+
+
+### Son Durumda
+
+Proxy      : 4 core 4 ram 50 gb Disk >>>>> ssl offloading yapacak birde
+Confluence : 4 Core 8 Ram 100 gb Disk >>>>>
+Jira       : 4 Core 8 Ram 100 gb Disk / Insight için de extra 2 core 4 ram ve big picture için 2 core 4 ram bu durumda toplam 8 core 16 ram >>>>
+Bitbucket  : 4 core 8 Ram 100 gb Disk >>>>
+Bamboo     : 4 Core 8 Ram 100 gb Disk  >>>>>
+Jenkins    : 4 Core 8 Ram 100 gb Disk  >>>>>
+Win Agent  : 8 Core 16 Ram 500 gb Disk >>>>>
+Lin Agent  : 4 Core 8 Ram 250 gb Disk >>>>>>
+Sonarqube  : 8 Core 16 Ram 250 gb Disk (kendi içinde elasticsearch var)
+Nexus 3    : 8 Core 16 Ram 750 gb Disk >>>>>
+
+Veritabanı :
+Sentry     : 8 core 16 Ram 500 gb disk
+
+Crucible   : bunun yerine ilerde araç bakılacak iki tanesi göze çarpıyor (Review Board, Gerrit)
+Crowd      : bunun yerine de gerekirse ileride KeyCloak mantıklı görünüyor
+
+
+
+Toplam     :64 Core 124 ram 2.600 TB
+
+
+
+makina isimlerinde devops benzeri bir kelime geçirilirse iyi olur
+
+
+Database
+- 1. Makina  : Postgres Veritabanı
+
+Agents
+
+- 2. makina  : Linux Agent:4 Core 8 Ram 250 gb Disk
+- 3. Makina  : Win Agent: 8 Core 16 Ram 500 gb Disk
+
+apps / her bir uygulamaya özel docker compose yazağız. compose üzerinden update leri yapılcak. Swarm yada Kubernetes kurulmayacak ileride gerekirse bu makinlar kullanılarak kurulabilir. 
+Datacenter versiyonları da yine makina sayısı arttırılarak yada bu makinların kaynakları arttırılarak yapılabilir.
+
+- 4. Makina  : Proxy: 4 core 4 ram 50 gb Disk
+- 5. Makina  : Nexus3 - Jenkins - Bamboo 16 Core 32 Ram 1 TB Disk
+- 6. Makina  : Confluence - Jira - Bitbucket 16 Core 32  Ram 500 GB Disk
+- 7. Makina  : Sentry taşınacak 8 core 16 ram 500 gb disk   (4 core 8 ram 200 gb disk var ancak bu yetersiz yukarıda bahsedildiği gibi 8 core 16 ram 500 Disk Konulmalı - üzerinde sentry worker api, sentry ui app ve postgre vertabanı çalışıyor yani 3 uygulama ve exception loglama yapıyor.)
+
+
+
+Test Makinası için
+
+- Tek Makina : 32 core 64 ram 500 gb disk
+
+Bütün DevOps uygulamlarının test ve UAT sunucuları burada olacak ayrıca Docker çalışmalarının da ArGe ve test işlemlerini bu sunucuda yönetiyor olacağız. 
+Daha önceleri bu ortamlar vardı ancak hepsini geçen sürede kullanmak zorunda kaldık. Tek makina ile bütün test işlerini çözelim dedim yoksa onlarca makina açıp bir ton kural yazıyor olacağız. 
+
+bu sunucu üzerinde en az 2 veritabanı, 10 üzeri sanal makina, 10 dan fazla uygulama kurulacak. bazen upgrade testleri yapılacak.
+
+
+
+
+
+
+3 ve 4 nolu makinaları swarm yapıp alttaki konfigürasyonla sadece belli makinlarda çalışması sağlanacak.
+
+noda label ata:  https://docs.docker.com/engine/swarm/manage-nodes/
+
+docker node update --label-add foo --label-add bar=baz node-1
+
+
+
+
+sonrada noda servisi atıyoruz. (https://docs.docker.com/engine/swarm/services/)
+
+ docker service create \
+  --name my-nginx \
+  --mode global \
+  --constraint node.labels.region==east \
+  --constraint node.labels.type!=devel \
+  nginx
+
+
+
+
+
+
+
+
+### eskiler
+------
  
+proxy:  2 core 4 ram 50 gb disk
+wiki git bamboo: 6 core 24 ram 100 GB disk
+git elastic: 4 core 8 ram 150 gb disk
+jira sonar jenkins crows crucible: 6 core 24 ram 100 gb disk
+linux agent: 2 core 8 ram 40 gb disk
+win agent: 2 core 8 ram 110 gb disk
+sentry : 4 core 8 ram 200 gb disk
+
+nexus 3 : yok zaten
+
+
+toplam : 30 Core 84 ram 800 GB
+
+

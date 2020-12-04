@@ -12,9 +12,14 @@ https://github.com/Microsoft/BuildXL/blob/master/README.md
 
 ### __Free And Open Sourced Tools__
 
-1. jenkins
-2. gitea
-3. taiga
+1. jenkins: CI/CD
+2. gitea : Git (go ile yazılmış)
+3. taiga: (daha çok jira gibi)Taiga is a free and open-source project management system for startups, agile developers, and designers.[2] Its frontend is written in AngularJS and CoffeeScript; backend, in Django and Python.[3] Taiga is released under GNU Affero General Public License. (php galiba)
+4. ZenTao: daha çok jira gibi
+5. redmime: daha çok ms project yada atlassian bigpicture yada aalign gibi ancak üzerinde agile ve scrum metodolijileri de, yani jirayı da kapsıyor gibi. ruby on rails
+6. Review Board: code review aracı python tabanlı
+7. Gerrit: java tabanlı code review aracı google arkasındaymış
+
 
 - https://www.youtube.com/watch?v=WxjJlYFIWtI
 
