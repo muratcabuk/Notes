@@ -3,7 +3,7 @@ version: "3.9"
 services:
   postgres:
     image: "postgres:9.6"
-     restart: unless-stopped
+    restart: unless-stopped
     env_file:
       - postgres.env
     ports:
@@ -19,10 +19,11 @@ services:
       - 8080:80
     depends_on:
       - postgres
-    volumes: pgadmin-data:/var/lib/pgadmin
+    volumes: 
+      - pgadmin-data:/var/lib/pgadmin
     
-  volumes:
-    postgres-data:
-    pgadmin-data:
+volumes:
+  postgres-data:
+  pgadmin-data:
   
 # https://www.pgadmin.org/docs/pgadmin4/development/container_deployment.html
