@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  nexus:
+    image: sonatype/nexus3:3.29.0
+    volumes:
+      - "nexus-data:/nexus-data" # default password de burada zaten
+      # - "nexus-ssl:/opt/sonatype/nexus/etc/ssl" # nexus3 ssl i yönetmeyecek proxy yapacağız.
+      # bizde load balancer olacağı için ona bırakacağız. yani, proxy olacak.
+      # şimdilik simule etmek için nxinx kullancağız
+    ports:
+      - "8081:8081" # nexus3 port, nginx ile https bize 8081 olarak yönlenecek
+      - "8082:8082" # docker registery için port
+      - "8083:8083" # nuget için  port
+      # üstteki 3 port için 3 farklı domain lazım olacak.
+      - "8084:8084"
+      - "8085:8085"
+      - "8087:8086"
+      - "8088:8088"
+      - "8089:8089"
+      # son 5 tanesi gerekli olursa diğerleri için kullanılacak
+
+  
+volumes:
+  nexus-data:
+
+networks:
+  default:
+    external:
+      name: devopsbridge
+
+
+# https://help.sonatype.com/repomanager3/installation/run-behind-a-reverse-proxy#RunBehindaReverseProxy-nginx.2
+# https://sancreton.com/blogs/devops/nexus-docker-registry

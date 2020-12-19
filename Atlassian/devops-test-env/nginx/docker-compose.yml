@@ -1,0 +1,31 @@
+
+version: '3'
+services:
+  nginx: 
+    image: nginx:1.19.6-alpine
+    volumes:
+      - nginx-conf:/etc/nginx/nginx.conf
+      - nginx-cert:/etc/nginx/cert
+      - nginx-log:/var/log/nginx
+      - nginx-html:/var/www/html
+    ports:
+      - 80:80 # bu portla gelenleri uyaran bir sayfa yapılcak. 
+              # bu sayfada yapılması gerekenler de yazılacak 
+      - 443:443
+volumes:
+  nginx-conf:
+  nginx-cert:
+  nginx-log:
+  nginx-html:
+
+networks:
+  default:
+    external:
+      name: devopsbridge
+
+  
+
+# http ile gelenler de redirect yapılacak
+# https://www.domysee.com/blogposts/reverse-proxy-nginx-docker-compose
+# https://help.sonatype.com/repomanager3/installation/run-behind-a-reverse-proxy#RunBehindaReverseProxy-nginx.2
+# https://sancreton.com/blogs/devops/nexus-docker-registry

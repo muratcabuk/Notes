@@ -8,8 +8,8 @@ services:
       - postgres.env
     ports:
       - 5432:5432
-    networks: 
-      - front
+    # networks: 
+    #   - devopsbridge
     volumes:
       - postgres-data:/var/lib/postgresql/data/
   pgadmin:
@@ -21,21 +21,29 @@ services:
       - 8080:80
     depends_on:
       - postgres
-    networks: 
-      - front
+    # networks: 
+    #   - devopsbridge
     volumes: 
       - pgadmin-data:/var/lib/pgadmin
 
+
 networks:
-    front:
-      driver: bridge
-#      driver_opts:
-#        com.docker.network.enable_ipv6: "true"
-      ipam:
-        driver: default
-        config:
-          - subnet: 192.168.0.2/24
-#            gateway: 192.168.0.1
+  default:
+    external:
+      name: devopsbridge
+
+
+## alttaki ayarlar bu compose için oluşturulacak netwotku konfigure etemk için kullanılır
+# networks:
+#     devopsbridge:
+#       driver: bridge
+# #      driver_opts:
+# #        com.docker.network.enable_ipv6: "true"
+#       ipam:
+#         driver: default
+#         config:
+#           - subnet: 192.168.0.2/24
+# #            gateway: 192.168.0.1
 
     
 volumes:
