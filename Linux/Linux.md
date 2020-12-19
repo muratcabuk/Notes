@@ -14,10 +14,12 @@ https://demirten.gitbooks.io/linux-sistem-programlama/content/intro/history.html
 
 
 
+### Environment Variables Kullanımı
+
+https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/
 
 
-
-### bütün hatalrı gidermek
+### apt bütün hatalrı gidermek
 
 ```
 sudo apt-get upgrade
@@ -30,11 +32,6 @@ sudo apt-get install -f
 sudo apt-get remove ––purge package_name
 sudo apt-get auto-remove && apt-get clean && apt-get update && apt-get upgrade
 ```
-
-
-
-
-
 
 
 ### Programs
@@ -166,3 +163,6 @@ http://lists.busybox.net/pipermail/busybox/2010-December/074114.html
 /swap :	The swap partition is where you extend the system memory by dedicating part of the hard drive to it.
 
  
+### Commnads
+
+https://linuxize.com/tags/terminal/

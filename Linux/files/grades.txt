@@ -1,0 +1,5 @@
+Gil     Conrad 98     93     94     A
+Vern    Wynne  85     78     93     B
+Ingram  Dannie 84     85     94     B+
+Wright  Morty  75     76     79     C+
+Johnnie Adair  78     94     87     B
