@@ -4,8 +4,7 @@ services:
   nginx: 
     image: nginx:1.19.6-alpine
     volumes:
-      - nginx-conf:/etc/nginx/nginx.conf
-      - nginx-cert:/etc/nginx/cert
+      - nginx-etc:/etc/nginx
       - nginx-log:/var/log/nginx
       - nginx-html:/var/www/html
     ports:
@@ -13,8 +12,7 @@ services:
               # bu sayfada yapılması gerekenler de yazılacak 
       - 443:443
 volumes:
-  nginx-conf:
-  nginx-cert:
+  nginx-etc:
   nginx-log:
   nginx-html:
 
