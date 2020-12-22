@@ -4,7 +4,9 @@ services:
   nexus:
     image: sonatype/nexus3:3.29.0
     volumes:
-      - "nexus-data:/nexus-data" # default password de burada zaten
+      - type: bind
+      - source: /data/nexus3-data
+      - target: /nexus-data# default password de burada zaten
       # - "nexus-ssl:/opt/sonatype/nexus/etc/ssl" # nexus3 ssl i yönetmeyecek proxy yapacağız.
       # bizde load balancer olacağı için ona bırakacağız. yani, proxy olacak.
       # şimdilik simule etmek için nxinx kullancağız
@@ -20,9 +22,8 @@ services:
       - "8089:8089"
       # son 5 tanesi gerekli olursa diğerleri için kullanılacak
 
-  
-volumes:
-  nexus-data:
+# volumes:
+#   nexus-data:
 
 networks:
   default:

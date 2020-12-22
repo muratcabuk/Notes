@@ -2,19 +2,21 @@
 version: '3'
 services:
   nginx: 
-    image: nginx:1.19.6-alpine
-    volumes:
-      - nginx-etc:/etc/nginx
-      - nginx-log:/var/log/nginx
-      - nginx-html:/var/www/html
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    # volumes:
+    #   - nginx-etc:/etc/nginx
+    #   - nginx-log:/var/log/nginx
+    #   - nginx-html:/var/www/html
     ports:
       - 80:80 # bu portla gelenleri uyaran bir sayfa yapılcak. 
               # bu sayfada yapılması gerekenler de yazılacak 
       - 443:443
-volumes:
-  nginx-etc:
-  nginx-log:
-  nginx-html:
+# volumes:
+#   nginx-etc:
+#   nginx-log:
+#   nginx-html:
 
 networks:
   default:

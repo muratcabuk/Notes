@@ -1,6 +1,8 @@
 ### INTRO
 Nexus3 kendi içinde SAP OrientDB kullanıyor. Java tabanlı graph ve documentdb 
 
+https://hub.docker.com/r/sonatype/nexus3
+
 - Repoyu ssl proxy ile açmak: https://support.sonatype.com/hc/en-us/articles/115013153887-Docker-Repository-Configuration-and-Client-Connection#ProxySSL
 - https://www.ivankrizsan.se/2016/06/09/create-a-private-docker-registry/
 - https://help.sonatype.com/repomanager3/installation/run-behind-a-reverse-proxy#RunBehindaReverseProxy-nginx.2

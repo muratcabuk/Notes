@@ -1,0 +1,23 @@
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:2.263.1-lts-centos7
+    volumes:
+      - type: bind
+        source: /data/jenkins_home/jenkins
+        target: /var/jenkins_home
+    env_file:
+      - jenkins.env
+    ports:
+      - 8081:8080
+      - 50000:50000
+    user: "130" # host makinasında oluşturulan jenkin skullanısını UID si gelmeli
+    container_name: jenkins
+
+networks:
+  default:
+    external:
+      name: devopsbridge
+
+
+    # ocker run --name myjenkins  -d -u 130 -p 8080:8080 -p 50000:50000 --env JAVA_OPTS="-Djava.util.logging.config.file=/var/jenkins_home/log.properties" -v /data/jenkins_home/jenkins:/var/jenkins_home jenkins/jenkins
