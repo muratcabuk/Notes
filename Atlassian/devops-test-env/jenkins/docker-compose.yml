@@ -9,8 +9,8 @@ services:
     env_file:
       - jenkins.env
     ports:
-      - 8081:8080
-      - 50000:50000
+      - 8180:8080 # aynı ayar proxy de yapıldı, orada da 443 ü 8180 e yönlendirdik
+      - 50000:50000 # agentlar için
     user: "130" # host makinasında oluşturulan jenkin skullanısını UID si gelmeli
     container_name: jenkins
 
