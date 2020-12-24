@@ -1,0 +1,28 @@
+version: '3'
+services:
+  bamboo:
+    image: atlassian/bamboo-server:7.1.4
+    volumes:
+      - /data/bamboo-home:/var/atlassian/bamboo
+    ports:
+      - '8085:8085'
+      - '54663:54663'
+    env_file:
+      - bamboo.env
+    depends_on:
+      - postgresql
+    init: true # init run an init process (PID 1) inside the container that forwards signals and reaps processes. Set this option to true to enable this feature for the service.
+  postgresql:
+    image: postgres:9.6
+    container_name: postgres
+    hostname: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - /data/postgresql-data:/var/lib/postgresql/data
+    env_file:
+      - postgres.env
+networks:
+  default:
+    external:
+      name: devopsbridge

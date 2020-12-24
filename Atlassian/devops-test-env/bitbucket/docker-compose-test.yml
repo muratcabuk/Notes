@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  bitbucket:
+    image: atlassian/bitbucket-server:7.8.1-jdk8
+    depends_on:
+      - postgres
+    volumes:
+      - /data/bitbucket-data:/var/atlassian/application-data/bitbucket
+    ports:
+      - 7990:7990
+      - 7999:7999
+    environment:
+      - JVM_MINIMUM_MEMORY=512m
+      - JVM_MAXIMUM_MEMORY=1024m
+      - ELASTICSEARCH_ENABLED=false 
+      # true edilirse elasticsearch bitbucket içinde çalışacak demektir. biz tet etmek için elastic i ayrıca kuracağız.
+      # normalde tur yapılırsa es şurayaiçeride kurulur <Bitbucket home directory>/shared 
+      - APPLICATION_MODE=default #  This can be set to 'mirror' to start Bitbucket as a Smart Mirror. This will also disable Elasticsearch even if ELASTICSEARCH_ENABLED has not been set to 'false'.    
+      #- JDBC_DRIVER
+      #- JDBC_URL
+      #- JDBC_USER
+      #- JDBC_PASSWORD
+      #- BITBUCKET_PROXY_NAME=#The reverse proxy's fully qualified hostname.
+      #- BITBUCKET_PROXY_PORT=#The reverse proxy's port number via which bitbucket is accessed
+      #- BITBUCKET_PROXY_SCHEME=true # nginx ayağa kaldırıldığında yani ssl olduğunda açılacak
+
+
+  postgres:
+    image: postgres:9.6
+    volumes:
+      - /data/postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=bitbucketdb
+      - POSTGRES_PASSWORD=jellyfish
+      - POSTGRES_DB=bitbucketdb
+      - POSTGRES_ENCODING=UTF8
+
+networks:
+  default:
+    external:
+      name: devopsbridge

@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  confluence:
+    image: atlassian/confluence-server:7.9.3-ubuntu
+    restart: unless-stopped
+    ports:
+      - 8090:8090
+      # - 8091:8091 # cluster kurulursa sync için gerekli 
+    volumes:
+      - /data/confluence-data:/var/atlassian/application-data/confluence
+
+    environment:
+      - CATALINA_OPTS= -Xms256m -Xmx1g
+      # - CONFLUENCE_PROXY_NAME=
+      # - CONFLUENCE_PROXY_PORT=
+      # - CONFLUENCE_PROXY_SCHEME=
+      # - CONFLUENCE_DELAYED_START=
+
+networks:
+  default:
+    external:
+      name: devopsbridge
