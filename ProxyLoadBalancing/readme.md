@@ -18,12 +18,19 @@ Proxy'de sunucular client'ı bilmezler. Revers Proxy de ise Client'lar sunucu bi
 proxy de biraz amaç client ı gizlemktir. Reverse Proxy de ama sunucuları gizlemektir. (gizlemek perspektifinden bakıldığında)
 
 
+http://www.fatlan.com/nginx-reverse-proxy-server-ters-vekil-sunucu-url-rewrite-senaryo-uygulama/
+
+
 
 #### Load Balancer
 
+http://www.fatlan.com/haproxyloadbalancer-ve-keepalivedcluster-kurulum-ve-yapilandirmasi/
 
+http://www.fatlan.com/nginx-reverse-proxy-server-ters-vekil-sunucu-url-rewrite-senaryo-uygulama/
 
 #### Failover Clustering
+
+http://www.fatlan.com/haproxyloadbalancer-ve-keepalivedcluster-kurulum-ve-yapilandirmasi/
 
 
 #### Heartbeat vs Keepalived

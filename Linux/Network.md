@@ -152,9 +152,34 @@ default via 172.18.0.1 dev eth1
 Network Address Translation (NAT) converts local ip to global ip. Routing is the process to route the data packet from one network to the other.
 
 
+
+**Syntax**
+
+- ip OBJECT COMMAND
+- ip \[options\] OBJECT COMMAND
+- ip OBJECT help
+
+OBJECTS can be any one of the following and may be written in full or abbreviated form:
+|Object|Abbreviated form|Purpose|
+|------|----------------|-------|
+|link|l|Network device.|
+|address|a addr|Protocol (IP or IPv6) address on a device.|
+|addrlabel|addrl|Label configuration for protocol address selection.|
+|neighbour|n neigh|ARP or NDISC cache entry.|
+|route|r|Routing table entry.|
+|rule|ru|Rule in routing policy database.|
+|maddress|m maddr|Multicast address.|
+|mroute|mr|Multicast routing cache entry.|
+|tunnel|t|Tunnel over IP.|
+|xfrm|x|Framework for IPsec protocol.|
+
+
+
+
+
 ip komutunun genel biçimi
 
-ip [ OPTIONS ] OBJECT [ COMMAND [ ARGUMENTS ] ]
+ip \[ OPTIONS \] OBJECT \[ COMMAND \[ ARGUMENTS \] \]
 
 options
 - V : ip programının sürümünü belirtir.
@@ -163,19 +188,11 @@ options
 - 6 ipv6 protokol ailesini belirtir.
 
  
- 
-LİNUXSİSTEM-NETWORK
-ip Komutu ve Kullanımı
-adminAğustos 15, 2017
-
- 
-
- 
 Linux 2.2 çekirdek sürümüyle birlikte network işlemleri için kullanılan net-tools paketinin yerini IPROUTE2 paketi aldı. Bu paketteki ana araç “ip” komut setidir. Net-tools paketinde kullanılan ifconfig, route, arp vb komutların yerini daha güçlü ve esnek olan ip komutu almıştır.Bunun yanında net-tools paketindeki komutlar geriye dönük uyumluluk için vardır ve kullanılabilir. Bu komut setiyle ağ arayüzlerini, ağ adreslerini, yönlendirme işlemlerini, arp tablolarını, ağ tünellerini, politika tabanlı yönlendirme işlemlerini, etki alanı işlemlerini vb network ile ilgili birçok işlemi kolayca gerçekleştirebilir ve konfigüre edebiliriz.
 
 İp Komutunun Genel Biçimi
 
-ip [ OPTIONS ] OBJECT [ COMMAND [ ARGUMENTS ] ]
+ip \[ OPTIONS \] OBJECT \[ COMMAND \[ ARGUMENTS \] \]
 
 Köşeli parantez içerisindeki alanların kullanımı zorunlu değildir ihtiyaca göre kullanılır. Şimdi komut setinde yer alan kısımları açıklayalım.
 

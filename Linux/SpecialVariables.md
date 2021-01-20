@@ -6,6 +6,28 @@
 - $? = The exit status of the last command executed.
 - $$ = The process number of the current shell. For shell scripts, this is the process ID under which they are executing.
 - $! = The process number of the last background command.
+- $_ =  means the last argument to the previous command.
+
+
+
+
+
+! Start a history substitution, except when followed by a blank, newline, carriage return, = or ( (when the extglob shell option is enabled using the shopt builtin).
+
+
+\[..\]
+
+
+**Word designators** are used to select desired words from the event. A : separates the event specification from the word designator. [..]
+
+\[..\]
+- n The n-th word.
+- ^ The first argument. That is, word 1.
+- $ The last word. This is usually the last argument, but will expand to the zeroth word if there is only one word in the line. 
+
+
+
+
   
  
 ```

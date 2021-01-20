@@ -1,3 +1,15 @@
+
+
+http://www.fatlan.com/openstack-ansible-network-configuration-bonding-mtu-vlan-br-vlan-br-vxlan-with-netplan-on-ubuntu-18/
+
+http://tr.opticalpatchcable.com/info/an-overview-on-evpn-and-lnv-35954130.html
+
+
+
+
+
+
+
  
 - https://www.cemaltaner.com.tr/2018/07/13/sdn-nedir/
 - https://www.cemaltaner.com.tr/2018/06/19/sdne-giris/

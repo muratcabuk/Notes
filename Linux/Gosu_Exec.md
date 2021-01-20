@@ -1,4 +1,4 @@
- - exec
+### exec suexec
  
 The exec built-in command mirrors functions in the kernel, there are a family of them based on execve, which is usually called from C.
 
@@ -124,11 +124,75 @@ Another common use of exec is in redirecting file-descriptors. stdin, stdout, st
 
 
 
+#### suexec
+
+This is a simple tool that will simply execute a program with different privileges. The program will be exceuted directly and not run as a child, like su and sudo does, which avoids TTY and signal issues. This does more or less exactly the same thing as gosu but it is only 10kb instead of 1.8MB.
+
+- https://github.com/ncopa/su-exec
+
+
+örnek
+
+```
+$ docker run -it --rm alpine:edge su postgres -c 'ps aux'
+PID   USER     TIME   COMMAND
+    1 postgres   0:00 ash -c ps aux
+   12 postgres   0:00 ps aux
+$ docker run -it --rm -v $PWD/su-exec:/sbin/su-exec:ro alpine:edge su-exec postgres ps aux
+PID   USER     TIME   COMMAND
+    1 postgres   0:00 ps aux
+
+```
 
 
 
 
-### Resources
+
+
+### Resources (Exec suexec)
 
 - https://askubuntu.com/questions/819910/what-are-possible-use-of-exec-command
 - https://askubuntu.com/questions/525767/what-does-an-exec-command-do
+- [sunum](files/isletim_sistemleri_fork_exec.pptx)
+- https://aonurozcan.com/linux-fork-exec-wait-islemleri
+- https://medium.com/@gokhansengun/linux-prosesleri-nas%C4%B1l-y%C3%B6netir-9b1536dc06f7
+
+
+
+### Gosu
+
+
+örnek 
+
+```
+$ docker run -it --rm ubuntu:trusty su -c 'exec ps aux'
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0  46636  2688 ?        Ss+  02:22   0:00 su -c exec ps a
+root         6  0.0  0.0  15576  2220 ?        Rs   02:22   0:00 ps aux
+$ docker run -it --rm ubuntu:trusty sudo ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  3.0  0.0  46020  3144 ?        Ss+  02:22   0:00 sudo ps aux
+root         7  0.0  0.0  15576  2172 ?        R+   02:22   0:00 ps aux
+$ docker run -it --rm -v $PWD/gosu-amd64:/usr/local/bin/gosu:ro ubuntu:trusty gosu root ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   7140   768 ?        Rs+  02:22   0:00 ps aux
+```
+
+
+
+### Resource (Gosu)
+
+- https://github.com/tianon/gosu
+
+
+
+### chroot
+
+aslında izolasyon klavramı ile ilgili.
+
+
+![chroot](files/chroot.webp)
+
+Chroot, sunucu servisleri ve uygulamalar için yeni bir kök (/) dizini tanımlar. Kısaca çalıştırılacak  olan  servis  ya  da  uygulama  için  gerekli  kütüphaneler,  yapılandırma dosyaları, sürücü dosyaları (device file) bu servis için belirlenen kök dizinde bulunan ilgili  yollara  (path)  kopyalanır  ve  sunucu  yazılımları  belirlenen  kök  dizini  altında çalıştırılır. 
+
+
