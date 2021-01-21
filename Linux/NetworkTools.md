@@ -92,9 +92,17 @@ But let’s remember that truism: simple wins over complicated. Having been thro
 https://docs.openvswitch.org/en/latest/faq/general/
 
 
-### ip
+### ip / iproute2
 
 Ifcongig yerine artık bu kullanılmaktadır.
+
+iproute2 ile linux e gelen ve ipfilter kernel modülü üzerinebbir interface olarak çalışan araç. aşağıda adı geçen birçok uygulamanın yerine gelmiş bir araç.
+
+araç için de birçok uygulama geliyor. Örneğin ip komutu iproute2 ile gelmektedir.
+
+
+
+- https://baturin.org/docs/iproute2/ (çok iyi hazırlanmış bir sayfa)
 
 
 **Syntax**

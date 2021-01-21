@@ -173,6 +173,31 @@ Bridge, Hub’dan çok karışıktır. Layer-2’de çalışır. Hub’dan farkl
 - https://www.youtube.com/playlist?list=PLSNNzog5eydtmcbcbc1b8pVRkgre3vNUy (Switching and Routing hakkında video serisi)
 
 
+
+**BGP (Border Gateway Protocol - Sınır Geçit Protokolü)**
+
+
+![dinamikrouting-1.png](files/dinamikrouting-1.png)
+
+
+iç network protokolleri IGP (interior gateway protocol) olarka adlnadırılır. Dış network protokollerine de EGP (exterior gateway protocol) adı verilir. 
+
+örneğin süperonline networkünden turk telekom networküne  giderken EGP kullanılır. BGP de EGP leriden biridir. Path Vector Routing protokkolerinden biridit BGP de. komsuşukları kullanrak ilgili networke ulaşılır.
+
+BGP nin iç network olanına IBGP dış olanına EBGP de denir. 
+
+
+BGP DATABASESBGP 3 database tutar . Neighbor Database, BGP Database, Routing Table. 
+
+
+farklı komşuluklar kurularak network te bir kopma olması durumunda diğer komşu yollardan hedefe ulaşmaya çalışışır. Aslında tüm internet böyle çalışmaktadır.
+
+BGP için piyasada en fazla BIRD ve FRRouting kullanılıyor. Calico altyapısında bird kullanıyor. ancak cloud foundation frrouting i detekliyor. aslında FRRounting, BIRD e göre daha gelişmiş bir araç.
+
+
+https://docs.projectcalico.org/reference/architecture/overview
+
+
 ### Repeater
 
 
@@ -292,7 +317,7 @@ OBJECTS can be any one of the following and may be written in full or abbreviate
 
 ## VIRTUAL TANIMLAR
 
-
+https://baturin.org/docs/iproute2/#ip-route
 
 - https://www.youtube.com/watch?v=BB_q-75Snsk (virtualbox üzerinden anlatım)
 
@@ -415,7 +440,7 @@ PAT ve NAT beraber kullanıldığında Overloaded olur
 
 ### BRIDGE
 
-
+https://baturin.org/docs/iproute2/#ip-route
 ![bridge.png](files/bridge.png)
 
 şekilde görüldüğü üzere 2 adet tap cihazı var. altta tanımı var. 
@@ -435,7 +460,7 @@ Network Tap Nedir Network Tap, çeşitli izleme cihazlarının kullanımı için
 
 
 ### Bonded interface vs Team device
-
+https://baturin.org/docs/iproute2/#ip-route
 temel amaç network cihazlarını load balance yapmaktır. tabiiki aralarında farklar var ancak konu bu değil. ancak şunu söylebiliriz team daha yetenkli ve kurgulanması daha kolay bir araç.
 
 **bond**
@@ -499,7 +524,7 @@ azure aws karşılaştıması
 
 ### VLAN
 
-
+https://baturin.org/docs/iproute2/#ip-route
 özet olarak normalde hiç dokunulmadığında aynı network de olan cihazları mantıksal olarak gruplamaktır.
 
 aynı örneği 3 farklı şekilde inceleyelim.
@@ -538,13 +563,26 @@ Note: When configuring a VLAN, you need to make sure the switch connected to the
 
  bridge vlan show
 ```
-özellikle aşağıdakiler incelenmeli
+
+örmekler için link
+
+- vlan-vxlan-example/01-vlan.txt
+- vlan-vxlan-example/02-vxlan-point-to-point.txt
+- vlan-vxlan-example/03-vxlan-multicast.txt
+
+burada vlan için iki makin lazı vagrant kullanılabilir. hatta aşağıdaki vxlan örneğindeki kutgu kulanılabilir. hazır vagrant var orada.
+
+- https://www.cyberciti.biz/tips/howto-configure-linux-virtual-local-area-network-vlan.html
+
+**özellikle aşağıdakiler incelenmeli**
+
+- https://github.com/madorn/tenant-isolation
 
 - https://linux-blog.anracom.com/2017/11/28/fun-with-veth-devices-linux-bridges-and-vlans-in-unnamed-linux-network-namespaces-vi/
 - https://linux-blog.anracom.com/2017/12/30/fun-with-veth-devices-linux-bridges-and-vlans-in-unnamed-linux-network-namespaces-vii/
 - https://linux-blog.anracom.com/2018/01/05/fun-with-veth-devices-linux-bridges-and-vlans-in-unnamed-linux-network-namespaces-viii/
 
-diğer linkler
+**diğer linkler**
 - https://hicu.be/bridge-vs-macvlan (bridge vs vlan)
 - https://wiki.archlinux.org/index.php/VLAN
 - https://developers.redhat.com/blog/2017/09/14/vlan-filter-support-on-bridge/
@@ -682,7 +720,7 @@ This creates two namespaces, net1 and net2, and a pair of VETH devices, and it a
 
 ### VETH -  Nat ile bridge Kullanmadan
 
-
+https://baturin.org/docs/iproute2/#ip-route
 
 
 **örnek kod:** https://developpaper.com/detailed-underlying-technology-of-cloud-computing-network-principle-and-practice-of-linux-network-namespace/
@@ -1133,7 +1171,7 @@ iptables -A FORWARD -i eth0 -p tcp --dport 80 -d 172.31.0.23 -j ACCEPT
 Bu kural, güvenlik duvarından gelen HTTP isteklerinin, güvenlik duvarının arkasındaki Apache HTTP Sunucusu sunucusunun amaçlanan hedefine iletilmesine izin verir.
 
 ### VETH - Bridge + NAT kullanarak
-
+https://baturin.org/docs/iproute2/#ip-route
 öncelikle detaylı bilgi almak için üstteki VETH Nat kullanark başlılı tutorial ı takip ediniz.
 
 
@@ -1227,8 +1265,7 @@ bridge link show br1
 
 # Set the address of the `br1` interface (bridge device)
 # to 192.168.1.13/24 and also set the broadcast address
-# to 192.168.1.255 (the `+` symbol sets  the host bits to
-# 255).
+# to 192.168.1.255 (the `+` symbol sets  the host bits to 255).
 # burada broadcast adresi bu adrese gönderilen paketlerin tüm subnet e gideceğini belirtir.
 sudo ip addr add 192.168.1.13/24  brd + dev br1
 sudo ip link set br1 up
@@ -1333,7 +1370,7 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 
 
 ### VXLAN (Virtual eXtensible Local Area Network)
-
+https://baturin.org/docs/iproute2/#ip-route
 özellikle cloud plaformlarında scalebility problemini çözmek için çıkmıştır. 
 
 ![vxlan.webp](files/vxlan.webp)
@@ -1353,9 +1390,428 @@ VXLAN, geniş çaplı bulut bilişim dağıtımlarında görülen ağların öl�
 ```
 
 
+**VNI**
+
+The VXLAN Network Identifier (VNI) identifies the VXLAN and has a similar function as the VLAN ID for regular VLANs. We use 24 bits for the VNI, which means we can create 16,777,215 ( ~16 million) VXLANs. That’s a lot, compared to those 4094 VLANs with a 12-bit VLAN ID. We can create plenty of VXLANs, which means a large service provider with even thousands of customers can use as many VXLANs per customer as needed.
+
+
+**VTEP**
+
+The VXLAN tunnel endpoint (VTEP) is the device that’s responsible for encapsulating and de-encapsulating layer 2 traffic. This device is the connection between the overlay and the underlay network. The VTEP comes in two forms:
+
+- Software (host-based)
+- Hardware (gateway)
+
+
+
+
+
+**vxlan software based**
+![software-based-vxlan.png](files/software-based-vxlan.png)
+
+**vxlan hardware based**
+![hardware-based-vxlan.png](files/hardware-based-vxlan.png)
+
+
+
+**VLAN vs VXLAN**
+
+- Definition
+    - VLAN: Any Layer2 partitioned and isolated broadcast domain in a computer network
+    - VXLAN: Virtual Extensible LAN (VXLAN) is an encapsulation protocol for running an overlay network on existing Layer 3 infrastructure.
+- Protocols
+    - VLAN: VLAN uses the Spanning-Tree Protocol (STP) which blocks redundant paths to avoid traffic loops in the network and hence allows using only half of the available paths.
+    - VXLAN: VXLAN uses underlying Layer 3 routing protocol to use all the available ports with technologies like ECMP (Equal cost multipath Routing) etc.
+- How it works
+     - VLAN: Uses VLAN tag on Layer 2 frame for encapsulation to extend VLAN across switches.
+     - VXLAN: Uses MAC-in-UDP encapsulation to extend Layer 2 segments across locations.
+- Scalability
+    - VLAN: VLANs uses 12-bit VLAN ID, which limits scalability to 4094 VLANs.
+    - VXLAN: VXLAN uses a 24-bit ID which scales it up to 16 Million VXLAN segments
+- Flexibility
+    - VLAN: Less flexible for a multi-tenant environment
+    - VXLAN - Flexible and suitable for the multi-tenant environment, VXLAN is easier for scaling out a cloud computing environment maintaining cloud apps and tenants logically isolated.
+
+
+
+**troubleshooting için güzel bir örnek**
+
+https://ilearnedhowto.wordpress.com/2017/02/16/how-to-create-overlay-networks-using-linux-bridges-and-vxlans/ 
+
+
+**çalışan vagran uygulamsı point-to-point**
+
 https://codingpackets.com/blog/linux-network-components-used-in-openstack/
 
 
+2 tane makina lazı bunları ayağa kaldırmak için bir klasöre Vagrantfile adında bir dosya koyup içine alttakileri ekliyoruz.
+
+
+eğer ilgili box lar yoksa başka box lara da nakılabilir. ama özellikler aynı kalmalı.
+
+svg var
+![network-namespaces-lab.svg](files/network-namespaces-lab.svg)
+
+yani kurgu şu şekilde soldaki makinadan örneğin microsost namespace inden 10.1.0.5 e ping attığımızda vxlan tunelinden geçip node02 de microsft namespace ine düşmeli.
+
+hatta bu durumu tcpdump ile test ettğimizde node01 den gelen mac adresi ile karşılayan mac adresleri doğru olamalı.
+
+
+
+```
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# https://codingpackets.com/blog/linux-network-components-used-in-openstack/
+
+Vagrant.configure("2") do |config|
+
+  ##########################
+  #          node01        #
+  ##########################
+
+  config.vm.define "node01" do |node|
+    node.vm.box = "elastic/ubuntu-16.04-x86_64"
+    node.vm.hostname = "node01"
+    node.vm.synced_folder ".", "/vagrant", disabled: true
+    node.ssh.insert_key = false
+
+    node.vm.provider :libvirt do |domain|
+      domain.memory = 1024
+    end
+
+    node.vm.network :private_network,
+      :mac => "28:b7:ad:f8:5b:7d",
+      :libvirt__tunnel_type => "udp",
+      :libvirt__tunnel_local_ip => "127.1.1.1",
+      :libvirt__tunnel_local_port => "10001",
+      :libvirt__tunnel_ip => "127.1.1.2",
+      :libvirt__tunnel_port => "10001",
+      :libvirt__iface_name => "eth1",
+      auto_config: false
+
+    node.vm.provision "shell",
+      inline: "sudo ip address add 10.10.10.10/24 dev eth1"
+
+  end
+
+  ##########################
+  #          node02        #
+  ##########################
+
+  config.vm.define "node02" do |node|
+    node.vm.box = "elastic/ubuntu-16.04-x86_64"
+    node.vm.hostname = "node02"
+    node.vm.synced_folder ".", "/vagrant", disabled: true
+    node.ssh.insert_key = false
+
+    node.vm.provider :libvirt do |domain|
+      domain.memory = 1024
+    end
+
+    node.vm.network :private_network,
+      :mac => "28:b7:ad:f8:5b:7c",
+      :libvirt__tunnel_type => "udp",
+      :libvirt__tunnel_local_ip => "127.1.1.2",
+      :libvirt__tunnel_local_port => "10001",
+      :libvirt__tunnel_ip => "127.1.1.1",
+      :libvirt__tunnel_port => "10001",
+      :libvirt__iface_name => "eth1",
+      auto_config: false
+
+    node.vm.provision "shell",
+      inline: "sudo ip address add 10.10.10.20/24 dev eth1"
+
+  end
+
+end
+```
+
+iki sunucuda da alttaki paketi kuruyoruz
+
+```
+sudo apt install -y bridge-utils
+```
+
+
+
+node01 de çalıştıracağımız script
+
+```
+# Create a network namespace for both companies
+sudo ip netns add microsoft
+sudo ip netns add apple
+
+# Create veth pairs for both companies
+sudo ip link add msft-veth0 type veth peer name msft-veth1
+sudo ip link add aapl-veth0 type veth peer name aapl-veth1
+
+# Add veth1 to each company's namespace
+sudo ip link set msft-veth1 netns microsoft
+sudo ip link set aapl-veth1 netns apple
+
+# Add the same ip to veth1 in both company namespaces
+sudo ip netns exec microsoft ip a add dev msft-veth1 10.1.0.4/24
+sudo ip netns exec apple ip a add dev aapl-veth1 10.1.0.4/24
+
+# Create a tenant-network linux bridge for each company
+sudo brctl addbr msft-br
+sudo brctl addbr aapl-br
+
+# Add a veth pair to each company's linux bridge
+sudo brctl addif msft-br msft-veth0
+sudo brctl addif aapl-br aapl-veth0
+
+# Create a point-to-point VXLAN interface for each company
+sudo ip link add msft-vxl-10 type vxlan id 10 remote 10.10.10.20 dev eth1
+sudo ip link add aapl-vxl-20 type vxlan id 20 remote 10.10.10.20 dev eth1
+
+# Add the point-to-point VXLAN interface to each company's tenant-network Linux bridge
+sudo brctl addif msft-br msft-vxl-10
+sudo brctl addif aapl-br aapl-vxl-20
+
+# Bring up the veth pairs
+sudo ip link set dev msft-veth0 up
+sudo ip link set dev aapl-veth0 up
+sudo ip netns exec microsoft ip link set dev msft-veth1 up
+sudo ip netns exec apple ip link set dev aapl-veth1 up
+
+# Bring up the loopback adapter inside the namespaces
+sudo ip netns exec microsoft ip link set dev lo up
+sudo ip netns exec apple ip link set dev lo up
+
+# Bring up each company's tenant-network bridge
+sudo ip link set dev msft-br up
+sudo ip link set dev aapl-br up
+
+# Bring up the VXLAN interface for each company
+sudo ip link set dev msft-vxl-10 up
+sudo ip link set dev aapl-vxl-20 up
+```
+
+
+node02 de çalıştıracağmız sonucu
+
+```
+# Create network namespace for both companies
+sudo ip netns add microsoft
+sudo ip netns add apple
+
+# Create veth pair for both companies
+sudo ip link add msft-veth0 type veth peer name msft-veth1
+sudo ip link add aapl-veth0 type veth peer name aapl-veth1
+
+# Add veth1 to each company's namespace
+sudo ip link set msft-veth1 netns microsoft
+sudo ip link set aapl-veth1 netns apple
+
+# Add same ip to veth1 in both company's namespace
+sudo ip netns exec microsoft ip a add dev msft-veth1 10.1.0.5/24
+sudo ip netns exec apple ip a add dev aapl-veth1 10.1.0.5/24
+
+# Create a tenant-network linux-bridge for each company
+sudo brctl addbr msft-br
+sudo brctl addbr aapl-br
+
+# Add veth pair to each company's linux-bridge
+sudo brctl addif msft-br msft-veth0
+sudo brctl addif aapl-br aapl-veth0
+
+# Create a point-to-point VXLAN interface for each company
+sudo ip link add msft-vxl-10 type vxlan id 10 remote 10.10.10.10 dev eth1
+sudo ip link add aapl-vxl-20 type vxlan id 20 remote 10.10.10.10 dev eth1
+
+# Add the point-to-point VXLAN interface to each company's tenant-network linux-bridge
+sudo brctl addif msft-br msft-vxl-10
+sudo brctl addif aapl-br aapl-vxl-20
+
+# Bring up the veth pairs
+sudo ip link set dev msft-veth0 up
+sudo ip link set dev aapl-veth0 up
+sudo ip netns exec microsoft ip link set dev msft-veth1 up
+sudo ip netns exec apple ip link set dev aapl-veth1 up
+
+# Bring up the loopback adapter inside the namespaces
+sudo ip netns exec microsoft ip link set dev lo up
+sudo ip netns exec apple ip link set dev lo up
+
+# Bring up each company's tenant-network bridge
+sudo ip link set dev msft-br up
+sudo ip link set dev aapl-br up
+
+# Bring up the VXLAN interface for each company
+sudo ip link set dev msft-vxl-10 up
+sudo ip link set dev aapl-vxl-20 up
+```
+
+
+test için
+
+```
+
+sudo ip netns exec microsoft ping -c 3 10.1.0.5
+
+# output
+PING 10.1.0.5 (10.1.0.5) 56(84) bytes of data.
+64 bytes from 10.1.0.5: icmp_seq=1 ttl=64 time=0.749 ms
+64 bytes from 10.1.0.5: icmp_seq=2 ttl=64 time=0.550 ms
+64 bytes from 10.1.0.5: icmp_seq=3 ttl=64 time=0.588 ms
+
+--- 10.1.0.5 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1998ms
+rtt min/avg/max/mdev = 0.550/0.629/0.749/0.086 ms
+
+# Apple Namespace
+sudo ip netns exec apple ping -c 3 10.1.0.5
+
+# output
+PING 10.1.0.5 (10.1.0.5) 56(84) bytes of data.
+64 bytes from 10.1.0.5: icmp_seq=1 ttl=64 time=0.825 ms
+64 bytes from 10.1.0.5: icmp_seq=2 ttl=64 time=0.621 ms
+64 bytes from 10.1.0.5: icmp_seq=3 ttl=64 time=0.527 ms
+
+--- 10.1.0.5 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1999ms
+rtt min/avg/max/mdev = 0.527/0.657/0.825/0.127 ms
+```
+
+**yardımcı olabilcek kodlar.**
+
+
+
+alttaki kodlar bridge ucuna bağlı olan microsoft vxlan interface ini gösteriyor.
+
+```
+sudo ip -d link show msft-vxl-10
+
+# output node02, vxlan olduğu uzak sunucuda 10.10.10.10 ipsi ile haberleşeceği belirtilmiş VNI number 10
+
+sudo ip -d link show msft-vxl-10
+10: msft-vxl-10: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc noqueue master msft-br state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 6a:36:61:b5:e8:21 brd ff:ff:ff:ff:ff:ff promiscuity 1 
+    vxlan id 10 remote 10.10.10.10 dev eth1 srcport 0 0 dstport 8472 ageing 300 
+    bridge_slave state forwarding priority 32 cost 100 hairpin off guard off root_block off fastleave off learning on flood on addrgenmode eui64 
+
+
+# output node01
+
+
+10: msft-vxl-10: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc noqueue master msft-br state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 42:03:4d:ef:fd:c4 brd ff:ff:ff:ff:ff:ff promiscuity 1 
+    vxlan id 10 remote 10.10.10.20 dev eth1 srcport 0 0 dstport 8472 ageing 300 
+    bridge_slave state forwarding priority 32 cost 100 hairpin off guard off root_block off fastleave off learning on flood on addrgenmode eui64 
+```
+
+burakiler ise bridge in microsoft namespace içindeki interface bilgilerini gösteriyordu
+
+
+```
+# node02  mac = 12:3f:47:b0:b8:18
+
+
+sudo ip netns exec microsoft  ip -d link show  msft-veth1
+4: msft-veth1@if5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 12:3f:47:b0:b8:18 brd ff:ff:ff:ff:ff:ff link-netnsid 0 promiscuity 1 
+    veth addrgenmode eui64 
+
+
+
+#node01  mac = 32:fd:c5:48:3d:a1
+
+sudo ip netns exec microsoft  ip -d link show  msft-veth1
+4: msft-veth1@if5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 32:fd:c5:48:3d:a1 brd ff:ff:ff:ff:ff:ff link-netnsid 0 promiscuity 0 
+    veth addrgenmode eui64 
+
+```
+
+**test için**
+
+node02 de microsoft namespace indeki interface i dinliyoruz
+
+```
+sudo ip netns exec microsoft tcpdump -e -n -l -i msft-veth1
+
+```
+node01 microsoft name space i içinde de node02 de dinlenen ip adresine ping atıyoruz
+
+```
+sudo ip netns exec microsoft ping -c 3 10.1.0.5
+```
+
+
+aşğıda görüleceği üzere  mac lar arasında şu şekilde 32:fd:c5:48:3d:a1 > 12:3f:47:b0:b8:18  request gtimiş ve cevaplarda şu şekilde 2:3f:47:b0:b8:18 > 32:fd:c5:48:3d:a1 geri dönmüş.
+
+```
+23:24:02.967891 32:fd:c5:48:3d:a1 > 12:3f:47:b0:b8:18, ethertype IPv4 (0x0800), length 98: 10.1.0.4 > 10.1.0.5: ICMP echo request, id 2520, seq 1, length 64
+23:24:02.967973 12:3f:47:b0:b8:18 > 32:fd:c5:48:3d:a1, ethertype IPv4 (0x0800), length 98: 10.1.0.5 > 10.1.0.4: ICMP echo reply, id 2520, seq 1, length 64
+23:24:03.969056 32:fd:c5:48:3d:a1 > 12:3f:47:b0:b8:18, ethertype IPv4 (0x0800), length 98: 10.1.0.4 > 10.1.0.5: ICMP echo request, id 2520, seq 2, length 64
+23:24:03.969080 12:3f:47:b0:b8:18 > 32:fd:c5:48:3d:a1, ethertype IPv4 (0x0800), length 98: 10.1.0.5 > 10.1.0.4: ICMP echo reply, id 2520, seq 2, length 64
+23:24:04.970580 32:fd:c5:48:3d:a1 > 12:3f:47:b0:b8:18, ethertype IPv4 (0x0800), length 98: 10.1.0.4 > 10.1.0.5: ICMP echo request, id 2520, seq 3, length 64
+23:24:04.970630 12:3f:47:b0:b8:18 > 32:fd:c5:48:3d:a1, ethertype IPv4 (0x0800), length 98: 10.1.0.5 > 10.1.0.4: ICMP echo reply, id 2520, seq 3, length 64
+23:24:07.978705 12:3f:47:b0:b8:18 > 32:fd:c5:48:3d:a1, ethertype ARP (0x0806), length 42: Request who-has 10.1.0.4 tell 10.1.0.5, length 28
+23:24:07.980712 32:fd:c5:48:3d:a1 > 12:3f:47:b0:b8:18, ethertype ARP (0x0806), length 42: Reply 10.1.0.4 is-at 32:fd:c5:48:3d:a1, length 28
+
+```
+
+
+
+**test sonucu**
+
+![vxlan_test_result.png](files/vxlan_test_result.png)
+
+
+
+
+
+**örnekler için local link - vm üzerinden anlatıyor**
+
+vxlan multicat uygulama da var.
+
+- vlan-vxlan-example/01-vlan.txt
+- vlan-vxlan-example/02-vxlan-point-to-point.txt
+- vlan-vxlan-example/03-vxlan-multicast.txt
+
+
+**troubleshooting için**
+
+şu adreslere bakılabilir
+
+- https://ilearnedhowto.wordpress.com/tag/vxlan/
+- https://wiki.libvirt.org/page/Net.bridge.bridge-nf-call_and_sysctl.conf
+
+şu kntroller makinlarda yapılabilir. 
+
+```
+# iptables -t filter -S
+-P INPUT ACCEPT
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+
+```
+
+eğer forward olanın değeri DROP ise aşağıdaki komut çalıştırılabilir
+
+```
+# iptables -t FILTER -A FORWARD -i br-vxlan20 -j ACCEPT
+```
+
+
+
+**örnekler**
+- https://tecden.co.uk/linux/vxlan-and-namespaces-basic-concepts-creating-a-simple-isolated-router/(çok güzel ve bizim yaptığımızdan daha karmaşık bir örnek)
+- https://ilearnedhowto.wordpress.com/2017/02/16/how-to-create-overlay-networks-using-linux-bridges-and-vxlans/ (lxc üzerinden güzel anlatım)
+- https://programmer.help/blogs/practice-vxlan-under-linux.html (docker üzerinden vxlan anlatmış bakılması güzel anlatım)
+- https://codingpackets.com/blog/linux-network-components-used-in-openstack/ (VM ler üzerinden vxlan ı anlatmış, vagrant file ı var)
+- https://weezer.su/vxlan_example_namespace_linux_bridge.html (vm üzerinden)
+- https://tecden.co.uk/linux/vxlan-and-namespaces-basic-concepts-creating-a-simple-isolated-router/ (vm üzerinden)
+- https://rancher.com/docs/rancher/v2.x/en/faq/networking/cni-providers/ (kubernetes oramı için CNI ları çok iyi anlatmış, vxlan ve BGP)
+- https://blog.revolve.team/2017/05/09/deep-dive-into-docker-overlay-networks-part-2/ (docker overlay networku anlatmak için çok iyi vxlan örmeği vermiş)
+- https://blog.revolve.team/2017/08/20/deep-dive-3-into-docker-overlay-networks-part-3/ (çok detaylı overlay network anlatımı)
+
+
+
+- https://codingpackets.com/blog/linux-network-components-used-in-openstack/
 - https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/
 - https://www.kernel.org/doc/html/latest/networking/vxlan.html
 - http://www.fatlan.com/openstack-ansible-network-configuration-bonding-mtu-vlan-br-vlan-br-vxlan-with-netplan-on-ubuntu-18/
@@ -1364,7 +1820,7 @@ https://codingpackets.com/blog/linux-network-components-used-in-openstack/
 
 
 ### MACVLAN
-
+https://baturin.org/docs/iproute2/#ip-route
 macvlan aslında bir fiziksel bir interface e birden fazla mac adresi bağlam demektir. böylece alt interface ler kendilerine ait mac adresleriyle fizikssel interface e bağlanabilirler ve böyle kendi ip adresleriyle dışarı da çıkabilirler.
 
 ![linux-macvlan.png](files/linux-macvlan.png)
@@ -1502,7 +1958,7 @@ böylece sistem dışarıda açılmış oldu iç networku de kullanabilir  oldu.
 
 
 ### IPVLAN
-
+https://baturin.org/docs/iproute2/#ip-route
 macvlan e benze ancak burada bütün endpointler aynı mac adresine sahiptir.
 
 
@@ -1642,7 +2098,7 @@ sudo ip netns del ns6
 - http://networkstatic.net/configuring-macvlan-ipvlan-linux-networking/
 
 ### MACVTAP/IPVTAP
-
+https://baturin.org/docs/iproute2/#ip-route
 
 MACVTAP/IPVTAP is a new device driver meant to simplify virtualized bridged networking. When a MACVTAP/IPVTAP instance is created on top of a physical interface, the kernel also creates a character device/dev/tapX to be used just like a TUN/TAP device, which can be directly used by KVM/QEMU.
 
@@ -1690,4 +2146,113 @@ görüldüğü üzere bridge mode da tek bir çıkış ar eth0 üzerinde
 
 
 
+
+
+
+
+### BGP - Dynamic Rouring Protocol
+
+https://baturin.org/docs/iproute2/#ip-route
+
+**BGP (Border Gateway Protocol - Sınır Geçit Protokolü)**
+
+
+![dinamikrouting-1.png](files/dinamikrouting-1.png)
+
+https://baturin.org/docs/iproute2/#ip-link-add-vlan
+
+
+**BGP dinamik routing protokollerinden biridir.**
+
+![Dynamic-Routing-Protocol.webp](files/Dynamic-Routing-Protocol.webp)
+
+![dinamik.webp](files/dinamik.webp)
+
+ dinamik yönlendirme statike göre daha spesifik çalışır. Basit olarak, statik rotalar manuel olarak yapılandırılırken, dinamik rotalar ise Router tarafından otomatik olarak oluşturulur.
+
+Oluşturulan dinamik rotalar, Router’lar arasında belli zaman aralıklarında gönderilen hello paketleri ile yayılırlar. Ağın topoloji haritası Router’lar arasında otomatik olarak paylaşılır.
+
+
+Ağ üzerinde meydana gelen hatalar sonucunda, rotalar yeniden hesaplanır ve Router‘lar yönlendirme tablolarını güncellerler. Örneğin, ağdaki bir Router arızalandığında, diğer aygıtlar bu hedefi belli bir süre bekleyecek ve zaman aşımından sonra yönlendirme tablolarını güncelleyerek bu rotayı topoloji tablolarından kaldıracaklardır.
+
+Ağ ortamına yeni bir Router eklendiğinde, dinamik protokoller sayesinde bu yeni aygıt ağa hemen katılabilir. Eğer yeni aygıt üzerinde dinamik bir protokol yerine statik rota yapılandırılırsa, iş yükü ve zamanı oldukça fazla artacaktır.
+
+
+Dynamic protokoller tüm ağları öğrenir, keşfeder ve en iyi rotaları yönlendirme tablolarına kaydederler. Bir protokolün en iyi rotayı hesaplaması işlemine Yönlendirme Algoritması (Routing Algorithm) denir.
+
+
+statik rota tnımlaması ip route veya sadece route komutu ile yapılırken dinamik route tanımlamaslı için bazı uygulamalr kullanılır örneğin BIRD, FRRouting gibi.
+
+
+Kubernetes ortamında sıkça kullanılan calico cni mesela alyapısında BIRD kullanmaktadır. Calico ayrıca güvenlikle alaklı extra özelliklerde barındıkmaktadır. diğer bazı paketleride içine alarak kullanımı daha kolay ve versiyonlanambilir (yaml) dosyaları docker ortamları dışında bare-metal olarka da kullanılabilir.
+
+
+![dinamik_network_protocol.jpg](files/dinamik_network_protocol.jpg)
+
+iç network protokolleri IGP (interior gateway protocol) olarka adlnadırılır. Dış network protokollerine de EGP (exterior gateway protocol) adı verilir. 
+
+örneğin süperonline networkünden turk telekom networküne  giderken EGP kullanılır. BGP de EGP leriden biridir. Path Vector Routing protokkolerinden biridit BGP de. komsuşukları kullanrak ilgili networke ulaşılır.
+
+BGP nin iç network olanına IBGP dış olanına EBGP de denir. 
+
+
+BGP DATABASESBGP 3 database tutar . Neighbor Database, BGP Database, Routing Table. 
+
+
+farklı komşuluklar kurularak network te bir kopma olması durumunda diğer komşu yollardan hedefe ulaşmaya çalışışır. Aslında tüm internet böyle çalışmaktadır.
+
+BGP için piyasada en fazla BIRD ve FRRouting kullanılıyor. Calico altyapısında bird kullanıyor. ancak cloud foundation frrouting i detekliyor. aslında FRRounting, BIRD e göre daha gelişmiş bir araç.
+
+
+**En çok kullanılan iç ağ protokollerinin özellikleri aşağıdaki tabloyla özetlenebilir:**
+![dinamik_protokoller.png](files/dinamik_protokoller.png)
+
+- Metrik: En iyi yolu seçmek için gerekli olan parametrelerdir. Bunlar, geçilen durak sayısı (hop count), bant genişliği (bandwidth), trafik yükü (load), paketin anahtarlanma süresi (gecikme (delay)), hattın güvenilirliği (reliability), metriklerin toplam etkisi (cost) olabilir.
+
+- AD (Administrative Distance): Aynı ağın birden fazla protokolle öğrenilmesi durumunda, routerın karar vermek için kullandığı, protokol öncelik sırasıdır. Küçüldükçe öncelik artar.
+
+- Routing Harfi: Routerdaki işletim sisteminde protokolün temsil edildiği harftir.
+
+- VLSM (Variable Length Subnet Masking) Desteği: IP bloklarını, değişik büyüklüklerde alt ağlara bölmeye yarar. VLSM desteği olan protokoller sınıfsız, olmayanlar ise sınıflı bir mimari yapıya sahiptir.
+
+- *Hello Paketi: Sadece değişiklik olduğunda güncelleme paketi yollayan protokollerde, bağlantının devamlı olduğunu göstermek için gönderilen pakettir. Boyutu çok küçüktür. 
+
+
+
+
+
+
+
+
+
+
+
+- https://rancher.com/docs/rancher/v2.x/en/faq/networking/cni-providers/ (kubernetes oramı için CNI ları çok iyi anlatmış, vxlan ve BGP)
+- https://www.objectif-libre.com/en/blog/2018/07/05/k8s-network-solutions-comparison/ (kubernetes için CNI ları çok iyi anlatmış karşılaştıram tablosu var)
+- https://docs.projectcalico.org/reference/architecture/overview (iproute2 oaketini detaylı örneklerle anlamış)
+- https://octetz.com/docs/2020/2020-10-01-calico-routing-modes/ (calico routing sistemini çok iyi anlatmış)
+
+calico dan dolayı bizde pragmatist yaklaşıp BIRD e bakacağız.
+
+
+öncelkle BIRD ü kuruyoruz
+
+```
+sudo add-apt-repository ppa:cz.nic-labs/bird
+
+apt-get install bird
+
+sudo systemctl enable bird
+
+sudo systemctl restart bird
+```
+
+
+
+
+- https://www.techtutsonline.com/dynamic-routing/
+- http://packetfire.org/post/intro-to-bgp/
+- https://gitlab.nic.cz/labs/bird/-/wikis/BGP_example_1
+- https://gitlab.nic.cz/labs/bird/-/wikis/BGP_example_2
+- https://www.sysnettechsolutions.com/dinamik-yonlendirme-nedir-dynamic-routing-nedir/
 
