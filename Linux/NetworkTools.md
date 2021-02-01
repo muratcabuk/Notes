@@ -94,6 +94,9 @@ https://docs.openvswitch.org/en/latest/faq/general/
 
 ### ip / iproute2
 
+- https://codilime.com/how-to-drop-a-packet-in-linux-in-more-ways-than-one/ (keinlikl eoknmalı)
+
+
 Ifcongig yerine artık bu kullanılmaktadır.
 
 iproute2 ile linux e gelen ve ipfilter kernel modülü üzerinebbir interface olarak çalışan araç. aşağıda adı geçen birçok uygulamanın yerine gelmiş bir araç.

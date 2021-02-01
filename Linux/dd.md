@@ -12,7 +12,7 @@ Bu komut "data definition" kelimelerinin kısalmasıdır.
 dd if=/dev/sda of=/dev/sdb
 ```
 
-2. Örnek 2: Disk bozulmasına karşın parçalı veya tam HDD’nin yedeğini alabiliriz.
+2. Örnek 2: Disk bozulmasına karşın parçalı veya tam HDD' nin yedeğini alabiliriz.
 
 ```
 dd if =/dev/sda2 of=~/hdadisk.img

@@ -1,3 +1,5 @@
+- https://codilime.com/how-to-drop-a-packet-in-linux-in-more-ways-than-one/ (keinlikl eoknmalı)
+
 
 
 http://www.fatlan.com/openstack-ansible-network-configuration-bonding-mtu-vlan-br-vlan-br-vxlan-with-netplan-on-ubuntu-18/

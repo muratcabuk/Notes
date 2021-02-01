@@ -440,6 +440,9 @@ PAT ve NAT beraber kullanıldığında Overloaded olur
 
 ### BRIDGE
 
+- https://codilime.com/how-to-drop-a-packet-in-linux-in-more-ways-than-one/ (keinlikl eoknmalı)
+
+
 https://baturin.org/docs/iproute2/#ip-route
 ![bridge.png](files/bridge.png)
 

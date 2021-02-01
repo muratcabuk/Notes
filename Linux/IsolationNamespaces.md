@@ -560,3 +560,7 @@ Bu kural, güvenlik duvarından gelen HTTP isteklerinin, güvenlik duvarının a
 ### UTS namespace
 ### User Namespace
 ### CGroup - Kontrol Grupları 
+
+### Chroot
+
+konuyla ilgili, linux sıkılarştırma eğitimi içinde başlık var bakılmalı

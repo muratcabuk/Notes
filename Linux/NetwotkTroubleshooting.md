@@ -5,6 +5,7 @@ https://www.redhat.com/sysadmin/five-network-commands
 
 https://haydenjames.io/linux-networking-commands-scripts/
 
+- https://codilime.com/how-to-drop-a-packet-in-linux-in-more-ways-than-one/ (keinlikl eoknmalı)
 
 
 

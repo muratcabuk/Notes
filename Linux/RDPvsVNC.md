@@ -111,7 +111,24 @@ EOF
 sudo systemctl restart polkit
 ```
 
+#### KDE XRDP Troubleshooting
 
+bağlanıldığında beyaz ekran görme yada ikinci kişi girdiğinde problem yaşanıyorsa
+
+öncelikle ltaaki komutla x-session-manager startplasma-X11 seçilir
+
+```
+sudo update-alternatives --config x-session-manager
+```
+
+ikinici olarak bir
+```
+/etc/xrdp/startwm.sh and add these lines before the lines that test and execute Xsession. The $HOME/.profile is not part of the solution, but is something that should be run before starting the session anyway.
+
+unset DBUS_SESSION_BUS_ADDRESS  
+unset XDG_RUNTIME_DIR
+
+```
 
 
 

@@ -1,6 +1,8 @@
 
 ### Öenmli komutlar
 
+- https://codilime.com/how-to-drop-a-packet-in-linux-in-more-ways-than-one/ (keinlikl eoknmalı)
+
 okunması lazım 
 
 https://jvns.ca/blog/2017/09/03/network-interfaces/
