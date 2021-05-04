@@ -20,4 +20,7 @@ In a Unix-like OS, root directory(/) is the top directory. root file system sits
  
 2. Resource Control: Normal şartlarda linux'da çalışan proccessler'in ne kadar kaynak (örneğin CPU, memory, devices, pids (bir process kaç alt proccess ayağa kaldırabilir.)) tüketeceğine kara veremezdik. 
  - cgroups (control group): Ancak bu teknoloji le artık bu mümkün hale geliyor. Kernel üzerinde proccesslerin kaynkalrını sınırlandırabiliyoruz.
+ 
+ **detaylı anlatım, ileri seviye script örnekleri**
+ - https://tldp.org/guides.html (kesin bakılmalı)
 
